@@ -1,7 +1,18 @@
+import { ApiProperty } from "@nestjs/swagger";
+
 export class BaganMapInfo {
-    Id: string;
-    PagodaMmName: string;
-    PagodaEngName: string;
-    Latitude: number;
-    Longitude: number;
-  }
+  @ApiProperty()
+  Id: string;
+
+  @ApiProperty()
+  PagodaMmName: string;
+
+  @ApiProperty()
+  PagodaEngName: string;
+
+  @ApiProperty()
+  Latitude: number;
+
+  @ApiProperty()
+  Longitude: number;
+}

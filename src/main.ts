@@ -11,7 +11,7 @@ async function bootstrap() {
     .setTitle('Burma Project Ideas')
     .setDescription('')
     .setVersion('1.0')
-    .addTag('burma-project-idea')
+    // .addTag('burma-project-idea')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('', app, document);

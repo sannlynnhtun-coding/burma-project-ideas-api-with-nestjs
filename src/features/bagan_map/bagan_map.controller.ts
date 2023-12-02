@@ -2,7 +2,9 @@ import { Controller, Get, Param } from '@nestjs/common';
 import { BaganMapService } from './bagan_map.service';
 import { TravelRoute } from './travel_route';
 import { BaganMapInfoDetail } from './bagan_map_info_detail';
+import { ApiQuery, ApiTags } from '@nestjs/swagger';
 
+@ApiTags('bagan-map')
 @Controller('bagan-map')
 export class BaganMapController {
   constructor(private readonly baganMapService: BaganMapService) {}
@@ -15,6 +17,7 @@ export class BaganMapController {
   }
 
   @Get('/:id')
+  @ApiQuery({ name: 'id' })
   getTravleRoute(@Param('id') id): TravelRoute {
     return this.baganMapService
       .getTravelRoute()
@@ -22,6 +25,7 @@ export class BaganMapController {
   }
 
   @Get('/detail/:id')
+  @ApiQuery({ name: 'id' })
   getMapInfoDetail(@Param('id') id): BaganMapInfoDetail {
     return this.baganMapService
       .getBaganMapDeatil()
