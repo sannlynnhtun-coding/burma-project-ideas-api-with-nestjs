@@ -1,5 +1,5 @@
 import { Controller, Get, Param } from '@nestjs/common';
-import { ApiQuery, ApiTags } from '@nestjs/swagger';
+import { ApiParam, ApiQuery, ApiTags } from '@nestjs/swagger';
 import { PickAPileService } from './pick_a_pile.service';
 import { PickAPileAnswer } from './pick_a_pile_answer';
 import { PickAPileQuestion } from './pick_a_pile_question';
@@ -15,7 +15,7 @@ export class PickAPileController {
   }
 
   @Get('/:id')
-  @ApiQuery({ name: 'id' })
+  @ApiParam({ name: 'id' })
   getBird(@Param('id') id): PickAPileAnswer {
     return this.pickAPileService
       .getAnswers()

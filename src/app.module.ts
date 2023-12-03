@@ -7,6 +7,8 @@ import { join } from 'path';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { BaganMapController } from './features/bagan_map/bagan_map.controller';
 import { BaganMapService } from './features/bagan_map/bagan_map.service';
+import { PickAPileController } from './features/pick_a_pile/pick_a_pile.controller';
+import { PickAPileService } from './features/pick_a_pile/pick_a_pile.service';
 
 @Module({
   imports: [
@@ -14,7 +16,7 @@ import { BaganMapService } from './features/bagan_map/bagan_map.service';
       rootPath: join(__dirname, '..', 'public'),
     }),
   ],
-  controllers: [AppController, BirdsController, BaganMapController],
-  providers: [AppService, BirdsService, BaganMapService],
+  controllers: [AppController, BirdsController, BaganMapController, PickAPileController],
+  providers: [AppService, BirdsService, BaganMapService, PickAPileService],
 })
 export class AppModule {}

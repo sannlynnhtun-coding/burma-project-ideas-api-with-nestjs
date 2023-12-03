@@ -1,7 +1,7 @@
 import { Controller, Get, Param } from '@nestjs/common';
 import { BirdsService } from './birds.service';
 import { Bird } from './bird';
-import { ApiQuery, ApiTags } from '@nestjs/swagger';
+import { ApiParam, ApiQuery, ApiTags } from '@nestjs/swagger';
 
 @ApiTags('birds')
 @Controller('birds')
@@ -14,7 +14,7 @@ export class BirdsController {
   }
 
   @Get('/:id')
-  @ApiQuery({ name: 'id' })
+  @ApiParam({ name: 'id' })
   getBird(@Param('id') id): Bird {
     return this.birdService.getBirds().filter(x=> x.Id == id)[0];
   }
