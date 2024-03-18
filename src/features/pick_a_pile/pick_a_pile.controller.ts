@@ -16,9 +16,9 @@ export class PickAPileController {
 
   @Get('/:id')
   @ApiParam({ name: 'id' })
-  getBird(@Param('id') id): PickAPileAnswer {
+  getBird(@Param('id') id): PickAPileAnswer[] {
     return this.pickAPileService
       .getAnswers()
-      .filter((x) => x.QuestionId == id)[0];
+      .filter((x) => x.QuestionId == id);
   }
 }
