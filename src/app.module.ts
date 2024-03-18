@@ -11,6 +11,8 @@ import {PickAPileController} from './features/pick_a_pile/pick_a_pile.controller
 import {PickAPileService} from './features/pick_a_pile/pick_a_pile.service';
 import {ArtGalleryController} from './features/art_gallery/art_gallery.controller';
 import {ArtGalleryService} from './features/art_gallery/art_gallery.service';
+import { SnakesController } from './features/snakes/snakes.controller';
+import { SnakeService } from './features/snakes/snakes.service';
 
 @Module({
     imports: [
@@ -24,6 +26,7 @@ import {ArtGalleryService} from './features/art_gallery/art_gallery.service';
         BaganMapController,
         PickAPileController,
         ArtGalleryController,
+        SnakesController,
     ],
     providers: [
         AppService,
@@ -31,6 +34,7 @@ import {ArtGalleryService} from './features/art_gallery/art_gallery.service';
         BaganMapService,
         PickAPileService,
         ArtGalleryService,
+        SnakeService,
     ],
 })
 export class AppModule {
