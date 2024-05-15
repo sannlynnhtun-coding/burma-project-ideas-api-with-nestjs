@@ -1,18 +1,19 @@
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
-
+import { ApiTags } from '@nestjs/swagger';
+@ApiTags('Start')
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  // @Get()
-  // getHello(): string {
-  //   return this.appService.getHello();
-  // }
+  @Get()
+  getHello(): string {
+    return this.appService.getHello();
+  }
 
   // @Get('users')
-  // getUsers(): string[] { // Change return type to string[](stirng Array) 
+  // getUsers(): string[] { // Change return type to string[](stirng Array)
   //    // Change the service method name to getUsers
-  //    return this.appService.getUsers(); 
+  //    return this.appService.getUsers();
   // }
 }

@@ -4,7 +4,7 @@ npm i -g vercel
 
 vercel login
 
-email==>>
+choose email and input email 
 
 vercel --prod
 
@@ -26,5 +26,5 @@ nest g co [controller name]
 ```
 
 ```
-npm run dev
+npm run start:dev --watch
 ```
