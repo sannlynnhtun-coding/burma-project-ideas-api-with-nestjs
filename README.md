@@ -1,7 +1,3 @@
-Here’s a refined version of the `README.md` content, written more smoothly:
-
----
-
 # Burma Project Ideas API with Nest.js
 
 ## Installation and Setup
@@ -72,7 +68,3 @@ This command ensures that your server restarts automatically whenever changes ar
 ## Acknowledgements
 
 Special thanks to the [Stack Overflow community](https://stackoverflow.com/questions/72863930/why-am-i-suddenly-getting-ng-file-c-users-d-appdata-roaming-npm-ng-ps1-canno) for providing solutions to common PowerShell execution policy issues.
-
----
-
-This version of the `README.md` flows more naturally and is easier to follow, while still conveying all the necessary information.
