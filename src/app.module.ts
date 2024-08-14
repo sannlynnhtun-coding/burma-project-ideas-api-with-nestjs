@@ -15,11 +15,14 @@ import { SnakesController } from './features/snakes/snakes.controller';
 import { SnakeService } from './features/snakes/snakes.service';
 import { LatHtaukBayDinController } from './features/lat_htauk_bay_din/lat_htauk_bay_din.controller';
 import { LatHtaukBayDinService } from './features/lat_htauk_bay_din/lat_htauk_bay_din.service';
+import { DreamDictionaryController } from './features/dream_dictionary/dream_dictionary.controller';
+import { DreamDictionaryService } from './features/dream_dictionary/dream_dictionary.service';
 
 @Module({
   imports: [
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'public'),
+      exclude: ['/api*'], // Exclude paths that start with '/api' from being served as static files
     }),
   ],
   controllers: [
@@ -30,6 +33,7 @@ import { LatHtaukBayDinService } from './features/lat_htauk_bay_din/lat_htauk_ba
     ArtGalleryController,
     SnakesController,
     LatHtaukBayDinController,
+    DreamDictionaryController,
   ],
   providers: [
     AppService,
@@ -39,6 +43,7 @@ import { LatHtaukBayDinService } from './features/lat_htauk_bay_din/lat_htauk_ba
     ArtGalleryService,
     SnakeService,
     LatHtaukBayDinService,
+    DreamDictionaryService,
   ],
 })
 export class AppModule {}
