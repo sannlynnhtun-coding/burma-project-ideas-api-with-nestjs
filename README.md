@@ -74,7 +74,7 @@ Special thanks to the [Stack Overflow community](https://stackoverflow.com/quest
 This document outlines a list of projects, indicating which have been completed and which are still in progress.
 
 - [x] Min Thein Kha - Lat Htauk Bay Din
-- [ ] Dream Dictionary
+- [x] Dream Dictionary
 - [ ] Movie Ticket Online Booking System
 - [x] Pick A Pile
 - [ ] Myanmar Proverbs
