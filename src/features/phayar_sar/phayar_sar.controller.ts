@@ -1,30 +1,20 @@
-import { Controller } from '@nestjs/common';
+import {Controller, Get, Param, ParseIntPipe} from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
+import { DreamDictionaryService } from '../dream_dictionary/dream_dictionary.service';
+import { PhayarSarService } from './phayar_sar.service';
 
+@ApiTags('phayar-sar')
 @Controller('phayar-sar')
-export class PhayarSarController {}
+export class PhayarSarController {
+  constructor(private readonly phayarSarService: PhayarSarService) {}
 
-// group-detail.ts
-export class GroupDetail {
-    id: number;
-    groupId: number;
-    title: string;
+  @Get()
+  getTitles() {
+    return this.phayarSarService.getTitles();
+  }
 
-    constructor(id: number, groupId: number, title: string) {
-        this.id = id;
-        this.groupId = groupId;
-        this.title = title;
-    }
-}
-
-// group.ts
-export class Group {
-    groupId: number;
-    title: string;
-    data: GroupDetail[];
-
-    constructor(groupId: number, title: string, data: GroupDetail[]) {
-        this.groupId = groupId;
-        this.title = title;
-        this.data = data;
-    }
+  @Get(':id')
+  getDetails(@Param('groupId', ParseIntPipe) groupId: number, @Param('detailId', ParseIntPipe) detailId: number) {
+    return this.phayarSarService.getDetails(groupId, detailId);
+  }
 }
