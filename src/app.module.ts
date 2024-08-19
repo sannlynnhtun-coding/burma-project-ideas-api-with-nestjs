@@ -17,6 +17,8 @@ import { LatHtaukBayDinController } from './features/lat_htauk_bay_din/lat_htauk
 import { LatHtaukBayDinService } from './features/lat_htauk_bay_din/lat_htauk_bay_din.service';
 import { DreamDictionaryController } from './features/dream_dictionary/dream_dictionary.controller';
 import { DreamDictionaryService } from './features/dream_dictionary/dream_dictionary.service';
+import { PhayarSarService } from './features/phayar_sar/phayar_sar.service';
+import { PhayarSarController } from './features/phayar_sar/phayar_sar.controller';
 
 @Module({
   imports: [
@@ -34,6 +36,7 @@ import { DreamDictionaryService } from './features/dream_dictionary/dream_dictio
     SnakesController,
     LatHtaukBayDinController,
     DreamDictionaryController,
+    PhayarSarController
   ],
   providers: [
     AppService,
@@ -44,6 +47,7 @@ import { DreamDictionaryService } from './features/dream_dictionary/dream_dictio
     SnakeService,
     LatHtaukBayDinService,
     DreamDictionaryService,
+    PhayarSarService
   ],
 })
 export class AppModule {}
