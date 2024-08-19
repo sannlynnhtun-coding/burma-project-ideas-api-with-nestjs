@@ -9,11 +9,11 @@ export class DreamDictionaryController {
 
   @Get()
   getBlogHeaders() {
-    return this.dreamDictionaryService.getBlogHeaders();
+    return this.dreamDictionaryService.getGroupHeaders();
   }
 
   @Get(':id')
   getBlogDetails(@Param('id', ParseIntPipe) id: number) {
-    return this.dreamDictionaryService.getBlogDetails(id);
+    return this.dreamDictionaryService.getGroupDetails(id);
   }
 }
