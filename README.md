@@ -77,7 +77,7 @@ This document outlines a list of projects, indicating which have been completed 
 - [x] Dream Dictionary
 - [ ] Movie Ticket Online Booking System
 - [x] Pick A Pile
-- [ ] Myanmar Proverbs
+- [x] Myanmar Proverbs
 - [ ] Zodiac
 - [ ] Bagan Map
 - [x] Birds
