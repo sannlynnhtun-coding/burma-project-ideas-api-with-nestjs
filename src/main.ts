@@ -5,7 +5,9 @@ import { get } from 'http';
 import { createWriteStream } from 'fs';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, {
+    logger: false, // Disable logging 
+  });
 
   const config = new DocumentBuilder()
     .setTitle('Burma Project Ideas')
