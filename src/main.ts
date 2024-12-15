@@ -3,6 +3,7 @@ import { AppModule } from './app.module';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { get } from 'http';
 import { createWriteStream } from 'fs';
+import { CorsMiddleware } from './cores.middleware';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
@@ -17,7 +18,8 @@ async function bootstrap() {
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('', app, document);
-
+  
+  app.use(CorsMiddleware);
   await app.listen(3000);
 }
 bootstrap();
