@@ -20,12 +20,12 @@ async function bootstrap() {
   SwaggerModule.setup('', app, document);
   
   // app.use(CorsMiddleware);
-  app.enableCors({
-    origin: '*', // Allow all origins
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    preflightContinue: false,
-    optionsSuccessStatus: 204,
-  });
+  // app.enableCors({
+  //   origin: '*', // Allow all origins
+  //   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  //   preflightContinue: false,
+  //   optionsSuccessStatus: 204,
+  // });
   
   await app.listen(3000);
 }
