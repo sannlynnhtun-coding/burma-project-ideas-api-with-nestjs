@@ -3,30 +3,21 @@ import { AppModule } from './app.module';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { get } from 'http';
 import { createWriteStream } from 'fs';
-import { CorsMiddleware } from './cores.middleware';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule, {
-    logger: false, // Disable logging 
-  });
+  const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
     .setTitle('Burma Project Ideas')
     .setDescription('')
     .setVersion('1.0')
+    .addTag('burma-project-idea')
     // .addTag('burma-project-idea')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('', app, document);
-  
-  // app.use(CorsMiddleware);
-  // app.enableCors({
-  //   origin: '*', // Allow all origins
-  //   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  //   preflightContinue: false,
-  //   optionsSuccessStatus: 204,
-  // });
-    
+
   await app.listen(3000);
 }
 bootstrap();
+
