@@ -79,7 +79,7 @@ This document outlines a list of projects, indicating which have been completed 
 - [x] Pick A Pile
 - [x] Myanmar Proverbs
 - [ ] Zodiac
-- [ ] Bagan Map
+- [x] Bagan Map
 - [x] Birds
 - [ ] Myanmar Months
 - [x] Snakes
@@ -90,4 +90,4 @@ This document outlines a list of projects, indicating which have been completed 
 - [ ] Burmese Recipes
 - [ ] Burmese Agriculture
 - [ ] Banking Management System
-- [ ] PhayarSar
+- [x] PhayarSar
