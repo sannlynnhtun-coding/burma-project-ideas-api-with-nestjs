@@ -1,0 +1,10 @@
+---
+deployment:
+  tasks:
+    - export NVM_DIR="$HOME/.nvm"
+    - [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    - nvm install 16 # Use Node.js version 16 (or the version your project requires)
+    - nvm use 16
+    - npm install
+    - npm run build
+    - cp -r dist/* $HOME/public_html/ # Copy the built files to the public_html directory
