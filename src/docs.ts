@@ -1,22 +1,7 @@
 import { INestApplication } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-import type { apiReference } from '@scalar/nestjs-api-reference';
-import type { NextFunction, Request, Response } from 'express';
+import type { Request, Response } from 'express';
 import { join } from 'path';
-
-type ScalarModule = {
-  apiReference: typeof apiReference;
-};
-
-type ScalarMiddleware = (req: Request, res: Response) => void;
-
-const importEsm = new Function('specifier', 'return import(specifier)') as <
-  TModule,
->(
-  specifier: string,
-) => Promise<TModule>;
-
-let scalarMiddlewarePromise: Promise<ScalarMiddleware> | undefined;
 
 export function setupApiDocumentation(app: INestApplication): void {
   const config = new DocumentBuilder()
@@ -36,34 +21,31 @@ export function setupApiDocumentation(app: INestApplication): void {
 
   app.use(
     '/scalar',
-    async (req: Request, res: Response, next: NextFunction) => {
-      try {
-        if (!scalarMiddlewarePromise) {
-          scalarMiddlewarePromise = importEsm<ScalarModule>(
-            '@scalar/nestjs-api-reference',
-          ).then(
-            ({ apiReference }) =>
-              apiReference({
-                spec: {
-                  content: document,
-                },
-              }) as ScalarMiddleware,
-          );
-        }
-
-        const scalarMiddleware = await scalarMiddlewarePromise;
-        scalarMiddleware(req, res);
-      } catch (error) {
-        scalarMiddlewarePromise = undefined;
-        console.error('Scalar API Reference failed to load', error);
-
-        if (!res.headersSent) {
-          res.redirect(302, '/swagger');
-          return;
-        }
-
-        next(error);
-      }
+    (_req: Request, res: Response) => {
+      res.type('html').send(renderScalarReferenceHtml());
     },
   );
+}
+
+function renderScalarReferenceHtml(): string {
+  const scalarConfig = JSON.stringify({
+    pageTitle: 'Burma Project Ideas API Reference',
+    url: '/swagger-json',
+  });
+
+  return `<!doctype html>
+<html lang="en">
+  <head>
+    <title>Scalar API Reference | Burma Project Ideas</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference"></script>
+    <script>
+      Scalar.createApiReference('#app', ${scalarConfig})
+    </script>
+  </body>
+</html>`;
 }

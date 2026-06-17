@@ -52,5 +52,13 @@ describe('AppController (e2e)', () => {
       .get('/swagger/swagger-ui-bundle.js')
       .expect(200)
       .expect('Content-Type', /javascript/);
+
+    await request(app.getHttpServer())
+      .get('/scalar')
+      .expect(200)
+      .expect('Content-Type', /html/)
+      .expect((res) => {
+        expect(res.text).toContain('Scalar API Reference');
+      });
   });
 });

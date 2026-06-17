@@ -28,7 +28,6 @@
     "@nestjs/platform-express": "^11.1.27",
     "@nestjs/serve-static": "^5.0.5",
     "@nestjs/swagger": "^11.4.4",
-    "@scalar/nestjs-api-reference": "^1.2.3",
     "express": "^5.2.1",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.2",
