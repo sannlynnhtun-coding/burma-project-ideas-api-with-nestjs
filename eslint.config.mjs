@@ -7,7 +7,7 @@ export default [
     ignores: ['coverage/**', 'dist/**', 'node_modules/**'],
   },
   {
-    files: ['src/**/*.ts', 'test/**/*.ts'],
+    files: ['src/**/*.ts', 'test/**/*.ts', 'api/**/*.ts'],
     languageOptions: {
       parser: tsParser,
       parserOptions: {

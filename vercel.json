@@ -1,15 +1,60 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "dist/main.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "dist/main.js"
-      }
-    ]
-  }
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "framework": null,
+  "buildCommand": "npm run build",
+  "functions": {
+    "api/index.ts": {
+      "includeFiles": "public/**"
+    }
+  },
+  "routes": [
+    { "src": "/swagger/?", "dest": "/api/index" },
+    { "src": "/swagger/(.*)", "dest": "/api/index" },
+    { "src": "/scalar/?", "dest": "/api/index" },
+    { "src": "/scalar/(.*)", "dest": "/api/index" },
+    { "src": "/birds/?", "dest": "/api/index" },
+    { "src": "/birds/([0-9]+)/?", "dest": "/api/index" },
+    { "src": "/snakes/?", "dest": "/api/index" },
+    { "src": "/snakes/([0-9]+)/?", "dest": "/api/index" },
+    { "src": "/bagan-map/?", "dest": "/api/index" },
+    { "src": "/bagan-map/([0-9]+)/?", "dest": "/api/index" },
+    { "src": "/bagan-map/detail/([0-9]+)/?", "dest": "/api/index" },
+    { "src": "/pick-a-pile/?", "dest": "/api/index" },
+    { "src": "/pick-a-pile/([0-9]+)/?", "dest": "/api/index" },
+    { "src": "/art-gallery/?", "dest": "/api/index" },
+    { "src": "/art-gallery/([0-9]+)/?", "dest": "/api/index" },
+    { "src": "/lat-htauk-bay-din/Question/?", "dest": "/api/index" },
+    { "src": "/lat-htauk-bay-din/NumberList/?", "dest": "/api/index" },
+    {
+      "src": "/lat-htauk-bay-din/Answer/([0-9]+)/([0-9]+)/?",
+      "dest": "/api/index"
+    },
+    { "src": "/dream-dictionary/?", "dest": "/api/index" },
+    { "src": "/dream-dictionary/([0-9]+)/?", "dest": "/api/index" },
+    { "src": "/phayar-sar/?", "dest": "/api/index" },
+    { "src": "/phayar-sar/([0-9]+)/([0-9]+)/?", "dest": "/api/index" },
+    { "src": "/burmese-agriculture/?", "dest": "/api/index" },
+    { "src": "/burmese-agriculture/([0-9]+)/?", "dest": "/api/index" },
+    { "src": "/burmese-recipes/?", "dest": "/api/index" },
+    { "src": "/burmese-recipes/([0-9]+)/?", "dest": "/api/index" },
+    { "src": "/incompatible-food/?", "dest": "/api/index" },
+    { "src": "/incompatible-food/([0-9]+)/?", "dest": "/api/index" },
+    { "src": "/myanmar-months/?", "dest": "/api/index" },
+    { "src": "/myanmar-months/([0-9]+)/?", "dest": "/api/index" },
+    { "src": "/myanmar-proverbs/?", "dest": "/api/index" },
+    { "src": "/myanmar-proverbs/([0-9]+)/?", "dest": "/api/index" },
+    { "src": "/quotlets/?", "dest": "/api/index" },
+    { "src": "/quotlets/([0-9]+)/?", "dest": "/api/index" },
+    { "src": "/zodiac/?", "dest": "/api/index" },
+    { "src": "/zodiac/([0-9]+)/?", "dest": "/api/index" },
+    { "src": "/missing-historical-records/?", "dest": "/api/index" },
+    { "src": "/missing-historical-records/([0-9]+)/?", "dest": "/api/index" },
+    {
+      "src": "/missing-historical-records/([0-9]+)/pages/?",
+      "dest": "/api/index"
+    },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/api/index" }
+  ]
+}

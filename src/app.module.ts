@@ -39,8 +39,8 @@ import { MissingHistoricalRecordsService } from './features/missing-historical-r
 @Module({
   imports: [
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'public'),
-      exclude: ['/api*'], // Exclude paths that start with '/api' from being served as static files
+      rootPath: join(process.cwd(), 'public'),
+      exclude: ['/api*'],
     }),
   ],
   controllers: [
@@ -60,7 +60,7 @@ import { MissingHistoricalRecordsService } from './features/missing-historical-r
     MyanmarProverbController,
     QuotletController,
     ZodiacSignController,
-    MissingHistoricalRecordsController
+    MissingHistoricalRecordsController,
   ],
   providers: [
     AppService,
@@ -79,7 +79,7 @@ import { MissingHistoricalRecordsService } from './features/missing-historical-r
     MyanmarProverbService,
     QuotletService,
     ZodiacSignService,
-    MissingHistoricalRecordsService
+    MissingHistoricalRecordsService,
   ],
 })
 export class AppModule {}

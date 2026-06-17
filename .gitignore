@@ -2,6 +2,9 @@
 /dist
 /node_modules
 *.tsbuildinfo
+api/**/*.d.ts
+api/**/*.js
+api/**/*.js.map
 
 # Logs
 logs

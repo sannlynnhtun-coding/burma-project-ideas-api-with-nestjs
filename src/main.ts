@@ -1,30 +1,10 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
-import { apiReference } from '@scalar/nestjs-api-reference';
+import { setupApiDocumentation } from './docs';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-
-  const config = new DocumentBuilder()
-    .setTitle('Burma Project Ideas')
-    .setDescription('A collection of Myanmar cultural and educational data APIs')
-    .setVersion('1.0')
-    .addTag('burma-project-idea')
-    .build();
-  const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('swagger', app, document);
-
-  app.use(
-    '/scalar',
-    apiReference({
-      spec: {
-        content: document,
-      },
-    }),
-  );
-
+  setupApiDocumentation(app);
   await app.listen(3000);
 }
 bootstrap();
-
