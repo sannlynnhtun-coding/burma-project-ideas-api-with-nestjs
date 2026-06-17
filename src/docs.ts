@@ -15,6 +15,8 @@ const importEsm = new Function('specifier', 'return import(specifier)') as <
   specifier: string,
 ) => Promise<TModule>;
 
+let scalarMiddlewarePromise: Promise<ScalarMiddleware> | undefined;
+
 export function setupApiDocumentation(app: INestApplication): void {
   const config = new DocumentBuilder()
     .setTitle('Burma Project Ideas')
@@ -28,24 +30,34 @@ export function setupApiDocumentation(app: INestApplication): void {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('swagger', app, document);
 
-  const scalarMiddlewarePromise = importEsm<ScalarModule>(
-    '@scalar/nestjs-api-reference',
-  ).then(
-    ({ apiReference }) =>
-      apiReference({
-        spec: {
-          content: document,
-        },
-      }) as ScalarMiddleware,
-  );
-
   app.use(
     '/scalar',
     async (req: Request, res: Response, next: NextFunction) => {
       try {
+        if (!scalarMiddlewarePromise) {
+          scalarMiddlewarePromise = importEsm<ScalarModule>(
+            '@scalar/nestjs-api-reference',
+          ).then(
+            ({ apiReference }) =>
+              apiReference({
+                spec: {
+                  content: document,
+                },
+              }) as ScalarMiddleware,
+          );
+        }
+
         const scalarMiddleware = await scalarMiddlewarePromise;
         scalarMiddleware(req, res);
       } catch (error) {
+        scalarMiddlewarePromise = undefined;
+        console.error('Scalar API Reference failed to load', error);
+
+        if (!res.headersSent) {
+          res.redirect(302, '/swagger');
+          return;
+        }
+
         next(error);
       }
     },
