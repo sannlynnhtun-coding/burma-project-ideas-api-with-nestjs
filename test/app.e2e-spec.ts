@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
-import * as request from 'supertest';
+import request from 'supertest';
 import { AppModule } from './../src/app.module';
 
 describe('AppController (e2e)', () => {
@@ -15,13 +15,14 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
-  it('/ (GET) should return the landing page HTML', () => {
+  it('/missing-historical-records (GET) should return records', () => {
     return request(app.getHttpServer())
-      .get('/')
+      .get('/missing-historical-records')
       .expect(200)
-      .expect('Content-Type', /html/)
+      .expect('Content-Type', /json/)
       .expect((res) => {
-        expect(res.text).toContain('Burma Project Ideas');
+        expect(res.body).toHaveLength(43);
+        expect(res.body[0]).toHaveProperty('BookId', 1);
       });
   });
 });

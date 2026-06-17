@@ -1,7 +1,7 @@
 import { Controller, Get, Param } from '@nestjs/common';
 import { BirdsService } from './birds.service';
 import { Bird } from './bird';
-import { ApiParam, ApiQuery, ApiTags } from '@nestjs/swagger';
+import { ApiParam, ApiTags } from '@nestjs/swagger';
 
 @ApiTags('birds')
 @Controller('birds')

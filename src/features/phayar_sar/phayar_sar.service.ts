@@ -7,14 +7,14 @@ import { PhayarSarDetail } from './phayar_sar_detail';
 @Injectable()
 export class PhayarSarService {
     private data: any[];
+    private readonly dataRoot = path.resolve(__dirname, '..', '..', '..', 'public', 'phayar-sar');
 
     constructor() {
         this.loadData();
     }
 
     private loadData() {
-        const projectRoot = path.join(__dirname, '..', '..');
-        const filePath = path.join(projectRoot.replace("\dist", ''), 'public', 'phayar-sar', 'data.json');
+        const filePath = path.join(this.dataRoot, 'data.json');
         const jsonData = fs.readFileSync(filePath, 'utf8');
         this.data = JSON.parse(jsonData.trim());
         // console.log(this.data);
@@ -32,9 +32,7 @@ export class PhayarSarService {
                 throw new NotFoundException(`Group with ID ${groupId} not found`);
             }
 
-            const projectRoot = path.join(__dirname, '..', '..');
-            const filePath = path.join(projectRoot.replace("\dist", ''), 'public', 'phayar-sar',
-                groupId.toString(), detailId.toString() + '.json');
+            const filePath = path.join(this.dataRoot, groupId.toString(), detailId.toString() + '.json');
             const jsonData = fs.readFileSync(filePath, 'utf8');
             const detail = JSON.parse(jsonData.trim());
 

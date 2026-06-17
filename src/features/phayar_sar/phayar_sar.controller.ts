@@ -1,6 +1,5 @@
 import { Controller, Get, Param, ParseIntPipe } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
-import { DreamDictionaryService } from '../dream_dictionary/dream_dictionary.service';
 import { PhayarSarService } from './phayar_sar.service';
 
 @ApiTags('phayar-sar')

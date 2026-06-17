@@ -1,11 +1,6 @@
 import {Controller, Get, Param} from '@nestjs/common';
-import {BaganMapService} from "../bagan_map/bagan_map.service";
 import {ApiParam, ApiTags} from "@nestjs/swagger";
-import {TravelRoute} from "../bagan_map/travel_route";
-import {BaganMapInfoDetail} from "../bagan_map/bagan_map_info_detail";
 import {ArtGalleryService} from "./art_gallery.service";
-import {ArtDto} from "./art_dto";
-import {SocialDto} from "./social_dto";
 
 @ApiTags('art-gallery')
 @Controller('art-gallery')

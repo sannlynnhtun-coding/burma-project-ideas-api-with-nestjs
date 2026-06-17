@@ -2,7 +2,7 @@ import { Controller, Get, Param } from '@nestjs/common';
 import { BaganMapService } from './bagan_map.service';
 import { TravelRoute } from './travel_route';
 import { BaganMapInfoDetail } from './bagan_map_info_detail';
-import { ApiParam, ApiQuery, ApiTags } from '@nestjs/swagger';
+import { ApiParam, ApiTags } from '@nestjs/swagger';
 
 @ApiTags('bagan-map')
 @Controller('bagan-map')
