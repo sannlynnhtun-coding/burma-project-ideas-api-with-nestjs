@@ -71,23 +71,28 @@ Special thanks to the [Stack Overflow community](https://stackoverflow.com/quest
 
 # Projects
 
-This document outlines a list of projects, indicating which have been completed and which are still in progress.
+This document outlines the project status. Finished API features are checked against the controllers registered in `src/app.module.ts`.
 
-- [x] Min Thein Kha - Lat Htauk Bay Din
-- [x] Dream Dictionary
-- [ ] Movie Ticket Online Booking System
-- [x] Pick A Pile
-- [x] Myanmar Proverbs
-- [ ] Zodiac
+## Finished API Features
+
+- [x] Art Gallery
 - [x] Bagan Map
 - [x] Birds
-- [ ] Myanmar Months
+- [x] Burmese Agriculture
+- [x] Burmese Recipes
+- [x] Dream Dictionary
+- [x] Incompatible Food
+- [x] Min Thein Kha - Lat Htauk Bay Din
+- [x] Missing Historical Records
+- [x] Myanmar Months
+- [x] Myanmar Proverbs
+- [x] Phayar Sar
+- [x] Pick A Pile
+- [x] Quotlets
 - [x] Snakes
-- [x] Art Gallery
-- [ ] Incompatible Food
-- [ ] Missing Historical Records
-- [ ] Quotlets
-- [ ] Burmese Recipes
-- [ ] Burmese Agriculture
+- [x] Zodiac
+
+## Not Finished / Separate Projects
+
 - [ ] Banking Management System
-- [x] PhayarSar
+- [ ] Movie Ticket Online Booking System

@@ -14,13 +14,13 @@ export class DreamDictionaryService {
   }
 
   private loadDreamData() {
-    const projectRoot = path.join(__dirname, '..', '..');
+    const dataRoot = path.resolve(__dirname, '..', '..', '..', 'public', 'dream-dictionary');
 
-    const filePathGroup = path.join(projectRoot.replace("\dist", ''), 'public', 'dream-dictionary', 'group.json');
+    const filePathGroup = path.join(dataRoot, 'group.json');
     const jsonDataGroup = fs.readFileSync(filePathGroup, 'utf8');
     this.dreamDataGroup = JSON.parse(jsonDataGroup);
 
-    const filePathDetail = path.join(projectRoot.replace("\dist", ''), 'public', 'dream-dictionary', 'detail.json');
+    const filePathDetail = path.join(dataRoot, 'detail.json');
     const jsonDataDetail = fs.readFileSync(filePathDetail, 'utf8');
     this.dreamDataDetail = JSON.parse(jsonDataDetail);
   }

@@ -33,6 +33,8 @@ import { QuotletController } from './features/quotlets/quotlets.controller';
 import { QuotletService } from './features/quotlets/quotlets.service';
 import { ZodiacSignController } from './features/zodiac/zodiac.controller';
 import { ZodiacSignService } from './features/zodiac/zodiac.service';
+import { MissingHistoricalRecordsController } from './features/missing-historical-records/missing-historical-records.controller';
+import { MissingHistoricalRecordsService } from './features/missing-historical-records/missing-historical-records.service';
 
 @Module({
   imports: [
@@ -57,7 +59,8 @@ import { ZodiacSignService } from './features/zodiac/zodiac.service';
     MyanmarMonthController,
     MyanmarProverbController,
     QuotletController,
-    ZodiacSignController
+    ZodiacSignController,
+    MissingHistoricalRecordsController
   ],
   providers: [
     AppService,
@@ -75,7 +78,8 @@ import { ZodiacSignService } from './features/zodiac/zodiac.service';
     MyanmarMonthService,
     MyanmarProverbService,
     QuotletService,
-    ZodiacSignService
+    ZodiacSignService,
+    MissingHistoricalRecordsService
   ],
 })
 export class AppModule {}
