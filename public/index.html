@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>Burma Project Ideas API</title>
+  <style>
+    :root {
+      --bg: #f6f8f8;
+      --bg-soft: #edf5f3;
+      --surface: #ffffff;
+      --surface-muted: #f0f5f4;
+      --ink: #102526;
+      --text: #203436;
+      --muted: #5c6b6d;
+      --line: #d8e3e1;
+      --line-strong: #bccbc8;
+      --primary: #0f766e;
+      --primary-strong: #0b4f49;
+      --primary-soft: #dff2ef;
+      --accent: #b7791f;
+      --accent-soft: #fff4dc;
+      --blue: #315f96;
+      --green: #1f8a70;
+      --shadow: 0 18px 50px rgba(16, 37, 38, 0.09);
+      --radius: 8px;
+      --container: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    svg {
+      display: block;
+      flex: 0 0 auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: 12px;
+      z-index: 20;
+      transform: translateY(-140%);
+      background: var(--ink);
+      color: #ffffff;
+      padding: 10px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(216, 227, 225, 0.9);
+      background: rgba(246, 248, 248, 0.94);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      max-width: var(--container);
+      margin: 0 auto;
+      min-height: 72px;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 48px;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius);
+      background: var(--primary-strong);
+      color: #ffffff;
+      box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.14);
+    }
+
+    .brand-mark svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+
+    .brand-text span:last-child {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav-links a,
+    .footer-links a {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      border-radius: 6px;
+      padding: 10px 12px;
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 700;
+      transition: color 180ms ease, background 180ms ease;
+    }
+
+    .nav-links a:hover,
+    .footer-links a:hover {
+      background: var(--surface-muted);
+      color: var(--ink);
+    }
+
+    .nav-cta {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid var(--primary-strong);
+      border-radius: var(--radius);
+      background: var(--primary-strong);
+      color: #ffffff;
+      padding: 10px 16px;
+      text-decoration: none;
+      font-weight: 800;
+      transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+    }
+
+    .nav-cta:hover {
+      background: var(--primary);
+      box-shadow: 0 10px 24px rgba(15, 118, 110, 0.22);
+      transform: translateY(-1px);
+    }
+
+    .nav-cta svg,
+    .button svg,
+    .text-link svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .hero-band {
+      border-bottom: 1px solid var(--line);
+      background: var(--bg-soft);
+    }
+
+    .hero {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 72px 24px 44px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 460px;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .status-line {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      color: var(--primary-strong);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .status-line svg {
+      width: 18px;
+      height: 18px;
+      color: var(--green);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      max-width: 720px;
+      color: var(--ink);
+      font-size: 56px;
+      line-height: 1.05;
+      font-weight: 850;
+    }
+
+    .hero-copy > p {
+      max-width: 680px;
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 19px;
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      margin-top: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: var(--radius);
+      padding: 12px 18px;
+      text-decoration: none;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, border-color 180ms ease;
+    }
+
+    .button-primary {
+      background: var(--primary-strong);
+      color: #ffffff;
+    }
+
+    .button-primary:hover {
+      background: var(--primary);
+      box-shadow: 0 12px 28px rgba(15, 118, 110, 0.24);
+      transform: translateY(-1px);
+    }
+
+    .button-secondary {
+      background: var(--surface);
+      color: var(--primary-strong);
+      border-color: var(--line-strong);
+    }
+
+    .button-secondary:hover {
+      border-color: var(--primary);
+      box-shadow: 0 10px 22px rgba(16, 37, 38, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .hero-facts {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .fact {
+      border-left: 3px solid var(--primary);
+      padding-left: 14px;
+    }
+
+    .fact strong {
+      display: block;
+      color: var(--ink);
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    .fact span {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .console-panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .console-topbar {
+      min-height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      background: #fbfdfc;
+    }
+
+    .console-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+      font-weight: 850;
+    }
+
+    .console-title svg {
+      width: 20px;
+      height: 20px;
+      color: var(--primary);
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      min-height: 32px;
+      padding: 6px 10px;
+      border: 1px solid #c8e5d9;
+      border-radius: 6px;
+      background: #edf8f3;
+      color: #16634e;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .status-badge::before {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      content: "";
+    }
+
+    .console-body {
+      padding: 18px;
+    }
+
+    .endpoint-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .endpoint-row {
+      display: grid;
+      grid-template-columns: 56px minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 12px;
+      min-height: 52px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #ffffff;
+    }
+
+    .method {
+      color: var(--primary-strong);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .path {
+      color: var(--ink);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 14px;
+      word-break: break-word;
+    }
+
+    .endpoint-icon {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 6px;
+      background: var(--primary-soft);
+      color: var(--primary-strong);
+    }
+
+    .endpoint-icon svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .payload {
+      margin-top: 16px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #102526;
+      color: #d9f3ee;
+      overflow: hidden;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 13px;
+    }
+
+    .payload-header {
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+      color: #a9cec7;
+    }
+
+    .payload pre {
+      margin: 0;
+      padding: 14px 12px 16px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+    }
+
+    .section {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 72px 24px;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    .section-kicker {
+      color: var(--primary-strong);
+      font-size: 14px;
+      font-weight: 850;
+    }
+
+    h2 {
+      margin-top: 8px;
+      color: var(--ink);
+      font-size: 34px;
+      line-height: 1.18;
+      font-weight: 850;
+    }
+
+    .section-head p {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .docs-band {
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .docs-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .doc-card,
+    .catalog-card,
+    .capability {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+
+    .doc-card {
+      display: grid;
+      grid-template-columns: 48px minmax(0, 1fr) 28px;
+      align-items: center;
+      gap: 16px;
+      min-height: 136px;
+      padding: 22px;
+      text-decoration: none;
+    }
+
+    .doc-card:hover,
+    .catalog-card:hover,
+    .capability:hover {
+      border-color: var(--line-strong);
+      box-shadow: 0 14px 34px rgba(16, 37, 38, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .doc-icon,
+    .catalog-icon,
+    .capability-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius);
+      background: var(--primary-soft);
+      color: var(--primary-strong);
+    }
+
+    .doc-card:nth-child(2) .doc-icon {
+      background: #edf0fb;
+      color: var(--blue);
+    }
+
+    .doc-icon svg,
+    .catalog-icon svg,
+    .capability-icon svg {
+      width: 25px;
+      height: 25px;
+    }
+
+    .doc-card h3,
+    .catalog-card h3,
+    .capability h3 {
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.25;
+      font-weight: 850;
+    }
+
+    .doc-card p,
+    .catalog-card p,
+    .capability p {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .doc-card > svg {
+      width: 22px;
+      height: 22px;
+      color: var(--primary);
+    }
+
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .catalog-card {
+      min-height: 158px;
+      padding: 18px;
+    }
+
+    .catalog-card header {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .catalog-icon {
+      width: 42px;
+      height: 42px;
+      color: var(--primary);
+      background: #ecf7f5;
+    }
+
+    .route {
+      display: inline-flex;
+      margin-top: 16px;
+      border-radius: 6px;
+      background: var(--surface-muted);
+      color: var(--primary-strong);
+      padding: 6px 9px;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 13px;
+      font-weight: 800;
+      word-break: break-word;
+    }
+
+    .capability-band {
+      background: #eef4f2;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .capability-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .capability {
+      padding: 18px;
+      background: #ffffff;
+    }
+
+    .capability-icon {
+      margin-bottom: 16px;
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .footer {
+      background: #102526;
+      color: #d8e3e1;
+    }
+
+    .footer-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 32px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 850;
+    }
+
+    .footer .brand-mark {
+      background: #ffffff;
+      color: var(--primary-strong);
+      box-shadow: none;
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #d8e3e1;
+    }
+
+    .footer-links a:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 980px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .console-panel {
+        max-width: 620px;
+      }
+
+      .catalog-grid,
+      .capability-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        min-height: auto;
+        padding: 14px 18px;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-cta {
+        padding: 10px 12px;
+      }
+
+      .hero,
+      .section {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .hero {
+        padding-top: 52px;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      .hero-copy > p {
+        font-size: 17px;
+      }
+
+      .hero-facts {
+        grid-template-columns: 1fr;
+      }
+
+      .docs-grid,
+      .catalog-grid,
+      .capability-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .doc-card {
+        grid-template-columns: 44px minmax(0, 1fr);
+      }
+
+      .doc-card > svg {
+        display: none;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .brand-text span:last-child {
+        display: none;
+      }
+
+      .nav {
+        gap: 12px;
+      }
+
+      .nav-cta span {
+        display: none;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .endpoint-row {
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+
+      .endpoint-icon {
+        justify-self: start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="/" aria-label="Burma Project Ideas API home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg><use href="/assets/landing-icons.svg#logo-mark"></use></svg>
+        </span>
+        <span class="brand-text">
+          <span>Burma Project Ideas API</span>
+          <span>Culture and knowledge data</span>
+        </span>
+      </a>
+
+      <div class="nav-links" aria-label="Page sections">
+        <a href="#docs">Docs</a>
+        <a href="#catalog">API Catalog</a>
+        <a href="#capabilities">Capabilities</a>
+      </div>
+
+      <a class="nav-cta" href="/swagger">
+        <svg aria-hidden="true"><use href="/assets/landing-icons.svg#icon-docs"></use></svg>
+        <span>Open Docs</span>
+      </a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero-band" aria-labelledby="hero-title">
+      <div class="hero">
+        <div class="hero-copy">
+          <div class="status-line">
+            <svg aria-hidden="true"><use href="/assets/landing-icons.svg#icon-check"></use></svg>
+            Public API portal for Myanmar datasets
+          </div>
+          <h1 id="hero-title">Structured cultural data for products, research, and learning tools.</h1>
+          <p>
+            Burma Project Ideas API brings curated Myanmar cultural, educational, travel, food, calendar, and reference datasets into one documented REST surface.
+          </p>
+
+          <div class="hero-actions" aria-label="Documentation actions">
+            <a class="button button-primary" href="/swagger">
+              <svg aria-hidden="true"><use href="/assets/landing-icons.svg#icon-docs"></use></svg>
+              Swagger API Docs
+            </a>
+            <a class="button button-secondary" href="/scalar">
+              <svg aria-hidden="true"><use href="/assets/landing-icons.svg#icon-layers"></use></svg>
+              Scalar API Docs
+            </a>
+          </div>
+
+          <div class="hero-facts" aria-label="API facts">
+            <div class="fact">
+              <strong>15</strong>
+              <span>API groups</span>
+            </div>
+            <div class="fact">
+              <strong>2</strong>
+              <span>Docs explorers</span>
+            </div>
+            <div class="fact">
+              <strong>REST</strong>
+              <span>Simple routes</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="console-panel" aria-label="API preview">
+          <div class="console-topbar">
+            <div class="console-title">
+              <svg aria-hidden="true"><use href="/assets/landing-icons.svg#icon-api"></use></svg>
+              Live route map
+            </div>
+            <span class="status-badge">Available</span>
+          </div>
+
+          <div class="console-body">
+            <div class="endpoint-list">
+              <div class="endpoint-row">
+                <span class="method">GET</span>
+                <span class="path">/birds</span>
+                <span class="endpoint-icon" aria-hidden="true">
+                  <svg><use href="/assets/landing-icons.svg#icon-bird"></use></svg>
+                </span>
+              </div>
+              <div class="endpoint-row">
+                <span class="method">GET</span>
+                <span class="path">/bagan-map</span>
+                <span class="endpoint-icon" aria-hidden="true">
+                  <svg><use href="/assets/landing-icons.svg#icon-map"></use></svg>
+                </span>
+              </div>
+              <div class="endpoint-row">
+                <span class="method">GET</span>
+                <span class="path">/art-gallery</span>
+                <span class="endpoint-icon" aria-hidden="true">
+                  <svg><use href="/assets/landing-icons.svg#icon-art"></use></svg>
+                </span>
+              </div>
+              <div class="endpoint-row">
+                <span class="method">GET</span>
+                <span class="path">/phayar-sar</span>
+                <span class="endpoint-icon" aria-hidden="true">
+                  <svg><use href="/assets/landing-icons.svg#icon-book"></use></svg>
+                </span>
+              </div>
+            </div>
+
+            <div class="payload" aria-label="Example response">
+              <div class="payload-header">application/json</div>
+              <pre>{
+  "name": "Burma Project Ideas",
+  "docs": ["/swagger", "/scalar"],
+  "datasets": 15
+}</pre>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="docs-band" id="docs" aria-labelledby="docs-title">
+      <div class="section">
+        <div class="section-head">
+          <p class="section-kicker">Documentation</p>
+          <h2 id="docs-title">Choose the API explorer that fits your workflow.</h2>
+          <p>Both documentation surfaces are kept at their existing routes and expose the same NestJS OpenAPI specification.</p>
+        </div>
+
+        <div class="docs-grid">
+          <a class="doc-card" href="/swagger">
+            <span class="doc-icon" aria-hidden="true">
+              <svg><use href="/assets/landing-icons.svg#icon-docs"></use></svg>
+            </span>
+            <div>
+              <h3>Swagger API Docs</h3>
+              <p>Inspect endpoints, schemas, parameters, and responses in the classic OpenAPI interface.</p>
+            </div>
+            <svg aria-hidden="true"><use href="/assets/landing-icons.svg#icon-arrow"></use></svg>
+          </a>
+
+          <a class="doc-card" href="/scalar">
+            <span class="doc-icon" aria-hidden="true">
+              <svg><use href="/assets/landing-icons.svg#icon-layers"></use></svg>
+            </span>
+            <div>
+              <h3>Scalar API Docs</h3>
+              <p>Browse the same API contract in a clean reference interface designed for scanning.</p>
+            </div>
+            <svg aria-hidden="true"><use href="/assets/landing-icons.svg#icon-arrow"></use></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="catalog" aria-labelledby="catalog-title">
+      <div class="section-head">
+        <p class="section-kicker">API Catalog</p>
+        <h2 id="catalog-title">Curated data domains in one predictable API surface.</h2>
+        <p>Each group is organized as a focused resource so apps can discover content without custom scraping or one-off data files.</p>
+      </div>
+
+      <div class="catalog-grid">
+        <article class="catalog-card">
+          <header>
+            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-bird"></use></svg></span>
+            <h3>Birds</h3>
+          </header>
+          <p>Myanmar bird species and reference information.</p>
+          <span class="route">/birds</span>
+        </article>
+
+        <article class="catalog-card">
+          <header>
+            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-snake"></use></svg></span>
+            <h3>Snakes</h3>
+          </header>
+          <p>Myanmar snake species and related details.</p>
+          <span class="route">/snakes</span>
+        </article>
+
+        <article class="catalog-card">
+          <header>
+            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-map"></use></svg></span>
+            <h3>Bagan Map</h3>
+          </header>
+          <p>Bagan pagodas, locations, and travel route data.</p>
+          <span class="route">/bagan-map</span>
+        </article>
+
+        <article class="catalog-card">
+          <header>
+            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-art"></use></svg></span>
+            <h3>Art Gallery</h3>
+          </header>
+          <p>Myanmar art, artists, gallery metadata, and social links.</p>
+          <span class="route">/art-gallery</span>
+        </article>
+
+        <article class="catalog-card">
+          <header>
+            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-cards"></use></svg></span>
+            <h3>Pick a Pile</h3>
+          </header>
+          <p>Question and answer sets for fortune telling cards.</p>
+          <span class="route">/pick-a-pile</span>
+        </article>
+
+        <article class="catalog-card">
+          <header>
+            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-thread"></use></svg></span>
+            <h3>Lat Htauk Bay Din</h3>
+          </header>
+          <p>Traditional divination questions, numbers, and answers.</p>
+          <span class="route">/lat-htauk-bay-din</span>
+        </article>
+
+        <article class="catalog-card">
+          <header>
+            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-moon"></use></svg></span>
+            <h3>Dream Dictionary</h3>
+          </header>
+          <p>Grouped dream interpretations and lookup details.</p>
+          <span class="route">/dream-dictionary</span>
+        </article>
+
+        <article class="catalog-card">
+          <header>
+            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-book"></use></svg></span>
+            <h3>Phayar Sar</h3>
+          </header>
+          <p>Religious text groups and detail entries.</p>
+          <span class="route">/phayar-sar</span>
+        </article>
+
+        <article class="catalog-card">
+          <header>
+            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-leaf"></use></svg></span>
+            <h3>Burmese Agriculture</h3>
+          </header>
+          <p>Agricultural reference guides and structured entries.</p>
+          <span class="route">/burmese-agriculture</span>
+        </article>
+
+        <article class="catalog-card">
+          <header>
+            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-bowl"></use></svg></span>
+            <h3>Burmese Recipes</h3>
+          </header>
+          <p>Traditional recipes and cooking reference content.</p>
+          <span class="route">/burmese-recipes</span>
+        </article>
+
+        <article class="catalog-card">
+          <header>
+            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-alert"></use></svg></span>
+            <h3>Incompatible Food</h3>
+          </header>
+          <p>Food compatibility notes and traditional guidance.</p>
+          <span class="route">/incompatible-food</span>
+        </article>
+
+        <article class="catalog-card">
+          <header>
+            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-calendar"></use></svg></span>
+            <h3>Myanmar Months</h3>
+          </header>
+          <p>Myanmar calendar months and related metadata.</p>
+          <span class="route">/myanmar-months</span>
+        </article>
+
+        <article class="catalog-card">
+          <header>
+            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-quote"></use></svg></span>
+            <h3>Myanmar Proverbs</h3>
+          </header>
+          <p>Traditional proverbs for learning and reference products.</p>
+          <span class="route">/myanmar-proverbs</span>
+        </article>
+
+        <article class="catalog-card">
+          <header>
+            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-spark"></use></svg></span>
+            <h3>Quotlets</h3>
+          </header>
+          <p>Inspirational quotes and short shareable text entries.</p>
+          <span class="route">/quotlets</span>
+        </article>
+
+        <article class="catalog-card">
+          <header>
+            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-zodiac"></use></svg></span>
+            <h3>Zodiac</h3>
+          </header>
+          <p>Zodiac signs, traits, and lookup records.</p>
+          <span class="route">/zodiac</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="capability-band" id="capabilities" aria-labelledby="capability-title">
+      <div class="section">
+        <div class="section-head">
+          <p class="section-kicker">Capabilities</p>
+          <h2 id="capability-title">Designed for teams that need clear data contracts.</h2>
+          <p>The landing page now reflects the API as an operational data product while leaving the underlying NestJS implementation intact.</p>
+        </div>
+
+        <div class="capability-grid">
+          <article class="capability">
+            <span class="capability-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-shield"></use></svg></span>
+            <h3>Stable routes</h3>
+            <p>Docs and API URLs remain predictable across the existing deployment surface.</p>
+          </article>
+
+          <article class="capability">
+            <span class="capability-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-database"></use></svg></span>
+            <h3>Curated datasets</h3>
+            <p>Static public data sources are presented as organized REST resources.</p>
+          </article>
+
+          <article class="capability">
+            <span class="capability-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-gauge"></use></svg></span>
+            <h3>Fast entry point</h3>
+            <p>The home page stays lightweight with no frontend framework or CDN dependency.</p>
+          </article>
+
+          <article class="capability">
+            <span class="capability-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-access"></use></svg></span>
+            <h3>Accessible UI</h3>
+            <p>Keyboard focus, contrast, responsive layouts, and motion preferences are built in.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg><use href="/assets/landing-icons.svg#logo-mark"></use></svg>
+        </span>
+        <span>Burma Project Ideas API</span>
+      </div>
+      <nav class="footer-links" aria-label="Footer links">
+        <a href="/swagger">Swagger</a>
+        <a href="/scalar">Scalar</a>
+        <a href="#catalog">Catalog</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
