@@ -2,6 +2,7 @@ import { INestApplication } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import type { apiReference } from '@scalar/nestjs-api-reference';
 import type { NextFunction, Request, Response } from 'express';
+import { join } from 'path';
 
 type ScalarModule = {
   apiReference: typeof apiReference;
@@ -28,7 +29,10 @@ export function setupApiDocumentation(app: INestApplication): void {
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('swagger', app, document);
+  SwaggerModule.setup('swagger', app, document, {
+    customSwaggerUiPath: join(process.cwd(), 'public'),
+    customfavIcon: '/assets/landing-icons.svg',
+  });
 
   app.use(
     '/scalar',
