@@ -19,6 +19,20 @@ import { DreamDictionaryController } from './features/dream_dictionary/dream_dic
 import { DreamDictionaryService } from './features/dream_dictionary/dream_dictionary.service';
 import { PhayarSarService } from './features/phayar_sar/phayar_sar.service';
 import { PhayarSarController } from './features/phayar_sar/phayar_sar.controller';
+import { BurmeseAgricultureController } from './features/burmese-agriculture/burmese-agriculture.controller';
+import { BurmeseAgricultureService } from './features/burmese-agriculture/burmese-agriculture.service';
+import { BurmeseRecipeController } from './features/burmese-recipes/burmese-recipes.controller';
+import { BurmeseRecipeService } from './features/burmese-recipes/burmese-recipes.service';
+import { IncompatibleFoodController } from './features/incompatible-food/incompatible-food.controller';
+import { IncompatibleFoodService } from './features/incompatible-food/incompatible-food.service';
+import { MyanmarMonthController } from './features/myanmar-months/myanmar-months.controller';
+import { MyanmarMonthService } from './features/myanmar-months/myanmar-months.service';
+import { MyanmarProverbController } from './features/myanmar-proverbs/myanmar-proverbs.controller';
+import { MyanmarProverbService } from './features/myanmar-proverbs/myanmar-proverbs.service';
+import { QuotletController } from './features/quotlets/quotlets.controller';
+import { QuotletService } from './features/quotlets/quotlets.service';
+import { ZodiacSignController } from './features/zodiac/zodiac.controller';
+import { ZodiacSignService } from './features/zodiac/zodiac.service';
 
 @Module({
   imports: [
@@ -36,7 +50,14 @@ import { PhayarSarController } from './features/phayar_sar/phayar_sar.controller
     SnakesController,
     LatHtaukBayDinController,
     DreamDictionaryController,
-    PhayarSarController
+    PhayarSarController,
+    BurmeseAgricultureController,
+    BurmeseRecipeController,
+    IncompatibleFoodController,
+    MyanmarMonthController,
+    MyanmarProverbController,
+    QuotletController,
+    ZodiacSignController
   ],
   providers: [
     AppService,
@@ -47,7 +68,14 @@ import { PhayarSarController } from './features/phayar_sar/phayar_sar.controller
     SnakeService,
     LatHtaukBayDinService,
     DreamDictionaryService,
-    PhayarSarService
+    PhayarSarService,
+    BurmeseAgricultureService,
+    BurmeseRecipeService,
+    IncompatibleFoodService,
+    MyanmarMonthService,
+    MyanmarProverbService,
+    QuotletService,
+    ZodiacSignService
   ],
 })
 export class AppModule {}
