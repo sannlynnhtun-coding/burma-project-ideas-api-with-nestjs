@@ -1,6 +1,19 @@
 import { INestApplication } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-import { apiReference } from '@scalar/nestjs-api-reference';
+import type { apiReference } from '@scalar/nestjs-api-reference';
+import type { NextFunction, Request, Response } from 'express';
+
+type ScalarModule = {
+  apiReference: typeof apiReference;
+};
+
+type ScalarMiddleware = (req: Request, res: Response) => void;
+
+const importEsm = new Function('specifier', 'return import(specifier)') as <
+  TModule,
+>(
+  specifier: string,
+) => Promise<TModule>;
 
 export function setupApiDocumentation(app: INestApplication): void {
   const config = new DocumentBuilder()
@@ -15,12 +28,26 @@ export function setupApiDocumentation(app: INestApplication): void {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('swagger', app, document);
 
+  const scalarMiddlewarePromise = importEsm<ScalarModule>(
+    '@scalar/nestjs-api-reference',
+  ).then(
+    ({ apiReference }) =>
+      apiReference({
+        spec: {
+          content: document,
+        },
+      }) as ScalarMiddleware,
+  );
+
   app.use(
     '/scalar',
-    apiReference({
-      spec: {
-        content: document,
-      },
-    }),
+    async (req: Request, res: Response, next: NextFunction) => {
+      try {
+        const scalarMiddleware = await scalarMiddlewarePromise;
+        scalarMiddleware(req, res);
+      } catch (error) {
+        next(error);
+      }
+    },
   );
 }
