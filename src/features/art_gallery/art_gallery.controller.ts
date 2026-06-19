@@ -1,6 +1,8 @@
-import {Controller, Get, Param} from '@nestjs/common';
+import { Controller, Get, Param, Req } from '@nestjs/common';
+import type { Request } from 'express';
 import {ApiParam, ApiTags} from "@nestjs/swagger";
 import {ArtGalleryService} from "./art_gallery.service";
+import { buildAssetUrl } from '../../common/asset-url';
 
 @ApiTags('art-gallery')
 @Controller('art-gallery')
@@ -9,20 +11,20 @@ export class ArtGalleryController {
     }
 
     @Get()
-    getArtGallery(): object {
+    getArtGallery(@Req() request: Request): object {
         return this.artGalleryService
             .getArt()
             .map((x) => ({
                 ArtId: x.ArtId,
                 ArtName: x.ArtName,
                 ArtDescription: x.ArtDescription,
-                ArtImageUrl: `img/art-gallery/${x.ArtId}.jpg`
+                ArtImageUrl: buildAssetUrl(request, `img/art-gallery/${x.ArtId}.jpg`)
             }));
     }
 
     @Get('/:id')
     @ApiParam({name: 'id'})
-    getArtist(@Param('id') id): object {
+    getArtist(@Req() request: Request, @Param('id') id): object {
         let item = this.artGalleryService
             .getArt()
             .filter((x) => x.ArtId == id)[0];
@@ -43,13 +45,13 @@ export class ArtGalleryController {
                 ArtistId: artist.ArtistId,
                 ArtistName: artist.ArtistName,
                 Social: artist.Social,
-                ArtistImageUrl: `img/art-gallery/profile/${artist.ArtistId}.jpg`
+                ArtistImageUrl: buildAssetUrl(request, `img/art-gallery/profile/${artist.ArtistId}.jpg`)
             },
             Arts: artistArts.map((x) => ({
                 ArtId: x.ArtId,
                 ArtName: x.ArtName,
                 ArtDescription: x.ArtDescription,
-                ArtImageUrl: `img/art-gallery/${x.ArtId}.jpg`
+                ArtImageUrl: buildAssetUrl(request, `img/art-gallery/${x.ArtId}.jpg`)
             }))
         };
     }

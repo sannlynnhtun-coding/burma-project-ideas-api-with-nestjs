@@ -5,6 +5,7 @@ import type { Express } from 'express';
 import type { IncomingMessage, ServerResponse } from 'node:http';
 import { AppModule } from '../src/app.module';
 import { setupApiDocumentation } from '../src/docs';
+import { usePublicStaticAssets } from '../src/static-assets';
 
 const server = express();
 let bootstrapPromise: Promise<Express> | undefined;
@@ -16,6 +17,7 @@ async function bootstrap(): Promise<Express> {
         AppModule,
         new ExpressAdapter(server),
       );
+      usePublicStaticAssets(app);
       setupApiDocumentation(app);
       await app.init();
       return server;

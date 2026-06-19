@@ -3,8 +3,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { BirdsController } from './features/birds/birds.controller';
 import { BirdsService } from './features/birds/birds.service';
-import { join } from 'path';
 import { ServeStaticModule } from '@nestjs/serve-static';
+import { getPublicRoot } from './static-assets';
 import { BaganMapController } from './features/bagan_map/bagan_map.controller';
 import { BaganMapService } from './features/bagan_map/bagan_map.service';
 import { PickAPileController } from './features/pick_a_pile/pick_a_pile.controller';
@@ -39,8 +39,11 @@ import { MissingHistoricalRecordsService } from './features/missing-historical-r
 @Module({
   imports: [
     ServeStaticModule.forRoot({
-      rootPath: join(process.cwd(), 'public'),
-      exclude: ['/api*'],
+      rootPath: getPublicRoot(),
+      exclude: ['/api/{*any}'],
+      serveStaticOptions: {
+        redirect: false,
+      },
     }),
   ],
   controllers: [
