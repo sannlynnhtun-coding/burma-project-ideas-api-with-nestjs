@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-language="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,23 +7,18 @@
   <title>Burma Project Ideas API</title>
   <style>
     :root {
-      --bg: #f6f8f8;
-      --bg-soft: #edf5f3;
+      --bg: #f7f6f3;
       --surface: #ffffff;
-      --surface-muted: #f0f5f4;
-      --ink: #102526;
-      --text: #203436;
-      --muted: #5c6b6d;
-      --line: #d8e3e1;
-      --line-strong: #bccbc8;
-      --primary: #0f766e;
-      --primary-strong: #0b4f49;
-      --primary-soft: #dff2ef;
-      --accent: #b7791f;
-      --accent-soft: #fff4dc;
-      --blue: #315f96;
-      --green: #1f8a70;
-      --shadow: 0 18px 50px rgba(16, 37, 38, 0.09);
+      --surface-muted: #f2f1ed;
+      --ink: #20201e;
+      --text: #383835;
+      --muted: #65655f;
+      --line: #eaeaea;
+      --line-strong: #c9c7c1;
+      --accent: #346538;
+      --accent-strong: #244b29;
+      --accent-soft: #edf3ec;
+      --focus: #76520b;
       --radius: 8px;
       --container: 1180px;
     }
@@ -41,14 +36,27 @@
       min-width: 320px;
       background: var(--bg);
       color: var(--text);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: "SF Pro Display", "Segoe UI Variable", "Helvetica Neue", Arial, sans-serif;
       font-size: 16px;
-      line-height: 1.6;
-      letter-spacing: 0;
+      line-height: 1.65;
+    }
+
+    :lang(my) {
+      font-family: "Myanmar Text", "Noto Sans Myanmar", sans-serif;
+      line-height: 1.8;
+    }
+
+    html[data-language="en"] [data-copy][lang="my"],
+    html[data-language="my"] [data-copy][lang="en"] {
+      display: none !important;
     }
 
     a {
       color: inherit;
+    }
+
+    button {
+      font: inherit;
     }
 
     svg {
@@ -56,12 +64,43 @@
       flex: 0 0 auto;
     }
 
+    ul,
+    dl,
+    dd,
+    figure {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
     .skip-link {
       position: absolute;
       left: 16px;
       top: 12px;
       z-index: 20;
-      transform: translateY(-140%);
+      transform: translateY(-160%);
       background: var(--ink);
       color: #ffffff;
       padding: 10px 14px;
@@ -72,17 +111,15 @@
 
     .skip-link:focus {
       transform: translateY(0);
-      outline: 3px solid var(--accent);
-      outline-offset: 3px;
     }
 
     .site-header {
       position: sticky;
       top: 0;
       z-index: 10;
-      border-bottom: 1px solid rgba(216, 227, 225, 0.9);
-      background: rgba(246, 248, 248, 0.94);
-      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      background: rgba(247, 246, 243, 0.96);
+      backdrop-filter: blur(10px);
     }
 
     .nav {
@@ -93,33 +130,33 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      gap: 20px;
     }
 
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
+      gap: 11px;
       min-height: 48px;
       color: var(--ink);
       text-decoration: none;
-      font-weight: 800;
+      font-weight: 750;
     }
 
     .brand-mark {
-      width: 40px;
-      height: 40px;
+      width: 36px;
+      height: 36px;
       display: grid;
       place-items: center;
-      border-radius: var(--radius);
-      background: var(--primary-strong);
-      color: #ffffff;
-      box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.14);
+      border: 1px solid var(--line-strong);
+      border-radius: 6px;
+      background: var(--surface);
+      color: var(--ink);
     }
 
     .brand-mark svg {
-      width: 24px;
-      height: 24px;
+      width: 21px;
+      height: 21px;
     }
 
     .brand-text {
@@ -128,16 +165,24 @@
       line-height: 1.15;
     }
 
-    .brand-text span:last-child {
+    .brand-text small {
+      margin-top: 3px;
       color: var(--muted);
       font-size: 12px;
-      font-weight: 700;
+      font-weight: 600;
     }
 
-    .nav-links {
+    .nav-links,
+    .nav-links ul,
+    .nav-tools,
+    .footer-links ul {
       display: flex;
       align-items: center;
-      gap: 4px;
+    }
+
+    .nav-links ul,
+    .footer-links ul {
+      gap: 2px;
     }
 
     .nav-links a,
@@ -146,11 +191,11 @@
       display: inline-flex;
       align-items: center;
       border-radius: 6px;
-      padding: 10px 12px;
+      padding: 9px 11px;
       color: var(--muted);
       text-decoration: none;
-      font-weight: 700;
-      transition: color 180ms ease, background 180ms ease;
+      font-weight: 650;
+      transition: color 160ms ease, background 160ms ease;
     }
 
     .nav-links a:hover,
@@ -159,286 +204,317 @@
       color: var(--ink);
     }
 
-    .nav-cta {
+    .nav-tools {
+      gap: 10px;
+    }
+
+    .language-switcher {
+      display: inline-flex;
+      padding: 2px;
+      border: 1px solid var(--line-strong);
+      border-radius: 6px;
+      background: var(--surface);
+    }
+
+    .language-switcher button {
+      min-width: 64px;
       min-height: 44px;
+      border: 0;
+      border-radius: 4px;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    .language-switcher button[aria-pressed="true"] {
+      background: var(--ink);
+      color: #ffffff;
+    }
+
+    .nav-cta,
+    .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      border: 1px solid var(--primary-strong);
-      border-radius: var(--radius);
-      background: var(--primary-strong);
-      color: #ffffff;
-      padding: 10px 16px;
+      gap: 9px;
+      border-radius: 6px;
       text-decoration: none;
-      font-weight: 800;
-      transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+      font-weight: 750;
+      transition: color 160ms ease, background 160ms ease, border-color 160ms ease;
     }
 
-    .nav-cta:hover {
-      background: var(--primary);
-      box-shadow: 0 10px 24px rgba(15, 118, 110, 0.22);
-      transform: translateY(-1px);
+    .nav-cta {
+      min-height: 44px;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: #ffffff;
+      padding: 9px 14px;
+    }
+
+    .nav-cta:hover,
+    .button-primary:hover {
+      background: #383835;
     }
 
     .nav-cta svg,
-    .button svg,
-    .text-link svg {
-      width: 18px;
-      height: 18px;
+    .button svg {
+      width: 17px;
+      height: 17px;
     }
 
     .hero-band {
       border-bottom: 1px solid var(--line);
-      background: var(--bg-soft);
+      background: #fbfbfa;
     }
 
     .hero {
       max-width: var(--container);
       margin: 0 auto;
-      padding: 72px 24px 44px;
+      padding: 88px 24px 64px;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 460px;
-      gap: 56px;
+      grid-template-columns: minmax(0, 1fr) 440px;
+      gap: 64px;
       align-items: center;
     }
 
     .status-line {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      margin-bottom: 20px;
-      color: var(--primary-strong);
-      font-size: 14px;
-      font-weight: 800;
+      gap: 9px;
+      margin-bottom: 22px;
+      color: var(--accent-strong);
+      font-size: 13px;
+      font-weight: 750;
+      letter-spacing: 0.02em;
     }
 
     .status-line svg {
-      width: 18px;
-      height: 18px;
-      color: var(--green);
-    }
-
-    h1,
-    h2,
-    h3,
-    p {
-      margin: 0;
+      width: 17px;
+      height: 17px;
+      color: var(--accent);
     }
 
     h1 {
-      max-width: 720px;
+      max-width: 760px;
       color: var(--ink);
-      font-size: 56px;
-      line-height: 1.05;
-      font-weight: 850;
+      font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+      font-size: clamp(42px, 5vw, 62px);
+      line-height: 1.04;
+      letter-spacing: -0.035em;
+      font-weight: 600;
+      overflow-wrap: anywhere;
+    }
+
+    h1 :lang(my) {
+      font-family: "Myanmar Text", "Noto Sans Myanmar", sans-serif;
+      letter-spacing: 0;
+      line-height: 1.35;
+      font-weight: 700;
     }
 
     .hero-copy > p {
       max-width: 680px;
-      margin-top: 22px;
+      margin-top: 24px;
       color: var(--muted);
-      font-size: 19px;
-      line-height: 1.65;
+      font-size: 18px;
+      line-height: 1.75;
     }
 
     .hero-actions {
       margin-top: 32px;
+    }
+
+    .hero-actions ul {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
     }
 
     .button {
       min-height: 48px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      border-radius: var(--radius);
-      padding: 12px 18px;
-      text-decoration: none;
-      font-weight: 800;
+      padding: 11px 17px;
       border: 1px solid transparent;
-      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, border-color 180ms ease;
     }
 
     .button-primary {
-      background: var(--primary-strong);
+      background: var(--ink);
       color: #ffffff;
-    }
-
-    .button-primary:hover {
-      background: var(--primary);
-      box-shadow: 0 12px 28px rgba(15, 118, 110, 0.24);
-      transform: translateY(-1px);
     }
 
     .button-secondary {
       background: var(--surface);
-      color: var(--primary-strong);
+      color: var(--ink);
       border-color: var(--line-strong);
     }
 
     .button-secondary:hover {
-      border-color: var(--primary);
-      box-shadow: 0 10px 22px rgba(16, 37, 38, 0.08);
-      transform: translateY(-1px);
+      border-color: var(--ink);
+      background: var(--surface-muted);
     }
 
     .hero-facts {
-      margin-top: 34px;
+      margin-top: 36px;
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 12px;
     }
 
     .fact {
-      border-left: 3px solid var(--primary);
+      border-left: 2px solid var(--line-strong);
       padding-left: 14px;
     }
 
-    .fact strong {
-      display: block;
+    .fact dd {
       color: var(--ink);
-      font-size: 22px;
-      line-height: 1.2;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 20px;
+      line-height: 1.25;
+      font-weight: 750;
     }
 
-    .fact span {
-      display: block;
-      margin-top: 3px;
+    .fact dt {
+      margin-top: 4px;
       color: var(--muted);
-      font-size: 14px;
-      font-weight: 700;
+      font-size: 13px;
+      font-weight: 650;
     }
 
     .console-panel {
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: var(--surface);
-      box-shadow: var(--shadow);
       overflow: hidden;
     }
 
     .console-topbar {
-      min-height: 56px;
+      min-height: 54px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      padding: 14px 16px;
+      padding: 13px 15px;
       border-bottom: 1px solid var(--line);
-      background: #fbfdfc;
+      background: #fbfbfa;
     }
 
     .console-title {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 9px;
+      margin: 0;
       color: var(--ink);
-      font-weight: 850;
+      font-size: 15px;
+      line-height: 1.4;
+      letter-spacing: 0;
+      font-weight: 750;
     }
 
     .console-title svg {
-      width: 20px;
-      height: 20px;
-      color: var(--primary);
+      width: 18px;
+      height: 18px;
+      color: var(--accent);
     }
 
     .status-badge {
       display: inline-flex;
       align-items: center;
       gap: 7px;
-      min-height: 32px;
-      padding: 6px 10px;
-      border: 1px solid #c8e5d9;
-      border-radius: 6px;
-      background: #edf8f3;
-      color: #16634e;
-      font-size: 13px;
-      font-weight: 800;
+      min-height: 30px;
+      padding: 5px 10px;
+      border: 1px solid #cbdac9;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: 0.04em;
       white-space: nowrap;
     }
 
     .status-badge::before {
-      width: 8px;
-      height: 8px;
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
-      background: var(--green);
+      background: var(--accent);
       content: "";
     }
 
     .console-body {
-      padding: 18px;
+      padding: 16px;
     }
 
     .endpoint-list {
       display: grid;
-      gap: 10px;
+      gap: 8px;
     }
 
     .endpoint-row {
       display: grid;
-      grid-template-columns: 56px minmax(0, 1fr) auto;
+      grid-template-columns: 54px minmax(0, 1fr) auto;
       align-items: center;
       gap: 12px;
-      min-height: 52px;
-      padding: 10px 12px;
+      min-height: 50px;
+      padding: 9px 11px;
       border: 1px solid var(--line);
       border-radius: 6px;
-      background: #ffffff;
+      background: var(--surface);
+    }
+
+    .method,
+    .path,
+    .route,
+    .payload {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
     }
 
     .method {
-      color: var(--primary-strong);
-      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-      font-size: 13px;
-      font-weight: 850;
+      color: var(--accent-strong);
+      font-size: 12px;
+      font-weight: 750;
     }
 
     .path {
       color: var(--ink);
-      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-      font-size: 14px;
+      font-size: 13px;
       word-break: break-word;
     }
 
     .endpoint-icon {
-      width: 30px;
-      height: 30px;
+      width: 28px;
+      height: 28px;
       display: grid;
       place-items: center;
+      border: 1px solid var(--line);
       border-radius: 6px;
-      background: var(--primary-soft);
-      color: var(--primary-strong);
+      color: var(--accent-strong);
     }
 
     .endpoint-icon svg {
-      width: 18px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
     }
 
     .payload {
-      margin-top: 16px;
-      border: 1px solid var(--line);
+      margin-top: 14px;
+      border: 1px solid var(--ink);
       border-radius: 6px;
-      background: #102526;
-      color: #d9f3ee;
+      background: var(--ink);
+      color: #f7f6f3;
       overflow: hidden;
-      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-      font-size: 13px;
+      font-size: 12px;
     }
 
-    .payload-header {
-      padding: 10px 12px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-      color: #a9cec7;
+    .payload figcaption {
+      padding: 9px 11px;
+      border-bottom: 1px solid #4a4a46;
+      color: #d8d7d2;
     }
 
     .payload pre {
       margin: 0;
-      padding: 14px 12px 16px;
+      padding: 13px 11px 15px;
       overflow-x: auto;
       white-space: pre-wrap;
     }
@@ -446,32 +522,41 @@
     .section {
       max-width: var(--container);
       margin: 0 auto;
-      padding: 72px 24px;
+      padding: 88px 24px;
     }
 
     .section-head {
       max-width: 760px;
-      margin-bottom: 28px;
+      margin-bottom: 32px;
     }
 
     .section-kicker {
-      color: var(--primary-strong);
-      font-size: 14px;
-      font-weight: 850;
+      color: var(--accent-strong);
+      font-size: 13px;
+      font-weight: 750;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
     }
 
     h2 {
-      margin-top: 8px;
+      margin-top: 10px;
       color: var(--ink);
-      font-size: 34px;
+      font-size: clamp(29px, 3.5vw, 40px);
       line-height: 1.18;
-      font-weight: 850;
+      letter-spacing: -0.025em;
+      font-weight: 680;
+      overflow-wrap: anywhere;
     }
 
-    .section-head p {
-      margin-top: 12px;
+    h2 :lang(my) {
+      letter-spacing: 0;
+    }
+
+    .section-head > p:last-child {
+      margin-top: 14px;
       color: var(--muted);
-      font-size: 17px;
+      font-size: 16px;
+      line-height: 1.75;
     }
 
     .docs-band {
@@ -482,7 +567,7 @@
     .docs-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
+      gap: 14px;
     }
 
     .doc-card,
@@ -491,15 +576,15 @@
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: var(--surface);
-      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+      transition: border-color 160ms ease, background 160ms ease;
     }
 
     .doc-card {
       display: grid;
-      grid-template-columns: 48px minmax(0, 1fr) 28px;
+      grid-template-columns: 42px minmax(0, 1fr) 22px;
       align-items: center;
-      gap: 16px;
-      min-height: 136px;
+      gap: 15px;
+      min-height: 132px;
       padding: 22px;
       text-decoration: none;
     }
@@ -508,96 +593,90 @@
     .catalog-card:hover,
     .capability:hover {
       border-color: var(--line-strong);
-      box-shadow: 0 14px 34px rgba(16, 37, 38, 0.08);
-      transform: translateY(-2px);
+      background: #fbfbfa;
     }
 
     .doc-icon,
     .catalog-icon,
     .capability-icon {
-      width: 48px;
-      height: 48px;
+      width: 42px;
+      height: 42px;
       display: grid;
       place-items: center;
-      border-radius: var(--radius);
-      background: var(--primary-soft);
-      color: var(--primary-strong);
-    }
-
-    .doc-card:nth-child(2) .doc-icon {
-      background: #edf0fb;
-      color: var(--blue);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--surface-muted);
+      color: var(--accent-strong);
     }
 
     .doc-icon svg,
     .catalog-icon svg,
     .capability-icon svg {
-      width: 25px;
-      height: 25px;
+      width: 21px;
+      height: 21px;
     }
 
     .doc-card h3,
     .catalog-card h3,
     .capability h3 {
       color: var(--ink);
-      font-size: 18px;
-      line-height: 1.25;
-      font-weight: 850;
+      font-size: 17px;
+      line-height: 1.35;
+      font-weight: 720;
     }
 
     .doc-card p,
     .catalog-card p,
     .capability p {
-      margin-top: 6px;
+      margin-top: 7px;
       color: var(--muted);
-      font-size: 15px;
+      font-size: 14px;
+      line-height: 1.65;
     }
 
     .doc-card > svg {
-      width: 22px;
-      height: 22px;
-      color: var(--primary);
+      width: 20px;
+      height: 20px;
+      color: var(--accent-strong);
     }
 
     .catalog-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
+      gap: 12px;
     }
 
     .catalog-card {
-      min-height: 158px;
+      min-height: 164px;
       padding: 18px;
     }
 
-    .catalog-card header {
+    .catalog-card-heading {
       display: flex;
       align-items: center;
-      gap: 13px;
+      gap: 12px;
     }
 
     .catalog-icon {
-      width: 42px;
-      height: 42px;
-      color: var(--primary);
-      background: #ecf7f5;
+      width: 38px;
+      height: 38px;
+      background: transparent;
     }
 
     .route {
       display: inline-flex;
       margin-top: 16px;
-      border-radius: 6px;
-      background: var(--surface-muted);
-      color: var(--primary-strong);
-      padding: 6px 9px;
-      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-      font-size: 13px;
-      font-weight: 800;
+      border-radius: 4px;
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+      padding: 5px 8px;
+      font-size: 12px;
+      font-weight: 750;
       word-break: break-word;
     }
 
     .capability-band {
-      background: #eef4f2;
+      background: #fbfbfa;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
@@ -605,23 +684,21 @@
     .capability-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
+      gap: 12px;
     }
 
     .capability {
       padding: 18px;
-      background: #ffffff;
     }
 
     .capability-icon {
-      margin-bottom: 16px;
+      margin-bottom: 15px;
       background: var(--accent-soft);
-      color: var(--accent);
     }
 
     .footer {
-      background: #102526;
-      color: #d8e3e1;
+      background: var(--ink);
+      color: #e8e7e2;
     }
 
     .footer-inner {
@@ -637,41 +714,40 @@
     .footer-brand {
       display: flex;
       align-items: center;
-      gap: 12px;
-      font-weight: 850;
+      gap: 11px;
+      font-weight: 720;
     }
 
     .footer .brand-mark {
-      background: #ffffff;
-      color: var(--primary-strong);
-      box-shadow: none;
-    }
-
-    .footer-links {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      flex-wrap: wrap;
-    }
-
-    .footer-links a {
-      color: #d8e3e1;
-    }
-
-    .footer-links a:hover {
-      background: rgba(255, 255, 255, 0.1);
+      background: transparent;
+      border-color: #62625d;
       color: #ffffff;
     }
 
+    .footer-links a {
+      color: #d8d7d2;
+    }
+
+    .footer-links a:hover {
+      background: #383835;
+      color: #ffffff;
+    }
+
+    #docs,
+    #catalog,
+    #capabilities {
+      scroll-margin-top: 84px;
+    }
+
     :focus-visible {
-      outline: 3px solid var(--accent);
+      outline: 3px solid var(--focus);
       outline-offset: 3px;
     }
 
     @media (max-width: 980px) {
       .hero {
         grid-template-columns: 1fr;
-        gap: 36px;
+        gap: 44px;
       }
 
       .console-panel {
@@ -684,19 +760,14 @@
       }
     }
 
-    @media (max-width: 760px) {
+    @media (max-width: 800px) {
       .nav {
-        min-height: auto;
-        padding: 14px 18px;
-        align-items: flex-start;
+        padding: 12px 18px;
+        flex-wrap: wrap;
       }
 
       .nav-links {
         display: none;
-      }
-
-      .nav-cta {
-        padding: 10px 12px;
       }
 
       .hero,
@@ -706,19 +777,7 @@
       }
 
       .hero {
-        padding-top: 52px;
-      }
-
-      h1 {
-        font-size: 42px;
-      }
-
-      .hero-copy > p {
-        font-size: 17px;
-      }
-
-      .hero-facts {
-        grid-template-columns: 1fr;
+        padding-top: 64px;
       }
 
       .docs-grid,
@@ -727,42 +786,27 @@
         grid-template-columns: 1fr;
       }
 
-      .doc-card {
-        grid-template-columns: 44px minmax(0, 1fr);
-      }
-
-      .doc-card > svg {
-        display: none;
-      }
-
       .footer-inner {
         align-items: flex-start;
         flex-direction: column;
       }
     }
 
-    @media (max-width: 520px) {
-      .brand-text span:last-child {
+    @media (max-width: 560px) {
+      .brand-text small {
         display: none;
       }
 
       .nav {
-        gap: 12px;
+        gap: 10px;
       }
 
-      .nav-cta span {
-        display: none;
+      .nav-tools {
+        width: 100%;
+        justify-content: space-between;
       }
 
-      h1 {
-        font-size: 34px;
-      }
-
-      h2 {
-        font-size: 28px;
-      }
-
-      .hero-actions {
+      .hero-actions ul {
         flex-direction: column;
       }
 
@@ -770,13 +814,43 @@
         width: 100%;
       }
 
-      .endpoint-row {
+      .hero-facts {
         grid-template-columns: 1fr;
-        align-items: start;
+      }
+
+      .endpoint-row {
+        grid-template-columns: 50px minmax(0, 1fr);
       }
 
       .endpoint-icon {
-        justify-self: start;
+        display: none;
+      }
+
+      .doc-card {
+        grid-template-columns: 38px minmax(0, 1fr);
+      }
+
+      .doc-card > svg {
+        display: none;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .nav-cta {
+        width: 48px;
+        padding: 9px;
+      }
+
+      .nav-cta [data-copy] {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
       }
     }
 
@@ -796,30 +870,55 @@
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
+  <a class="skip-link" href="#main">
+    <span data-copy lang="en">Skip to main content</span>
+    <span data-copy lang="my">အဓိကအကြောင်းအရာသို့ ကျော်သွားရန်</span>
+  </a>
 
   <header class="site-header">
-    <nav class="nav" aria-label="Primary navigation">
-      <a class="brand" href="/" aria-label="Burma Project Ideas API home">
+    <nav class="nav" aria-labelledby="primary-nav-label">
+      <span class="sr-only" id="primary-nav-label">
+        <span data-copy lang="en">Primary navigation</span>
+        <span data-copy lang="my">အဓိကလမ်းညွှန်</span>
+      </span>
+
+      <a class="brand" href="/">
         <span class="brand-mark" aria-hidden="true">
           <svg><use href="/assets/landing-icons.svg#logo-mark"></use></svg>
         </span>
         <span class="brand-text">
-          <span>Burma Project Ideas API</span>
-          <span>Culture and knowledge data</span>
+          <span lang="en">Burma Project Ideas API</span>
+          <small>
+            <span data-copy lang="en">Culture and knowledge data</span>
+            <span data-copy lang="my">ယဉ်ကျေးမှုနှင့် ဗဟုသုတဒေတာ</span>
+          </small>
         </span>
       </a>
 
-      <div class="nav-links" aria-label="Page sections">
-        <a href="#docs">Docs</a>
-        <a href="#catalog">API Catalog</a>
-        <a href="#capabilities">Capabilities</a>
+      <div class="nav-links">
+        <ul>
+          <li><a href="#docs"><span data-copy lang="en">Docs</span><span data-copy lang="my">စာရွက်စာတမ်း</span></a></li>
+          <li><a href="#catalog"><span data-copy lang="en">API Catalog</span><span data-copy lang="my">API စာရင်း</span></a></li>
+          <li><a href="#capabilities"><span data-copy lang="en">Capabilities</span><span data-copy lang="my">စွမ်းဆောင်ရည်များ</span></a></li>
+        </ul>
       </div>
 
-      <a class="nav-cta" href="/swagger">
-        <svg aria-hidden="true"><use href="/assets/landing-icons.svg#icon-docs"></use></svg>
-        <span>Open Docs</span>
-      </a>
+      <div class="nav-tools">
+        <div class="language-switcher" role="group" aria-labelledby="language-label">
+          <span class="sr-only" id="language-label">
+            <span data-copy lang="en">Language</span>
+            <span data-copy lang="my">ဘာသာစကား</span>
+          </span>
+          <button type="button" data-language-choice="en" aria-pressed="true" lang="en">English</button>
+          <button type="button" data-language-choice="my" aria-pressed="false" lang="my">မြန်မာ</button>
+        </div>
+
+        <a class="nav-cta" href="/swagger">
+          <svg aria-hidden="true"><use href="/assets/landing-icons.svg#icon-docs"></use></svg>
+          <span data-copy lang="en">Open Docs</span>
+          <span data-copy lang="my">စာရွက်စာတမ်း ဖွင့်ရန်</span>
+        </a>
+      </div>
     </nav>
   </header>
 
@@ -827,91 +926,112 @@
     <section class="hero-band" aria-labelledby="hero-title">
       <div class="hero">
         <div class="hero-copy">
-          <div class="status-line">
+          <p class="status-line">
             <svg aria-hidden="true"><use href="/assets/landing-icons.svg#icon-check"></use></svg>
-            Public API portal for Myanmar datasets
-          </div>
-          <h1 id="hero-title">Structured cultural data for products, research, and learning tools.</h1>
-          <p>
-            Burma Project Ideas API brings curated Myanmar cultural, educational, travel, food, calendar, and reference datasets into one documented REST surface.
+            <span data-copy lang="en">Public API portal for Myanmar datasets</span>
+            <span data-copy lang="my">မြန်မာဒေတာစုများအတွက် အများသုံး API ပေါ်တယ်</span>
           </p>
 
-          <div class="hero-actions" aria-label="Documentation actions">
-            <a class="button button-primary" href="/swagger">
-              <svg aria-hidden="true"><use href="/assets/landing-icons.svg#icon-docs"></use></svg>
-              Swagger API Docs
-            </a>
-            <a class="button button-secondary" href="/scalar">
-              <svg aria-hidden="true"><use href="/assets/landing-icons.svg#icon-layers"></use></svg>
-              Scalar API Docs
-            </a>
-          </div>
+          <h1 id="hero-title">
+            <span data-copy lang="en">Structured cultural data for products, research, and learning tools.</span>
+            <span data-copy lang="my">ထုတ်ကုန်များ၊ သုတေသနနှင့် သင်ယူရေးကိရိယာများအတွက် စနစ်တကျဖွဲ့စည်းထားသော ယဉ်ကျေးမှုဒေတာ။</span>
+          </h1>
 
-          <div class="hero-facts" aria-label="API facts">
+          <p>
+            <span data-copy lang="en">Burma Project Ideas API brings curated Myanmar cultural, educational, travel, food, calendar, and reference datasets into one documented REST surface.</span>
+            <span data-copy lang="my"><span lang="en">Burma Project Ideas API</span> သည် စိစစ်စုစည်းထားသော မြန်မာ့ယဉ်ကျေးမှု၊ ပညာရေး၊ ခရီးသွား၊ အစားအစာ၊ ပြက္ခဒိန်နှင့် ကိုးကားဒေတာများကို စာရွက်စာတမ်းပြည့်စုံသော <span lang="en">REST API</span> တစ်ခုအဖြစ် ပေးထားသည်။</span>
+          </p>
+
+          <nav class="hero-actions" aria-labelledby="docs-actions-title">
+            <span class="sr-only" id="docs-actions-title">
+              <span data-copy lang="en">Documentation options</span>
+              <span data-copy lang="my">စာရွက်စာတမ်းရွေးချယ်မှုများ</span>
+            </span>
+            <ul>
+              <li>
+                <a class="button button-primary" href="/swagger">
+                  <svg aria-hidden="true"><use href="/assets/landing-icons.svg#icon-docs"></use></svg>
+                  <span lang="en">Swagger API Docs</span>
+                </a>
+              </li>
+              <li>
+                <a class="button button-secondary" href="/scalar">
+                  <svg aria-hidden="true"><use href="/assets/landing-icons.svg#icon-layers"></use></svg>
+                  <span lang="en">Scalar API Docs</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <dl class="hero-facts">
             <div class="fact">
-              <strong>16</strong>
-              <span>API groups</span>
+              <dd lang="en">16</dd>
+              <dt><span data-copy lang="en">API groups</span><span data-copy lang="my">API အုပ်စုများ</span></dt>
             </div>
             <div class="fact">
-              <strong>2</strong>
-              <span>Docs explorers</span>
+              <dd lang="en">2</dd>
+              <dt><span data-copy lang="en">Docs explorers</span><span data-copy lang="my">Docs ကြည့်ရှုကိရိယာများ</span></dt>
             </div>
             <div class="fact">
-              <strong>REST</strong>
-              <span>Simple routes</span>
+              <dd lang="en">REST</dd>
+              <dt><span data-copy lang="en">Simple routes</span><span data-copy lang="my">ရိုးရှင်းသော လမ်းကြောင်းများ</span></dt>
             </div>
-          </div>
+          </dl>
         </div>
 
-        <aside class="console-panel" aria-label="API preview">
+        <aside class="console-panel" aria-labelledby="preview-title">
           <div class="console-topbar">
-            <div class="console-title">
+            <h2 class="console-title" id="preview-title">
               <svg aria-hidden="true"><use href="/assets/landing-icons.svg#icon-api"></use></svg>
-              Live route map
-            </div>
-            <span class="status-badge">Available</span>
+              <span data-copy lang="en">Live route map</span>
+              <span data-copy lang="my">လက်ရှိ လမ်းကြောင်းမြေပုံ</span>
+            </h2>
+            <span class="status-badge">
+              <span data-copy lang="en">Available</span>
+              <span data-copy lang="my">အသုံးပြုနိုင်သည်</span>
+            </span>
           </div>
 
           <div class="console-body">
-            <div class="endpoint-list">
-              <div class="endpoint-row">
-                <span class="method">GET</span>
-                <span class="path">/birds</span>
-                <span class="endpoint-icon" aria-hidden="true">
-                  <svg><use href="/assets/landing-icons.svg#icon-bird"></use></svg>
-                </span>
-              </div>
-              <div class="endpoint-row">
-                <span class="method">GET</span>
-                <span class="path">/bagan-map</span>
-                <span class="endpoint-icon" aria-hidden="true">
-                  <svg><use href="/assets/landing-icons.svg#icon-map"></use></svg>
-                </span>
-              </div>
-              <div class="endpoint-row">
-                <span class="method">GET</span>
-                <span class="path">/art-gallery</span>
-                <span class="endpoint-icon" aria-hidden="true">
-                  <svg><use href="/assets/landing-icons.svg#icon-art"></use></svg>
-                </span>
-              </div>
-              <div class="endpoint-row">
-                <span class="method">GET</span>
-                <span class="path">/phayar-sar</span>
-                <span class="endpoint-icon" aria-hidden="true">
-                  <svg><use href="/assets/landing-icons.svg#icon-book"></use></svg>
-                </span>
-              </div>
-            </div>
+            <h3 class="sr-only" id="endpoint-list-title">
+              <span data-copy lang="en">Example endpoints</span>
+              <span data-copy lang="my">နမူနာ endpoint များ</span>
+            </h3>
+            <ul class="endpoint-list" aria-labelledby="endpoint-list-title">
+              <li class="endpoint-row">
+                <code class="method" lang="en">GET</code>
+                <code class="path" lang="en">/birds</code>
+                <span class="endpoint-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-bird"></use></svg></span>
+              </li>
+              <li class="endpoint-row">
+                <code class="method" lang="en">GET</code>
+                <code class="path" lang="en">/bagan-map</code>
+                <span class="endpoint-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-map"></use></svg></span>
+              </li>
+              <li class="endpoint-row">
+                <code class="method" lang="en">GET</code>
+                <code class="path" lang="en">/art-gallery</code>
+                <span class="endpoint-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-art"></use></svg></span>
+              </li>
+              <li class="endpoint-row">
+                <code class="method" lang="en">GET</code>
+                <code class="path" lang="en">/phayar-sar</code>
+                <span class="endpoint-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-book"></use></svg></span>
+              </li>
+            </ul>
 
-            <div class="payload" aria-label="Example response">
-              <div class="payload-header">application/json</div>
-              <pre>{
+            <figure class="payload">
+              <figcaption>
+                <span data-copy lang="en">Example response</span>
+                <span data-copy lang="my">နမူနာ တုံ့ပြန်ချက်</span>
+                <span aria-hidden="true"> · </span><span lang="en">application/json</span>
+              </figcaption>
+              <pre><code lang="en">{
   "name": "Burma Project Ideas",
   "docs": ["/swagger", "/scalar"],
   "datasets": 16
-}</pre>
-            </div>
+}</code></pre>
+            </figure>
           </div>
         </aside>
       </div>
@@ -920,224 +1040,175 @@
     <section class="docs-band" id="docs" aria-labelledby="docs-title">
       <div class="section">
         <div class="section-head">
-          <p class="section-kicker">Documentation</p>
-          <h2 id="docs-title">Choose the API explorer that fits your workflow.</h2>
-          <p>Both documentation surfaces are kept at their existing routes and expose the same NestJS OpenAPI specification.</p>
+          <p class="section-kicker"><span data-copy lang="en">Documentation</span><span data-copy lang="my">စာရွက်စာတမ်း</span></p>
+          <h2 id="docs-title">
+            <span data-copy lang="en">Choose the API explorer that fits your workflow.</span>
+            <span data-copy lang="my">သင့်လုပ်ငန်းစဉ်နှင့် ကိုက်ညီသော API explorer ကိုရွေးချယ်ပါ။</span>
+          </h2>
+          <p>
+            <span data-copy lang="en">Both documentation surfaces stay at their existing routes and expose the same NestJS OpenAPI specification.</span>
+            <span data-copy lang="my">စာရွက်စာတမ်းနှစ်မျိုးလုံးသည် လက်ရှိ route များတွင်ရှိပြီး တူညီသော NestJS OpenAPI specification ကိုဖော်ပြပေးသည်။</span>
+          </p>
         </div>
 
-        <div class="docs-grid">
-          <a class="doc-card" href="/swagger">
-            <span class="doc-icon" aria-hidden="true">
-              <svg><use href="/assets/landing-icons.svg#icon-docs"></use></svg>
-            </span>
-            <div>
-              <h3>Swagger API Docs</h3>
-              <p>Inspect endpoints, schemas, parameters, and responses in the classic OpenAPI interface.</p>
-            </div>
-            <svg aria-hidden="true"><use href="/assets/landing-icons.svg#icon-arrow"></use></svg>
-          </a>
-
-          <a class="doc-card" href="/scalar">
-            <span class="doc-icon" aria-hidden="true">
-              <svg><use href="/assets/landing-icons.svg#icon-layers"></use></svg>
-            </span>
-            <div>
-              <h3>Scalar API Docs</h3>
-              <p>Browse the same API contract in a clean reference interface designed for scanning.</p>
-            </div>
-            <svg aria-hidden="true"><use href="/assets/landing-icons.svg#icon-arrow"></use></svg>
-          </a>
-        </div>
+        <ul class="docs-grid">
+          <li>
+            <a class="doc-card" href="/swagger">
+              <span class="doc-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-docs"></use></svg></span>
+              <div>
+                <h3 lang="en">Swagger API Docs</h3>
+                <p><span data-copy lang="en">Inspect endpoints, schemas, parameters, and responses in the classic OpenAPI interface.</span><span data-copy lang="my">OpenAPI interface တွင် endpoint၊ schema၊ parameter နှင့် response များကိုစစ်ဆေးပါ။</span></p>
+              </div>
+              <svg aria-hidden="true"><use href="/assets/landing-icons.svg#icon-arrow"></use></svg>
+            </a>
+          </li>
+          <li>
+            <a class="doc-card" href="/scalar">
+              <span class="doc-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-layers"></use></svg></span>
+              <div>
+                <h3 lang="en">Scalar API Docs</h3>
+                <p><span data-copy lang="en">Browse the same API contract in a clean reference interface designed for scanning.</span><span data-copy lang="my">ဖတ်ရှုရလွယ်သော reference interface ဖြင့် တူညီသည့် API contract ကိုကြည့်ရှုပါ။</span></p>
+              </div>
+              <svg aria-hidden="true"><use href="/assets/landing-icons.svg#icon-arrow"></use></svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
 
     <section class="section" id="catalog" aria-labelledby="catalog-title">
       <div class="section-head">
-        <p class="section-kicker">API Catalog</p>
-        <h2 id="catalog-title">Curated data domains in one predictable API surface.</h2>
-        <p>Each group is organized as a focused resource so apps can discover content without custom scraping or one-off data files.</p>
+        <p class="section-kicker"><span data-copy lang="en">API Catalog</span><span data-copy lang="my">API စာရင်း</span></p>
+        <h2 id="catalog-title">
+          <span data-copy lang="en">Curated data domains in one predictable API surface.</span>
+          <span data-copy lang="my">ခန့်မှန်းရလွယ်သော API တစ်ခုထဲမှ စိစစ်စုစည်းထားသည့် ဒေတာကဏ္ဍများ။</span>
+        </h2>
+        <p>
+          <span data-copy lang="en">Each group is organized as a focused resource so apps can discover content without custom scraping or one-off data files.</span>
+          <span data-copy lang="my">App များက custom scraping သို့မဟုတ် တစ်ခါသုံး data file မလိုဘဲ အကြောင်းအရာရှာနိုင်ရန် အုပ်စုတစ်ခုစီကို သီးခြား resource အဖြစ်ဖွဲ့ထားသည်။</span>
+        </p>
       </div>
 
-      <div class="catalog-grid">
-        <article class="catalog-card">
-          <header>
-            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-bird"></use></svg></span>
-            <h3>Birds</h3>
-          </header>
-          <p>Myanmar bird species and reference information.</p>
-          <span class="route">/birds</span>
-        </article>
-
-        <article class="catalog-card">
-          <header>
-            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-snake"></use></svg></span>
-            <h3>Snakes</h3>
-          </header>
-          <p>Myanmar snake species and related details.</p>
-          <span class="route">/snakes</span>
-        </article>
-
-        <article class="catalog-card">
-          <header>
-            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-map"></use></svg></span>
-            <h3>Bagan Map</h3>
-          </header>
-          <p>Bagan pagodas, locations, and travel route data.</p>
-          <span class="route">/bagan-map</span>
-        </article>
-
-        <article class="catalog-card">
-          <header>
-            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-art"></use></svg></span>
-            <h3>Art Gallery</h3>
-          </header>
-          <p>Myanmar art, artists, gallery metadata, and social links.</p>
-          <span class="route">/art-gallery</span>
-        </article>
-
-        <article class="catalog-card">
-          <header>
-            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-cards"></use></svg></span>
-            <h3>Pick a Pile</h3>
-          </header>
-          <p>Question and answer sets for fortune telling cards.</p>
-          <span class="route">/pick-a-pile</span>
-        </article>
-
-        <article class="catalog-card">
-          <header>
-            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-thread"></use></svg></span>
-            <h3>Lat Htauk Bay Din</h3>
-          </header>
-          <p>Traditional divination questions, numbers, and answers.</p>
-          <span class="route">/lat-htauk-bay-din</span>
-        </article>
-
-        <article class="catalog-card">
-          <header>
-            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-moon"></use></svg></span>
-            <h3>Dream Dictionary</h3>
-          </header>
-          <p>Grouped dream interpretations and lookup details.</p>
-          <span class="route">/dream-dictionary</span>
-        </article>
-
-        <article class="catalog-card">
-          <header>
-            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-book"></use></svg></span>
-            <h3>Phayar Sar</h3>
-          </header>
-          <p>Religious text groups and detail entries.</p>
-          <span class="route">/phayar-sar</span>
-        </article>
-
-        <article class="catalog-card">
-          <header>
-            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-book"></use></svg></span>
-            <h3>Missing Historical Records</h3>
-          </header>
-          <p>Historical books, metadata, and page-level record content.</p>
-          <span class="route">/missing-historical-records</span>
-        </article>
-
-        <article class="catalog-card">
-          <header>
-            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-leaf"></use></svg></span>
-            <h3>Burmese Agriculture</h3>
-          </header>
-          <p>Agricultural reference guides and structured entries.</p>
-          <span class="route">/burmese-agriculture</span>
-        </article>
-
-        <article class="catalog-card">
-          <header>
-            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-bowl"></use></svg></span>
-            <h3>Burmese Recipes</h3>
-          </header>
-          <p>Traditional recipes and cooking reference content.</p>
-          <span class="route">/burmese-recipes</span>
-        </article>
-
-        <article class="catalog-card">
-          <header>
-            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-alert"></use></svg></span>
-            <h3>Incompatible Food</h3>
-          </header>
-          <p>Food compatibility notes and traditional guidance.</p>
-          <span class="route">/incompatible-food</span>
-        </article>
-
-        <article class="catalog-card">
-          <header>
-            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-calendar"></use></svg></span>
-            <h3>Myanmar Months</h3>
-          </header>
-          <p>Myanmar calendar months and related metadata.</p>
-          <span class="route">/myanmar-months</span>
-        </article>
-
-        <article class="catalog-card">
-          <header>
-            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-quote"></use></svg></span>
-            <h3>Myanmar Proverbs</h3>
-          </header>
-          <p>Traditional proverbs for learning and reference products.</p>
-          <span class="route">/myanmar-proverbs</span>
-        </article>
-
-        <article class="catalog-card">
-          <header>
-            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-spark"></use></svg></span>
-            <h3>Quotlets</h3>
-          </header>
-          <p>Inspirational quotes and short shareable text entries.</p>
-          <span class="route">/quotlets</span>
-        </article>
-
-        <article class="catalog-card">
-          <header>
-            <span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-zodiac"></use></svg></span>
-            <h3>Zodiac</h3>
-          </header>
-          <p>Zodiac signs, traits, and lookup records.</p>
-          <span class="route">/zodiac</span>
-        </article>
-      </div>
+      <ul class="catalog-grid">
+        <li class="catalog-card">
+          <div class="catalog-card-heading"><span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-bird"></use></svg></span><h3><span data-copy lang="en">Birds</span><span data-copy lang="my">ငှက်များ</span></h3></div>
+          <p><span data-copy lang="en">Myanmar bird species and reference information.</span><span data-copy lang="my">မြန်မာနိုင်ငံရှိ ငှက်မျိုးစိတ်များနှင့် ကိုးကားအချက်အလက်များ။</span></p>
+          <code class="route" lang="en">/birds</code>
+        </li>
+        <li class="catalog-card">
+          <div class="catalog-card-heading"><span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-snake"></use></svg></span><h3><span data-copy lang="en">Snakes</span><span data-copy lang="my">မြွေများ</span></h3></div>
+          <p><span data-copy lang="en">Myanmar snake species and related details.</span><span data-copy lang="my">မြန်မာနိုင်ငံရှိ မြွေမျိုးစိတ်များနှင့် ဆက်စပ်အချက်အလက်များ။</span></p>
+          <code class="route" lang="en">/snakes</code>
+        </li>
+        <li class="catalog-card">
+          <div class="catalog-card-heading"><span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-map"></use></svg></span><h3><span data-copy lang="en">Bagan Map</span><span data-copy lang="my">ပုဂံမြေပုံ</span></h3></div>
+          <p><span data-copy lang="en">Bagan pagodas, locations, and travel route data.</span><span data-copy lang="my">ပုဂံဘုရားများ၊ တည်နေရာများနှင့် ခရီးစဉ်ဒေတာ။</span></p>
+          <code class="route" lang="en">/bagan-map</code>
+        </li>
+        <li class="catalog-card">
+          <div class="catalog-card-heading"><span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-art"></use></svg></span><h3><span data-copy lang="en">Art Gallery</span><span data-copy lang="my">အနုပညာပြခန်း</span></h3></div>
+          <p><span data-copy lang="en">Myanmar art, artists, gallery metadata, and social links.</span><span data-copy lang="my">မြန်မာ့အနုပညာ၊ ပန်းချီဆရာများ၊ ပြခန်းအချက်အလက်နှင့် social link များ။</span></p>
+          <code class="route" lang="en">/art-gallery</code>
+        </li>
+        <li class="catalog-card">
+          <div class="catalog-card-heading"><span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-cards"></use></svg></span><h3><span data-copy lang="en">Pick a Pile</span><span data-copy lang="my">ကတ်တစ်ပုံရွေး</span></h3></div>
+          <p><span data-copy lang="en">Question and answer sets for fortune-telling cards.</span><span data-copy lang="my">ဗေဒင်ကတ်များအတွက် မေးခွန်းနှင့် အဖြေစုများ။</span></p>
+          <code class="route" lang="en">/pick-a-pile</code>
+        </li>
+        <li class="catalog-card">
+          <div class="catalog-card-heading"><span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-thread"></use></svg></span><h3><span data-copy lang="en">Lat Htauk Bay Din</span><span data-copy lang="my">လက်ထောက်ဗေဒင်</span></h3></div>
+          <p><span data-copy lang="en">Traditional divination questions, numbers, and answers.</span><span data-copy lang="my">ရိုးရာဗေဒင် မေးခွန်း၊ နံပါတ်နှင့် အဖြေများ။</span></p>
+          <code class="route" lang="en">/lat-htauk-bay-din</code>
+        </li>
+        <li class="catalog-card">
+          <div class="catalog-card-heading"><span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-moon"></use></svg></span><h3><span data-copy lang="en">Dream Dictionary</span><span data-copy lang="my">အိပ်မက်အဘိဓာန်</span></h3></div>
+          <p><span data-copy lang="en">Grouped dream interpretations and lookup details.</span><span data-copy lang="my">အုပ်စုခွဲထားသော အိပ်မက်အနက်ဖွင့်ဆိုချက်နှင့် ရှာဖွေမှုအသေးစိတ်များ။</span></p>
+          <code class="route" lang="en">/dream-dictionary</code>
+        </li>
+        <li class="catalog-card">
+          <div class="catalog-card-heading"><span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-book"></use></svg></span><h3><span data-copy lang="en">Phayar Sar</span><span data-copy lang="my">ဘုရားစာ</span></h3></div>
+          <p><span data-copy lang="en">Religious text groups and detail entries.</span><span data-copy lang="my">ဘာသာရေးစာစုများနှင့် အသေးစိတ်အကြောင်းအရာများ။</span></p>
+          <code class="route" lang="en">/phayar-sar</code>
+        </li>
+        <li class="catalog-card">
+          <div class="catalog-card-heading"><span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-book"></use></svg></span><h3><span data-copy lang="en">Missing Historical Records</span><span data-copy lang="my">ပျောက်ဆုံးသမိုင်းမှတ်တမ်းများ</span></h3></div>
+          <p><span data-copy lang="en">Historical books, metadata, and page-level record content.</span><span data-copy lang="my">သမိုင်းစာအုပ်များ၊ metadata နှင့် စာမျက်နှာအလိုက် မှတ်တမ်းအကြောင်းအရာများ။</span></p>
+          <code class="route" lang="en">/missing-historical-records</code>
+        </li>
+        <li class="catalog-card">
+          <div class="catalog-card-heading"><span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-leaf"></use></svg></span><h3><span data-copy lang="en">Burmese Agriculture</span><span data-copy lang="my">မြန်မာ့စိုက်ပျိုးရေး</span></h3></div>
+          <p><span data-copy lang="en">Agricultural reference guides and structured entries.</span><span data-copy lang="my">စိုက်ပျိုးရေးကိုးကားလမ်းညွှန်များနှင့် စနစ်တကျဖွဲ့စည်းထားသော အကြောင်းအရာများ။</span></p>
+          <code class="route" lang="en">/burmese-agriculture</code>
+        </li>
+        <li class="catalog-card">
+          <div class="catalog-card-heading"><span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-bowl"></use></svg></span><h3><span data-copy lang="en">Burmese Recipes</span><span data-copy lang="my">မြန်မာဟင်းချက်နည်းများ</span></h3></div>
+          <p><span data-copy lang="en">Traditional recipes and cooking reference content.</span><span data-copy lang="my">ရိုးရာဟင်းချက်နည်းများနှင့် ချက်ပြုတ်ရေးကိုးကားအကြောင်းအရာများ။</span></p>
+          <code class="route" lang="en">/burmese-recipes</code>
+        </li>
+        <li class="catalog-card">
+          <div class="catalog-card-heading"><span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-alert"></use></svg></span><h3><span data-copy lang="en">Incompatible Food</span><span data-copy lang="my">အတည့်မဖြစ်သော အစားအစာများ</span></h3></div>
+          <p><span data-copy lang="en">Food compatibility notes and traditional guidance.</span><span data-copy lang="my">အစားအစာအတည့်အကျပ် မှတ်စုများနှင့် ရိုးရာလမ်းညွှန်ချက်များ။</span></p>
+          <code class="route" lang="en">/incompatible-food</code>
+        </li>
+        <li class="catalog-card">
+          <div class="catalog-card-heading"><span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-calendar"></use></svg></span><h3><span data-copy lang="en">Myanmar Months</span><span data-copy lang="my">မြန်မာလများ</span></h3></div>
+          <p><span data-copy lang="en">Myanmar calendar months and related metadata.</span><span data-copy lang="my">မြန်မာပြက္ခဒိန်လများနှင့် ဆက်စပ် metadata။</span></p>
+          <code class="route" lang="en">/myanmar-months</code>
+        </li>
+        <li class="catalog-card">
+          <div class="catalog-card-heading"><span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-quote"></use></svg></span><h3><span data-copy lang="en">Myanmar Proverbs</span><span data-copy lang="my">မြန်မာစကားပုံများ</span></h3></div>
+          <p><span data-copy lang="en">Traditional proverbs for learning and reference products.</span><span data-copy lang="my">သင်ယူရေးနှင့် ကိုးကားထုတ်ကုန်များအတွက် ရိုးရာစကားပုံများ။</span></p>
+          <code class="route" lang="en">/myanmar-proverbs</code>
+        </li>
+        <li class="catalog-card">
+          <div class="catalog-card-heading"><span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-spark"></use></svg></span><h3><span data-copy lang="en">Quotlets</span><span data-copy lang="my">အဆိုအမိန့်များ</span></h3></div>
+          <p><span data-copy lang="en">Inspirational quotes and short shareable text entries.</span><span data-copy lang="my">အားပေးစကားများနှင့် မျှဝေရလွယ်သော စာသားတိုများ။</span></p>
+          <code class="route" lang="en">/quotlets</code>
+        </li>
+        <li class="catalog-card">
+          <div class="catalog-card-heading"><span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-zodiac"></use></svg></span><h3><span data-copy lang="en">Zodiac</span><span data-copy lang="my">ရာသီခွင်</span></h3></div>
+          <p><span data-copy lang="en">Zodiac signs, traits, and lookup records.</span><span data-copy lang="my">ရာသီခွင်သင်္ကေတများ၊ လက္ခဏာများနှင့် ရှာဖွေမှတ်တမ်းများ။</span></p>
+          <code class="route" lang="en">/zodiac</code>
+        </li>
+      </ul>
     </section>
 
     <section class="capability-band" id="capabilities" aria-labelledby="capability-title">
       <div class="section">
         <div class="section-head">
-          <p class="section-kicker">Capabilities</p>
-          <h2 id="capability-title">Designed for teams that need clear data contracts.</h2>
-          <p>The landing page now reflects the API as an operational data product while leaving the underlying NestJS implementation intact.</p>
+          <p class="section-kicker"><span data-copy lang="en">Capabilities</span><span data-copy lang="my">စွမ်းဆောင်ရည်များ</span></p>
+          <h2 id="capability-title">
+            <span data-copy lang="en">Designed for teams that need clear data contracts.</span>
+            <span data-copy lang="my">ရှင်းလင်းသော ဒေတာစာချုပ်များလိုအပ်သည့် အဖွဲ့များအတွက် ဒီဇိုင်းပြုထားသည်။</span>
+          </h2>
+          <p>
+            <span data-copy lang="en">The landing page presents the API as an operational data product while leaving the NestJS implementation intact.</span>
+            <span data-copy lang="my">Landing page သည် NestJS implementation ကိုမပြောင်းဘဲ API ကိုအသုံးချနိုင်သော ဒေတာထုတ်ကုန်တစ်ခုအဖြစ် ဖော်ပြထားသည်။</span>
+          </p>
         </div>
 
-        <div class="capability-grid">
-          <article class="capability">
+        <ul class="capability-grid">
+          <li class="capability">
             <span class="capability-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-shield"></use></svg></span>
-            <h3>Stable routes</h3>
-            <p>Docs and API URLs remain predictable across the existing deployment surface.</p>
-          </article>
-
-          <article class="capability">
+            <h3><span data-copy lang="en">Stable routes</span><span data-copy lang="my">တည်ငြိမ်သော route များ</span></h3>
+            <p><span data-copy lang="en">Docs and API URLs remain predictable across the existing deployment surface.</span><span data-copy lang="my">Docs နှင့် API URL များသည် လက်ရှိ deployment တွင် ခန့်မှန်းရလွယ်ကူစွာ တည်ငြိမ်နေသည်။</span></p>
+          </li>
+          <li class="capability">
             <span class="capability-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-database"></use></svg></span>
-            <h3>Curated datasets</h3>
-            <p>Static public data sources are presented as organized REST resources.</p>
-          </article>
-
-          <article class="capability">
+            <h3><span data-copy lang="en">Curated datasets</span><span data-copy lang="my">စိစစ်စုစည်းထားသော ဒေတာစုများ</span></h3>
+            <p><span data-copy lang="en">Static public data sources are presented as organized REST resources.</span><span data-copy lang="my">Static အများသုံးဒေတာရင်းမြစ်များကို စနစ်တကျဖွဲ့ထားသော REST resource များအဖြစ် ပေးထားသည်။</span></p>
+          </li>
+          <li class="capability">
             <span class="capability-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-gauge"></use></svg></span>
-            <h3>Fast entry point</h3>
-            <p>The home page stays lightweight with no frontend framework or CDN dependency.</p>
-          </article>
-
-          <article class="capability">
+            <h3><span data-copy lang="en">Fast entry point</span><span data-copy lang="my">လျင်မြန်သော ဝင်ပေါက်</span></h3>
+            <p><span data-copy lang="en">The home page stays lightweight with no frontend framework or CDN dependency.</span><span data-copy lang="my">Home page တွင် frontend framework သို့မဟုတ် CDN dependency မရှိသဖြင့် ပေါ့ပါးနေသည်။</span></p>
+          </li>
+          <li class="capability">
             <span class="capability-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-access"></use></svg></span>
-            <h3>Accessible UI</h3>
-            <p>Keyboard focus, contrast, responsive layouts, and motion preferences are built in.</p>
-          </article>
-        </div>
+            <h3><span data-copy lang="en">Accessible UI</span><span data-copy lang="my">လူတိုင်းအသုံးပြုနိုင်သော UI</span></h3>
+            <p><span data-copy lang="en">Keyboard focus, contrast, responsive layouts, and motion preferences are built in.</span><span data-copy lang="my">Keyboard focus၊ အရောင်ကွာခြားမှု၊ responsive layout နှင့် motion preference များပါဝင်သည်။</span></p>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
@@ -1145,17 +1216,75 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <span class="brand-mark" aria-hidden="true">
-          <svg><use href="/assets/landing-icons.svg#logo-mark"></use></svg>
-        </span>
-        <span>Burma Project Ideas API</span>
+        <span class="brand-mark" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#logo-mark"></use></svg></span>
+        <span lang="en">Burma Project Ideas API</span>
       </div>
-      <nav class="footer-links" aria-label="Footer links">
-        <a href="/swagger">Swagger</a>
-        <a href="/scalar">Scalar</a>
-        <a href="#catalog">Catalog</a>
+      <nav class="footer-links" aria-labelledby="footer-links-title">
+        <span class="sr-only" id="footer-links-title"><span data-copy lang="en">Footer links</span><span data-copy lang="my">အောက်ခြေလင့်ခ်များ</span></span>
+        <ul>
+          <li><a href="/swagger" lang="en">Swagger</a></li>
+          <li><a href="/scalar" lang="en">Scalar</a></li>
+          <li><a href="#catalog"><span data-copy lang="en">Catalog</span><span data-copy lang="my">စာရင်း</span></a></li>
+        </ul>
       </nav>
     </div>
   </footer>
+
+  <script>
+    (() => {
+      const storageKey = 'burma-project-ideas-language';
+      const buttons = [...document.querySelectorAll('[data-language-choice]')];
+      const chooseLanguage = (storedLanguage, browserLanguage) =>
+        storedLanguage === 'en' || storedLanguage === 'my'
+          ? storedLanguage
+          : String(browserLanguage).toLowerCase().startsWith('my')
+            ? 'my'
+            : 'en';
+
+      console.assert(
+        chooseLanguage('my', 'en-US') === 'my' &&
+        chooseLanguage(null, 'my-MM') === 'my' &&
+        chooseLanguage(null, 'en-US') === 'en',
+        'Language preference selection failed',
+      );
+
+      const setLanguage = (language, persist = false) => {
+        document.documentElement.dataset.language = language;
+        document.documentElement.lang = language;
+        document.title = language === 'my'
+          ? 'Burma Project Ideas API | မြန်မာဒေတာ API'
+          : 'Burma Project Ideas API';
+
+        buttons.forEach((button) => {
+          button.setAttribute(
+            'aria-pressed',
+            String(button.dataset.languageChoice === language),
+          );
+        });
+
+        if (persist) {
+          try {
+            localStorage.setItem(storageKey, language);
+          } catch {
+            // The selected language still applies when storage is unavailable.
+          }
+        }
+      };
+
+      let storedLanguage = null;
+      try {
+        storedLanguage = localStorage.getItem(storageKey);
+      } catch {
+        // Fall back to the browser language when storage is unavailable.
+      }
+
+      setLanguage(chooseLanguage(storedLanguage, navigator.language));
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+          setLanguage(button.dataset.languageChoice, true);
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

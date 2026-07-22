@@ -23,6 +23,26 @@ describe('AppController (e2e)', () => {
     await app.close();
   });
 
+  it('/ (GET) should serve the bilingual accessible landing page', () => {
+    return request(app.getHttpServer())
+      .get('/')
+      .expect(200)
+      .expect('Content-Type', /html/)
+      .expect((res) => {
+        expect(res.text).toContain('<html lang="en" data-language="en">');
+        expect(res.text).toContain('href="#main"');
+        expect(res.text).toContain('<main id="main">');
+        expect(res.text).toContain('data-language-choice="en"');
+        expect(res.text).toContain('data-language-choice="my"');
+        expect(res.text).toContain('data-copy lang="my"');
+        expect(res.text).toContain('burma-project-ideas-language');
+        expect(res.text).toContain('<dl class="hero-facts">');
+        expect(res.text).toContain('<figure class="payload">');
+        expect(res.text).toContain('<pre><code lang="en">');
+        expect(res.text).toContain('@media (prefers-reduced-motion: reduce)');
+      });
+  });
+
   it('/missing-historical-records (GET) should return records', () => {
     return request(app.getHttpServer())
       .get('/missing-historical-records')
@@ -43,7 +63,11 @@ describe('AppController (e2e)', () => {
     await request(app.getHttpServer())
       .get('/swagger-json')
       .expect(200)
-      .expect('Content-Type', /json/);
+      .expect('Content-Type', /json/)
+      .expect((res) => {
+        expect(res.body.info.title).toContain('မြန်မာ');
+        expect(res.body.info.description).toContain('မြန်မာ့ယဉ်ကျေးမှု');
+      });
 
     await request(app.getHttpServer())
       .get('/swagger/swagger-ui.css')
@@ -61,6 +85,7 @@ describe('AppController (e2e)', () => {
       .expect('Content-Type', /html/)
       .expect((res) => {
         expect(res.text).toContain('Scalar API Reference');
+        expect(res.text).toContain('မြန်မာ API ကိုးကားချက်');
       });
   });
 
