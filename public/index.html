@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light">
+  <meta name="color-scheme" content="dark">
   <title>Burma Project Ideas API</title>
   <style>
     :root {
@@ -854,6 +854,470 @@
       }
     }
 
+    /* Syntax-inspired dark documentation theme. */
+    :root {
+      --bg: #08101f;
+      --surface: #0d182b;
+      --surface-muted: #12213a;
+      --ink: #f3f7ff;
+      --text: #d5deed;
+      --muted: #a9b6cb;
+      --line: #223454;
+      --line-strong: #385276;
+      --accent: #43d3ff;
+      --accent-strong: #8ae8ff;
+      --accent-soft: #102c42;
+      --focus: #ffd166;
+      --radius: 14px;
+      --container: 1220px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .skip-link {
+      background: var(--focus);
+      color: #111827;
+    }
+
+    .site-header {
+      border-bottom-color: rgba(67, 211, 255, 0.16);
+      background: rgba(8, 16, 31, 0.94);
+    }
+
+    .nav {
+      min-height: 82px;
+      padding-inline: 32px;
+    }
+
+    .brand {
+      color: var(--ink);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-color: var(--accent);
+      background: transparent;
+      color: var(--accent);
+      transform: rotate(45deg);
+    }
+
+    .brand-mark svg {
+      transform: rotate(-45deg);
+    }
+
+    .brand-text small {
+      color: var(--muted);
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .nav-links {
+      min-width: min(410px, 34vw);
+      padding: 4px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--surface);
+    }
+
+    .nav-links ul {
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .nav-links li {
+      flex: 1;
+    }
+
+    .nav-links a,
+    .footer-links a {
+      justify-content: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav-links a:hover,
+    .footer-links a:hover {
+      background: var(--surface-muted);
+      color: var(--ink);
+    }
+
+    .language-switcher {
+      border-color: var(--line-strong);
+      background: var(--surface);
+    }
+
+    .language-switcher button {
+      color: var(--muted);
+    }
+
+    .language-switcher button[aria-pressed="true"] {
+      background: var(--surface-muted);
+      color: var(--accent-strong);
+    }
+
+    .nav-cta,
+    .button {
+      border-radius: 999px;
+    }
+
+    .nav-cta {
+      border-color: var(--line-strong);
+      background: var(--surface-muted);
+      color: var(--ink);
+    }
+
+    .nav-cta:hover,
+    .button-primary:hover {
+      background: #79e2ff;
+      color: #07111f;
+    }
+
+    .hero-band {
+      position: relative;
+      overflow: hidden;
+      border-bottom-color: var(--line);
+      background: var(--bg);
+    }
+
+    .hero-band::before {
+      position: absolute;
+      top: -260px;
+      right: -80px;
+      width: 620px;
+      height: 620px;
+      border: 1px solid rgba(67, 211, 255, 0.2);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .hero-band::after {
+      position: absolute;
+      top: 0;
+      right: 23%;
+      bottom: 0;
+      border-left: 1px solid rgba(67, 211, 255, 0.12);
+      content: "";
+    }
+
+    .hero {
+      position: relative;
+      z-index: 1;
+      min-height: 620px;
+      padding: 72px 32px 96px;
+      grid-template-columns: minmax(0, 1fr) minmax(420px, 0.92fr);
+      gap: 72px;
+      align-items: start;
+    }
+
+    .status-line {
+      width: fit-content;
+      margin-bottom: 26px;
+      padding: 7px 11px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--accent-strong);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+    }
+
+    h1 {
+      max-width: 720px;
+      color: var(--ink);
+      font-family: inherit;
+      font-size: clamp(42px, 4.7vw, 60px);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+      font-weight: 740;
+    }
+
+    .headline-accent {
+      color: var(--accent);
+    }
+
+    h1 :lang(my) {
+      font-size: clamp(30px, 8vw, 46px);
+      letter-spacing: 0;
+      line-height: 1.65;
+    }
+
+    .hero-copy > p {
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    .button {
+      min-height: 48px;
+      padding-inline: 20px;
+    }
+
+    .button-primary {
+      background: var(--accent);
+      color: #07111f;
+    }
+
+    .button-secondary {
+      border-color: var(--line-strong);
+      background: var(--surface-muted);
+      color: var(--ink);
+    }
+
+    .button-secondary:hover {
+      border-color: var(--accent);
+      background: var(--surface);
+      color: var(--accent-strong);
+    }
+
+    .hero-facts {
+      max-width: 520px;
+      margin-top: 42px;
+    }
+
+    .fact {
+      border-left-color: var(--line-strong);
+    }
+
+    .fact dd {
+      color: var(--accent-strong);
+    }
+
+    .fact dt {
+      color: var(--muted);
+    }
+
+    .console-panel {
+      border-color: var(--line-strong);
+      border-radius: 18px;
+      background: #071120;
+    }
+
+    .console-topbar {
+      min-height: 58px;
+      border-bottom-color: var(--line);
+      background: var(--surface);
+    }
+
+    .console-title {
+      color: var(--accent-strong);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 13px;
+    }
+
+    .status-badge {
+      border-color: #27625a;
+      background: #0d302f;
+      color: #92f1d3;
+    }
+
+    .status-badge::before {
+      background: #5ee4ba;
+    }
+
+    .console-body {
+      padding: 10px 18px 18px;
+    }
+
+    .endpoint-list {
+      counter-reset: endpoint;
+      gap: 0;
+    }
+
+    .endpoint-row {
+      min-height: 52px;
+      padding: 8px 4px;
+      grid-template-columns: 28px 50px minmax(0, 1fr) auto;
+      gap: 10px;
+      counter-increment: endpoint;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      border-radius: 0;
+      background: transparent;
+    }
+
+    .endpoint-row::before {
+      color: #60708b;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 11px;
+      content: counter(endpoint, decimal-leading-zero);
+    }
+
+    .method {
+      color: #f59ac6;
+    }
+
+    .path {
+      color: var(--accent-strong);
+    }
+
+    .endpoint-icon {
+      border-color: var(--line);
+      background: var(--surface);
+      color: #b9a5ff;
+    }
+
+    .payload {
+      margin-top: 18px;
+      border-color: var(--line);
+      background: var(--surface);
+      color: #d7e2f5;
+    }
+
+    .payload figcaption {
+      border-bottom-color: var(--line);
+      color: var(--muted);
+    }
+
+    .section {
+      padding: 100px 32px;
+    }
+
+    .section-kicker {
+      color: var(--accent);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    }
+
+    h2 {
+      color: var(--ink);
+    }
+
+    .section-head > p:last-child,
+    .doc-card p,
+    .catalog-card p,
+    .capability p {
+      color: var(--muted);
+    }
+
+    .docs-band,
+    .capability-band {
+      border-color: var(--line);
+      background: #0a1425;
+    }
+
+    .doc-card,
+    .catalog-card,
+    .capability {
+      border-color: var(--line);
+      background: var(--surface);
+    }
+
+    .doc-card:hover,
+    .catalog-card:hover,
+    .capability:hover {
+      border-color: var(--accent);
+      background: var(--surface-muted);
+    }
+
+    .doc-icon,
+    .catalog-icon,
+    .capability-icon {
+      border-color: var(--line-strong);
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+    }
+
+    .doc-card h3,
+    .catalog-card h3,
+    .capability h3 {
+      color: var(--ink);
+    }
+
+    .doc-card > svg {
+      color: var(--accent);
+    }
+
+    .catalog-card {
+      min-height: 176px;
+    }
+
+    .route {
+      background: #091a2c;
+      color: var(--accent-strong);
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      background: #050b16;
+      color: var(--text);
+    }
+
+    .footer .brand-mark {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .footer-links a {
+      color: var(--muted);
+    }
+
+    :focus-visible {
+      outline-color: var(--focus);
+    }
+
+    @media (max-width: 980px) {
+      .hero {
+        min-height: 0;
+        grid-template-columns: 1fr;
+        gap: 56px;
+      }
+
+      .console-panel {
+        width: min(100%, 680px);
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .nav {
+        padding: 14px 18px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero,
+      .section {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .hero {
+        padding-top: 72px;
+        padding-bottom: 80px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .nav-tools {
+        width: 100%;
+      }
+
+      .hero-band::before {
+        display: none;
+      }
+
+      .hero-band::after {
+        right: 16px;
+      }
+
+      h1 {
+        font-size: clamp(38px, 12vw, 50px);
+      }
+
+      .endpoint-row {
+        grid-template-columns: 25px 46px minmax(0, 1fr);
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;
@@ -933,8 +1397,8 @@
           </p>
 
           <h1 id="hero-title">
-            <span data-copy lang="en">Structured cultural data for products, research, and learning tools.</span>
-            <span data-copy lang="my">ထုတ်ကုန်များ၊ သုတေသနနှင့် သင်ယူရေးကိရိယာများအတွက် စနစ်တကျဖွဲ့စည်းထားသော ယဉ်ကျေးမှုဒေတာ။</span>
+            <span data-copy lang="en">Structured <span class="headline-accent">cultural data</span> for products, research, and learning tools.</span>
+            <span data-copy lang="my">ထုတ်ကုန်များ၊ သုတေသနနှင့် သင်ယူရေးကိရိယာများအတွက် စနစ်တကျဖွဲ့စည်းထားသော <span class="headline-accent">ယဉ်ကျေးမှုဒေတာ</span>။</span>
           </h1>
 
           <p>
