@@ -115,7 +115,11 @@ describe('AppController (e2e)', () => {
     await request(app.getHttpServer())
       .get('/swagger')
       .expect(200)
-      .expect('Content-Type', /html/);
+      .expect('Content-Type', /html/)
+      .expect((res) => {
+        expect(res.text).toContain('SF Pro Text');
+        expect(res.text).toContain('--font-mono');
+      });
 
     await request(app.getHttpServer())
       .get('/swagger-json')
@@ -142,6 +146,8 @@ describe('AppController (e2e)', () => {
       .expect('Content-Type', /html/)
       .expect((res) => {
         expect(res.text).toContain('Scalar API Reference');
+        expect(res.text).toContain('"withDefaultFonts":false');
+        expect(res.text).toContain('--scalar-font');
         expect(res.text).toContain('မြန်မာ API ကိုးကားချက်');
       });
   });

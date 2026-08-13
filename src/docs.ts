@@ -69,6 +69,8 @@ const swaggerThemeCss = `
   --docs-line-strong: #385276;
   --docs-accent: #43d3ff;
   --docs-focus: #ffd166;
+  --font-sans: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI Variable Text", "Segoe UI", Arial, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
 }
 
 html,
@@ -83,7 +85,23 @@ body {
 
 .swagger-ui {
   color: var(--docs-text);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.swagger-ui,
+.swagger-ui * {
+  font-family: var(--font-sans) !important;
+}
+
+.swagger-ui code,
+.swagger-ui pre,
+.swagger-ui kbd,
+.swagger-ui samp,
+.swagger-ui .code,
+.swagger-ui .microlight,
+.swagger-ui .model,
+.swagger-ui .prop-type,
+.swagger-ui .parameter__in {
+  font-family: var(--font-mono) !important;
 }
 
 .swagger-ui .wrapper {
@@ -339,8 +357,8 @@ const scalarThemeCss = `
 :root,
 .dark-mode {
   color-scheme: dark;
-  --scalar-font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --scalar-font-code: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --scalar-font: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI Variable Text", "Segoe UI", Arial, sans-serif;
+  --scalar-font-code: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   --scalar-color-1: #f3f7ff;
   --scalar-color-2: #a9b6cb;
   --scalar-color-3: #7f8da5;
