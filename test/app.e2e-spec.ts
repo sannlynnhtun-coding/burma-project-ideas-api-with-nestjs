@@ -54,6 +54,63 @@ describe('AppController (e2e)', () => {
       });
   });
 
+  it('/nat-myat-si should serve the static divination workflow', async () => {
+    await request(app.getHttpServer())
+      .get('/nat-myat-si/questions')
+      .expect(200)
+      .expect((res) => {
+        expect(res.body).toHaveLength(100);
+        expect(res.body[0]).toEqual({
+          id: 1,
+          text: 'ဒီနှစ်အတွင်း အိမ်ထောင်ကျမှာလား။',
+        });
+      });
+
+    await request(app.getHttpServer())
+      .get('/nat-myat-si/questions')
+      .query({ search: 'အိမ်ထောင်' })
+      .expect(200)
+      .expect((res) => {
+        expect(res.body.length).toBeGreaterThan(0);
+        expect(
+          res.body.every((question: { text: string }) =>
+            question.text.includes('အိမ်ထောင်'),
+          ),
+        ).toBe(true);
+      });
+
+    await request(app.getHttpServer())
+      .get('/nat-myat-si/symbols')
+      .expect(200)
+      .expect((res) => {
+        expect(res.body).toHaveLength(16);
+      });
+
+    await request(app.getHttpServer())
+      .get('/nat-myat-si/readings/1/pisces')
+      .expect(200)
+      .expect((res) => {
+        expect(res.body.symbol.id).toBe('pisces');
+        expect(res.body.answer.text).toBe(
+          'အဝေးတစ်နေရာ (သို့) ခရီးသွားရင်း ဖူးစာဆုံ၍ အိမ်ထောင်ကျမည်။',
+        );
+      });
+  });
+
+  it('/nat-myat-si should validate reading identifiers', async () => {
+    await request(app.getHttpServer())
+      .get('/nat-myat-si/questions/not-a-number')
+      .expect(400);
+
+    await request(app.getHttpServer())
+      .get('/nat-myat-si/readings/999/pisces')
+      .expect(404);
+
+    await request(app.getHttpServer())
+      .get('/nat-myat-si/readings/1/unknown')
+      .expect(404);
+  });
+
   it('/swagger (GET) should serve documentation assets', async () => {
     await request(app.getHttpServer())
       .get('/swagger')

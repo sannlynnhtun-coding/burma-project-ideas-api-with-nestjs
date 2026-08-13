@@ -86,6 +86,7 @@ This document outlines the project status. Finished API features are checked aga
 - [x] Missing Historical Records
 - [x] Myanmar Months
 - [x] Myanmar Proverbs
+- [x] NatMyatSi
 - [x] Phayar Sar
 - [x] Pick A Pile
 - [x] Quotlets
@@ -96,3 +97,15 @@ This document outlines the project status. Finished API features are checked aga
 
 - [ ] Banking Management System
 - [ ] Movie Ticket Online Booking System
+
+## NatMyatSi API flow
+
+NatMyatSi uses static data from `public/nat-myat-si/data.json`. The client selects a question, shuffles and hides the 16 symbols, then requests the reading for the selected question and revealed symbol.
+
+```http
+GET /nat-myat-si/questions
+GET /nat-myat-si/questions?search=အိမ်ထောင်
+GET /nat-myat-si/questions/:questionId
+GET /nat-myat-si/symbols
+GET /nat-myat-si/readings/:questionId/:symbolId
+```
