@@ -54,6 +54,22 @@
       "src": "/missing-historical-records/([0-9]+)/pages/?",
       "dest": "/api/index"
     },
+    { "src": "/adhihtan/data\\.json/?", "dest": "/api/index" },
+    { "src": "/adhihtan/categories/?", "dest": "/api/index" },
+    {
+      "src": "/adhihtan/categories/([0-9]+)/?",
+      "dest": "/api/index"
+    },
+    {
+      "src": "/adhihtan/categories/([0-9]+)/schedules/?",
+      "dest": "/api/index"
+    },
+    {
+      "src": "/adhihtan/categories/([0-9]+)/schedules/([0-9]+)/?",
+      "dest": "/api/index"
+    },
+    { "src": "/adhihtan/spells/?", "dest": "/api/index" },
+    { "src": "/adhihtan/spells/([0-9]+)/?", "dest": "/api/index" },
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/api/index" }
   ]

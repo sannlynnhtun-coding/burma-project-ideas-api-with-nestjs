@@ -39,6 +39,11 @@ describe('AppController (e2e)', () => {
         expect(res.text).toContain('<dl class="hero-facts">');
         expect(res.text).toContain('<figure class="payload">');
         expect(res.text).toContain('<pre><code lang="en">');
+        expect(res.text).toContain('<dd lang="en">18</dd>');
+        expect(res.text).toContain('/adhihtan/categories');
+        expect(res.text).toContain(
+          '<span data-copy lang="my">အဓိဋ္ဌာန်</span>',
+        );
         expect(res.text).toContain('@media (prefers-reduced-motion: reduce)');
       });
   });
@@ -111,6 +116,86 @@ describe('AppController (e2e)', () => {
       .expect(404);
   });
 
+  it('/adhihtan should serve raw and structured static content', async () => {
+    await request(app.getHttpServer())
+      .get('/adhihtan/data.json')
+      .expect(200)
+      .expect('Content-Type', /json/)
+      .expect((res) => {
+        expect(res.body.schemaVersion).toBe(1);
+        expect(res.body.categories).toHaveLength(5);
+        expect(Object.keys(res.body.localizedSpellNames)).toHaveLength(35);
+      });
+
+    await request(app.getHttpServer())
+      .get('/adhihtan/categories')
+      .expect(200)
+      .expect((res) => {
+        expect(res.body).toHaveLength(5);
+        expect(res.body[0]).toHaveProperty('label', 'ကိုးနဝင်း');
+      });
+
+    await request(app.getHttpServer())
+      .get('/adhihtan/categories/1')
+      .expect(200)
+      .expect((res) => {
+        expect(res.body.value).toBe(1);
+        expect(res.body.detailTabs.instructions).toHaveLength(5);
+      });
+
+    await request(app.getHttpServer())
+      .get('/adhihtan/categories/1/schedules')
+      .expect(200)
+      .expect((res) => {
+        expect(res.body).toHaveLength(9);
+      });
+
+    await request(app.getHttpServer())
+      .get('/adhihtan/categories/1/schedules/1')
+      .expect(200)
+      .expect((res) => {
+        expect(res.body.value).toBe(1);
+        expect(res.body.datasources).toHaveLength(9);
+      });
+
+    await request(app.getHttpServer())
+      .get('/adhihtan/categories/5/schedules')
+      .expect(200)
+      .expect([]);
+
+    await request(app.getHttpServer())
+      .get('/adhihtan/spells')
+      .expect(200)
+      .expect((res) => {
+        expect(res.body).toHaveLength(35);
+      });
+
+    await request(app.getHttpServer())
+      .get('/adhihtan/spells/1')
+      .expect(200)
+      .expect({
+        id: 1,
+        key: 'default_spell_1',
+        name: 'ဗုဒ္ဓံ သရဏံ ဂစ္ဆမိ',
+      });
+  });
+
+  it('/adhihtan should validate category, level, and spell identifiers', async () => {
+    await request(app.getHttpServer())
+      .get('/adhihtan/categories/not-a-number')
+      .expect(400);
+
+    await request(app.getHttpServer())
+      .get('/adhihtan/categories/999')
+      .expect(404);
+
+    await request(app.getHttpServer())
+      .get('/adhihtan/categories/1/schedules/999')
+      .expect(404);
+
+    await request(app.getHttpServer()).get('/adhihtan/spells/999').expect(404);
+  });
+
   it('/swagger (GET) should serve documentation assets', async () => {
     await request(app.getHttpServer())
       .get('/swagger')
@@ -128,6 +213,25 @@ describe('AppController (e2e)', () => {
       .expect((res) => {
         expect(res.body.info.title).toContain('မြန်မာ');
         expect(res.body.info.description).toContain('မြန်မာ့ယဉ်ကျေးမှု');
+        const adhihtanTag = res.body.tags.find(
+          (tag: { name: string }) => tag.name === 'Adhihtan',
+        );
+        expect(adhihtanTag.description).toContain('prayer-counting flow');
+        expect(adhihtanTag.description).toContain('<span lang="my">');
+
+        const adhihtanPaths = Object.entries(res.body.paths).filter(([path]) =>
+          path.startsWith('/adhihtan/'),
+        );
+        expect(adhihtanPaths).toHaveLength(7);
+        expect(
+          adhihtanPaths.every(([, operations]) =>
+            Object.values(
+              operations as Record<string, { description?: string }>,
+            ).every((operation) =>
+              operation.description?.includes('<span lang="my">'),
+            ),
+          ),
+        ).toBe(true);
       });
 
     await request(app.getHttpServer())

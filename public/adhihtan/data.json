@@ -1,0 +1,2350 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "packageName": "com.a_dhi_htan",
+    "appVersion": "1.3.1",
+    "hermesBytecodeVersion": 96
+  },
+  "categories": [
+    {
+      "label": "ကိုးနဝင်း",
+      "value": 1,
+      "isActive": true,
+      "duration": "၈၁",
+      "level": [
+        {
+          "label": "ပထမအဆင့်",
+          "value": 1
+        },
+        {
+          "label": "ဒုတိယအဆင့်",
+          "value": 2
+        },
+        {
+          "label": "တတိယအဆင့်",
+          "value": 3
+        },
+        {
+          "label": "စတုတ္ထအဆင့်",
+          "value": 4
+        },
+        {
+          "label": "ပဉ္စမအဆင့်",
+          "value": 5
+        },
+        {
+          "label": "ဆဋ္ဌမအဆင့်",
+          "value": 6
+        },
+        {
+          "label": "သတ္တမအဆင့်",
+          "value": 7
+        },
+        {
+          "label": "အဋ္ဌမအဆင့်",
+          "value": 8
+        },
+        {
+          "label": "နဝမအဆင့်",
+          "value": 9
+        }
+      ],
+      "format": "နေ့တိုင်း",
+      "howToPray": "တစ်ဆင့်လျှင် သင်၏ အရေးအကြီးဆုံးကိစ္စတစ်ခုကို ဆုတောင်းနိုင်ပါသည်",
+      "benefit": "ဆုတောင်းပြည့်",
+      "detailTabs": {
+        "benefits": [
+          {
+            "title": "အဆင့် (၁) အောင်မြင်ပြီးပါက",
+            "description": "ငွေကြေးအပေးအယူ၊ ခရီး၊ ပညာရေး၊ အသိဉာဏ်ပွင့်လင်းခြင်းနှင့် ဆုံးဖြတ်ချက်ခိုင်မာခြင်းဆိုင်ရာ ကိစ္စများ အောင်မြင်နိုင်သည်ဟု ဆိုပါသည်။"
+          },
+          {
+            "title": "အဆင့် (၂) အောင်မြင်ပြီးပါက",
+            "description": "ရာထူး၊ စီးပွားရေး၊ မြေ၊ သစ်ပင်၊ ကလေးမွေးဖွားခြင်း၊ အလှအပ၊ လက်ဝတ်ရတနာနှင့် အခက်အခဲများဆိုင်ရာ ကိစ္စများ အောင်မြင်နိုင်သည်ဟု ဆိုပါသည်။"
+          },
+          {
+            "title": "အဆင့် (၃) အောင်မြင်ပြီးပါက",
+            "description": "အမှုအခင်း၊ အချုပ်အနှောင်နှင့် အထက်လူကြီးကြောင့် ကိုယ်စိတ်ဆင်းရဲခြင်းမှ လွတ်မြောက်နိုင်သည်ဟု ဆိုပါသည်။"
+          },
+          {
+            "title": "အဆင့် (၄) အောင်မြင်ပြီးပါက",
+            "description": "ကြွယ်ဝချမ်းသာခြင်း၊ မိတ်ဆွေတိုးပွားခြင်းနှင့် ညီညွတ်မှုဆိုင်ရာ ကိစ္စများ အောင်မြင်နိုင်သည်ဟု ဆိုပါသည်။"
+          },
+          {
+            "title": "အဆင့် (၅) အောင်မြင်ပြီးပါက",
+            "description": "အချစ်ရေး၊ စေ့စပ်မင်္ဂလာ၊ အိမ်ထောင်ရေးနှင့် ဒုက္ခများကို ကျော်လွှားနိုင်သည်ဟု ဆိုပါသည်။"
+          },
+          {
+            "title": "အဆင့် (၆) အောင်မြင်ပြီးပါက",
+            "description": "အတိုက်အခိုက်၊ ယာဉ်ရထား၊ ယှဉ်ပြိုင်မှုနှင့် ပင်လယ်ရပ်ခြားကိစ္စများ အောင်မြင်နိုင်သည်ဟု ဆိုပါသည်။"
+          },
+          {
+            "title": "အဆင့် (၇) အောင်မြင်ပြီးပါက",
+            "description": "အနှောင့်အယှက်၊ မိမိကိုယ်ကိုယုံကြည်မှု၊ ခိုင်မာမှုနှင့် အာမခံကိစ္စများ အောင်မြင်နိုင်သည်ဟု ဆိုပါသည်။"
+          },
+          {
+            "title": "အဆင့် (၈) အောင်မြင်ပြီးပါက",
+            "description": "ခက်ခဲသောအလုပ်များ ပြီးဆုံးခြင်း၊ အလှူ၊ ဘုရားဖူး၊ ကျင့်စဉ်နှင့် မကောင်းသောပြုစားမှုများ ပျောက်ကင်းနိုင်သည်ဟု ဆိုပါသည်။"
+          },
+          {
+            "title": "အဆင့် (၉) အောင်မြင်ပြီးပါက",
+            "description": "လိမ်လည်ခံရခြင်း၊ မဟုတ်မမှန်စွပ်စွဲခံရခြင်း၊ နာမည်ကျော်ကြားခြင်းဆိုင်ရာ ကိစ္စများ အောင်မြင်နိုင်သည်ဟု ဆိုပါသည်။"
+          },
+          {
+            "title": "သတိပြုရန်",
+            "description": "ဖော်ပြထားသောအကျိုးများသည် ရိုးရာယုံကြည်မှုဆိုင်ရာ အဆိုများဖြစ်ပြီး အာမခံချက်မဟုတ်ပါ။ ကျွမ်းကျင်သူ၏ အကူအညီကို အစားမထိုးသင့်ပါ။",
+            "caution": true
+          }
+        ],
+        "instructions": [
+          {
+            "title": "အဓိဋ္ဌာန်အစီအစဉ်",
+            "description": "အဓိဋ္ဌာန် (၉) ဆင့်ရှိပြီး တစ်ဆင့်လျှင် (၉) ရက်နှုန်းဖြင့် စုစုပေါင်း (၈၁) ရက် ဝင်ရပါမည်။"
+          },
+          {
+            "title": "ဆုတောင်းခြင်း",
+            "description": "တစ်ဆင့်လျှင် မိမိ၏အရေးအကြီးဆုံးကိစ္စတစ်ခုကို ဆုတောင်းနိုင်ပါသည်။"
+          },
+          {
+            "title": "အစဉ်လိုက်စိပ်ခြင်း",
+            "description": "ဖော်ပြထားသော ဂုဏ်တော်အမှတ်စဉ်နှင့် ပုတီးပတ်ရေအတိုင်း စိပ်ပါ။"
+          },
+          {
+            "title": "စတင်ရမည့်နေ့",
+            "description": "မည်သည့်နေ့မွေးဖွားသူမဆို တနင်္လာနေ့မှစ၍ အဓိဋ္ဌာန်ဝင်ရောက်ရမည်။"
+          },
+          {
+            "title": "သက်သက်လွတ်နေ့",
+            "description": "အစိမ်းရောင်ပြထားသောအကွက်သည် သက်သက်လွတ်စားရမည့်နေ့ဖြစ်ပါသည်။"
+          }
+        ]
+      }
+    },
+    {
+      "label": "ခန္တီစေတီ",
+      "value": 2,
+      "isActive": true,
+      "duration": "၁၆",
+      "level": [],
+      "format": "နေ့တိုင်း",
+      "howToPray": "အပတ်ပေါင်း (၁၆၀) စိပ်မိလျှင် စေတီတစ်ဆူတည်ပြီးဖြစ်၍ စေတီအဆူပေါင်း မိမိအသက်နှင့်အမျှ (သက်စေ့) တည်မိလျှင် လောကီ၊ လောကုတ္တရာနှစ်ဖြာသောအကျိုးကို ပေးမည်။",
+      "benefit": "အသက်ရှည်ခြင်း၊ ကျန်းမာခြင်း၊ သွေးသားစင်ကြယ်ခြင်း၊ စိတ်ထားဖြူစင်ခြင်း၊ စီးပွားဥစ္စာတိုးတက်ခြင်း အစရှိသော အကျိုးကျေးဇူးများကို ရနိုင်ပါသည်။",
+      "detailTabs": {
+        "benefits": [
+          {
+            "title": "ရိုးရာအဆိုအရ အကျိုးကျေးဇူး",
+            "description": "ဗုဒ္ဓါနုဿတိ၊ စိတ်ရှည်သည်းခံမှုနှင့် နေ့စဉ်အလေ့အကျင့် တည်ဆောက်ရာတွင် အထောက်အကူပြုနိုင်ပါသည်။"
+          },
+          {
+            "title": "ဖော်ပြထားသော ရည်ရွယ်ချက်",
+            "description": "အသက်ရှည်ခြင်း၊ ကျန်းမာခြင်း၊ စိတ်ထားဖြူစင်ခြင်းနှင့် လောကီ၊ လောကုတ္တရာအကျိုးများအတွက် ရည်ရွယ်ထားသည်ဟု ဆိုပါသည်။"
+          },
+          {
+            "title": "သတိပြုရန်",
+            "description": "ရိုးရာအကျိုးဖော်ပြချက်များသည် အာမခံချက်မဟုတ်ဘဲ ကျွမ်းကျင်အကူအညီကို အစားမထိုးသင့်ပါ။",
+            "caution": true
+          }
+        ],
+        "instructions": [
+          {
+            "title": "၁၆ ဆင့်ကို အစဉ်လိုက်စိပ်ပါ",
+            "description": "အဆင့် (၁) ဗုဒ္ဓံ သရဏံ ဂစ္ဆမိမှစ၍ စာရင်းပါအစဉ်အတိုင်း စိပ်ပါ။"
+          },
+          {
+            "title": "တစ်ဆင့်လျှင် ၁၀ ပတ်",
+            "description": "တစ်ဆင့်လျှင် ၁၀ ပတ်၊ ၁၆ ဆင့်အတွက် စုစုပေါင်း ၁၆၀ ပတ် စိပ်ရပါမည်။"
+          },
+          {
+            "title": "ဆုတောင်းတစ်ခု",
+            "description": "တစ်ကြိမ်ဝင်စဉ် မိမိအရေးအကြီးဆုံး ဆုတောင်းတစ်ခုကိုသာ ရွေးချယ်ပါ။"
+          },
+          {
+            "title": "သီလနှင့် သတိတရား",
+            "description": "ငါးပါးသီလကို တတ်နိုင်သမျှ စောင့်ထိန်းပြီး အဓိပ္ပာယ်ကို သတိပြုစိပ်ပါ။"
+          }
+        ]
+      }
+    },
+    {
+      "label": "ဂုဏ်တော်တစ်ထောင်",
+      "value": 3,
+      "isActive": true,
+      "duration": "၁၀",
+      "level": [],
+      "format": "နေ့တိုင်း",
+      "howToPray": "ဂုဏ်တော် ၉၇၂ ပါးကိုပင်လျှင် ဂုဏ်တော် ၁၀၀၀ ဟု ခေါ်ဆိုခြင်းဖြစ်သည်",
+      "benefit": "လိုတိုင်းတ ဆုတောင်းရနိုင်ပါသည်",
+      "detailTabs": {
+        "benefits": [
+          {
+            "title": "ဂုဏ်တော်ကို အာရုံပြုခြင်း",
+            "description": "သတိ၊ စူးစိုက်မှုနှင့် နေ့စဉ်ဘာဝနာအလေ့အကျင့် တည်ဆောက်ရာတွင် အထောက်အကူပြုနိုင်ပါသည်။"
+          },
+          {
+            "title": "ရိုးရာရည်ရွယ်ချက်",
+            "description": "ဂုဏ်တော် ၉၇၂ ပါးကို ဂုဏ်တော်တစ်ထောင်ဟုခေါ်ဆိုပြီး ဆုတောင်းပြည့်ဝရန် ရည်ရွယ်စိပ်ကြပါသည်။"
+          },
+          {
+            "title": "သတိပြုရန်",
+            "description": "ဆုတောင်းပြည့်မည်ဟူသောအဆိုသည် ယုံကြည်မှုဖြစ်ပြီး သေချာသောရလဒ်အဖြစ် မယူဆသင့်ပါ။",
+            "caution": true
+          }
+        ],
+        "instructions": [
+          {
+            "title": "ဂုဏ်တော်ဆယ်ပါး",
+            "description": "စာရင်းပါ သောဘဂဝါ ဣတိပိ ဂုဏ်တော်ဆယ်ပါးကို အမှတ်စဉ်အတိုင်း စိပ်ပါ။"
+          },
+          {
+            "title": "တစ်ပါးလျှင် ၁၀ ပတ်",
+            "description": "ဂုဏ်တော်တစ်ပါးစီ ၁၀ ပတ်၊ ဆယ်ပါးလုံးအတွက် စုစုပေါင်း ၁၀၀ ပတ် စိပ်ပါ။"
+          },
+          {
+            "title": "အစဉ်မပြောင်းဘဲ ပြီးစီးပါ",
+            "description": "နေ့စဉ်ပြထားသော ဂုဏ်တော်နှင့် ပတ်ရေကို အစဉ်မပြောင်းဘဲ ပြီးစီးအောင်စိပ်ပါ။"
+          }
+        ]
+      }
+    },
+    {
+      "label": "ဝါတွင်းသုံးလ",
+      "value": 4,
+      "isActive": true,
+      "duration": "၉၀",
+      "level": [],
+      "format": "ဝါတွင်းသုံးလ",
+      "howToPray": "ဝါတွင်း (၃) လ ရက်ပေါင်း (၉၀) စိပ်သည့် ကိုးနဝင်းပုတီးစိပ်ခြင်းဖြစ်သည်",
+      "benefit": "စိတ်၏ တည်ငြိမ်ရင့်ကျက်မှုဖြစ်သည့် သမာဓိရရှိရေးအတွက် လက်တွေ့အားထုတ်နိုင်ရန် စီစဉ်ညွှန်ပြသော ကျမ်းငယ်မျှဖြစ်သည်",
+      "detailTabs": {
+        "benefits": [
+          {
+            "title": "ရက် ၉၀ အလေ့အကျင့်",
+            "description": "နေ့စဉ်ပုံမှန်လုပ်ဆောင်ခြင်းက စည်းကမ်း၊ သတိနှင့် စိတ်တည်ငြိမ်မှုကို လေ့ကျင့်ပေးနိုင်ပါသည်။"
+          },
+          {
+            "title": "ဂုဏ်တော်နှင့် သိဒ္ဓိအစဉ်",
+            "description": "ပထမ ၉ ရက်တွင် ဂုဏ်တော်ကို အခြေခံပြီး နောက် ၈၁ ရက်တွင် သိဒ္ဓိပါသော ဂုဏ်တော်ကို အဆင့်လိုက်စိပ်ပါသည်။"
+          },
+          {
+            "title": "သတိပြုရန်",
+            "description": "ကျန်းမာရေးနှင့် နေ့စဉ်တာဝန်ကို မထိခိုက်စေဘဲ မိမိအခြေအနေနှင့်ညှိ၍ ဝင်ပါ။",
+            "caution": true
+          }
+        ],
+        "instructions": [
+          {
+            "title": "ပထမ ၉ ရက်",
+            "description": "အရဟံမှ ဘဂဝါအထိ တစ်ရက်တစ်ပါး၊ တစ်နေ့လျှင် ပုတီး ၁ ပတ်စီ စိပ်ပါ။"
+          },
+          {
+            "title": "နောက် ၈၁ ရက်",
+            "description": "အရဟံ သိဒ္ဓိမှ ဘဂဝါ သိဒ္ဓိအထိ တစ်ပါးစီကို ၉ ရက်၊ တစ်နေ့လျှင် ၉ ပတ်စီ စိပ်ပါ။"
+          },
+          {
+            "title": "ပြက္ခဒိန်အစဉ်",
+            "description": "မြန်မာပြက္ခဒိန်တွင် ဝါဝင်သည့်နေ့မှစ၍ သတ်မှတ်ထားသော ဂုဏ်တော်နှင့် ပတ်ရေအတိုင်း ပြီးစီးအောင် စိပ်ပါ။"
+          }
+        ]
+      }
+    },
+    {
+      "label": "တစ်ရက်ပုတီး (စိတ်ကြိုက်)",
+      "value": 5,
+      "isActive": true,
+      "duration": "၁",
+      "level": [],
+      "format": "တစ်ရက်စာ စိတ်ကြိုက်ပုတီးစိပ်ခြင်း",
+      "howToPray": "ဂုဏ်တော်၊ အပတ်ရေနှင့် တစ်ပတ်လျှင် ထိချက်အရေအတွက်ကို စိတ်ကြိုက်ရွေးချယ်နိုင်သည်",
+      "benefit": "နေ့စဉ် လွတ်လပ်စွာ ရေတွက်နိုင်ခြင်း",
+      "detailTabs": null
+    }
+  ],
+  "schedules": {
+    "1": [
+      {
+        "label": "ပထမအဆင့်",
+        "value": 1,
+        "datasources": [
+          {
+            "no": 1,
+            "enDay": "monday",
+            "mmDay": "တနင်္လာ",
+            "spellName": "သမ္မာသမ္ဗုဒ္ဓေါ",
+            "spellId": 5,
+            "spellCount": "၂",
+            "spellEngCount": 2,
+            "isVagitable": false
+          },
+          {
+            "no": 2,
+            "enDay": "tuesday",
+            "mmDay": "အင်္ဂါနေ့",
+            "spellName": "ဘဂဝါ",
+            "spellId": 4,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 3,
+            "enDay": "wednesday",
+            "mmDay": "ဗုဒ္ဓဟူး",
+            "spellName": "သုဂတော",
+            "spellId": 6,
+            "spellCount": "၄",
+            "spellEngCount": 4,
+            "isVagitable": false
+          },
+          {
+            "no": 4,
+            "enDay": "thursday",
+            "mmDay": "ကြာသပတေး",
+            "spellName": "သတ္ထာဒေဝမနုဿာနံ",
+            "spellId": 2,
+            "spellCount": "၇",
+            "spellEngCount": 7,
+            "isVagitable": false
+          },
+          {
+            "no": 5,
+            "enDay": "friday",
+            "mmDay": "သောကြာ",
+            "spellName": "လောကဝိဒူ",
+            "spellId": 7,
+            "spellCount": "၅",
+            "spellEngCount": 5,
+            "isVagitable": true
+          },
+          {
+            "no": 6,
+            "enDay": "saturday",
+            "mmDay": "စနေ",
+            "spellName": "ဝိဇ္ဇာစရဏသမ္ပန္နော",
+            "spellId": 9,
+            "spellCount": "၃",
+            "spellEngCount": 3,
+            "isVagitable": false
+          },
+          {
+            "no": 7,
+            "enDay": "sunday",
+            "mmDay": "တနင်္ဂနွေ",
+            "spellName": "အနုတ္တရောပုရိသဓမ္မသာရထိ",
+            "spellId": 8,
+            "spellCount": "၆",
+            "spellEngCount": 6,
+            "isVagitable": false
+          },
+          {
+            "no": 8,
+            "enDay": "monday",
+            "mmDay": "တနင်္လာ",
+            "spellName": "အရဟံ",
+            "spellId": 1,
+            "spellCount": "၁",
+            "spellEngCount": 1,
+            "isVagitable": false
+          },
+          {
+            "no": 9,
+            "enDay": "tuesday",
+            "mmDay": "အင်္ဂါနေ့",
+            "spellName": "ဗုဒ္ဓေါ",
+            "spellId": 3,
+            "spellCount": "၈",
+            "spellEngCount": 8,
+            "isVagitable": false
+          }
+        ]
+      },
+      {
+        "label": "ဒုတိယအဆင့်",
+        "value": 2,
+        "datasources": [
+          {
+            "no": 10,
+            "enDay": "wednesday",
+            "mmDay": "ဗုဒ္ဓဟူး",
+            "spellName": "ဝိဇ္ဇာစရဏသမ္ပန္နော",
+            "spellId": 9,
+            "spellCount": "၃",
+            "spellEngCount": 3,
+            "isVagitable": false
+          },
+          {
+            "no": 11,
+            "enDay": "thursday",
+            "mmDay": "ကြာသပတေး",
+            "spellName": "အရဟံ",
+            "spellId": 1,
+            "spellCount": "၁",
+            "spellEngCount": 1,
+            "isVagitable": false
+          },
+          {
+            "no": 12,
+            "enDay": "friday",
+            "mmDay": "သောကြာ",
+            "spellName": "လောကဝိဒူ",
+            "spellId": 7,
+            "spellCount": "၅",
+            "spellEngCount": 5,
+            "isVagitable": false
+          },
+          {
+            "no": 13,
+            "enDay": "saturday",
+            "mmDay": "စနေ",
+            "spellName": "ဗုဒ္ဓေါ",
+            "spellId": 3,
+            "spellCount": "၈",
+            "spellEngCount": 8,
+            "isVagitable": false
+          },
+          {
+            "no": 14,
+            "enDay": "sunday",
+            "mmDay": "တနင်္ဂနွေ",
+            "spellName": "အနုတ္တရောပုရိသဓမ္မသာရထိ",
+            "spellId": 8,
+            "spellCount": "၆",
+            "spellEngCount": 6,
+            "isVagitable": true
+          },
+          {
+            "no": 15,
+            "enDay": "monday",
+            "mmDay": "တနင်္လာ",
+            "spellName": "သုဂတော",
+            "spellId": 6,
+            "spellCount": "၄",
+            "spellEngCount": 4,
+            "isVagitable": false
+          },
+          {
+            "no": 16,
+            "enDay": "tuesday",
+            "mmDay": "အင်္ဂါနေ့",
+            "spellName": "သတ္ထာဒေဝမနုဿာနံ",
+            "spellId": 2,
+            "spellCount": "၇",
+            "spellEngCount": 7,
+            "isVagitable": false
+          },
+          {
+            "no": 17,
+            "enDay": "wednesday",
+            "mmDay": "ဗုဒ္ဓဟူး",
+            "spellName": "သမ္မာသမ္ဗုဒ္ဓေါ",
+            "spellId": 5,
+            "spellCount": "၂",
+            "spellEngCount": 2,
+            "isVagitable": false
+          },
+          {
+            "no": 18,
+            "enDay": "thursday",
+            "mmDay": "ကြာသပတေး",
+            "spellName": "ဘဂဝါ",
+            "spellId": 4,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          }
+        ]
+      },
+      {
+        "label": "တတိယအဆင့်",
+        "value": 3,
+        "datasources": [
+          {
+            "no": 19,
+            "enDay": "friday",
+            "mmDay": "သောကြာ",
+            "spellName": "သုဂတော",
+            "spellId": 6,
+            "spellCount": "၄",
+            "spellEngCount": 4,
+            "isVagitable": false
+          },
+          {
+            "no": 20,
+            "enDay": "saturday",
+            "mmDay": "စနေ",
+            "spellName": "သမ္မာသမ္ဗုဒ္ဓေါ",
+            "spellId": 5,
+            "spellCount": "၂",
+            "spellEngCount": 2,
+            "isVagitable": false
+          },
+          {
+            "no": 21,
+            "enDay": "sunday",
+            "mmDay": "တနင်္ဂနွေ",
+            "spellName": "အနုတ္တရောပုရိသဓမ္မသာရထိ",
+            "spellId": 8,
+            "spellCount": "၆",
+            "spellEngCount": 6,
+            "isVagitable": false
+          },
+          {
+            "no": 22,
+            "enDay": "monday",
+            "mmDay": "တနင်္လာ",
+            "spellName": "ဘဂဝါ",
+            "spellId": 4,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 23,
+            "enDay": "tuesday",
+            "mmDay": "အင်္ဂါနေ့",
+            "spellName": "သတ္ထာဒေဝမနုဿာနံ",
+            "spellId": 2,
+            "spellCount": "၇",
+            "spellEngCount": 7,
+            "isVagitable": true
+          },
+          {
+            "no": 24,
+            "enDay": "wednesday",
+            "mmDay": "ဗုဒ္ဓဟူး",
+            "spellName": "လောကဝိဒူ",
+            "spellId": 7,
+            "spellCount": "၅",
+            "spellEngCount": 5,
+            "isVagitable": false
+          },
+          {
+            "no": 25,
+            "enDay": "thursday",
+            "mmDay": "ကြာသပတေး",
+            "spellName": "ဗုဒ္ဓေါ",
+            "spellId": 3,
+            "spellCount": "၈",
+            "spellEngCount": 8,
+            "isVagitable": false
+          },
+          {
+            "no": 26,
+            "enDay": "friday",
+            "mmDay": "သောကြာ",
+            "spellName": "ဝိဇ္ဇာစရဏသမ္ပန္နော",
+            "spellId": 9,
+            "spellCount": "၃",
+            "spellEngCount": 3,
+            "isVagitable": false
+          },
+          {
+            "no": 27,
+            "enDay": "saturday",
+            "mmDay": "စနေ",
+            "spellName": "အရဟံ",
+            "spellId": 1,
+            "spellCount": "၁",
+            "spellEngCount": 1,
+            "isVagitable": false
+          }
+        ]
+      },
+      {
+        "label": "စတုတ္ထအဆင့်",
+        "value": 4,
+        "datasources": [
+          {
+            "no": 28,
+            "enDay": "sunday",
+            "mmDay": "တနင်္ဂနွေ",
+            "spellName": "လောကဝိဒူ",
+            "spellId": 7,
+            "spellCount": "၅",
+            "spellEngCount": 5,
+            "isVagitable": false
+          },
+          {
+            "no": 29,
+            "enDay": "monday",
+            "mmDay": "တနင်္လာ",
+            "spellName": "ဝိဇ္ဇာစရဏသမ္ပန္နော",
+            "spellId": 9,
+            "spellCount": "၃",
+            "spellEngCount": 3,
+            "isVagitable": false
+          },
+          {
+            "no": 30,
+            "enDay": "tuesday",
+            "mmDay": "အင်္ဂါနေ့",
+            "spellName": "သတ္ထာဒေဝမနုဿာနံ",
+            "spellId": 2,
+            "spellCount": "၇",
+            "spellEngCount": 7,
+            "isVagitable": false
+          },
+          {
+            "no": 31,
+            "enDay": "wednesday",
+            "mmDay": "ဗုဒ္ဓဟူး",
+            "spellName": "အရဟံ",
+            "spellId": 1,
+            "spellCount": "၁",
+            "spellEngCount": 1,
+            "isVagitable": false
+          },
+          {
+            "no": 32,
+            "enDay": "thursday",
+            "mmDay": "ကြာသပတေး",
+            "spellName": "ဗုဒ္ဓေါ",
+            "spellId": 3,
+            "spellCount": "၈",
+            "spellEngCount": 8,
+            "isVagitable": true
+          },
+          {
+            "no": 33,
+            "enDay": "friday",
+            "mmDay": "သောကြာ",
+            "spellName": "အနုတ္တရောပုရိသဓမ္မသာရထိ",
+            "spellId": 8,
+            "spellCount": "၆",
+            "spellEngCount": 6,
+            "isVagitable": false
+          },
+          {
+            "no": 34,
+            "enDay": "saturday",
+            "mmDay": "စနေ",
+            "spellName": "ဘဂဝါ",
+            "spellId": 4,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 35,
+            "enDay": "sunday",
+            "mmDay": "တနင်္ဂနွေ",
+            "spellName": "သုဂတော",
+            "spellId": 6,
+            "spellCount": "၄",
+            "spellEngCount": 4,
+            "isVagitable": false
+          },
+          {
+            "no": 36,
+            "enDay": "monday",
+            "mmDay": "တနင်္လာ",
+            "spellName": "သမ္မာသမ္ဗုဒ္ဓေါ",
+            "spellId": 5,
+            "spellCount": "၂",
+            "spellEngCount": 2,
+            "isVagitable": false
+          }
+        ]
+      },
+      {
+        "label": "ပဉ္စမအဆင့်",
+        "value": 5,
+        "datasources": [
+          {
+            "no": 37,
+            "enDay": "tuesday",
+            "mmDay": "အင်္ဂါနေ့",
+            "spellName": "အနုတ္တရောပုရိသဓမ္မသာရထိ",
+            "spellId": 8,
+            "spellCount": "၆",
+            "spellEngCount": 6,
+            "isVagitable": false
+          },
+          {
+            "no": 38,
+            "enDay": "wednesday",
+            "mmDay": "ဗုဒ္ဓဟူး",
+            "spellName": "သုဂတော",
+            "spellId": 6,
+            "spellCount": "၄",
+            "spellEngCount": 4,
+            "isVagitable": false
+          },
+          {
+            "no": 39,
+            "enDay": "thursday",
+            "mmDay": "ကြာသပတေး",
+            "spellName": "ဗုဒ္ဓေါ",
+            "spellId": 3,
+            "spellCount": "၈",
+            "spellEngCount": 8,
+            "isVagitable": false
+          },
+          {
+            "no": 40,
+            "enDay": "friday",
+            "mmDay": "သောကြာ",
+            "spellName": "သမ္မာသမ္ဗုဒ္ဓေါ",
+            "spellId": 5,
+            "spellCount": "၂",
+            "spellEngCount": 2,
+            "isVagitable": false
+          },
+          {
+            "no": 41,
+            "enDay": "saturday",
+            "mmDay": "စနေ",
+            "spellName": "ဘဂဝါ",
+            "spellId": 4,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": true
+          },
+          {
+            "no": 42,
+            "enDay": "sunday",
+            "mmDay": "တနင်္ဂနွေ",
+            "spellName": "သတ္ထာဒေဝမနုဿာနံ",
+            "spellId": 2,
+            "spellCount": "၇",
+            "spellEngCount": 7,
+            "isVagitable": false
+          },
+          {
+            "no": 43,
+            "enDay": "monday",
+            "mmDay": "တနင်္လာ",
+            "spellName": "အရဟံ",
+            "spellId": 1,
+            "spellCount": "၁",
+            "spellEngCount": 1,
+            "isVagitable": false
+          },
+          {
+            "no": 44,
+            "enDay": "tuesday",
+            "mmDay": "အင်္ဂါနေ့",
+            "spellName": "လောကဝိဒူ",
+            "spellId": 7,
+            "spellCount": "၅",
+            "spellEngCount": 5,
+            "isVagitable": false
+          },
+          {
+            "no": 45,
+            "enDay": "wednesday",
+            "mmDay": "ဗုဒ္ဓဟူး",
+            "spellName": "ဝိဇ္ဇာစရဏသမ္ပန္နော",
+            "spellId": 9,
+            "spellCount": "၃",
+            "spellEngCount": 3,
+            "isVagitable": false
+          }
+        ]
+      },
+      {
+        "label": "ဆဋ္ဌမအဆင့်",
+        "value": 6,
+        "datasources": [
+          {
+            "no": 46,
+            "enDay": "thursday",
+            "mmDay": "ကြာသပတေး",
+            "spellName": "သတ္ထာဒေဝမနုဿာနံ",
+            "spellId": 2,
+            "spellCount": "၇",
+            "spellEngCount": 7,
+            "isVagitable": false
+          },
+          {
+            "no": 47,
+            "enDay": "friday",
+            "mmDay": "သောကြာ",
+            "spellName": "လောကဝိဒူ",
+            "spellId": 7,
+            "spellCount": "၅",
+            "spellEngCount": 5,
+            "isVagitable": false
+          },
+          {
+            "no": 48,
+            "enDay": "saturday",
+            "mmDay": "စနေ",
+            "spellName": "ဘဂဝါ",
+            "spellId": 4,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 49,
+            "enDay": "sunday",
+            "mmDay": "တနင်္ဂနွေ",
+            "spellName": "ဝိဇ္ဇာစရဏသမ္ပန္နော",
+            "spellId": 9,
+            "spellCount": "၃",
+            "spellEngCount": 3,
+            "isVagitable": false
+          },
+          {
+            "no": 50,
+            "enDay": "monday",
+            "mmDay": "တနင်္လာ",
+            "spellName": "အရဟံ",
+            "spellId": 1,
+            "spellCount": "၁",
+            "spellEngCount": 1,
+            "isVagitable": true
+          },
+          {
+            "no": 51,
+            "enDay": "tuesday",
+            "mmDay": "အင်္ဂါနေ့",
+            "spellName": "ဗုဒ္ဓေါ",
+            "spellId": 3,
+            "spellCount": "၈",
+            "spellEngCount": 8,
+            "isVagitable": false
+          },
+          {
+            "no": 52,
+            "enDay": "wednesday",
+            "mmDay": "ဗုဒ္ဓဟူး",
+            "spellName": "သမ္မာသမ္ဗုဒ္ဓေါ",
+            "spellId": 5,
+            "spellCount": "၂",
+            "spellEngCount": 2,
+            "isVagitable": false
+          },
+          {
+            "no": 53,
+            "enDay": "thursday",
+            "mmDay": "ကြာသပတေး",
+            "spellName": "အနုတ္တရောပုရိသဓမ္မသာရထိ",
+            "spellId": 8,
+            "spellCount": "၆",
+            "spellEngCount": 6,
+            "isVagitable": false
+          },
+          {
+            "no": 54,
+            "enDay": "friday",
+            "mmDay": "သောကြာ",
+            "spellName": "သုဂတော",
+            "spellId": 6,
+            "spellCount": "၄",
+            "spellEngCount": 4,
+            "isVagitable": false
+          }
+        ]
+      },
+      {
+        "label": "သတ္တမအဆင့်",
+        "value": 7,
+        "datasources": [
+          {
+            "no": 55,
+            "enDay": "saturday",
+            "mmDay": "စနေ",
+            "spellName": "ဗုဒ္ဓေါ",
+            "spellId": 3,
+            "spellCount": "၈",
+            "spellEngCount": 8,
+            "isVagitable": false
+          },
+          {
+            "no": 56,
+            "enDay": "sunday",
+            "mmDay": "တနင်္ဂနွေ",
+            "spellName": "အနုတ္တရောပုရိသဓမ္မသာရထိ",
+            "spellId": 8,
+            "spellCount": "၆",
+            "spellEngCount": 6,
+            "isVagitable": false
+          },
+          {
+            "no": 57,
+            "enDay": "monday",
+            "mmDay": "တနင်္လာ",
+            "spellName": "အရဟံ",
+            "spellId": 1,
+            "spellCount": "၁",
+            "spellEngCount": 1,
+            "isVagitable": false
+          },
+          {
+            "no": 58,
+            "enDay": "tuesday",
+            "mmDay": "အင်္ဂါနေ့",
+            "spellName": "သုဂတော",
+            "spellId": 6,
+            "spellCount": "၄",
+            "spellEngCount": 4,
+            "isVagitable": false
+          },
+          {
+            "no": 59,
+            "enDay": "wednesday",
+            "mmDay": "ဗုဒ္ဓဟူး",
+            "spellName": "သမ္မာသမ္ဗုဒ္ဓေါ",
+            "spellId": 5,
+            "spellCount": "၂",
+            "spellEngCount": 2,
+            "isVagitable": true
+          },
+          {
+            "no": 60,
+            "enDay": "thursday",
+            "mmDay": "ကြာသပတေး",
+            "spellName": "ဘဂဝါ",
+            "spellId": 4,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 61,
+            "enDay": "friday",
+            "mmDay": "သောကြာ",
+            "spellName": "ဝိဇ္ဇာစရဏသမ္ပန္နော",
+            "spellId": 9,
+            "spellCount": "၃",
+            "spellEngCount": 3,
+            "isVagitable": false
+          },
+          {
+            "no": 62,
+            "enDay": "saturday",
+            "mmDay": "စနေ",
+            "spellName": "သတ္ထာဒေဝမနုဿာနံ",
+            "spellId": 2,
+            "spellCount": "၇",
+            "spellEngCount": 7,
+            "isVagitable": false
+          },
+          {
+            "no": 63,
+            "enDay": "sunday",
+            "mmDay": "တနင်္ဂနွေ",
+            "spellName": "လောကဝိဒူ",
+            "spellId": 7,
+            "spellCount": "၅",
+            "spellEngCount": 5,
+            "isVagitable": false
+          }
+        ]
+      },
+      {
+        "label": "အဋ္ဌမအဆင့်",
+        "value": 8,
+        "datasources": [
+          {
+            "no": 64,
+            "enDay": "monday",
+            "mmDay": "တနင်္လာ",
+            "spellName": "ဘဂဝါ",
+            "spellId": 4,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 65,
+            "enDay": "tuesday",
+            "mmDay": "အင်္ဂါနေ့",
+            "spellName": "သတ္ထာဒေဝမနုဿာနံ",
+            "spellId": 2,
+            "spellCount": "၇",
+            "spellEngCount": 7,
+            "isVagitable": false
+          },
+          {
+            "no": 66,
+            "enDay": "wednesday",
+            "mmDay": "ဗုဒ္ဓဟူး",
+            "spellName": "သမ္မာသမ္ဗုဒ္ဓေါ",
+            "spellId": 5,
+            "spellCount": "၂",
+            "spellEngCount": 2,
+            "isVagitable": false
+          },
+          {
+            "no": 67,
+            "enDay": "thursday",
+            "mmDay": "ကြာသပတေး",
+            "spellName": "လောကဝိဒူ",
+            "spellId": 7,
+            "spellCount": "၅",
+            "spellEngCount": 5,
+            "isVagitable": false
+          },
+          {
+            "no": 68,
+            "enDay": "friday",
+            "mmDay": "သောကြာ",
+            "spellName": "ဝိဇ္ဇာစရဏသမ္ပန္နော",
+            "spellId": 9,
+            "spellCount": "၃",
+            "spellEngCount": 3,
+            "isVagitable": true
+          },
+          {
+            "no": 69,
+            "enDay": "saturday",
+            "mmDay": "စနေ",
+            "spellName": "အရဟံ",
+            "spellId": 1,
+            "spellCount": "၁",
+            "spellEngCount": 1,
+            "isVagitable": false
+          },
+          {
+            "no": 70,
+            "enDay": "sunday",
+            "mmDay": "တနင်္ဂနွေ",
+            "spellName": "သုဂတော",
+            "spellId": 6,
+            "spellCount": "၄",
+            "spellEngCount": 4,
+            "isVagitable": false
+          },
+          {
+            "no": 71,
+            "enDay": "monday",
+            "mmDay": "တနင်္လာ",
+            "spellName": "ဗုဒ္ဓေါ",
+            "spellId": 3,
+            "spellCount": "၈",
+            "spellEngCount": 8,
+            "isVagitable": false
+          },
+          {
+            "no": 72,
+            "enDay": "tuesday",
+            "mmDay": "အင်္ဂါနေ့",
+            "spellName": "အနုတ္တရောပုရိသဓမ္မသာရထိ",
+            "spellId": 8,
+            "spellCount": "၆",
+            "spellEngCount": 6
+          }
+        ]
+      },
+      {
+        "label": "နဝမအဆင့်",
+        "value": 9,
+        "datasources": [
+          {
+            "no": 73,
+            "enDay": "wednesday",
+            "mmDay": "ဗုဒ္ဓဟူး",
+            "spellName": "အရဟံ",
+            "spellId": 1,
+            "spellCount": "၁",
+            "spellEngCount": 1,
+            "isVagitable": false
+          },
+          {
+            "no": 74,
+            "enDay": "thursday",
+            "mmDay": "ကြာသပတေး",
+            "spellName": "ဗုဒ္ဓေါ",
+            "spellId": 3,
+            "spellCount": "၈",
+            "spellEngCount": 8,
+            "isVagitable": false
+          },
+          {
+            "no": 75,
+            "enDay": "friday",
+            "mmDay": "သောကြာ",
+            "spellName": "ဝိဇ္ဇာစရဏသမ္ပန္နော",
+            "spellId": 9,
+            "spellCount": "၃",
+            "spellEngCount": 3,
+            "isVagitable": false
+          },
+          {
+            "no": 76,
+            "enDay": "saturday",
+            "mmDay": "စနေ",
+            "spellName": "အနုတ္တရောပုရိသဓမ္မသာရထိ",
+            "spellId": 8,
+            "spellCount": "၆",
+            "spellEngCount": 6,
+            "isVagitable": false
+          },
+          {
+            "no": 77,
+            "enDay": "sunday",
+            "mmDay": "တနင်္ဂနွေ",
+            "spellName": "သုဂတော",
+            "spellId": 6,
+            "spellCount": "၄",
+            "spellEngCount": 4,
+            "isVagitable": true
+          },
+          {
+            "no": 78,
+            "enDay": "monday",
+            "mmDay": "တနင်္လာ",
+            "spellName": "သမ္မာသမ္ဗုဒ္ဓေါ",
+            "spellId": 5,
+            "spellCount": "၂",
+            "spellEngCount": 2,
+            "isVagitable": false
+          },
+          {
+            "no": 79,
+            "enDay": "tuesday",
+            "mmDay": "အင်္ဂါနေ့",
+            "spellName": "လောကဝိဒူ",
+            "spellId": 7,
+            "spellCount": "၅",
+            "spellEngCount": 5,
+            "isVagitable": false
+          },
+          {
+            "no": 80,
+            "enDay": "wednesday",
+            "mmDay": "ဗုဒ္ဓဟူး",
+            "spellName": "ဘဂဝါ",
+            "spellId": 4,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 81,
+            "enDay": "thursday",
+            "mmDay": "ကြာသပတေး",
+            "spellName": "သတ္ထာဒေဝမနုဿာနံ",
+            "spellId": 2,
+            "spellCount": "၇",
+            "spellEngCount": 7,
+            "isVagitable": false
+          }
+        ]
+      }
+    ],
+    "2": [
+      {
+        "label": "",
+        "value": 1,
+        "datasources": [
+          {
+            "no": 1,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သောဘဂဝါ ဣတိပိ အရဟံ",
+            "spellId": 17,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          },
+          {
+            "no": 2,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သောဘဂဝါ ဣတိပိ သမ္မာသမ္ဗုဒ္ဓေါ",
+            "spellId": 18,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          },
+          {
+            "no": 3,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သောဘဂဝါ ဣတိပိ ဝိဇ္ဇာစရဏသမ္ပန္နော",
+            "spellId": 19,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          },
+          {
+            "no": 4,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သောဘဂဝါ ဣတိပိ အရဟံ",
+            "spellId": 20,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          },
+          {
+            "no": 5,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သောဘဂဝါ ဣတိပိ သုဂတော",
+            "spellId": 21,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          },
+          {
+            "no": 6,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သောဘဂဝါ ဣတိပိ လောကဝိဒူ",
+            "spellId": 22,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          },
+          {
+            "no": 7,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သောဘဂဝါ ဣတိပိ အနုတ္တရောပုရိသဒမ္မသာရထိ",
+            "spellId": 23,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          },
+          {
+            "no": 8,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သောဘဂဝါ ဣတိပိ သတ္ထာဒေဝမနုဿာနံ",
+            "spellId": 24,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          },
+          {
+            "no": 9,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သောဘဂဝါ ဣတိပိ ဗုဒ္ဓေါ",
+            "spellId": 25,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          },
+          {
+            "no": 10,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သောဘဂဝါ ဣတိပိ ဘဂဝါ",
+            "spellId": 26,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          }
+        ]
+      }
+    ],
+    "3": [
+      {
+        "label": "",
+        "value": 1,
+        "datasources": [
+          {
+            "no": 1,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဗုဒ္ဓံ သရဏံ ဂစ္ဆမိ",
+            "spellId": 1,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          },
+          {
+            "no": 2,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဓမ္မ သရဏံ ဂစ္ဆမိ",
+            "spellId": 2,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          },
+          {
+            "no": 3,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သံဃ သရဏံ ဂစ္ဆမိ",
+            "spellId": 3,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          },
+          {
+            "no": 4,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "အရဟံ",
+            "spellId": 4,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          },
+          {
+            "no": 5,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သမ္မာသမ္ဗုဒ္ဓေါ",
+            "spellId": 5,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          },
+          {
+            "no": 6,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဝိဇ္ဇာစရဏသမ္ပန္နော",
+            "spellId": 6,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          },
+          {
+            "no": 7,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သုဂတော",
+            "spellId": 7,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          },
+          {
+            "no": 8,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "လောကဝိဒူ",
+            "spellId": 8,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          },
+          {
+            "no": 9,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "အနုတ္တရောပုရိသဓမ္မသာရထိ",
+            "spellId": 9,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          },
+          {
+            "no": 10,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သတ္ထာဒေဝမနုဿာနံ",
+            "spellId": 10,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          },
+          {
+            "no": 11,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဗုဒ္ဓေါ",
+            "spellId": 11,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          },
+          {
+            "no": 12,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဘဂဝါ",
+            "spellId": 12,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          },
+          {
+            "no": 13,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "အနိစ္စ",
+            "spellId": 13,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          },
+          {
+            "no": 14,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဒုက္ခ",
+            "spellId": 14,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          },
+          {
+            "no": 15,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "အနတ္တ",
+            "spellId": 15,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          },
+          {
+            "no": 16,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ပုဒိအာ အာဒိပု",
+            "spellId": 16,
+            "spellCount": "၁၀",
+            "spellEngCount": 10,
+            "isVagitable": false
+          }
+        ]
+      }
+    ],
+    "4": [
+      {
+        "label": "",
+        "value": 1,
+        "datasources": [
+          {
+            "no": 1,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "အရဟံ",
+            "spellId": 4,
+            "spellCount": "၁",
+            "spellEngCount": 1,
+            "isVagitable": false
+          },
+          {
+            "no": 2,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သမ္မာသမ္ဗုဒ္ဓေါ",
+            "spellId": 5,
+            "spellCount": "၁",
+            "spellEngCount": 1,
+            "isVagitable": false
+          },
+          {
+            "no": 3,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဝိဇ္ဇာစရဏသမ္ပန္နော",
+            "spellId": 6,
+            "spellCount": "၁",
+            "spellEngCount": 1,
+            "isVagitable": false
+          },
+          {
+            "no": 4,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သုဂတော",
+            "spellId": 7,
+            "spellCount": "၁",
+            "spellEngCount": 1,
+            "isVagitable": false
+          },
+          {
+            "no": 5,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "လောကဝိဒူ",
+            "spellId": 8,
+            "spellCount": "၁",
+            "spellEngCount": 1,
+            "isVagitable": false
+          },
+          {
+            "no": 6,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "အနုတ္တရောပုရိသဓမ္မသာရထိ",
+            "spellId": 9,
+            "spellCount": "၁",
+            "spellEngCount": 1,
+            "isVagitable": false
+          },
+          {
+            "no": 7,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သတ္ထာဒေဝမနုဿာနံ",
+            "spellId": 10,
+            "spellCount": "၁",
+            "spellEngCount": 1,
+            "isVagitable": false
+          },
+          {
+            "no": 8,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဗုဒ္ဓေါ",
+            "spellId": 11,
+            "spellCount": "၁",
+            "spellEngCount": 1,
+            "isVagitable": false
+          },
+          {
+            "no": 9,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဘဂဝါ",
+            "spellId": 12,
+            "spellCount": "၁",
+            "spellEngCount": 1,
+            "isVagitable": false
+          },
+          {
+            "no": 10,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "အရဟံ သိဒ္ဓိ",
+            "spellId": 27,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 11,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "အရဟံ သိဒ္ဓိ",
+            "spellId": 27,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 12,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "အရဟံ သိဒ္ဓိ",
+            "spellId": 27,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 13,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "အရဟံ သိဒ္ဓိ",
+            "spellId": 27,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 14,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "အရဟံ သိဒ္ဓိ",
+            "spellId": 27,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 15,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "အရဟံ သိဒ္ဓိ",
+            "spellId": 27,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 16,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "အရဟံ သိဒ္ဓိ",
+            "spellId": 27,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 17,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "အရဟံ သိဒ္ဓိ",
+            "spellId": 27,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 18,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "အရဟံ သိဒ္ဓိ",
+            "spellId": 27,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 19,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သမ္မာသမ္ဗုဒ္ဓေါ သိဒ္ဓိ",
+            "spellId": 28,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 20,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သမ္မာသမ္ဗုဒ္ဓေါ သိဒ္ဓိ",
+            "spellId": 28,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 21,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သမ္မာသမ္ဗုဒ္ဓေါ သိဒ္ဓိ",
+            "spellId": 28,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 22,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သမ္မာသမ္ဗုဒ္ဓေါ သိဒ္ဓိ",
+            "spellId": 28,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 23,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သမ္မာသမ္ဗုဒ္ဓေါ သိဒ္ဓိ",
+            "spellId": 28,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 24,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သမ္မာသမ္ဗုဒ္ဓေါ သိဒ္ဓိ",
+            "spellId": 28,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 25,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သမ္မာသမ္ဗုဒ္ဓေါ သိဒ္ဓိ",
+            "spellId": 28,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 26,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သမ္မာသမ္ဗုဒ္ဓေါ သိဒ္ဓိ",
+            "spellId": 28,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 27,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သမ္မာသမ္ဗုဒ္ဓေါ သိဒ္ဓိ",
+            "spellId": 28,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 28,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဝိဇ္ဇာစရဏသမ္ပန္နော သိဒ္ဓိ",
+            "spellId": 29,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 29,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဝိဇ္ဇာစရဏသမ္ပန္နော သိဒ္ဓိ",
+            "spellId": 29,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 30,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဝိဇ္ဇာစရဏသမ္ပန္နော သိဒ္ဓိ",
+            "spellId": 29,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 31,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဝိဇ္ဇာစရဏသမ္ပန္နော သိဒ္ဓိ",
+            "spellId": 29,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 32,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဝိဇ္ဇာစရဏသမ္ပန္နော သိဒ္ဓိ",
+            "spellId": 29,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 33,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဝိဇ္ဇာစရဏသမ္ပန္နော သိဒ္ဓိ",
+            "spellId": 29,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 34,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဝိဇ္ဇာစရဏသမ္ပန္နော သိဒ္ဓိ",
+            "spellId": 29,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 35,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဝိဇ္ဇာစရဏသမ္ပန္နော သိဒ္ဓိ",
+            "spellId": 29,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 36,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဝိဇ္ဇာစရဏသမ္ပန္နော သိဒ္ဓိ",
+            "spellId": 29,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 37,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သုဂတော သိဒ္ဓိ",
+            "spellId": 30,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 38,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သုဂတော သိဒ္ဓိ",
+            "spellId": 30,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 39,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သုဂတော သိဒ္ဓိ",
+            "spellId": 30,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 40,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သုဂတော သိဒ္ဓိ",
+            "spellId": 30,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 41,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သုဂတော သိဒ္ဓိ",
+            "spellId": 30,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 42,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သုဂတော သိဒ္ဓိ",
+            "spellId": 30,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 43,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သုဂတော သိဒ္ဓိ",
+            "spellId": 30,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 44,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သုဂတော သိဒ္ဓိ",
+            "spellId": 30,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 45,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သုဂတော သိဒ္ဓိ",
+            "spellId": 30,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 46,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "လောကဝိဒူ သိဒ္ဓိ",
+            "spellId": 31,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 47,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "လောကဝိဒူ သိဒ္ဓိ",
+            "spellId": 31,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 48,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "လောကဝိဒူ သိဒ္ဓိ",
+            "spellId": 31,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 49,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "လောကဝိဒူ သိဒ္ဓိ",
+            "spellId": 31,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 50,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "လောကဝိဒူ သိဒ္ဓိ",
+            "spellId": 31,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 51,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "လောကဝိဒူ သိဒ္ဓိ",
+            "spellId": 31,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 52,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "လောကဝိဒူ သိဒ္ဓိ",
+            "spellId": 31,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 53,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "လောကဝိဒူ သိဒ္ဓိ",
+            "spellId": 31,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 54,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "လောကဝိဒူ သိဒ္ဓိ",
+            "spellId": 31,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 55,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "အနုတ္တရောပုရိသဓမ္မသာရထိ သိဒ္ဓိ",
+            "spellId": 32,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 56,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "အနုတ္တရောပုရိသဓမ္မသာရထိ သိဒ္ဓိ",
+            "spellId": 32,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 57,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "အနုတ္တရောပုရိသဓမ္မသာရထိ သိဒ္ဓိ",
+            "spellId": 32,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 58,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "အနုတ္တရောပုရိသဓမ္မသာရထိ သိဒ္ဓိ",
+            "spellId": 32,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 59,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "အနုတ္တရောပုရိသဓမ္မသာရထိ သိဒ္ဓိ",
+            "spellId": 32,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 60,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "အနုတ္တရောပုရိသဓမ္မသာရထိ သိဒ္ဓိ",
+            "spellId": 32,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 61,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "အနုတ္တရောပုရိသဓမ္မသာရထိ သိဒ္ဓိ",
+            "spellId": 32,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 62,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "အနုတ္တရောပုရိသဓမ္မသာရထိ သိဒ္ဓိ",
+            "spellId": 32,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 63,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "အနုတ္တရောပုရိသဓမ္မသာရထိ သိဒ္ဓိ",
+            "spellId": 32,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 64,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သတ္ထာဒေဝမနုဿာနံ သိဒ္ဓိ",
+            "spellId": 33,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 65,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သတ္ထာဒေဝမနုဿာနံ သိဒ္ဓိ",
+            "spellId": 33,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 66,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သတ္ထာဒေဝမနုဿာနံ သိဒ္ဓိ",
+            "spellId": 33,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 67,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သတ္ထာဒေဝမနုဿာနံ သိဒ္ဓိ",
+            "spellId": 33,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 68,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သတ္ထာဒေဝမနုဿာနံ သိဒ္ဓိ",
+            "spellId": 33,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 69,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သတ္ထာဒေဝမနုဿာနံ သိဒ္ဓိ",
+            "spellId": 33,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 70,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သတ္ထာဒေဝမနုဿာနံ သိဒ္ဓိ",
+            "spellId": 33,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 71,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သတ္ထာဒေဝမနုဿာနံ သိဒ္ဓိ",
+            "spellId": 33,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 72,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "သတ္ထာဒေဝမနုဿာနံ သိဒ္ဓိ",
+            "spellId": 33,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 73,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဗုဒ္ဓေါ သိဒ္ဓိ",
+            "spellId": 34,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 74,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဗုဒ္ဓေါ သိဒ္ဓိ",
+            "spellId": 34,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 75,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဗုဒ္ဓေါ သိဒ္ဓိ",
+            "spellId": 34,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 76,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဗုဒ္ဓေါ သိဒ္ဓိ",
+            "spellId": 34,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 77,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဗုဒ္ဓေါ သိဒ္ဓိ",
+            "spellId": 34,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 78,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဗုဒ္ဓေါ သိဒ္ဓိ",
+            "spellId": 34,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 79,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဗုဒ္ဓေါ သိဒ္ဓိ",
+            "spellId": 34,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 80,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဗုဒ္ဓေါ သိဒ္ဓိ",
+            "spellId": 34,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 81,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဗုဒ္ဓေါ သိဒ္ဓိ",
+            "spellId": 34,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 82,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဘဂဝါ သိဒ္ဓိ",
+            "spellId": 35,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 83,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဘဂဝါ သိဒ္ဓိ",
+            "spellId": 35,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 84,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဘဂဝါ သိဒ္ဓိ",
+            "spellId": 35,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 85,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဘဂဝါ သိဒ္ဓိ",
+            "spellId": 35,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 86,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဘဂဝါ သိဒ္ဓိ",
+            "spellId": 35,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 87,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဘဂဝါ သိဒ္ဓိ",
+            "spellId": 35,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 88,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဘဂဝါ သိဒ္ဓိ",
+            "spellId": 35,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 89,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဘဂဝါ သိဒ္ဓိ",
+            "spellId": 35,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          },
+          {
+            "no": 90,
+            "enDay": "",
+            "mmDay": "",
+            "spellName": "ဘဂဝါ သိဒ္ဓိ",
+            "spellId": 35,
+            "spellCount": "၉",
+            "spellEngCount": 9,
+            "isVagitable": false
+          }
+        ]
+      }
+    ]
+  },
+  "localizedSpellNames": {
+    "default_spell_1": "ဗုဒ္ဓံ သရဏံ ဂစ္ဆမိ",
+    "default_spell_2": "ဓမ္မ သရဏံ ဂစ္ဆမိ",
+    "default_spell_3": "သံဃ သရဏံ ဂစ္ဆမိ",
+    "default_spell_4": "အရဟံ",
+    "default_spell_5": "သမ္မာသမ္ဗုဒ္ဓေါ",
+    "default_spell_6": "ဝိဇ္ဇာစရဏသမ္ပန္နော",
+    "default_spell_7": "သုဂတော",
+    "default_spell_8": "လောကဝိဒူ",
+    "default_spell_9": "အနုတ္တရောပုရိသဓမ္မသာရထိ",
+    "default_spell_10": "သတ္ထာဒေဝမနုဿာနံ",
+    "default_spell_11": "ဗုဒ္ဓေါ",
+    "default_spell_12": "ဘဂဝါ",
+    "default_spell_13": "အနိစ္စ",
+    "default_spell_14": "ဒုက္ခ",
+    "default_spell_15": "အနတ္တ",
+    "default_spell_16": "ပုဒိအာ အာဒိပု",
+    "default_spell_17": "သောဘဂဝါ ဣတိပိ အရဟံ",
+    "default_spell_18": "သောဘဂဝါ ဣတိပိ သမ္မာသမ္ဗုဒ္ဓေါ",
+    "default_spell_19": "သောဘဂဝါ ဣတိပိ ဝိဇ္ဇာစရဏသမ္ပန္နော",
+    "default_spell_20": "သောဘဂဝါ ဣတိပိ အရဟံ",
+    "default_spell_21": "သောဘဂဝါ ဣတိပိ သုဂတော",
+    "default_spell_22": "သောဘဂဝါ ဣတိပိ လောကဝိဒူ",
+    "default_spell_23": "သောဘဂဝါ ဣတိပိ အနုတ္တရောပုရိသဒမ္မသာရထိ",
+    "default_spell_24": "သောဘဂဝါ ဣတိပိ သတ္ထာဒေဝမနုဿာနံ",
+    "default_spell_25": "သောဘဂဝါ ဣတိပိ ဗုဒ္ဓေါ",
+    "default_spell_26": "သောဘဂဝါ ဣတိပိ ဘဂဝါ",
+    "default_spell_27": "အရဟံ သိဒ္ဓိ",
+    "default_spell_28": "သမ္မာသမ္ဗုဒ္ဓေါ သိဒ္ဓိ",
+    "default_spell_29": "ဝိဇ္ဇာစရဏသမ္ပန္နော သိဒ္ဓိ",
+    "default_spell_30": "သုဂတော သိဒ္ဓိ",
+    "default_spell_31": "လောကဝိဒူ သိဒ္ဓိ",
+    "default_spell_32": "အနုတ္တရောပုရိသဓမ္မသာရထိ သိဒ္ဓိ",
+    "default_spell_33": "သတ္ထာဒေဝမနုဿာနံ သိဒ္ဓိ",
+    "default_spell_34": "ဗုဒ္ဓေါ သိဒ္ဓိ",
+    "default_spell_35": "ဘဂဝါ သိဒ္ဓိ"
+  }
+}

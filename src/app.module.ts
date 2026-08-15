@@ -37,6 +37,8 @@ import { MissingHistoricalRecordsController } from './features/missing-historica
 import { MissingHistoricalRecordsService } from './features/missing-historical-records/missing-historical-records.service';
 import { NatMyatSiController } from './features/nat_myat_si/nat_myat_si.controller';
 import { NatMyatSiService } from './features/nat_myat_si/nat_myat_si.service';
+import { AdhihtanController } from './features/adhihtan/adhihtan.controller';
+import { AdhihtanService } from './features/adhihtan/adhihtan.service';
 
 @Module({
   imports: [
@@ -67,6 +69,7 @@ import { NatMyatSiService } from './features/nat_myat_si/nat_myat_si.service';
     ZodiacSignController,
     MissingHistoricalRecordsController,
     NatMyatSiController,
+    AdhihtanController,
   ],
   providers: [
     AppService,
@@ -87,6 +90,7 @@ import { NatMyatSiService } from './features/nat_myat_si/nat_myat_si.service';
     ZodiacSignService,
     MissingHistoricalRecordsService,
     NatMyatSiService,
+    AdhihtanService,
   ],
 })
 export class AppModule {}
