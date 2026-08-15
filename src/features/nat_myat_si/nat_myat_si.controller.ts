@@ -14,7 +14,7 @@ import {
 } from './nat_myat_si';
 import { NatMyatSiService } from './nat_myat_si.service';
 
-@ApiTags('nat-myat-si')
+@ApiTags('nat-myat-si | နတ်မျက်စိ')
 @Controller('nat-myat-si')
 export class NatMyatSiController {
   constructor(private readonly natMyatSiService: NatMyatSiService) {}

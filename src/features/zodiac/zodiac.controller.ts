@@ -5,7 +5,7 @@ import { ZodiacSignService } from './zodiac.service';
 import { ZodiacSign } from './zodiac';
 import { buildFeatureAssetUrl } from '../../common/asset-url';
 
-@ApiTags('zodiac')
+@ApiTags('zodiac | ရာသီခွင်')
 @Controller('zodiac')
 export class ZodiacSignController {
   constructor(private readonly service: ZodiacSignService) {}

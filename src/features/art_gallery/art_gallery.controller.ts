@@ -4,7 +4,7 @@ import {ApiParam, ApiTags} from "@nestjs/swagger";
 import {ArtGalleryService} from "./art_gallery.service";
 import { buildAssetUrl } from '../../common/asset-url';
 
-@ApiTags('art-gallery')
+@ApiTags('art-gallery | အနုပညာပြခန်း')
 @Controller('art-gallery')
 export class ArtGalleryController {
     constructor(private readonly artGalleryService: ArtGalleryService) {

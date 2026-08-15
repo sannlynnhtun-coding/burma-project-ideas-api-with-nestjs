@@ -3,7 +3,7 @@ import { ApiParam, ApiTags } from '@nestjs/swagger';
 import { BurmeseRecipeService } from './burmese-recipes.service';
 import { BurmeseRecipe } from './burmese-recipes';
 
-@ApiTags('burmese-recipes')
+@ApiTags('burmese-recipes | မြန်မာဟင်းချက်နည်းများ')
 @Controller('burmese-recipes')
 export class BurmeseRecipeController {
   constructor(private readonly service: BurmeseRecipeService) {}

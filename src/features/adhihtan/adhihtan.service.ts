@@ -48,7 +48,7 @@ export class AdhihtanService {
 
     if (!category) {
       throw new NotFoundException(
-        `Adhihtan category with ID ${categoryId} not found`,
+        `adhihtan category with ID ${categoryId} not found`,
       );
     }
 
@@ -67,7 +67,7 @@ export class AdhihtanService {
 
     if (!level) {
       throw new NotFoundException(
-        `Adhihtan schedule level ${levelId} for category ${categoryId} not found`,
+        `adhihtan schedule level ${levelId} for category ${categoryId} not found`,
       );
     }
 
@@ -83,7 +83,7 @@ export class AdhihtanService {
 
     if (!spell) {
       throw new NotFoundException(
-        `Adhihtan localized spell with ID ${spellId} not found`,
+        `adhihtan localized spell with ID ${spellId} not found`,
       );
     }
 
@@ -94,7 +94,7 @@ export class AdhihtanService {
     const match = /^default_spell_(\d+)$/.exec(key);
 
     if (!match) {
-      throw new Error(`Unsupported Adhihtan spell key: ${key}`);
+      throw new Error(`Unsupported adhihtan spell key: ${key}`);
     }
 
     return Number.parseInt(match[1], 10);

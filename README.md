@@ -75,7 +75,7 @@ This document outlines the project status. Finished API features are checked aga
 
 ## Finished API Features
 
-- [x] Adhihtan
+- [x] adhihtan
 - [x] Art Gallery
 - [x] Bagan Map
 - [x] Birds
@@ -111,15 +111,15 @@ GET /nat-myat-si/symbols
 GET /nat-myat-si/readings/:questionId/:symbolId
 ```
 
-## Adhihtan API flow
+## adhihtan API flow
 
-Adhihtan is a read-only static-content API. A client lists the categories,
+adhihtan is a read-only static-content API. A client lists the categories,
 shows the selected category guidance, loads all schedules or one schedule
 level, and then tracks dates, counts, completion, and custom category 5 state
 locally. The raw JSON endpoint supports one-request offline bootstrapping, while
 the REST endpoints support smaller, focused reads.
 
-<p lang="my">Adhihtan သည် read-only static-content API ဖြစ်သည်။ Client က အမျိုးအစားစာရင်းကို ရယူပြီး ရွေးထားသောအမျိုးအစား၏ လမ်းညွှန်ကိုပြသကာ schedule အားလုံး သို့မဟုတ် schedule level တစ်ခုကို ရယူသည်။ ရက်စွဲ၊ ရေတွက်မှု၊ ပြီးစီးမှုနှင့် စိတ်ကြိုက် category ၅ ၏ state ကို client က local တွင် သိမ်းဆည်းရမည်။ Raw JSON endpoint သည် offline အတွက် data အပြည့်အစုံကို request တစ်ကြိမ်တည်းဖြင့် ရယူနိုင်စေပြီး REST endpoints များသည် လိုအပ်သောအပိုင်းကိုသာ ရယူနိုင်စေသည်။</p>
+<p lang="my">adhihtan သည် read-only static-content API ဖြစ်သည်။ Client က အမျိုးအစားစာရင်းကို ရယူပြီး ရွေးထားသောအမျိုးအစား၏ လမ်းညွှန်ကိုပြသကာ schedule အားလုံး သို့မဟုတ် schedule level တစ်ခုကို ရယူသည်။ ရက်စွဲ၊ ရေတွက်မှု၊ ပြီးစီးမှုနှင့် စိတ်ကြိုက် category ၅ ၏ state ကို client က local တွင် သိမ်းဆည်းရမည်။ Raw JSON endpoint သည် offline အတွက် data အပြည့်အစုံကို request တစ်ကြိမ်တည်းဖြင့် ရယူနိုင်စေပြီး REST endpoints များသည် လိုအပ်သောအပိုင်းကိုသာ ရယူနိုင်စေသည်။</p>
 
 ```http
 GET /adhihtan/data.json

@@ -3,7 +3,7 @@ import { ApiParam, ApiTags } from '@nestjs/swagger';
 import { IncompatibleFoodService } from './incompatible-food.service';
 import { IncompatibleFood } from './incompatible-food';
 
-@ApiTags('incompatible-food')
+@ApiTags('incompatible-food | အတည့်မဖြစ်သော အစားအစာများ')
 @Controller('incompatible-food')
 export class IncompatibleFoodController {
   constructor(private readonly service: IncompatibleFoodService) {}

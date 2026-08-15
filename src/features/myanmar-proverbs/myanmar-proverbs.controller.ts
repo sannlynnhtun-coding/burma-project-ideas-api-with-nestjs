@@ -3,7 +3,7 @@ import { ApiParam, ApiTags } from '@nestjs/swagger';
 import { MyanmarProverbService } from './myanmar-proverbs.service';
 import { MyanmarProverb } from './myanmar-proverbs';
 
-@ApiTags('myanmar-proverbs')
+@ApiTags('myanmar-proverbs | မြန်မာစကားပုံများ')
 @Controller('myanmar-proverbs')
 export class MyanmarProverbController {
   constructor(private readonly service: MyanmarProverbService) {}

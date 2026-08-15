@@ -211,6 +211,10 @@ describe('AppController (e2e)', () => {
       .expect((res) => {
         expect(res.text).toContain('SF Pro Text');
         expect(res.text).toContain('--font-mono');
+        expect(res.text).toContain(
+          '.swagger-ui .info .title small.version-stamp',
+        );
+        expect(res.text).toContain('background: transparent !important');
       });
 
     await request(app.getHttpServer())
@@ -220,11 +224,47 @@ describe('AppController (e2e)', () => {
       .expect((res) => {
         expect(res.body.info.title).toContain('မြန်မာ');
         expect(res.body.info.description).toContain('မြန်မာ့ယဉ်ကျေးမှု');
+        const expectedProjectTags = [
+          'adhihtan | အဓိဋ္ဌာန်',
+          'quotlets | အဆိုအမိန့်များ',
+          'burmese-recipes | မြန်မာဟင်းချက်နည်းများ',
+          'burmese-agriculture | မြန်မာ့စိုက်ပျိုးရေး',
+          'phayar-sar | ဘုရားစာ',
+          'nat-myat-si | နတ်မျက်စိ',
+          'lat-htauk-bay-din | လက်ထောက်ဗေဒင်',
+          'dream-dictionary | အိပ်မက်အဘိဓာန်',
+          'movie-ticket-online-booking | ရုပ်ရှင်လက်မှတ် အွန်လိုင်းကြိုတင်မှာယူခြင်း',
+          'pick-a-pile | ကတ်တစ်ပုံရွေး',
+          'myanmar-proverbs | မြန်မာစကားပုံများ',
+          'zodiac | ရာသီခွင်',
+          'bagan-map | ပုဂံမြေပုံ',
+          'birds | ငှက်များ',
+          'myanmar-months | မြန်မာလများ',
+          'snakes | မြွေများ',
+          'art-gallery | အနုပညာပြခန်း',
+          'incompatible-food | အတည့်မဖြစ်သော အစားအစာများ',
+          'missing-historical-records | ပျောက်ဆုံးသမိုင်းမှတ်တမ်းများ',
+        ];
+        const projectTags = res.body.tags as Array<{
+          name: string;
+          description: string;
+        }>;
+
+        expect(projectTags.map((tag) => tag.name)).toEqual(expectedProjectTags);
+        expect(
+          projectTags.every(
+            (tag) =>
+              tag.description.includes('<span lang="my">') &&
+              tag.description.includes('Source project') &&
+              tag.description.includes('https://github.com/'),
+          ),
+        ).toBe(true);
+
         const adhihtanTag = res.body.tags.find(
-          (tag: { name: string }) => tag.name === 'Adhihtan',
+          (tag: { name: string }) => tag.name === 'adhihtan | အဓိဋ္ဌာန်',
         );
         expect(adhihtanTag.description).toContain(
-          'read-only Adhihtan counting flow',
+          'read-only adhihtan counting flow',
         );
         expect(adhihtanTag.description).toContain('<span lang="my">');
 

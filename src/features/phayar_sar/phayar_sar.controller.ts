@@ -2,7 +2,7 @@ import { Controller, Get, Param, ParseIntPipe } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { PhayarSarService } from './phayar_sar.service';
 
-@ApiTags('phayar-sar')
+@ApiTags('phayar-sar | ဘုရားစာ')
 @Controller('phayar-sar')
 export class PhayarSarController {
   constructor(private readonly phayarSarService: PhayarSarService) { }

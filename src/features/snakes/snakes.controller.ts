@@ -5,7 +5,7 @@ import { SnakeService } from './snakes.service';
 import { Snake } from './snake';
 import { buildAssetUrl } from '../../common/asset-url';
 
-@ApiTags('snakes')
+@ApiTags('snakes | မြွေများ')
 @Controller('snakes')
 export class SnakesController {
 

@@ -4,7 +4,7 @@ import { LatHtaukBayDinService } from './lat_htauk_bay_din.service';
 import { LatHtaukBayDinQuestion } from './lat_htauk_bay_din_question';
 import { LatHtaukBayDinAnswer } from './lat_htauk_bay_din_answer';
 
-@ApiTags('lat-htauk-bay-din')
+@ApiTags('lat-htauk-bay-din | လက်ထောက်ဗေဒင်')
 @Controller('lat-htauk-bay-din')
 export class LatHtaukBayDinController {
   constructor(private readonly latHtaukBayDinService: LatHtaukBayDinService) {}

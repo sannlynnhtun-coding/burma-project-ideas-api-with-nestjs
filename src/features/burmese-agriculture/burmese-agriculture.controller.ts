@@ -3,7 +3,7 @@ import { ApiParam, ApiTags } from '@nestjs/swagger';
 import { BurmeseAgricultureService } from './burmese-agriculture.service';
 import { BurmeseAgriculture } from './burmese-agriculture';
 
-@ApiTags('burmese-agriculture')
+@ApiTags('burmese-agriculture | မြန်မာ့စိုက်ပျိုးရေး')
 @Controller('burmese-agriculture')
 export class BurmeseAgricultureController {
   constructor(private readonly service: BurmeseAgricultureService) {}

@@ -6,7 +6,7 @@ import {
 } from './missing-historical-records';
 import { MissingHistoricalRecordsService } from './missing-historical-records.service';
 
-@ApiTags('missing-historical-records')
+@ApiTags('missing-historical-records | ပျောက်ဆုံးသမိုင်းမှတ်တမ်းများ')
 @Controller('missing-historical-records')
 export class MissingHistoricalRecordsController {
   constructor(private readonly service: MissingHistoricalRecordsService) {}

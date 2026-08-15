@@ -5,7 +5,7 @@ import { QuotletService } from './quotlets.service';
 import { Quotlet } from './quotlets';
 import { buildFeatureAssetUrl } from '../../common/asset-url';
 
-@ApiTags('quotlets')
+@ApiTags('quotlets | အဆိုအမိန့်များ')
 @Controller('quotlets')
 export class QuotletController {
   constructor(private readonly service: QuotletService) {}

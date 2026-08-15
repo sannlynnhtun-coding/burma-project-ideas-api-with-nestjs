@@ -3,7 +3,7 @@ import { ApiParam, ApiTags } from '@nestjs/swagger';
 import { MyanmarMonthService } from './myanmar-months.service';
 import { MyanmarMonth } from './myanmar-months';
 
-@ApiTags('myanmar-months')
+@ApiTags('myanmar-months | မြန်မာလများ')
 @Controller('myanmar-months')
 export class MyanmarMonthController {
   constructor(private readonly service: MyanmarMonthService) {}

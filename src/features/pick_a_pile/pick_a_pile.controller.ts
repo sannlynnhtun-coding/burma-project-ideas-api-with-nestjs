@@ -6,7 +6,7 @@ import { PickAPileAnswer } from './pick_a_pile_answer';
 import { PickAPileQuestion } from './pick_a_pile_question';
 import { buildAssetUrl } from '../../common/asset-url';
 
-@ApiTags('pick-a-pile')
+@ApiTags('pick-a-pile | ကတ်တစ်ပုံရွေး')
 @Controller('pick-a-pile')
 export class PickAPileController {
   constructor(private readonly pickAPileService: PickAPileService) {}

@@ -4,7 +4,7 @@ import { TravelRoute } from './travel_route';
 import { BaganMapInfoDetail } from './bagan_map_info_detail';
 import { ApiParam, ApiTags } from '@nestjs/swagger';
 
-@ApiTags('bagan-map')
+@ApiTags('bagan-map | ပုဂံမြေပုံ')
 @Controller('bagan-map')
 export class BaganMapController {
   constructor(private readonly baganMapService: BaganMapService) {}

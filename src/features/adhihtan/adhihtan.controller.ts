@@ -15,17 +15,17 @@ import {
 import { AdhihtanService } from './adhihtan.service';
 
 const notFoundDescription =
-  'No Adhihtan item matches the supplied ID. Check the ID and try again. ' +
+  'No adhihtan item matches the supplied ID. Check the ID and try again. ' +
   '<span lang="my">ပေးထားသော ID နှင့်ကိုက်ညီသည့် အဓိဋ္ဌာန်အချက်အလက် မရှိပါ။ ID ကိုစစ်ပြီး ထပ်မံကြိုးစားပါ။</span>';
 
-@ApiTags('Adhihtan')
+@ApiTags('adhihtan | အဓိဋ္ဌာန်')
 @Controller('adhihtan')
 export class AdhihtanController {
   constructor(private readonly adhihtanService: AdhihtanService) {}
 
   @Get('data.json')
   @ApiOperation({
-    summary: 'Get all Adhihtan data',
+    summary: 'Get all adhihtan data',
     description:
       'Get categories, schedules, and localized spell names in one response. Use this endpoint to cache the full dataset or make it available offline. ' +
       '<span lang="my">အမျိုးအစား၊ schedule နှင့် ဂုဏ်တော်အမည်များကို response တစ်ခုတည်းဖြင့် ရယူပါ။ Data အားလုံးကို cache လုပ်ရန် သို့မဟုတ် offline အသုံးပြုနိုင်ရန် ဒီ endpoint ကိုသုံးပါ။</span>',
@@ -33,7 +33,7 @@ export class AdhihtanController {
   @ApiOkResponse({
     type: AdhihtanContent,
     description:
-      'All Adhihtan categories, schedules, source metadata, and localized spell names. ' +
+      'All adhihtan categories, schedules, source metadata, and localized spell names. ' +
       '<span lang="my">အဓိဋ္ဌာန်အမျိုးအစား၊ schedule၊ source metadata နှင့် ဂုဏ်တော်အမည်များ အားလုံး။</span>',
   })
   getRawData(): AdhihtanContent {
@@ -42,10 +42,10 @@ export class AdhihtanController {
 
   @Get('categories')
   @ApiOperation({
-    summary: 'List Adhihtan categories',
+    summary: 'List adhihtan categories',
     description:
-      'Get the five practices available in Adhihtan. Each category includes its duration, format, benefit summary, level options, and guidance. ' +
-      '<span lang="my">Adhihtan တွင်ရှိသော အဓိဋ္ဌာန်အမျိုးအစား ငါးမျိုးကို ရယူပါ။ အမျိုးအစားတစ်ခုစီတွင် ကြာချိန်၊ ပုံစံ၊ အကျိုးအနှစ်ချုပ်၊ အဆင့်ရွေးချယ်စရာနှင့် လမ်းညွှန် ပါဝင်သည်။</span>',
+      'Get the five practices available in adhihtan. Each category includes its duration, format, benefit summary, level options, and guidance. ' +
+      '<span lang="my">adhihtan တွင်ရှိသော အဓိဋ္ဌာန်အမျိုးအစား ငါးမျိုးကို ရယူပါ။ အမျိုးအစားတစ်ခုစီတွင် ကြာချိန်၊ ပုံစံ၊ အကျိုးအနှစ်ချုပ်၊ အဆင့်ရွေးချယ်စရာနှင့် လမ်းညွှန် ပါဝင်သည်။</span>',
   })
   @ApiOkResponse({ type: AdhihtanCategory, isArray: true })
   getCategories(): AdhihtanCategory[] {
@@ -54,7 +54,7 @@ export class AdhihtanController {
 
   @Get('categories/:categoryId')
   @ApiOperation({
-    summary: 'Get one Adhihtan category',
+    summary: 'Get one adhihtan category',
     description:
       'Get the overview, benefits, cautions, and instructions for one category. Show this information before a user starts the practice. ' +
       '<span lang="my">အမျိုးအစားတစ်ခု၏ အကျဉ်းချုပ်၊ အကျိုးကျေးဇူး၊ သတိပြုရန်နှင့် လုပ်ဆောင်နည်းတို့ကို ရယူပါ။ အဓိဋ္ဌာန်မစမီ ဒီအချက်အလက်ကို အသုံးပြုသူအား ပြပါ။</span>',
@@ -132,7 +132,7 @@ export class AdhihtanController {
 
   @Get('spells')
   @ApiOperation({
-    summary: 'List localized Adhihtan spell names',
+    summary: 'List localized adhihtan spell names',
     description:
       'Get the 35 display names stored under `default_spell_*` keys. Use the schedule entries for the spell name and sequence of a selected practice. ' +
       '<span lang="my">`default_spell_*` key များဖြင့် သိမ်းထားသော display name ၃၅ ခုကို ရယူပါ။ ရွေးထားသောအဓိဋ္ဌာန်၏ ဂုဏ်တော်အမည်နှင့် အစဉ်အတွက် schedule entry များကို သုံးပါ။</span>',
@@ -144,7 +144,7 @@ export class AdhihtanController {
 
   @Get('spells/:spellId')
   @ApiOperation({
-    summary: 'Get one localized Adhihtan spell name',
+    summary: 'Get one localized adhihtan spell name',
     description:
       'Get one display name by the number at the end of its key. For example, use `1` for `default_spell_1`. ' +
       '<span lang="my">Key ၏ နောက်ဆုံးနံပါတ်ဖြင့် display name တစ်ခုကို ရယူပါ။ ဥပမာ `default_spell_1` အတွက် `1` ကိုသုံးပါ။</span>',

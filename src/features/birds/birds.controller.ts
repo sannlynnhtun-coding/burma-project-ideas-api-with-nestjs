@@ -5,7 +5,7 @@ import { Bird } from './bird';
 import { ApiParam, ApiTags } from '@nestjs/swagger';
 import { buildAssetUrl } from '../../common/asset-url';
 
-@ApiTags('birds')
+@ApiTags('birds | ငှက်များ')
 @Controller('birds')
 export class BirdsController {
   constructor(private readonly birdService: BirdsService) {}
