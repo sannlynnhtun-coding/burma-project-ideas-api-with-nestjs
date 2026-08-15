@@ -41,6 +41,13 @@ describe('AppController (e2e)', () => {
         expect(res.text).toContain('<pre><code lang="en">');
         expect(res.text).toContain('<dd lang="en">18</dd>');
         expect(res.text).toContain('/adhihtan/categories');
+        expect(res.text).toContain('Open API docs');
+        expect(res.text).toContain('Browse Myanmar datasets by topic.');
+        expect(res.text).toContain(
+          'Built for apps that need clear, documented data.',
+        );
+        expect(res.text).not.toContain('Live route map');
+        expect(res.text).not.toContain('operational data product');
         expect(res.text).toContain(
           '<span data-copy lang="my">အဓိဋ္ဌာန်</span>',
         );
@@ -216,7 +223,9 @@ describe('AppController (e2e)', () => {
         const adhihtanTag = res.body.tags.find(
           (tag: { name: string }) => tag.name === 'Adhihtan',
         );
-        expect(adhihtanTag.description).toContain('prayer-counting flow');
+        expect(adhihtanTag.description).toContain(
+          'read-only Adhihtan counting flow',
+        );
         expect(adhihtanTag.description).toContain('<span lang="my">');
 
         const adhihtanPaths = Object.entries(res.body.paths).filter(([path]) =>

@@ -7,14 +7,15 @@ export function setupApiDocumentation(app: INestApplication): void {
   const config = new DocumentBuilder()
     .setTitle('Burma Project Ideas API | မြန်မာပရောဂျက်အကြံဉာဏ်များ API')
     .setDescription(
-      'A collection of Myanmar cultural and educational data APIs. မြန်မာ့ယဉ်ကျေးမှုနှင့် ပညာရေးဒေတာ API များ စုစည်းမှု။',
+      'Browse documented REST endpoints for Myanmar culture, education, travel, food, calendars, and reference data. ' +
+        '<span lang="my">မြန်မာ့ယဉ်ကျေးမှု၊ ပညာရေး၊ ခရီးသွား၊ အစားအစာ၊ ပြက္ခဒိန်နှင့် ကိုးကားဒေတာများအတွက် စာရွက်စာတမ်းပါသော REST endpoint များကို ကြည့်ရှုပါ။</span>',
     )
     .setVersion('1.0')
     .addTag('burma-project-idea')
     .addTag(
       'Adhihtan',
-      'Read-only static content for the Adhihtan prayer-counting flow. Start with `GET /adhihtan/categories`, choose a category, read its guidance, then request all schedules or one level. The client tracks dates, counts, completion, and custom category 5 locally. Use `GET /adhihtan/data.json` when an offline client needs the complete payload in one request; use the REST endpoints when it needs only part of the data.\n\n' +
-        '<span lang="my">အဓိဋ္ဌာန်ပုတီးရေတွက်ခြင်း flow အတွက် read-only static content ဖြစ်သည်။ `GET /adhihtan/categories` ဖြင့် စတင်ပြီး အမျိုးအစားရွေးပါ၊ လမ်းညွှန်ကိုဖတ်ပါ၊ ထို့နောက် schedule အားလုံး သို့မဟုတ် အဆင့်တစ်ခုကို ရယူပါ။ ရက်စွဲ၊ ရေတွက်မှု၊ ပြီးစီးမှုနှင့် စိတ်ကြိုက် category ၅ ကို client က local တွင် ထိန်းသိမ်းရမည်။ Offline client က data အပြည့်အစုံကို request တစ်ကြိမ်တည်းဖြင့် လိုအပ်လျှင် `GET /adhihtan/data.json` ကိုသုံးပြီး အပိုင်းလိုက်သာလိုအပ်လျှင် REST endpoints များကိုသုံးပါ။</span>',
+      'Build a read-only Adhihtan counting flow: get the categories, show the selected category’s guidance, load every schedule level or one level, then track dates, counts, and completion in the client. Category 5 is custom and has no server schedule. Use `GET /adhihtan/data.json` to cache all static content in one request.\n\n' +
+        '<span lang="my">Read-only အဓိဋ္ဌာန်ပုတီးရေတွက်ခြင်း flow ကို တည်ဆောက်ရန် အမျိုးအစားများကို ရယူပါ၊ ရွေးထားသောအမျိုးအစား၏ လမ်းညွှန်ကိုပြပါ၊ schedule level အားလုံး သို့မဟုတ် level တစ်ခုကို ရယူပါ၊ ထို့နောက် ရက်စွဲ၊ ရေတွက်မှုနှင့် ပြီးစီးမှုကို client တွင် သိမ်းပါ။ Category ၅ သည် စိတ်ကြိုက်ဖြစ်ပြီး server schedule မရှိပါ။ Static content အားလုံးကို request တစ်ကြိမ်တည်းဖြင့် cache လုပ်ရန် `GET /adhihtan/data.json` ကိုသုံးပါ။</span>',
     )
     .build();
 
