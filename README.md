@@ -113,6 +113,26 @@ GET /nat-myat-si/symbols
 GET /nat-myat-si/readings/:questionId/:symbolId
 ```
 
+## Phayar Sar API flow
+
+Phayar Sar lists prayer groups and returns one prayer by its numeric group and
+detail IDs. Appended entries from the PhayarSar iOS project also include the
+original source ID, background text, and paragraph-level pronunciation while
+retaining the combined `content` field used by existing clients.
+
+<p lang="my">Phayar Sar API တွင် ဘုရားစာအုပ်စုများကို စာရင်းပြုပြီး အုပ်စု ID နှင့် စာ ID ဖြင့် ဘုရားစာတစ်ပုဒ်ကို ရယူနိုင်သည်။ PhayarSar iOS project မှ ထပ်ဖြည့်ထားသော စာများတွင် မူရင်း source ID၊ အကြောင်းအရာနှင့် စာပိုဒ်အလိုက် အသံထွက်တို့ ပါဝင်ပြီး လက်ရှိ client များအသုံးပြုသည့် <code>content</code> field ကိုလည်း ဆက်လက်ထိန်းသိမ်းထားသည်။</p>
+
+```http
+GET /phayar-sar
+GET /phayar-sar/:groupId/:detailId
+```
+
+The appended prayer data comes from
+[KyawTheMonkey/PhayarSar](https://github.com/KyawTheMonkey/PhayarSar) under the
+included MIT license. Re-import it from a sibling checkout with
+`npm run import:phayar-sar` or pass a resource directory with
+`npm run import:phayar-sar -- --source <directory>`.
+
 ## adhihtan API flow
 
 adhihtan is a read-only static-content API. A client lists the categories,

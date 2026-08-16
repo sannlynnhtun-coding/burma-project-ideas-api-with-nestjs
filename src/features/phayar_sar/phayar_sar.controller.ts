@@ -5,19 +5,18 @@ import { PhayarSarService } from './phayar_sar.service';
 @ApiTags('phayar-sar | ဘုရားစာ')
 @Controller('phayar-sar')
 export class PhayarSarController {
-  constructor(private readonly phayarSarService: PhayarSarService) { }
+  constructor(private readonly phayarSarService: PhayarSarService) {}
 
   @Get()
   getTitles() {
-    let data = this.phayarSarService.getTitles();
-    console.log({ data });
-    return data;
+    return this.phayarSarService.getTitles();
   }
 
   @Get(':groupId/:detailId')
   getDetails(
     @Param('groupId', ParseIntPipe) groupId: number,
-    @Param('detailId', ParseIntPipe) detailId: number) {
+    @Param('detailId', ParseIntPipe) detailId: number,
+  ) {
     return this.phayarSarService.getDetails(groupId, detailId);
   }
 }
