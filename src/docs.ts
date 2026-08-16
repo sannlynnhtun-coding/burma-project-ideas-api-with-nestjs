@@ -28,6 +28,14 @@ const apiTagDefinitions: ApiTagDefinition[] = [
     sourceUrl: 'https://github.com/sannlynnhtun-coding/myanmar-nameology',
   },
   {
+    name: 'myanmar-word-list | မြန်မာစာလုံးစာရင်း',
+    english:
+      'Search 12,467 Myanmar words by prefix, batch-check spelling with optional suggestions, or download the normalized newline-delimited list for private offline processing.',
+    myanmar:
+      'မြန်မာစာလုံး ၁၂,၄၆၇ လုံးကို prefix ဖြင့် ရှာဖွေပါ၊ စာလုံးများကို အစုလိုက် စာလုံးပေါင်းစစ်ပြီး လိုအပ်ပါက အကြံပြုစာလုံးများ ရယူပါ၊ သို့မဟုတ် ကိုယ်ပိုင် offline processing အတွက် သန့်စင်ထားသော တစ်ကြောင်းတစ်လုံးစာရင်းကို download လုပ်ပါ။',
+    sourceUrl: 'https://github.com/sannlynnhtun-coding/blazor-word-list',
+  },
+  {
     name: 'quotlets | အဆိုအမိန့်များ',
     english:
       'Browse image-and-quote posts with `GET /quotlets`, then load one post by ID with `GET /quotlets/:id`.',

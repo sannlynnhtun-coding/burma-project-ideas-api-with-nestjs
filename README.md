@@ -88,6 +88,7 @@ This document outlines the project status. Finished API features are checked aga
 - [x] Myanmar Months
 - [x] Myanmar Nameology
 - [x] Myanmar Proverbs
+- [x] Myanmar Word List
 - [x] NatMyatSi
 - [x] Phayar Sar
 - [x] Pick A Pile
@@ -149,3 +150,27 @@ GET /myanmar-nameology/letter-groups
 GET /myanmar-nameology/meanings
 GET /myanmar-nameology/meanings/:number
 ```
+
+## Myanmar Word List API flow
+
+Myanmar Word List provides prefix search, batch spelling checks, edit-distance
+suggestions, and a normalized UTF-8 download. ASCII-only words are ignored to
+match the source Blazor app. Clients that need private or offline spell checking
+can download the full list and process text locally instead of sending words to
+the server.
+
+<p lang="my">Myanmar Word List တွင် prefix ရှာဖွေမှု၊ အစုလိုက်စာလုံးပေါင်းစစ်ဆေးမှု၊ edit-distance အလိုက် အကြံပြုစာလုံးများနှင့် သန့်စင်ထားသော UTF-8 စာလုံးစာရင်း download ပါဝင်သည်။ မူရင်း Blazor app နှင့် ကိုက်ညီစေရန် ASCII စာလုံးသီးသန့်ကို ignored အဖြစ် သတ်မှတ်သည်။ ကိုယ်ပိုင် သို့မဟုတ် offline စာလုံးပေါင်းစစ်ဆေးမှုလိုအပ်သော client များသည် စာလုံးများကို server သို့ မပို့ဘဲ စာလုံးစာရင်းအပြည့်အစုံကို download လုပ်၍ local တွင် စစ်ဆေးနိုင်သည်။</p>
+
+```http
+GET /myanmar-word-list/meta
+GET /myanmar-word-list/words?prefix=ကကြ&limit=50
+POST /myanmar-word-list/check
+GET /myanmar-word-list/words.list
+```
+
+The data is credited to
+[Kanaung Wordlists](https://github.com/kanaung/wordlists) and is distributed by
+that source under the
+[WTFPL](https://github.com/kanaung/wordlists/blob/master/LICENSE).
+
+<p lang="my">ဒေတာမူရင်းအဖြစ် <a href="https://github.com/kanaung/wordlists">Kanaung Wordlists</a> ကို credit ပေးထားပြီး ထိုမူရင်း repository တွင် <a href="https://github.com/kanaung/wordlists/blob/master/LICENSE">WTFPL</a> လိုင်စင်ဖြင့် ဖြန့်ချိထားသည်။</p>

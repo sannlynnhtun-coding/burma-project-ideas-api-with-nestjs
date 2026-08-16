@@ -63,9 +63,10 @@ describe('AppController (e2e)', () => {
             },
           },
         });
-        expect(res.text).toContain('<dd lang="en">19</dd>');
+        expect(res.text).toContain('<dd lang="en">20</dd>');
         expect(res.text).toContain('/adhihtan/categories');
         expect(res.text).toContain('/myanmar-nameology/calculate');
+        expect(res.text).toContain('/myanmar-word-list/words');
         expect(res.text).toContain('Open API docs');
         expect(res.text).toContain('Browse Myanmar datasets by topic.');
         expect(res.text).toContain(
@@ -306,6 +307,84 @@ describe('AppController (e2e)', () => {
       .expect(404);
   });
 
+  it('/myanmar-word-list should search, check, and serve offline data', async () => {
+    await request(app.getHttpServer())
+      .get('/myanmar-word-list/meta')
+      .expect(200)
+      .expect((res) => {
+        expect(res.body).toMatchObject({
+          wordCount: 12467,
+          maxSearchResults: 100,
+          maxBatchSize: 100,
+          maxSuggestionsPerWord: 5,
+          license: 'WTFPL',
+        });
+      });
+
+    await request(app.getHttpServer())
+      .get('/myanmar-word-list/words')
+      .query({ prefix: 'ကကြ', limit: 20 })
+      .expect(200)
+      .expect((res) => {
+        expect(res.body.words).toContain('ကကြီး');
+        expect(
+          res.body.words.every((word: string) => word.startsWith('ကကြ')),
+        ).toBe(true);
+      });
+
+    await request(app.getHttpServer())
+      .post('/myanmar-word-list/check')
+      .send({ words: ['ကကြီး', 'ကကြီ', 'Myanmar'] })
+      .expect(200)
+      .expect((res) => {
+        expect(res.body).toMatchObject({
+          wordCount: 3,
+          checkedCount: 2,
+          ignoredCount: 1,
+        });
+        expect(res.body.results[0]).toMatchObject({
+          status: 'correct',
+          isCorrect: true,
+        });
+        expect(res.body.results[1]).toMatchObject({
+          status: 'misspelled',
+          isCorrect: false,
+        });
+        expect(res.body.results[1].suggestions).toContain('ကကြီး');
+        expect(res.body.results[2]).toMatchObject({
+          status: 'ignored',
+          isCorrect: true,
+        });
+      });
+
+    await request(app.getHttpServer())
+      .get('/myanmar-word-list/words.list')
+      .expect(200)
+      .expect('Content-Type', /text\/plain/)
+      .expect((res) => {
+        expect(res.text).toContain('ကကြီး\n');
+        expect(res.text).not.toContain('\uFEFF');
+        expect(res.text.trimEnd().split('\n')).toHaveLength(12467);
+      });
+  });
+
+  it('/myanmar-word-list should validate request limits and bodies', async () => {
+    await request(app.getHttpServer())
+      .get('/myanmar-word-list/words')
+      .query({ prefix: 'က', limit: 101 })
+      .expect(400);
+
+    await request(app.getHttpServer())
+      .post('/myanmar-word-list/check')
+      .send({ words: [] })
+      .expect(400);
+
+    await request(app.getHttpServer())
+      .post('/myanmar-word-list/check')
+      .send({ words: [' '] })
+      .expect(400);
+  });
+
   it('/swagger (GET) should serve documentation assets', async () => {
     await request(app.getHttpServer())
       .get('/swagger')
@@ -330,6 +409,7 @@ describe('AppController (e2e)', () => {
         const expectedProjectTags = [
           'adhihtan | အဓိဋ္ဌာန်',
           'myanmar-nameology | မြန်မာနာမည်ကိန်း',
+          'myanmar-word-list | မြန်မာစာလုံးစာရင်း',
           'quotlets | အဆိုအမိန့်များ',
           'burmese-recipes | မြန်မာဟင်းချက်နည်းများ',
           'burmese-agriculture | မြန်မာ့စိုက်ပျိုးရေး',
@@ -392,6 +472,20 @@ describe('AppController (e2e)', () => {
         expect(myanmarNameologyPaths).toHaveLength(4);
         expect(
           myanmarNameologyPaths.every(([, operations]) =>
+            Object.values(
+              operations as Record<string, { description?: string }>,
+            ).every((operation) =>
+              operation.description?.includes('<span lang="my">'),
+            ),
+          ),
+        ).toBe(true);
+
+        const myanmarWordListPaths = Object.entries(res.body.paths).filter(
+          ([path]) => path.startsWith('/myanmar-word-list/'),
+        );
+        expect(myanmarWordListPaths).toHaveLength(4);
+        expect(
+          myanmarWordListPaths.every(([, operations]) =>
             Object.values(
               operations as Record<string, { description?: string }>,
             ).every((operation) =>

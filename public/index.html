@@ -1475,7 +1475,7 @@
 
           <dl class="hero-facts">
             <div class="fact">
-              <dd lang="en">19</dd>
+              <dd lang="en">20</dd>
               <dt><span data-copy lang="en">API groups</span><span data-copy lang="my">API အုပ်စုများ</span></dt>
             </div>
             <div class="fact">
@@ -1484,7 +1484,7 @@
             </div>
             <div class="fact">
               <dd lang="en">REST</dd>
-              <dt><span data-copy lang="en">GET endpoints</span><span data-copy lang="my">GET endpoint များ</span></dt>
+              <dt><span data-copy lang="en">GET and POST endpoints</span><span data-copy lang="my">GET နှင့် POST endpoint များ</span></dt>
             </div>
           </dl>
         </div>
@@ -1533,6 +1533,11 @@
                 <code class="path" lang="en">/adhihtan/categories</code>
                 <span class="endpoint-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-book"></use></svg></span>
               </li>
+              <li class="endpoint-row">
+                <code class="method" lang="en">GET</code>
+                <code class="path" lang="en">/myanmar-word-list/words</code>
+                <span class="endpoint-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-book"></use></svg></span>
+              </li>
             </ul>
 
             <figure class="payload">
@@ -1544,7 +1549,7 @@
               <pre><code lang="en">{
   "name": "Burma Project Ideas",
   "docs": ["/swagger", "/scalar"],
-  "datasets": 19
+  "datasets": 20
 }</code></pre>
             </figure>
           </div>
@@ -1614,6 +1619,11 @@
           <div class="catalog-card-heading"><span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-zodiac"></use></svg></span><h3><span data-copy lang="en">Myanmar Nameology</span><span data-copy lang="my">မြန်မာနာမည်ကိန်း</span></h3></div>
           <p><span data-copy lang="en">Traditional name-number calculation, letter values, and meanings.</span><span data-copy lang="my">ရိုးရာနာမည်ကိန်းတွက်ချက်မှု၊ အက္ခရာတန်ဖိုးများနှင့် အဓိပ္ပာယ်များ။</span></p>
           <code class="route" lang="en">/myanmar-nameology/calculate</code>
+        </li>
+        <li class="catalog-card">
+          <div class="catalog-card-heading"><span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-book"></use></svg></span><h3><span data-copy lang="en">Myanmar Word List</span><span data-copy lang="my">မြန်မာစာလုံးစာရင်း</span></h3></div>
+          <p><span data-copy lang="en">Prefix search, batch spelling checks, suggestions, and an offline word list.</span><span data-copy lang="my">Prefix ရှာဖွေမှု၊ အစုလိုက်စာလုံးပေါင်းစစ်ဆေးမှု၊ အကြံပြုစာလုံးများနှင့် offline စာလုံးစာရင်း။</span></p>
+          <code class="route" lang="en">/myanmar-word-list/words</code>
         </li>
         <li class="catalog-card">
           <div class="catalog-card-heading"><span class="catalog-icon" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#icon-bird"></use></svg></span><h3><span data-copy lang="en">Birds</span><span data-copy lang="my">ငှက်များ</span></h3></div>

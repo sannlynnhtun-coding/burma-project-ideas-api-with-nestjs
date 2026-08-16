@@ -41,6 +41,8 @@ import { AdhihtanController } from './features/adhihtan/adhihtan.controller';
 import { AdhihtanService } from './features/adhihtan/adhihtan.service';
 import { MyanmarNameologyController } from './features/myanmar-nameology/myanmar-nameology.controller';
 import { MyanmarNameologyService } from './features/myanmar-nameology/myanmar-nameology.service';
+import { MyanmarWordListController } from './features/myanmar-word-list/myanmar-word-list.controller';
+import { MyanmarWordListService } from './features/myanmar-word-list/myanmar-word-list.service';
 
 @Module({
   imports: [
@@ -73,6 +75,7 @@ import { MyanmarNameologyService } from './features/myanmar-nameology/myanmar-na
     NatMyatSiController,
     AdhihtanController,
     MyanmarNameologyController,
+    MyanmarWordListController,
   ],
   providers: [
     AppService,
@@ -95,6 +98,7 @@ import { MyanmarNameologyService } from './features/myanmar-nameology/myanmar-na
     NatMyatSiService,
     AdhihtanService,
     MyanmarNameologyService,
+    MyanmarWordListService,
   ],
 })
 export class AppModule {}

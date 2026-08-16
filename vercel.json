@@ -77,6 +77,13 @@
       "src": "/myanmar-nameology/meanings/([0-9]+)/?",
       "dest": "/api/index"
     },
+    { "src": "/myanmar-word-list/meta/?", "dest": "/api/index" },
+    { "src": "/myanmar-word-list/words/?", "dest": "/api/index" },
+    { "src": "/myanmar-word-list/check/?", "dest": "/api/index" },
+    {
+      "src": "/myanmar-word-list/words\\.list/?",
+      "dest": "/api/index"
+    },
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/api/index" }
   ]
