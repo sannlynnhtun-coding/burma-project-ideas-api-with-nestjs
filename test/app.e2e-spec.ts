@@ -444,6 +444,8 @@ describe('AppController (e2e)', () => {
       .expect((res) => {
         expect(res.text).toContain('Scalar API Reference');
         expect(res.text).toContain('"withDefaultFonts":false');
+        expect(res.text).toContain('"tagsSorter":"alpha"');
+        expect(res.text).toContain('"operationsSorter":"alpha"');
         expect(res.text).toContain('--scalar-font');
         expect(res.text).toContain('မြန်မာ API ကိုးကားချက်');
       });

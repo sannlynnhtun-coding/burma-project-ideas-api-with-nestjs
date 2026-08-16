@@ -222,6 +222,8 @@ function renderScalarReferenceHtml(): string {
     forceDarkModeState: 'dark',
     hideDarkModeToggle: true,
     withDefaultFonts: false,
+    tagsSorter: 'alpha',
+    operationsSorter: 'alpha',
     customCss: scalarThemeCss,
   });
 
