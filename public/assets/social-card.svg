@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="card-title card-description">
+  <title id="card-title">Burma Project Ideas API</title>
+  <desc id="card-description">A bilingual social card for the Burma Project Ideas API.</desc>
+  <rect width="1200" height="630" fill="#08101f" />
+  <rect x="48" y="48" width="1104" height="534" rx="20" fill="#0d182b" stroke="#223454" stroke-width="2" />
+  <g transform="translate(116 173) scale(4.45)">
+    <rect x="1.5" y="1.5" width="61" height="61" rx="12" fill="#08101f" />
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m21 15-10 17 10 17M43 15l10 17-10 17" stroke="#f3f7ff" stroke-width="4.5" />
+      <path d="M32 29v-7m0 7-7 11m7-11 7 11" stroke="#43d3ff" stroke-width="2.75" />
+      <path d="M32 9v5m-10.5-1.5 3.5 3.5m17.5-3.5L39 16" stroke="#43d3ff" stroke-width="3" />
+      <path d="M27 47h10m-8 5h6" stroke="#43d3ff" stroke-width="3.5" />
+    </g>
+    <circle cx="32" cy="29" r="4.5" fill="#f3f7ff" />
+    <circle cx="32" cy="21" r="3.25" fill="#43d3ff" />
+    <circle cx="25" cy="40" r="3.25" fill="#43d3ff" />
+    <circle cx="39" cy="40" r="3.25" fill="#43d3ff" />
+  </g>
+  <g fill="#f3f7ff">
+    <text x="475" y="247" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="54" font-weight="700" letter-spacing="-1.5">Burma Project Ideas API</text>
+    <text x="475" y="322" lang="my" font-family="'Myanmar Text', 'Noto Sans Myanmar', sans-serif" font-size="39" font-weight="600">မြန်မာပရောဂျက်အကြံဉာဏ်များ API</text>
+  </g>
+  <path d="M475 368h565" stroke="#223454" stroke-width="2" />
+  <text x="475" y="420" fill="#a9b6cb" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="25">Culture and knowledge data</text>
+  <text x="475" y="466" lang="my" fill="#a9b6cb" font-family="'Myanmar Text', 'Noto Sans Myanmar', sans-serif" font-size="24">ယဉ်ကျေးမှုနှင့် ဗဟုသုတဒေတာ</text>
+</svg>

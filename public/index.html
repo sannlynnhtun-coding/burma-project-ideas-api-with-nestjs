@@ -4,7 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#08101f">
+  <meta name="description" content="Explore documented APIs for Myanmar culture, food, travel, calendars, and knowledge. မြန်မာ့ယဉ်ကျေးမှု၊ အစားအစာ၊ ခရီးသွားနှင့် ဗဟုသုတ API များကို လေ့လာပါ။">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/">
+  <meta property="og:site_name" content="Burma Project Ideas API">
+  <meta property="og:title" content="Burma Project Ideas API | မြန်မာဒေတာ API">
+  <meta property="og:description" content="Documented APIs for Myanmar culture and knowledge data. မြန်မာ့ယဉ်ကျေးမှုနှင့် ဗဟုသုတဒေတာ API များ။">
+  <meta property="og:image" content="/assets/social-card.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Burma Project Ideas API logo | မြန်မာပရောဂျက်အကြံဉာဏ်များ API လိုဂို">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Burma Project Ideas API | မြန်မာဒေတာ API">
+  <meta name="twitter:description" content="Documented APIs for Myanmar culture and knowledge data. မြန်မာ့ယဉ်ကျေးမှုနှင့် ဗဟုသုတဒေတာ API များ။">
+  <meta name="twitter:image" content="/assets/social-card.png">
+  <meta name="twitter:image:alt" content="Burma Project Ideas API logo | မြန်မာပရောဂျက်အကြံဉာဏ်များ API လိုဂို">
+  <link rel="icon" href="/assets/brand-logo.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="canonical" href="/">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
   <title>Burma Project Ideas API</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Burma Project Ideas API",
+      "alternateName": "မြန်မာပရောဂျက်အကြံဉာဏ်များ API",
+      "url": "/",
+      "logo": "/assets/icon-512.png",
+      "image": "/assets/social-card.png",
+      "description": "Documented APIs for Myanmar culture and knowledge data. မြန်မာ့ယဉ်ကျေးမှုနှင့် ဗဟုသုတဒေတာ API များ။",
+      "inLanguage": ["en", "my"],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Burma Project Ideas",
+        "alternateName": "မြန်မာပရောဂျက်အကြံဉာဏ်များ",
+        "url": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "/assets/icon-512.png",
+          "width": 512,
+          "height": 512
+        }
+      }
+    }
+  </script>
   <style>
     :root {
       --bg: #f7f6f3;
@@ -150,15 +198,15 @@
       height: 36px;
       display: grid;
       place-items: center;
-      border: 1px solid var(--line-strong);
-      border-radius: 6px;
-      background: var(--surface);
-      color: var(--ink);
+      border: 0;
+      border-radius: 8px;
+      background: transparent;
+      overflow: hidden;
     }
 
-    .brand-mark svg {
-      width: 21px;
-      height: 21px;
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
     }
 
     .brand-text {
@@ -904,14 +952,7 @@
     .brand-mark {
       width: 38px;
       height: 38px;
-      border-color: var(--accent);
-      background: transparent;
-      color: var(--accent);
-      transform: rotate(45deg);
-    }
-
-    .brand-mark svg {
-      transform: rotate(-45deg);
+      transform: none;
     }
 
     .brand-text small {
@@ -1256,8 +1297,7 @@
     }
 
     .footer .brand-mark {
-      border-color: var(--accent);
-      color: var(--accent);
+      background: transparent;
     }
 
     .footer-links a {
@@ -1354,7 +1394,7 @@
 
       <a class="brand" href="/">
         <span class="brand-mark" aria-hidden="true">
-          <svg><use href="/assets/landing-icons.svg#logo-mark"></use></svg>
+          <img src="/assets/brand-logo.svg" alt="" width="38" height="38">
         </span>
         <span class="brand-text">
           <span lang="en">Burma Project Ideas API</span>
@@ -1696,7 +1736,7 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <span class="brand-mark" aria-hidden="true"><svg><use href="/assets/landing-icons.svg#logo-mark"></use></svg></span>
+        <span class="brand-mark" aria-hidden="true"><img src="/assets/brand-logo.svg" alt="" width="38" height="38"></span>
         <span lang="en">Burma Project Ideas API</span>
       </div>
       <nav class="footer-links" aria-labelledby="footer-links-title">

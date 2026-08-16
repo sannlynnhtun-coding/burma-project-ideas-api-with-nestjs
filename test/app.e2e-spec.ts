@@ -39,6 +39,30 @@ describe('AppController (e2e)', () => {
         expect(res.text).toContain('<dl class="hero-facts">');
         expect(res.text).toContain('<figure class="payload">');
         expect(res.text).toContain('<pre><code lang="en">');
+        expect(res.text).toContain('/assets/brand-logo.svg');
+        expect(res.text).toContain('/assets/social-card.png');
+        expect(res.text).toContain('application/ld+json');
+        expect(res.text).toContain('rel="canonical"');
+        expect(res.text).toContain('rel="apple-touch-icon"');
+        const structuredDataMatch = res.text.match(
+          /<script type="application\/ld\+json">([\s\S]*?)<\/script>/,
+        );
+        expect(structuredDataMatch).not.toBeNull();
+        const structuredData = JSON.parse(structuredDataMatch?.[1] ?? '{}');
+        expect(structuredData).toMatchObject({
+          '@type': 'WebSite',
+          name: 'Burma Project Ideas API',
+          logo: '/assets/icon-512.png',
+          inLanguage: ['en', 'my'],
+          publisher: {
+            '@type': 'Organization',
+            logo: {
+              '@type': 'ImageObject',
+              width: 512,
+              height: 512,
+            },
+          },
+        });
         expect(res.text).toContain('<dd lang="en">18</dd>');
         expect(res.text).toContain('/adhihtan/categories');
         expect(res.text).toContain('Open API docs');
@@ -282,6 +306,32 @@ describe('AppController (e2e)', () => {
           ),
         ).toBe(true);
       });
+
+    await request(app.getHttpServer())
+      .get('/assets/brand-logo.svg')
+      .expect(200)
+      .expect('Content-Type', /svg/)
+      .expect((res) => {
+        const logoSvg = Buffer.from(res.body).toString('utf8');
+        expect(logoSvg).toContain('#0d182b');
+        expect(logoSvg).toContain('#43d3ff');
+        expect(logoSvg).toContain('#f3f7ff');
+      });
+
+    await request(app.getHttpServer())
+      .get('/assets/social-card.png')
+      .expect(200)
+      .expect('Content-Type', /png/);
+
+    await request(app.getHttpServer())
+      .get('/site.webmanifest')
+      .expect(200)
+      .expect('Content-Type', /json|manifest/);
+
+    await request(app.getHttpServer())
+      .get('/favicon.ico')
+      .expect(200)
+      .expect('Content-Type', /image/);
 
     await request(app.getHttpServer())
       .get('/swagger/swagger-ui.css')

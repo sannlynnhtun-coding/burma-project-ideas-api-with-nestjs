@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="logo-title logo-description">
+  <title id="logo-title">Burma Project Ideas API logo</title>
+  <desc id="logo-description">Code brackets surround connected data nodes shaped like an idea.</desc>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="12" fill="#0d182b" />
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m21 15-10 17 10 17M43 15l10 17-10 17" stroke="#f3f7ff" stroke-width="4.5" />
+    <path d="M32 29v-7m0 7-7 11m7-11 7 11" stroke="#43d3ff" stroke-width="2.75" />
+    <path d="M32 9v5m-10.5-1.5 3.5 3.5m17.5-3.5L39 16" stroke="#43d3ff" stroke-width="3" />
+    <path d="M27 47h10m-8 5h6" stroke="#43d3ff" stroke-width="3.5" />
+  </g>
+  <circle cx="32" cy="29" r="4.5" fill="#f3f7ff" />
+  <circle cx="32" cy="21" r="3.25" fill="#43d3ff" />
+  <circle cx="25" cy="40" r="3.25" fill="#43d3ff" />
+  <circle cx="39" cy="40" r="3.25" fill="#43d3ff" />
+</svg>
