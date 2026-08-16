@@ -39,6 +39,8 @@ import { NatMyatSiController } from './features/nat_myat_si/nat_myat_si.controll
 import { NatMyatSiService } from './features/nat_myat_si/nat_myat_si.service';
 import { AdhihtanController } from './features/adhihtan/adhihtan.controller';
 import { AdhihtanService } from './features/adhihtan/adhihtan.service';
+import { MyanmarNameologyController } from './features/myanmar-nameology/myanmar-nameology.controller';
+import { MyanmarNameologyService } from './features/myanmar-nameology/myanmar-nameology.service';
 
 @Module({
   imports: [
@@ -70,6 +72,7 @@ import { AdhihtanService } from './features/adhihtan/adhihtan.service';
     MissingHistoricalRecordsController,
     NatMyatSiController,
     AdhihtanController,
+    MyanmarNameologyController,
   ],
   providers: [
     AppService,
@@ -91,6 +94,7 @@ import { AdhihtanService } from './features/adhihtan/adhihtan.service';
     MissingHistoricalRecordsService,
     NatMyatSiService,
     AdhihtanService,
+    MyanmarNameologyService,
   ],
 })
 export class AppModule {}

@@ -70,6 +70,13 @@
     },
     { "src": "/adhihtan/spells/?", "dest": "/api/index" },
     { "src": "/adhihtan/spells/([0-9]+)/?", "dest": "/api/index" },
+    { "src": "/myanmar-nameology/calculate/?", "dest": "/api/index" },
+    { "src": "/myanmar-nameology/letter-groups/?", "dest": "/api/index" },
+    { "src": "/myanmar-nameology/meanings/?", "dest": "/api/index" },
+    {
+      "src": "/myanmar-nameology/meanings/([0-9]+)/?",
+      "dest": "/api/index"
+    },
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/api/index" }
   ]

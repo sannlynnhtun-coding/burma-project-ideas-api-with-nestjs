@@ -63,8 +63,9 @@ describe('AppController (e2e)', () => {
             },
           },
         });
-        expect(res.text).toContain('<dd lang="en">18</dd>');
+        expect(res.text).toContain('<dd lang="en">19</dd>');
         expect(res.text).toContain('/adhihtan/categories');
+        expect(res.text).toContain('/myanmar-nameology/calculate');
         expect(res.text).toContain('Open API docs');
         expect(res.text).toContain('Browse Myanmar datasets by topic.');
         expect(res.text).toContain(
@@ -227,6 +228,84 @@ describe('AppController (e2e)', () => {
     await request(app.getHttpServer()).get('/adhihtan/spells/999').expect(404);
   });
 
+  it('/myanmar-nameology should calculate names and serve reference data', async () => {
+    await request(app.getHttpServer())
+      .get('/myanmar-nameology/calculate')
+      .query({ name: 'ဆန်းလင်းထွန်း' })
+      .expect(200)
+      .expect((res) => {
+        expect(res.body).toMatchObject({
+          status: 'success',
+          name: 'ဆန်းလင်းထွန်း',
+          keyword: 'ဆလထ',
+          total: 14,
+          totalPlusSeven: 21,
+          remainder: 3,
+          isSuccess: true,
+          meaning: {
+            number: 3,
+            title: 'သူခိုးကိန်း',
+          },
+        });
+        expect(res.body.matchedLetters).toEqual([
+          { letter: 'ဆ', value: 3 },
+          { letter: 'လ', value: 4 },
+          { letter: 'ထ', value: 7 },
+        ]);
+      });
+
+    await request(app.getHttpServer())
+      .get('/myanmar-nameology/letter-groups')
+      .expect(200)
+      .expect((res) => {
+        expect(res.body).toHaveLength(7);
+        expect(res.body[0]).toHaveProperty('dayName', 'တနင်္ဂနွေ');
+      });
+
+    await request(app.getHttpServer())
+      .get('/myanmar-nameology/meanings')
+      .expect(200)
+      .expect((res) => {
+        expect(res.body).toHaveLength(9);
+      });
+
+    await request(app.getHttpServer())
+      .get('/myanmar-nameology/meanings/3')
+      .expect(200)
+      .expect((res) => {
+        expect(res.body).toHaveProperty('title', 'သူခိုးကိန်း');
+      });
+  });
+
+  it('/myanmar-nameology should preserve empty states and validate meaning numbers', async () => {
+    await request(app.getHttpServer())
+      .get('/myanmar-nameology/calculate')
+      .expect(200)
+      .expect((res) => {
+        expect(res.body).toMatchObject({
+          status: 'empty',
+          isSuccess: false,
+          meaning: null,
+        });
+      });
+
+    await request(app.getHttpServer())
+      .get('/myanmar-nameology/calculate')
+      .query({ name: 'Sann Lynn Htun' })
+      .expect(200)
+      .expect((res) => {
+        expect(res.body.status).toBe('noMyanmarLetters');
+      });
+
+    await request(app.getHttpServer())
+      .get('/myanmar-nameology/meanings/not-a-number')
+      .expect(400);
+
+    await request(app.getHttpServer())
+      .get('/myanmar-nameology/meanings/10')
+      .expect(404);
+  });
+
   it('/swagger (GET) should serve documentation assets', async () => {
     await request(app.getHttpServer())
       .get('/swagger')
@@ -250,6 +329,7 @@ describe('AppController (e2e)', () => {
         expect(res.body.info.description).toContain('မြန်မာ့ယဉ်ကျေးမှု');
         const expectedProjectTags = [
           'adhihtan | အဓိဋ္ဌာန်',
+          'myanmar-nameology | မြန်မာနာမည်ကိန်း',
           'quotlets | အဆိုအမိန့်များ',
           'burmese-recipes | မြန်မာဟင်းချက်နည်းများ',
           'burmese-agriculture | မြန်မာ့စိုက်ပျိုးရေး',
@@ -298,6 +378,20 @@ describe('AppController (e2e)', () => {
         expect(adhihtanPaths).toHaveLength(7);
         expect(
           adhihtanPaths.every(([, operations]) =>
+            Object.values(
+              operations as Record<string, { description?: string }>,
+            ).every((operation) =>
+              operation.description?.includes('<span lang="my">'),
+            ),
+          ),
+        ).toBe(true);
+
+        const myanmarNameologyPaths = Object.entries(res.body.paths).filter(
+          ([path]) => path.startsWith('/myanmar-nameology/'),
+        );
+        expect(myanmarNameologyPaths).toHaveLength(4);
+        expect(
+          myanmarNameologyPaths.every(([, operations]) =>
             Object.values(
               operations as Record<string, { description?: string }>,
             ).every((operation) =>

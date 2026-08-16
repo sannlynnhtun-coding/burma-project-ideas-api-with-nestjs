@@ -20,6 +20,14 @@ const apiTagDefinitions: ApiTagDefinition[] = [
     sourceUrl: 'https://github.com/sannlynnhtun-coding/Adhihtan',
   },
   {
+    name: 'myanmar-nameology | မြန်မာနာမည်ကိန်း',
+    english:
+      'Calculate a traditional Myanmar name number with `GET /myanmar-nameology/calculate?name=...`, or load the weekday letter groups and nine result meanings from the reference endpoints. The calculator is provided for entertainment and is not scientifically validated.',
+    myanmar:
+      'ရိုးရာမြန်မာနာမည်ကိန်းကို `GET /myanmar-nameology/calculate?name=...` ဖြင့် တွက်ချက်ပါ၊ သို့မဟုတ် နေ့နံအက္ခရာအုပ်စုများနှင့် ရလဒ်အဓိပ္ပာယ် ကိုးမျိုးကို reference endpoint များမှ ရယူပါ။ ဤတွက်ချက်မှုသည် ဖျော်ဖြေရေးအတွက်သာဖြစ်ပြီး သိပ္ပံနည်းကျ အတည်ပြုထားခြင်းမရှိပါ။',
+    sourceUrl: 'https://github.com/sannlynnhtun-coding/myanmar-nameology',
+  },
+  {
     name: 'quotlets | အဆိုအမိန့်များ',
     english:
       'Browse image-and-quote posts with `GET /quotlets`, then load one post by ID with `GET /quotlets/:id`.',

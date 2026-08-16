@@ -86,6 +86,7 @@ This document outlines the project status. Finished API features are checked aga
 - [x] Min Thein Kha - Lat Htauk Bay Din
 - [x] Missing Historical Records
 - [x] Myanmar Months
+- [x] Myanmar Nameology
 - [x] Myanmar Proverbs
 - [x] NatMyatSi
 - [x] Phayar Sar
@@ -129,4 +130,22 @@ GET /adhihtan/categories/:categoryId/schedules
 GET /adhihtan/categories/:categoryId/schedules/:levelId
 GET /adhihtan/spells
 GET /adhihtan/spells/:spellId
+```
+
+## Myanmar Nameology API flow
+
+Myanmar Nameology is a read-only calculator and reference API. A client sends a
+Myanmar name to the calculation endpoint and receives the extracted keyword,
+letter-value breakdown, arithmetic result, and matching traditional meaning.
+The reference endpoints expose the seven weekday letter groups and nine
+meanings. The calculator is provided for entertainment and is not scientifically
+validated.
+
+<p lang="my">Myanmar Nameology သည် read-only တွက်ချက်မှုနှင့် ကိုးကား API ဖြစ်သည်။ Client က မြန်မာနာမည်ကို calculation endpoint သို့ပို့ပြီး ထုတ်ယူထားသော အမည်ကီး၊ အက္ခရာတန်ဖိုးခွဲခြမ်းချက်၊ တွက်ချက်မှုရလဒ်နှင့် ကိုက်ညီသော ရိုးရာအဓိပ္ပာယ်ကို ရယူသည်။ Reference endpoint များတွင် နေ့နံအက္ခရာအုပ်စု ခုနစ်ခုနှင့် အဓိပ္ပာယ် ကိုးမျိုးကို ရယူနိုင်သည်။ ဤတွက်ချက်မှုသည် ဖျော်ဖြေရေးအတွက်သာဖြစ်ပြီး သိပ္ပံနည်းကျ အတည်ပြုထားခြင်းမရှိပါ။</p>
+
+```http
+GET /myanmar-nameology/calculate?name=ဆန်းလင်းထွန်း
+GET /myanmar-nameology/letter-groups
+GET /myanmar-nameology/meanings
+GET /myanmar-nameology/meanings/:number
 ```
