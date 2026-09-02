@@ -111,6 +111,8 @@ Burma Calendar provides 42-day monthly calendar matrices, Myanmar Era (မြန
 <p lang="my">Burma Calendar တွင် ၄၂ ကွက် လစဉ်ပြက္ခဒိန် grid တွက်ချက်မှု၊ မြန်မာသက္ကရာဇ်တွက်ချက်မှု၊ မြန်မာဂဏန်းပြောင်းလဲမှု၊ လတွဲသတ်မှတ်ချက်များနှင့် ၂၀၂၄ မှ ၂၀၂၇ အထိ တရားဝင် မြန်မာ့ရုံးပိတ်ရက်မှတ်တမ်းများ ပါဝင်သည်။ Client များသည် ပြက္ခဒိန် UI အပြည့်အစုံကို ဖော်ပြနိုင်ခြင်း၊ နှစ်အလိုက် ရုံးပိတ်ရက်များ ရယူနိုင်ခြင်းနှင့် ရက်စွဲတစ်ခုချင်းစီ၏ ရုံးပိတ်ရက်အခြေအနေကို စစ်ဆေးနိုင်ခြင်းတို့ ဆောင်ရွက်နိုင်သည်။</p>
 
 ```http
+GET /burma-calendar/months
+GET /burma-calendar/years
 GET /burma-calendar/month?year=2026&month=4
 GET /burma-calendar/holidays
 GET /burma-calendar/holidays?year=2026&month=April

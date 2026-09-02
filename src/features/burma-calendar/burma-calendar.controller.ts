@@ -14,6 +14,7 @@ import {
   CalendarYearDto,
   DateCheckResultDto,
   HolidayDto,
+  MonthDto,
 } from './burma-calendar';
 import { BurmaCalendarService } from './burma-calendar.service';
 
@@ -21,6 +22,37 @@ import { BurmaCalendarService } from './burma-calendar.service';
 @Controller('burma-calendar')
 export class BurmaCalendarController {
   constructor(private readonly calendarService: BurmaCalendarService) {}
+
+  @Get('months')
+  @ApiOperation({
+    summary: 'List all Gregorian months with Myanmar month pairs',
+    description:
+      'Retrieve all 12 Gregorian months with their corresponding traditional Myanmar lunar month pairs and month numbers. ' +
+      '<span lang="my">ဂရီဂိုရီယံလ ၁၂ လနှင့် ၎င်းတို့နှင့် ကိုက်ညီသော မြန်မာလတွဲများကို ရယူပါ။</span>',
+  })
+  @ApiOkResponse({
+    type: [MonthDto],
+    description: 'Array of 12 months with Myanmar month pair mappings.',
+  })
+  getMonths(): MonthDto[] {
+    return this.calendarService.getMonths();
+  }
+
+  @Get('years')
+  @ApiOperation({
+    summary: 'List available holiday years',
+    description:
+      'Retrieve the list of years for which official Myanmar public holiday schedules are available. ' +
+      '<span lang="my">တရားဝင် မြန်မာ့ရုံးပိတ်ရက်မှတ်တမ်းများ ရရှိနိုင်သော နှစ်များကို ရယူပါ။</span>',
+  })
+  @ApiOkResponse({
+    type: [Number],
+    description:
+      'Array of supported calendar years (e.g. [2024, 2025, 2026, 2027]).',
+  })
+  getYears(): number[] {
+    return this.calendarService.getAvailableYears();
+  }
 
   @Get('holidays')
   @ApiOperation({

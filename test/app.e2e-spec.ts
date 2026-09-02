@@ -609,6 +609,16 @@ describe('AppController (e2e)', () => {
   });
 
   describe('/burma-calendar', () => {
+    it('GET /burma-calendar/years should return available holiday years', async () => {
+      await request(app.getHttpServer())
+        .get('/burma-calendar/years')
+        .expect(200)
+        .expect('Content-Type', /json/)
+        .expect((res) => {
+          expect(res.body).toEqual([2024, 2025, 2026, 2027]);
+        });
+    });
+
     it('GET /burma-calendar/holidays should return filtered holidays', async () => {
       await request(app.getHttpServer())
         .get('/burma-calendar/holidays?year=2026&month=April')

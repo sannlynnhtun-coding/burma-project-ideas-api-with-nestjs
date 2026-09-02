@@ -21,6 +21,11 @@ describe('BurmaCalendarController', () => {
     expect(service).toBeDefined();
   });
 
+  it('getYears should delegate to service.getAvailableYears', () => {
+    const years = controller.getYears();
+    expect(years).toEqual([2024, 2025, 2026, 2027]);
+  });
+
   it('getHolidays should delegate to service.getHolidays', () => {
     const holidays = controller.getHolidays('2026', 'April');
     expect(holidays.length).toBeGreaterThan(0);

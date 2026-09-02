@@ -168,6 +168,20 @@ export class CalendarMonthGridDto {
   days: CalendarDayCellDto[];
 }
 
+export class MonthDto {
+  @ApiProperty({ example: 1, description: 'Gregorian month number (1–12)' })
+  number: number;
+
+  @ApiProperty({ example: 'January', description: 'English month name' })
+  name: string;
+
+  @ApiProperty({
+    example: 'နတ်တော် / ပြာသို',
+    description: 'Traditional Myanmar lunar month pair',
+  })
+  myanmarMonthPair: string;
+}
+
 export class CalendarReferenceDto {
   @ApiProperty({
     example: [

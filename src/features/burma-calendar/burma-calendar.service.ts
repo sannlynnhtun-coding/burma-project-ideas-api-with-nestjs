@@ -10,6 +10,7 @@ import {
   CalendarYearDto,
   DateCheckResultDto,
   HolidayDto,
+  MonthDto,
   WeekdayDto,
 } from './burma-calendar';
 import holidayDataRaw from './data/holidays.json';
@@ -413,5 +414,13 @@ export class BurmaCalendarService {
       weekdays: WEEKDAYS,
       myanmarDigits: MYANMAR_DIGITS,
     };
+  }
+
+  getMonths(): MonthDto[] {
+    return ENGLISH_MONTHS.map((name, index) => ({
+      number: index + 1,
+      name,
+      myanmarMonthPair: MYANMAR_MONTH_PAIRS[index],
+    }));
   }
 }
