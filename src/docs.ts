@@ -191,6 +191,14 @@ const apiTagDefinitions: ApiTagDefinition[] = [
     sourceUrl:
       'https://github.com/burma-project-ideas/missing-historical-records',
   },
+  {
+    name: 'ybs | ရန်ကုန်ဘတ်စ်ကားလိုင်းများ',
+    english:
+      'Explore Yangon Bus Service (YBS) routes, bus stops, stores/top-up kiosks, and transit pathfinding. Features direct bus lines, nearest stops by GPS, and BFS transit route planning.',
+    myanmar:
+      'ရန်ကုန်ဘတ်စ်ကားလိုင်းများ (YBS)၊ ဘတ်စ်ကားမှတ်တိုင်များ၊ YPS အရောင်းဆိုင်များ/စတိုးများနှင့် လမ်းကြောင်းရှာဖွေခြင်း (PathFinder) API ဖြစ်ပါသည်။ ဘတ်စ်ကားလိုင်းများ၊ GPS ဖြင့် အနီးဆုံးမှတ်တိုင်များရှာဖွေခြင်းနှင့် BFS transit route planning ပါဝင်ပါသည်။',
+    sourceUrl: 'https://github.com/burma-project-ideas',
+  },
 ];
 
 function buildApiTagDescription(definition: ApiTagDefinition): string {

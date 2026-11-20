@@ -1,0 +1,6042 @@
+[
+    {
+        "id":  "1",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.003471",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1817",
+        "store_id":  "1"
+    },
+    {
+        "id":  "2",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.026053",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2003",
+        "store_id":  "1"
+    },
+    {
+        "id":  "3",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.159114",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2213",
+        "store_id":  "1"
+    },
+    {
+        "id":  "4",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.192044",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3130",
+        "store_id":  "1"
+    },
+    {
+        "id":  "5",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.215691",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2050",
+        "store_id":  "1"
+    },
+    {
+        "id":  "6",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.021344",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1602",
+        "store_id":  "2"
+    },
+    {
+        "id":  "7",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.062606",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4156",
+        "store_id":  "2"
+    },
+    {
+        "id":  "8",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.090766",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3764",
+        "store_id":  "2"
+    },
+    {
+        "id":  "9",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.096567",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4344",
+        "store_id":  "2"
+    },
+    {
+        "id":  "10",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.176046",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4011",
+        "store_id":  "2"
+    },
+    {
+        "id":  "11",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.079116",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1915",
+        "store_id":  "3"
+    },
+    {
+        "id":  "12",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.083545",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2018",
+        "store_id":  "3"
+    },
+    {
+        "id":  "13",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.303011",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4132",
+        "store_id":  "3"
+    },
+    {
+        "id":  "14",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.314882",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4170",
+        "store_id":  "3"
+    },
+    {
+        "id":  "15",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.46666",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2499",
+        "store_id":  "3"
+    },
+    {
+        "id":  "16",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.026532",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2456",
+        "store_id":  "4"
+    },
+    {
+        "id":  "17",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.050575",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2713",
+        "store_id":  "4"
+    },
+    {
+        "id":  "18",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.238669",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2051",
+        "store_id":  "4"
+    },
+    {
+        "id":  "19",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.254243",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3409",
+        "store_id":  "4"
+    },
+    {
+        "id":  "20",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.254926",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3683",
+        "store_id":  "4"
+    },
+    {
+        "id":  "21",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.01675",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4325",
+        "store_id":  "5"
+    },
+    {
+        "id":  "22",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.021421",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3330",
+        "store_id":  "5"
+    },
+    {
+        "id":  "23",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.243918",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3316",
+        "store_id":  "5"
+    },
+    {
+        "id":  "24",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.253771",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3543",
+        "store_id":  "5"
+    },
+    {
+        "id":  "25",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.279231",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3985",
+        "store_id":  "5"
+    },
+    {
+        "id":  "26",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.114958",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3424",
+        "store_id":  "6"
+    },
+    {
+        "id":  "27",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.199793",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2050",
+        "store_id":  "6"
+    },
+    {
+        "id":  "28",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.283707",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3481",
+        "store_id":  "6"
+    },
+    {
+        "id":  "29",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.317523",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1795",
+        "store_id":  "6"
+    },
+    {
+        "id":  "30",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.328424",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2003",
+        "store_id":  "6"
+    },
+    {
+        "id":  "31",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.155066",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3701",
+        "store_id":  "7"
+    },
+    {
+        "id":  "32",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.323747",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2539",
+        "store_id":  "7"
+    },
+    {
+        "id":  "33",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.349385",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3938",
+        "store_id":  "7"
+    },
+    {
+        "id":  "34",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.367118",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3408",
+        "store_id":  "7"
+    },
+    {
+        "id":  "35",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.454511",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2910",
+        "store_id":  "7"
+    },
+    {
+        "id":  "36",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.019646",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2379",
+        "store_id":  "8"
+    },
+    {
+        "id":  "37",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.108898",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4324",
+        "store_id":  "8"
+    },
+    {
+        "id":  "38",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.143602",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2996",
+        "store_id":  "8"
+    },
+    {
+        "id":  "39",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.146527",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2041",
+        "store_id":  "8"
+    },
+    {
+        "id":  "40",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.225992",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2130",
+        "store_id":  "8"
+    },
+    {
+        "id":  "41",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.141976",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2051",
+        "store_id":  "9"
+    },
+    {
+        "id":  "42",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.254201",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3134",
+        "store_id":  "9"
+    },
+    {
+        "id":  "43",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.27127",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2456",
+        "store_id":  "9"
+    },
+    {
+        "id":  "44",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.272671",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3683",
+        "store_id":  "9"
+    },
+    {
+        "id":  "45",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.273001",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3409",
+        "store_id":  "9"
+    },
+    {
+        "id":  "46",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.348239",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4185",
+        "store_id":  "10"
+    },
+    {
+        "id":  "47",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.351341",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4060",
+        "store_id":  "10"
+    },
+    {
+        "id":  "48",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.354986",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2886",
+        "store_id":  "10"
+    },
+    {
+        "id":  "49",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.366291",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2740",
+        "store_id":  "10"
+    },
+    {
+        "id":  "50",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.550928",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3488",
+        "store_id":  "10"
+    },
+    {
+        "id":  "51",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.018481",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3390",
+        "store_id":  "11"
+    },
+    {
+        "id":  "52",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.040307",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3984",
+        "store_id":  "11"
+    },
+    {
+        "id":  "53",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.203332",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4011",
+        "store_id":  "11"
+    },
+    {
+        "id":  "54",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.203523",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2238",
+        "store_id":  "11"
+    },
+    {
+        "id":  "55",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.282194",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4344",
+        "store_id":  "11"
+    },
+    {
+        "id":  "56",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.064351",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2943",
+        "store_id":  "12"
+    },
+    {
+        "id":  "57",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.200632",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4010",
+        "store_id":  "12"
+    },
+    {
+        "id":  "58",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.249439",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3474",
+        "store_id":  "12"
+    },
+    {
+        "id":  "59",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.253631",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3039",
+        "store_id":  "12"
+    },
+    {
+        "id":  "60",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.25391",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4017",
+        "store_id":  "12"
+    },
+    {
+        "id":  "61",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.083338",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4074",
+        "store_id":  "13"
+    },
+    {
+        "id":  "62",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.091884",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2375",
+        "store_id":  "13"
+    },
+    {
+        "id":  "63",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.157299",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2318",
+        "store_id":  "13"
+    },
+    {
+        "id":  "64",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.177592",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2225",
+        "store_id":  "13"
+    },
+    {
+        "id":  "65",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.375983",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2208",
+        "store_id":  "13"
+    },
+    {
+        "id":  "66",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.19916",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2800",
+        "store_id":  "14"
+    },
+    {
+        "id":  "67",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.204796",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2416",
+        "store_id":  "14"
+    },
+    {
+        "id":  "68",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.210062",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1526",
+        "store_id":  "14"
+    },
+    {
+        "id":  "69",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.463693",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4323",
+        "store_id":  "14"
+    },
+    {
+        "id":  "70",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.467182",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3338",
+        "store_id":  "14"
+    },
+    {
+        "id":  "71",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.198618",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1987",
+        "store_id":  "15"
+    },
+    {
+        "id":  "72",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.21713",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1397",
+        "store_id":  "15"
+    },
+    {
+        "id":  "73",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.220584",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3261",
+        "store_id":  "15"
+    },
+    {
+        "id":  "74",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.237496",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3233",
+        "store_id":  "15"
+    },
+    {
+        "id":  "75",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.317415",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1993",
+        "store_id":  "15"
+    },
+    {
+        "id":  "76",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.004186",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3488",
+        "store_id":  "16"
+    },
+    {
+        "id":  "77",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.032706",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3459",
+        "store_id":  "16"
+    },
+    {
+        "id":  "78",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.207702",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2886",
+        "store_id":  "16"
+    },
+    {
+        "id":  "79",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.210925",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2740",
+        "store_id":  "16"
+    },
+    {
+        "id":  "80",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.40992",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1638",
+        "store_id":  "16"
+    },
+    {
+        "id":  "81",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.07134",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1759",
+        "store_id":  "17"
+    },
+    {
+        "id":  "82",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.083791",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2483",
+        "store_id":  "17"
+    },
+    {
+        "id":  "83",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.197542",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2011",
+        "store_id":  "17"
+    },
+    {
+        "id":  "84",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.204536",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2704",
+        "store_id":  "17"
+    },
+    {
+        "id":  "85",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.287625",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3496",
+        "store_id":  "17"
+    },
+    {
+        "id":  "86",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.005996",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1459",
+        "store_id":  "18"
+    },
+    {
+        "id":  "87",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.081693",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3218",
+        "store_id":  "18"
+    },
+    {
+        "id":  "88",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.715821",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2090",
+        "store_id":  "18"
+    },
+    {
+        "id":  "89",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.718082",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4074",
+        "store_id":  "18"
+    },
+    {
+        "id":  "90",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.734199",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2375",
+        "store_id":  "18"
+    },
+    {
+        "id":  "91",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.097078",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1661",
+        "store_id":  "19"
+    },
+    {
+        "id":  "92",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.127021",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4392",
+        "store_id":  "19"
+    },
+    {
+        "id":  "93",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.186819",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2933",
+        "store_id":  "19"
+    },
+    {
+        "id":  "94",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.212047",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3410",
+        "store_id":  "19"
+    },
+    {
+        "id":  "95",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.25835",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1381",
+        "store_id":  "19"
+    },
+    {
+        "id":  "96",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.035686",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4331",
+        "store_id":  "20"
+    },
+    {
+        "id":  "97",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.12208",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1422",
+        "store_id":  "20"
+    },
+    {
+        "id":  "98",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.149822",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4055",
+        "store_id":  "20"
+    },
+    {
+        "id":  "99",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.149936",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2814",
+        "store_id":  "20"
+    },
+    {
+        "id":  "100",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.249667",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4217",
+        "store_id":  "20"
+    },
+    {
+        "id":  "101",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.024125",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2073",
+        "store_id":  "21"
+    },
+    {
+        "id":  "102",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.04109",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3972",
+        "store_id":  "21"
+    },
+    {
+        "id":  "103",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.380668",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3430",
+        "store_id":  "21"
+    },
+    {
+        "id":  "104",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.402037",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3234",
+        "store_id":  "21"
+    },
+    {
+        "id":  "105",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.410869",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2569",
+        "store_id":  "21"
+    },
+    {
+        "id":  "106",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.117985",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3533",
+        "store_id":  "22"
+    },
+    {
+        "id":  "107",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.13065",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2624",
+        "store_id":  "22"
+    },
+    {
+        "id":  "108",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.455212",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4356",
+        "store_id":  "22"
+    },
+    {
+        "id":  "109",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.456084",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3956",
+        "store_id":  "22"
+    },
+    {
+        "id":  "110",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.512937",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3753",
+        "store_id":  "22"
+    },
+    {
+        "id":  "111",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.105262",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3459",
+        "store_id":  "23"
+    },
+    {
+        "id":  "112",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.110442",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3488",
+        "store_id":  "23"
+    },
+    {
+        "id":  "113",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.174897",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2740",
+        "store_id":  "23"
+    },
+    {
+        "id":  "114",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.185274",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2886",
+        "store_id":  "23"
+    },
+    {
+        "id":  "115",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.302048",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1638",
+        "store_id":  "23"
+    },
+    {
+        "id":  "116",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.063149",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1645",
+        "store_id":  "24"
+    },
+    {
+        "id":  "117",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.06758",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2131",
+        "store_id":  "24"
+    },
+    {
+        "id":  "118",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.208747",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3763",
+        "store_id":  "24"
+    },
+    {
+        "id":  "119",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.257192",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1790",
+        "store_id":  "24"
+    },
+    {
+        "id":  "120",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.340669",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4375",
+        "store_id":  "24"
+    },
+    {
+        "id":  "121",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.012633",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4291",
+        "store_id":  "137"
+    },
+    {
+        "id":  "122",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.01739",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1643",
+        "store_id":  "137"
+    },
+    {
+        "id":  "123",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.212526",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2262",
+        "store_id":  "137"
+    },
+    {
+        "id":  "124",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.214111",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3740",
+        "store_id":  "137"
+    },
+    {
+        "id":  "125",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.28989",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3002",
+        "store_id":  "137"
+    },
+    {
+        "id":  "126",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.192149",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3480",
+        "store_id":  "25"
+    },
+    {
+        "id":  "127",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.194289",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1410",
+        "store_id":  "25"
+    },
+    {
+        "id":  "128",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.208603",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3745",
+        "store_id":  "25"
+    },
+    {
+        "id":  "129",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.219872",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2951",
+        "store_id":  "25"
+    },
+    {
+        "id":  "130",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.328468",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2075",
+        "store_id":  "25"
+    },
+    {
+        "id":  "131",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.152809",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2353",
+        "store_id":  "26"
+    },
+    {
+        "id":  "132",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.154637",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2987",
+        "store_id":  "26"
+    },
+    {
+        "id":  "133",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.229367",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2252",
+        "store_id":  "26"
+    },
+    {
+        "id":  "134",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.238329",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3223",
+        "store_id":  "26"
+    },
+    {
+        "id":  "135",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.353739",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2802",
+        "store_id":  "26"
+    },
+    {
+        "id":  "136",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.162931",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3316",
+        "store_id":  "27"
+    },
+    {
+        "id":  "137",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.173203",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3543",
+        "store_id":  "27"
+    },
+    {
+        "id":  "138",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.177565",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3088",
+        "store_id":  "27"
+    },
+    {
+        "id":  "139",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.179089",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1581",
+        "store_id":  "27"
+    },
+    {
+        "id":  "140",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.371216",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3241",
+        "store_id":  "27"
+    },
+    {
+        "id":  "141",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.035888",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4056",
+        "store_id":  "28"
+    },
+    {
+        "id":  "142",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.058931",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3375",
+        "store_id":  "28"
+    },
+    {
+        "id":  "143",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.071328",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4070",
+        "store_id":  "28"
+    },
+    {
+        "id":  "144",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.157976",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3453",
+        "store_id":  "28"
+    },
+    {
+        "id":  "145",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.404468",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3813",
+        "store_id":  "28"
+    },
+    {
+        "id":  "146",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.343132",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3495",
+        "store_id":  "29"
+    },
+    {
+        "id":  "147",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.351133",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3558",
+        "store_id":  "29"
+    },
+    {
+        "id":  "148",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.358605",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4255",
+        "store_id":  "29"
+    },
+    {
+        "id":  "149",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.458521",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3490",
+        "store_id":  "29"
+    },
+    {
+        "id":  "150",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.46671",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4009",
+        "store_id":  "29"
+    },
+    {
+        "id":  "151",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.265038",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3569",
+        "store_id":  "30"
+    },
+    {
+        "id":  "152",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.286292",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2189",
+        "store_id":  "30"
+    },
+    {
+        "id":  "153",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.30917",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2895",
+        "store_id":  "30"
+    },
+    {
+        "id":  "154",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.31486",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4456",
+        "store_id":  "30"
+    },
+    {
+        "id":  "155",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.419173",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1431",
+        "store_id":  "30"
+    },
+    {
+        "id":  "156",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.091491",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3401",
+        "store_id":  "31"
+    },
+    {
+        "id":  "157",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.099998",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2937",
+        "store_id":  "31"
+    },
+    {
+        "id":  "158",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.15403",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3867",
+        "store_id":  "31"
+    },
+    {
+        "id":  "159",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.171237",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2313",
+        "store_id":  "31"
+    },
+    {
+        "id":  "160",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.206725",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3648",
+        "store_id":  "31"
+    },
+    {
+        "id":  "161",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.111772",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1409",
+        "store_id":  "32"
+    },
+    {
+        "id":  "162",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.114397",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3141",
+        "store_id":  "32"
+    },
+    {
+        "id":  "163",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.119862",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2277",
+        "store_id":  "32"
+    },
+    {
+        "id":  "164",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.158106",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3629",
+        "store_id":  "32"
+    },
+    {
+        "id":  "165",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.17046",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2085",
+        "store_id":  "32"
+    },
+    {
+        "id":  "166",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.086687",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4174",
+        "store_id":  "33"
+    },
+    {
+        "id":  "167",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.100156",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2043",
+        "store_id":  "33"
+    },
+    {
+        "id":  "168",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.101383",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1500",
+        "store_id":  "33"
+    },
+    {
+        "id":  "169",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.132628",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2383",
+        "store_id":  "33"
+    },
+    {
+        "id":  "170",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.197699",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1490",
+        "store_id":  "33"
+    },
+    {
+        "id":  "171",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.106443",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3130",
+        "store_id":  "34"
+    },
+    {
+        "id":  "172",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.238941",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2213",
+        "store_id":  "34"
+    },
+    {
+        "id":  "173",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.276183",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3481",
+        "store_id":  "34"
+    },
+    {
+        "id":  "174",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.294356",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2003",
+        "store_id":  "34"
+    },
+    {
+        "id":  "175",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.294817",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1817",
+        "store_id":  "34"
+    },
+    {
+        "id":  "176",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.157472",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2779",
+        "store_id":  "35"
+    },
+    {
+        "id":  "177",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.252324",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3481",
+        "store_id":  "35"
+    },
+    {
+        "id":  "178",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.290447",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3130",
+        "store_id":  "35"
+    },
+    {
+        "id":  "179",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.348677",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2294",
+        "store_id":  "35"
+    },
+    {
+        "id":  "180",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.371961",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2677",
+        "store_id":  "35"
+    },
+    {
+        "id":  "181",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.204219",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2121",
+        "store_id":  "36"
+    },
+    {
+        "id":  "182",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.206097",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3810",
+        "store_id":  "36"
+    },
+    {
+        "id":  "183",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.229557",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3375",
+        "store_id":  "36"
+    },
+    {
+        "id":  "184",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.233356",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4070",
+        "store_id":  "36"
+    },
+    {
+        "id":  "185",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.29408",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4056",
+        "store_id":  "36"
+    },
+    {
+        "id":  "186",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.26224",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1875",
+        "store_id":  "37"
+    },
+    {
+        "id":  "187",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.280572",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1768",
+        "store_id":  "37"
+    },
+    {
+        "id":  "188",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.352226",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3048",
+        "store_id":  "37"
+    },
+    {
+        "id":  "189",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.444583",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3551",
+        "store_id":  "37"
+    },
+    {
+        "id":  "190",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.465739",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3168",
+        "store_id":  "37"
+    },
+    {
+        "id":  "191",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.008329",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1681",
+        "store_id":  "38"
+    },
+    {
+        "id":  "192",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.019381",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3447",
+        "store_id":  "38"
+    },
+    {
+        "id":  "193",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.186855",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3259",
+        "store_id":  "38"
+    },
+    {
+        "id":  "194",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.26228",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3836",
+        "store_id":  "38"
+    },
+    {
+        "id":  "195",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.265412",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3571",
+        "store_id":  "38"
+    },
+    {
+        "id":  "196",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.058346",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4047",
+        "store_id":  "39"
+    },
+    {
+        "id":  "197",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.059288",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3442",
+        "store_id":  "39"
+    },
+    {
+        "id":  "198",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.171871",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1798",
+        "store_id":  "39"
+    },
+    {
+        "id":  "199",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.173531",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2668",
+        "store_id":  "39"
+    },
+    {
+        "id":  "200",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.302822",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2503",
+        "store_id":  "39"
+    },
+    {
+        "id":  "201",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.013229",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2340",
+        "store_id":  "40"
+    },
+    {
+        "id":  "202",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.019139",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3608",
+        "store_id":  "40"
+    },
+    {
+        "id":  "203",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.084896",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3532",
+        "store_id":  "40"
+    },
+    {
+        "id":  "204",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.087022",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3149",
+        "store_id":  "40"
+    },
+    {
+        "id":  "205",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.241728",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3136",
+        "store_id":  "40"
+    },
+    {
+        "id":  "206",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.034183",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1907",
+        "store_id":  "41"
+    },
+    {
+        "id":  "207",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.037843",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3563",
+        "store_id":  "41"
+    },
+    {
+        "id":  "208",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.47828",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3497",
+        "store_id":  "41"
+    },
+    {
+        "id":  "209",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.497465",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2722",
+        "store_id":  "41"
+    },
+    {
+        "id":  "210",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.553638",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3655",
+        "store_id":  "41"
+    },
+    {
+        "id":  "211",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.449389",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3146",
+        "store_id":  "42"
+    },
+    {
+        "id":  "212",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.470848",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1569",
+        "store_id":  "42"
+    },
+    {
+        "id":  "213",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.487161",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1379",
+        "store_id":  "42"
+    },
+    {
+        "id":  "214",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.487978",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3440",
+        "store_id":  "42"
+    },
+    {
+        "id":  "215",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.498782",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4060",
+        "store_id":  "42"
+    },
+    {
+        "id":  "216",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.143737",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1769",
+        "store_id":  "43"
+    },
+    {
+        "id":  "217",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.144977",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1463",
+        "store_id":  "43"
+    },
+    {
+        "id":  "218",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.337864",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1715",
+        "store_id":  "43"
+    },
+    {
+        "id":  "219",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.338101",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3516",
+        "store_id":  "43"
+    },
+    {
+        "id":  "220",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.368834",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4195",
+        "store_id":  "43"
+    },
+    {
+        "id":  "221",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.034999",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2931",
+        "store_id":  "44"
+    },
+    {
+        "id":  "222",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.398018",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2736",
+        "store_id":  "44"
+    },
+    {
+        "id":  "223",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.408161",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1971",
+        "store_id":  "44"
+    },
+    {
+        "id":  "224",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.460857",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2470",
+        "store_id":  "44"
+    },
+    {
+        "id":  "225",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.471494",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3641",
+        "store_id":  "44"
+    },
+    {
+        "id":  "226",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.149443",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3454",
+        "store_id":  "45"
+    },
+    {
+        "id":  "227",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.166124",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3455",
+        "store_id":  "45"
+    },
+    {
+        "id":  "228",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.310327",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1835",
+        "store_id":  "45"
+    },
+    {
+        "id":  "229",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.323665",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1859",
+        "store_id":  "45"
+    },
+    {
+        "id":  "230",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.373868",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2336",
+        "store_id":  "45"
+    },
+    {
+        "id":  "231",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.08294",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1969",
+        "store_id":  "46"
+    },
+    {
+        "id":  "232",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.085151",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2246",
+        "store_id":  "46"
+    },
+    {
+        "id":  "233",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.3098",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3885",
+        "store_id":  "46"
+    },
+    {
+        "id":  "234",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.385134",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4249",
+        "store_id":  "46"
+    },
+    {
+        "id":  "235",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.395251",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1408",
+        "store_id":  "46"
+    },
+    {
+        "id":  "236",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.032799",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1733",
+        "store_id":  "47"
+    },
+    {
+        "id":  "237",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.035007",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1876",
+        "store_id":  "47"
+    },
+    {
+        "id":  "238",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.236196",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3881",
+        "store_id":  "47"
+    },
+    {
+        "id":  "239",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.269167",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2877",
+        "store_id":  "47"
+    },
+    {
+        "id":  "240",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.269381",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1935",
+        "store_id":  "47"
+    },
+    {
+        "id":  "241",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.040145",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2842",
+        "store_id":  "48"
+    },
+    {
+        "id":  "242",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.162439",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4227",
+        "store_id":  "48"
+    },
+    {
+        "id":  "243",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.168724",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3456",
+        "store_id":  "48"
+    },
+    {
+        "id":  "244",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.29171",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2124",
+        "store_id":  "48"
+    },
+    {
+        "id":  "245",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.475202",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4169",
+        "store_id":  "48"
+    },
+    {
+        "id":  "246",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.034262",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1814",
+        "store_id":  "49"
+    },
+    {
+        "id":  "247",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.040498",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3276",
+        "store_id":  "49"
+    },
+    {
+        "id":  "248",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.083497",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4179",
+        "store_id":  "49"
+    },
+    {
+        "id":  "249",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.086729",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1445",
+        "store_id":  "49"
+    },
+    {
+        "id":  "250",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.109051",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2267",
+        "store_id":  "49"
+    },
+    {
+        "id":  "251",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.026642",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1974",
+        "store_id":  "50"
+    },
+    {
+        "id":  "252",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.045658",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2679",
+        "store_id":  "50"
+    },
+    {
+        "id":  "253",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.055119",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3056",
+        "store_id":  "50"
+    },
+    {
+        "id":  "254",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.062309",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3904",
+        "store_id":  "50"
+    },
+    {
+        "id":  "255",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.276928",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2010",
+        "store_id":  "50"
+    },
+    {
+        "id":  "256",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.165857",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1939",
+        "store_id":  "51"
+    },
+    {
+        "id":  "257",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.167067",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2135",
+        "store_id":  "51"
+    },
+    {
+        "id":  "258",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.22865",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2063",
+        "store_id":  "51"
+    },
+    {
+        "id":  "259",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.228752",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3025",
+        "store_id":  "51"
+    },
+    {
+        "id":  "260",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.557668",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3226",
+        "store_id":  "51"
+    },
+    {
+        "id":  "261",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.198875",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2189",
+        "store_id":  "52"
+    },
+    {
+        "id":  "262",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.224802",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3569",
+        "store_id":  "52"
+    },
+    {
+        "id":  "263",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.328848",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4300",
+        "store_id":  "52"
+    },
+    {
+        "id":  "264",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.334662",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2592",
+        "store_id":  "52"
+    },
+    {
+        "id":  "265",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.37004",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1494",
+        "store_id":  "52"
+    },
+    {
+        "id":  "266",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.113151",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3823",
+        "store_id":  "53"
+    },
+    {
+        "id":  "267",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.115662",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3141",
+        "store_id":  "53"
+    },
+    {
+        "id":  "268",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.117638",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3588",
+        "store_id":  "53"
+    },
+    {
+        "id":  "269",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.128135",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3111",
+        "store_id":  "53"
+    },
+    {
+        "id":  "270",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.147799",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3629",
+        "store_id":  "53"
+    },
+    {
+        "id":  "271",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.127284",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3502",
+        "store_id":  "54"
+    },
+    {
+        "id":  "272",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.14013",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2186",
+        "store_id":  "54"
+    },
+    {
+        "id":  "273",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.151275",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4093",
+        "store_id":  "54"
+    },
+    {
+        "id":  "274",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.200102",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2136",
+        "store_id":  "54"
+    },
+    {
+        "id":  "275",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.266547",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2796",
+        "store_id":  "54"
+    },
+    {
+        "id":  "276",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.075237",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3048",
+        "store_id":  "55"
+    },
+    {
+        "id":  "277",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.264567",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2294",
+        "store_id":  "55"
+    },
+    {
+        "id":  "278",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.269809",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2677",
+        "store_id":  "55"
+    },
+    {
+        "id":  "279",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.424853",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3168",
+        "store_id":  "55"
+    },
+    {
+        "id":  "280",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.47433",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3130",
+        "store_id":  "55"
+    },
+    {
+        "id":  "281",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.034326",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2385",
+        "store_id":  "56"
+    },
+    {
+        "id":  "282",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.30705",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4460",
+        "store_id":  "56"
+    },
+    {
+        "id":  "283",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.398502",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4344",
+        "store_id":  "56"
+    },
+    {
+        "id":  "284",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.399114",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3764",
+        "store_id":  "56"
+    },
+    {
+        "id":  "285",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.421029",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3984",
+        "store_id":  "56"
+    },
+    {
+        "id":  "286",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.281779",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3880",
+        "store_id":  "57"
+    },
+    {
+        "id":  "287",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.297015",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4377",
+        "store_id":  "57"
+    },
+    {
+        "id":  "288",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.398198",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3457",
+        "store_id":  "57"
+    },
+    {
+        "id":  "289",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.415356",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1767",
+        "store_id":  "57"
+    },
+    {
+        "id":  "290",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.415875",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4396",
+        "store_id":  "57"
+    },
+    {
+        "id":  "291",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.269261",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2529",
+        "store_id":  "58"
+    },
+    {
+        "id":  "292",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.281796",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3190",
+        "store_id":  "58"
+    },
+    {
+        "id":  "293",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.30595",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3472",
+        "store_id":  "58"
+    },
+    {
+        "id":  "294",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.313841",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2948",
+        "store_id":  "58"
+    },
+    {
+        "id":  "295",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.478113",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2639",
+        "store_id":  "58"
+    },
+    {
+        "id":  "296",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.118401",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4302",
+        "store_id":  "59"
+    },
+    {
+        "id":  "297",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.121896",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4024",
+        "store_id":  "59"
+    },
+    {
+        "id":  "298",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.129978",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2367",
+        "store_id":  "59"
+    },
+    {
+        "id":  "299",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.132473",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2314",
+        "store_id":  "59"
+    },
+    {
+        "id":  "300",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.264549",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2846",
+        "store_id":  "59"
+    },
+    {
+        "id":  "301",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.074703",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2600",
+        "store_id":  "60"
+    },
+    {
+        "id":  "302",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.074908",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4446",
+        "store_id":  "60"
+    },
+    {
+        "id":  "303",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.117387",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1626",
+        "store_id":  "60"
+    },
+    {
+        "id":  "304",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.119584",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3911",
+        "store_id":  "60"
+    },
+    {
+        "id":  "305",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.193976",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1887",
+        "store_id":  "60"
+    },
+    {
+        "id":  "306",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.240338",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1592",
+        "store_id":  "61"
+    },
+    {
+        "id":  "307",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.243732",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3192",
+        "store_id":  "61"
+    },
+    {
+        "id":  "308",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.251839",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1575",
+        "store_id":  "61"
+    },
+    {
+        "id":  "309",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.292125",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2300",
+        "store_id":  "61"
+    },
+    {
+        "id":  "310",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.313882",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1686",
+        "store_id":  "61"
+    },
+    {
+        "id":  "311",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.066334",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1811",
+        "store_id":  "62"
+    },
+    {
+        "id":  "312",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.077806",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4243",
+        "store_id":  "62"
+    },
+    {
+        "id":  "313",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.30366",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3359",
+        "store_id":  "62"
+    },
+    {
+        "id":  "314",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.305466",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1938",
+        "store_id":  "62"
+    },
+    {
+        "id":  "315",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.348062",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2299",
+        "store_id":  "62"
+    },
+    {
+        "id":  "316",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.09684",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2713",
+        "store_id":  "63"
+    },
+    {
+        "id":  "317",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.127073",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2456",
+        "store_id":  "63"
+    },
+    {
+        "id":  "318",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.222285",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3409",
+        "store_id":  "63"
+    },
+    {
+        "id":  "319",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.223341",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3683",
+        "store_id":  "63"
+    },
+    {
+        "id":  "320",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.287262",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2951",
+        "store_id":  "63"
+    },
+    {
+        "id":  "321",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.034879",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3945",
+        "store_id":  "64"
+    },
+    {
+        "id":  "322",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.038726",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3351",
+        "store_id":  "64"
+    },
+    {
+        "id":  "323",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.174288",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1972",
+        "store_id":  "64"
+    },
+    {
+        "id":  "324",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.179447",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3556",
+        "store_id":  "64"
+    },
+    {
+        "id":  "325",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.602241",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2756",
+        "store_id":  "64"
+    },
+    {
+        "id":  "326",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.12881",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1384",
+        "store_id":  "65"
+    },
+    {
+        "id":  "327",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.149983",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1686",
+        "store_id":  "65"
+    },
+    {
+        "id":  "328",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.198855",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1575",
+        "store_id":  "65"
+    },
+    {
+        "id":  "329",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.218952",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2300",
+        "store_id":  "65"
+    },
+    {
+        "id":  "330",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.287562",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4095",
+        "store_id":  "65"
+    },
+    {
+        "id":  "331",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.392342",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1950",
+        "store_id":  "66"
+    },
+    {
+        "id":  "332",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.392972",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1976",
+        "store_id":  "66"
+    },
+    {
+        "id":  "333",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.404093",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3147",
+        "store_id":  "66"
+    },
+    {
+        "id":  "334",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.417354",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1385",
+        "store_id":  "66"
+    },
+    {
+        "id":  "335",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.423477",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3792",
+        "store_id":  "66"
+    },
+    {
+        "id":  "336",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.160025",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4010",
+        "store_id":  "67"
+    },
+    {
+        "id":  "337",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.207591",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2943",
+        "store_id":  "67"
+    },
+    {
+        "id":  "338",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.289525",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2196",
+        "store_id":  "67"
+    },
+    {
+        "id":  "339",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.308181",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2630",
+        "store_id":  "67"
+    },
+    {
+        "id":  "340",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.347813",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3039",
+        "store_id":  "67"
+    },
+    {
+        "id":  "341",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.182507",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1503",
+        "store_id":  "68"
+    },
+    {
+        "id":  "342",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.20844",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3964",
+        "store_id":  "68"
+    },
+    {
+        "id":  "343",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.313939",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3802",
+        "store_id":  "68"
+    },
+    {
+        "id":  "344",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.33383",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3720",
+        "store_id":  "68"
+    },
+    {
+        "id":  "345",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.420012",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1477",
+        "store_id":  "68"
+    },
+    {
+        "id":  "346",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.082929",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2674",
+        "store_id":  "69"
+    },
+    {
+        "id":  "347",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.08696",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2227",
+        "store_id":  "69"
+    },
+    {
+        "id":  "348",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.386145",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3188",
+        "store_id":  "69"
+    },
+    {
+        "id":  "349",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.412581",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4339",
+        "store_id":  "69"
+    },
+    {
+        "id":  "350",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.581955",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3700",
+        "store_id":  "69"
+    },
+    {
+        "id":  "351",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.112315",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2628",
+        "store_id":  "70"
+    },
+    {
+        "id":  "352",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.223245",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4397",
+        "store_id":  "70"
+    },
+    {
+        "id":  "353",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.345039",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2663",
+        "store_id":  "70"
+    },
+    {
+        "id":  "354",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.403167",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2797",
+        "store_id":  "70"
+    },
+    {
+        "id":  "355",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.434944",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3778",
+        "store_id":  "70"
+    },
+    {
+        "id":  "356",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.137116",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1424",
+        "store_id":  "71"
+    },
+    {
+        "id":  "357",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.1461",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2569",
+        "store_id":  "71"
+    },
+    {
+        "id":  "358",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.495268",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4220",
+        "store_id":  "71"
+    },
+    {
+        "id":  "359",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.514962",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3011",
+        "store_id":  "71"
+    },
+    {
+        "id":  "360",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.572792",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3972",
+        "store_id":  "71"
+    },
+    {
+        "id":  "361",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.060073",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3330",
+        "store_id":  "72"
+    },
+    {
+        "id":  "362",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.06057",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4325",
+        "store_id":  "72"
+    },
+    {
+        "id":  "363",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.208005",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3985",
+        "store_id":  "72"
+    },
+    {
+        "id":  "364",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.232882",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1674",
+        "store_id":  "72"
+    },
+    {
+        "id":  "365",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.265068",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1734",
+        "store_id":  "72"
+    },
+    {
+        "id":  "366",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.399777",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2873",
+        "store_id":  "73"
+    },
+    {
+        "id":  "367",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.422162",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1517",
+        "store_id":  "73"
+    },
+    {
+        "id":  "368",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.483516",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3600",
+        "store_id":  "73"
+    },
+    {
+        "id":  "369",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.484038",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3320",
+        "store_id":  "73"
+    },
+    {
+        "id":  "370",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.490533",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2791",
+        "store_id":  "73"
+    },
+    {
+        "id":  "371",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.011536",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4260",
+        "store_id":  "74"
+    },
+    {
+        "id":  "372",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.025668",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1412",
+        "store_id":  "74"
+    },
+    {
+        "id":  "373",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.266987",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1697",
+        "store_id":  "74"
+    },
+    {
+        "id":  "374",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.269072",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2558",
+        "store_id":  "74"
+    },
+    {
+        "id":  "375",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.37187",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1462",
+        "store_id":  "74"
+    },
+    {
+        "id":  "376",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.049302",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4130",
+        "store_id":  "75"
+    },
+    {
+        "id":  "377",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.098027",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3240",
+        "store_id":  "75"
+    },
+    {
+        "id":  "378",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.446057",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2709",
+        "store_id":  "75"
+    },
+    {
+        "id":  "379",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.446349",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2245",
+        "store_id":  "75"
+    },
+    {
+        "id":  "380",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.50572",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2375",
+        "store_id":  "75"
+    },
+    {
+        "id":  "381",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.189493",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2886",
+        "store_id":  "76"
+    },
+    {
+        "id":  "382",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.194681",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2740",
+        "store_id":  "76"
+    },
+    {
+        "id":  "383",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.399251",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3488",
+        "store_id":  "76"
+    },
+    {
+        "id":  "384",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.414422",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4185",
+        "store_id":  "76"
+    },
+    {
+        "id":  "385",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.42231",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3459",
+        "store_id":  "76"
+    },
+    {
+        "id":  "386",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.073755",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4107",
+        "store_id":  "77"
+    },
+    {
+        "id":  "387",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.143763",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2491",
+        "store_id":  "77"
+    },
+    {
+        "id":  "388",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.150245",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1549",
+        "store_id":  "77"
+    },
+    {
+        "id":  "389",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.235396",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2463",
+        "store_id":  "77"
+    },
+    {
+        "id":  "390",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.253825",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3415",
+        "store_id":  "77"
+    },
+    {
+        "id":  "391",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.025908",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1808",
+        "store_id":  "78"
+    },
+    {
+        "id":  "392",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.035213",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2429",
+        "store_id":  "78"
+    },
+    {
+        "id":  "393",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.238166",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3082",
+        "store_id":  "78"
+    },
+    {
+        "id":  "394",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.241195",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1437",
+        "store_id":  "78"
+    },
+    {
+        "id":  "395",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.397698",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1867",
+        "store_id":  "78"
+    },
+    {
+        "id":  "396",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.154633",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2405",
+        "store_id":  "79"
+    },
+    {
+        "id":  "397",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.177732",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2208",
+        "store_id":  "79"
+    },
+    {
+        "id":  "398",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.251301",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2225",
+        "store_id":  "79"
+    },
+    {
+        "id":  "399",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.267569",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2318",
+        "store_id":  "79"
+    },
+    {
+        "id":  "400",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.269581",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2115",
+        "store_id":  "79"
+    },
+    {
+        "id":  "401",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.154852",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4343",
+        "store_id":  "80"
+    },
+    {
+        "id":  "402",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.175351",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3696",
+        "store_id":  "80"
+    },
+    {
+        "id":  "403",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.198879",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4341",
+        "store_id":  "80"
+    },
+    {
+        "id":  "404",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.212071",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1600",
+        "store_id":  "80"
+    },
+    {
+        "id":  "405",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.238869",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3207",
+        "store_id":  "80"
+    },
+    {
+        "id":  "406",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.37177",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4185",
+        "store_id":  "81"
+    },
+    {
+        "id":  "407",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.371949",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4060",
+        "store_id":  "81"
+    },
+    {
+        "id":  "408",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.384405",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2886",
+        "store_id":  "81"
+    },
+    {
+        "id":  "409",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.397764",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2740",
+        "store_id":  "81"
+    },
+    {
+        "id":  "410",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.572979",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3488",
+        "store_id":  "81"
+    },
+    {
+        "id":  "411",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.025151",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3643",
+        "store_id":  "82"
+    },
+    {
+        "id":  "412",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.025897",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2688",
+        "store_id":  "82"
+    },
+    {
+        "id":  "413",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.038653",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3156",
+        "store_id":  "82"
+    },
+    {
+        "id":  "414",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.322412",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3505",
+        "store_id":  "82"
+    },
+    {
+        "id":  "415",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.326434",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2973",
+        "store_id":  "82"
+    },
+    {
+        "id":  "416",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.029987",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2513",
+        "store_id":  "83"
+    },
+    {
+        "id":  "417",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.156915",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1577",
+        "store_id":  "83"
+    },
+    {
+        "id":  "418",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.275897",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3251",
+        "store_id":  "83"
+    },
+    {
+        "id":  "419",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.284321",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1978",
+        "store_id":  "83"
+    },
+    {
+        "id":  "420",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.576066",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2784",
+        "store_id":  "83"
+    },
+    {
+        "id":  "421",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.060878",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2204",
+        "store_id":  "84"
+    },
+    {
+        "id":  "422",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.082212",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2528",
+        "store_id":  "84"
+    },
+    {
+        "id":  "423",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.285235",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1539",
+        "store_id":  "84"
+    },
+    {
+        "id":  "424",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.28849",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3756",
+        "store_id":  "84"
+    },
+    {
+        "id":  "425",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.294299",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4393",
+        "store_id":  "84"
+    },
+    {
+        "id":  "426",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.029746",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3119",
+        "store_id":  "85"
+    },
+    {
+        "id":  "427",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.038149",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2393",
+        "store_id":  "85"
+    },
+    {
+        "id":  "428",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.305237",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2947",
+        "store_id":  "85"
+    },
+    {
+        "id":  "429",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.308311",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3514",
+        "store_id":  "85"
+    },
+    {
+        "id":  "430",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.30876",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2589",
+        "store_id":  "85"
+    },
+    {
+        "id":  "431",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.10478",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3425",
+        "store_id":  "86"
+    },
+    {
+        "id":  "432",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.126278",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3759",
+        "store_id":  "86"
+    },
+    {
+        "id":  "433",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.40481",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2851",
+        "store_id":  "86"
+    },
+    {
+        "id":  "434",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.421725",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3771",
+        "store_id":  "86"
+    },
+    {
+        "id":  "435",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.45925",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3825",
+        "store_id":  "86"
+    },
+    {
+        "id":  "436",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.239557",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3411",
+        "store_id":  "87"
+    },
+    {
+        "id":  "437",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.258107",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2496",
+        "store_id":  "87"
+    },
+    {
+        "id":  "438",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.329261",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2525",
+        "store_id":  "87"
+    },
+    {
+        "id":  "439",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.338395",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1565",
+        "store_id":  "87"
+    },
+    {
+        "id":  "440",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.519232",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4334",
+        "store_id":  "87"
+    },
+    {
+        "id":  "441",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.066162",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3409",
+        "store_id":  "88"
+    },
+    {
+        "id":  "442",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.066252",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3683",
+        "store_id":  "88"
+    },
+    {
+        "id":  "443",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.211684",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2447",
+        "store_id":  "88"
+    },
+    {
+        "id":  "444",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.214745",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3507",
+        "store_id":  "88"
+    },
+    {
+        "id":  "445",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.296843",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2713",
+        "store_id":  "88"
+    },
+    {
+        "id":  "446",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.117807",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3288",
+        "store_id":  "89"
+    },
+    {
+        "id":  "447",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.128808",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3980",
+        "store_id":  "89"
+    },
+    {
+        "id":  "448",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.315428",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1713",
+        "store_id":  "89"
+    },
+    {
+        "id":  "449",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.33018",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2542",
+        "store_id":  "89"
+    },
+    {
+        "id":  "450",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.35298",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1477",
+        "store_id":  "89"
+    },
+    {
+        "id":  "451",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.048945",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2374",
+        "store_id":  "90"
+    },
+    {
+        "id":  "452",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.13103",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2705",
+        "store_id":  "90"
+    },
+    {
+        "id":  "453",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.408988",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3397",
+        "store_id":  "90"
+    },
+    {
+        "id":  "454",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.517094",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2959",
+        "store_id":  "90"
+    },
+    {
+        "id":  "455",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.616261",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3691",
+        "store_id":  "90"
+    },
+    {
+        "id":  "456",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.044661",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3799",
+        "store_id":  "91"
+    },
+    {
+        "id":  "457",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.045674",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4357",
+        "store_id":  "91"
+    },
+    {
+        "id":  "458",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.048161",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2958",
+        "store_id":  "91"
+    },
+    {
+        "id":  "459",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.193382",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4381",
+        "store_id":  "91"
+    },
+    {
+        "id":  "460",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.204729",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3603",
+        "store_id":  "91"
+    },
+    {
+        "id":  "461",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.083325",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3039",
+        "store_id":  "92"
+    },
+    {
+        "id":  "462",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.184801",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2943",
+        "store_id":  "92"
+    },
+    {
+        "id":  "463",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.359705",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4017",
+        "store_id":  "92"
+    },
+    {
+        "id":  "464",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.3613",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3474",
+        "store_id":  "92"
+    },
+    {
+        "id":  "465",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.365685",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2463",
+        "store_id":  "92"
+    },
+    {
+        "id":  "466",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.226881",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2586",
+        "store_id":  "93"
+    },
+    {
+        "id":  "467",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.229343",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4033",
+        "store_id":  "93"
+    },
+    {
+        "id":  "468",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.281814",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2696",
+        "store_id":  "93"
+    },
+    {
+        "id":  "469",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.334077",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4159",
+        "store_id":  "93"
+    },
+    {
+        "id":  "470",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.45149",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2041",
+        "store_id":  "93"
+    },
+    {
+        "id":  "471",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.042532",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4290",
+        "store_id":  "94"
+    },
+    {
+        "id":  "472",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.052821",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2102",
+        "store_id":  "94"
+    },
+    {
+        "id":  "473",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.263707",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1953",
+        "store_id":  "94"
+    },
+    {
+        "id":  "474",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.266406",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4078",
+        "store_id":  "94"
+    },
+    {
+        "id":  "475",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.275425",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3855",
+        "store_id":  "94"
+    },
+    {
+        "id":  "476",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.140298",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2563",
+        "store_id":  "95"
+    },
+    {
+        "id":  "477",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.157317",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3595",
+        "store_id":  "95"
+    },
+    {
+        "id":  "478",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.169268",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2652",
+        "store_id":  "95"
+    },
+    {
+        "id":  "479",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.21346",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3235",
+        "store_id":  "95"
+    },
+    {
+        "id":  "480",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.303438",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1822",
+        "store_id":  "95"
+    },
+    {
+        "id":  "481",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.109953",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2630",
+        "store_id":  "96"
+    },
+    {
+        "id":  "482",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.22223",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3123",
+        "store_id":  "96"
+    },
+    {
+        "id":  "483",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.305697",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3643",
+        "store_id":  "96"
+    },
+    {
+        "id":  "484",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.312807",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3156",
+        "store_id":  "96"
+    },
+    {
+        "id":  "485",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.317445",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4010",
+        "store_id":  "96"
+    },
+    {
+        "id":  "486",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.164213",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4123",
+        "store_id":  "97"
+    },
+    {
+        "id":  "487",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.178788",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1795",
+        "store_id":  "97"
+    },
+    {
+        "id":  "488",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.262611",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4305",
+        "store_id":  "97"
+    },
+    {
+        "id":  "489",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.279208",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2687",
+        "store_id":  "97"
+    },
+    {
+        "id":  "490",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.282506",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2909",
+        "store_id":  "97"
+    },
+    {
+        "id":  "491",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.223019",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2300",
+        "store_id":  "98"
+    },
+    {
+        "id":  "492",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.276235",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1687",
+        "store_id":  "98"
+    },
+    {
+        "id":  "493",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.279925",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3548",
+        "store_id":  "98"
+    },
+    {
+        "id":  "494",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.29971",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1686",
+        "store_id":  "98"
+    },
+    {
+        "id":  "495",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.30648",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1575",
+        "store_id":  "98"
+    },
+    {
+        "id":  "496",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.339335",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2051",
+        "store_id":  "99"
+    },
+    {
+        "id":  "497",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.366642",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3134",
+        "store_id":  "99"
+    },
+    {
+        "id":  "498",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.43977",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3683",
+        "store_id":  "99"
+    },
+    {
+        "id":  "499",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.440605",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3409",
+        "store_id":  "99"
+    },
+    {
+        "id":  "500",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.52139",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2456",
+        "store_id":  "99"
+    },
+    {
+        "id":  "501",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.134783",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2003",
+        "store_id":  "100"
+    },
+    {
+        "id":  "502",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.139351",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3130",
+        "store_id":  "100"
+    },
+    {
+        "id":  "503",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.146601",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3481",
+        "store_id":  "100"
+    },
+    {
+        "id":  "504",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.151169",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1817",
+        "store_id":  "100"
+    },
+    {
+        "id":  "505",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.221082",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2213",
+        "store_id":  "100"
+    },
+    {
+        "id":  "506",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.0496",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1477",
+        "store_id":  "101"
+    },
+    {
+        "id":  "507",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.065296",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2542",
+        "store_id":  "101"
+    },
+    {
+        "id":  "508",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.236898",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1951",
+        "store_id":  "101"
+    },
+    {
+        "id":  "509",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.246023",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1713",
+        "store_id":  "101"
+    },
+    {
+        "id":  "510",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.391292",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3964",
+        "store_id":  "101"
+    },
+    {
+        "id":  "511",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.068171",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1384",
+        "store_id":  "102"
+    },
+    {
+        "id":  "512",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.090291",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1686",
+        "store_id":  "102"
+    },
+    {
+        "id":  "513",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.105259",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1575",
+        "store_id":  "102"
+    },
+    {
+        "id":  "514",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.170369",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2300",
+        "store_id":  "102"
+    },
+    {
+        "id":  "515",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.367309",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4095",
+        "store_id":  "102"
+    },
+    {
+        "id":  "516",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.013279",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3631",
+        "store_id":  "103"
+    },
+    {
+        "id":  "517",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.232386",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2732",
+        "store_id":  "103"
+    },
+    {
+        "id":  "518",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.340538",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2250",
+        "store_id":  "103"
+    },
+    {
+        "id":  "519",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.691362",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2946",
+        "store_id":  "103"
+    },
+    {
+        "id":  "520",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.912187",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4032",
+        "store_id":  "103"
+    },
+    {
+        "id":  "521",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.077783",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4140",
+        "store_id":  "104"
+    },
+    {
+        "id":  "522",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.092072",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2430",
+        "store_id":  "104"
+    },
+    {
+        "id":  "523",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.106032",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2274",
+        "store_id":  "104"
+    },
+    {
+        "id":  "524",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.11942",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3707",
+        "store_id":  "104"
+    },
+    {
+        "id":  "525",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.376052",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2109",
+        "store_id":  "104"
+    },
+    {
+        "id":  "526",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.054301",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3088",
+        "store_id":  "105"
+    },
+    {
+        "id":  "527",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.062804",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1581",
+        "store_id":  "105"
+    },
+    {
+        "id":  "528",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.284924",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3316",
+        "store_id":  "105"
+    },
+    {
+        "id":  "529",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.297478",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3543",
+        "store_id":  "105"
+    },
+    {
+        "id":  "530",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.340107",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3241",
+        "store_id":  "105"
+    },
+    {
+        "id":  "531",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.076116",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4090",
+        "store_id":  "106"
+    },
+    {
+        "id":  "532",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.185699",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3822",
+        "store_id":  "106"
+    },
+    {
+        "id":  "533",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.186654",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3070",
+        "store_id":  "106"
+    },
+    {
+        "id":  "534",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.189685",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2502",
+        "store_id":  "106"
+    },
+    {
+        "id":  "535",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.194167",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4087",
+        "store_id":  "106"
+    },
+    {
+        "id":  "536",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.087719",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1492",
+        "store_id":  "107"
+    },
+    {
+        "id":  "537",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.102086",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3577",
+        "store_id":  "107"
+    },
+    {
+        "id":  "538",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.116433",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4083",
+        "store_id":  "107"
+    },
+    {
+        "id":  "539",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.147413",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4095",
+        "store_id":  "107"
+    },
+    {
+        "id":  "540",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.344917",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1951",
+        "store_id":  "107"
+    },
+    {
+        "id":  "541",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.020761",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2249",
+        "store_id":  "108"
+    },
+    {
+        "id":  "542",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.235989",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4010",
+        "store_id":  "108"
+    },
+    {
+        "id":  "543",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.318443",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3474",
+        "store_id":  "108"
+    },
+    {
+        "id":  "544",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.331723",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4017",
+        "store_id":  "108"
+    },
+    {
+        "id":  "545",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.349991",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2688",
+        "store_id":  "108"
+    },
+    {
+        "id":  "546",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.276842",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1795",
+        "store_id":  "109"
+    },
+    {
+        "id":  "547",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.316611",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3362",
+        "store_id":  "109"
+    },
+    {
+        "id":  "548",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.322408",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2585",
+        "store_id":  "109"
+    },
+    {
+        "id":  "549",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.334176",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2050",
+        "store_id":  "109"
+    },
+    {
+        "id":  "550",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.366716",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2180",
+        "store_id":  "109"
+    },
+    {
+        "id":  "551",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.258583",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2933",
+        "store_id":  "110"
+    },
+    {
+        "id":  "552",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.268565",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3410",
+        "store_id":  "110"
+    },
+    {
+        "id":  "553",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.323652",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1661",
+        "store_id":  "110"
+    },
+    {
+        "id":  "554",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.350128",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4392",
+        "store_id":  "110"
+    },
+    {
+        "id":  "555",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.409111",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3034",
+        "store_id":  "110"
+    },
+    {
+        "id":  "556",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.116531",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2447",
+        "store_id":  "111"
+    },
+    {
+        "id":  "557",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.120034",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3507",
+        "store_id":  "111"
+    },
+    {
+        "id":  "558",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.242694",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3855",
+        "store_id":  "111"
+    },
+    {
+        "id":  "559",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.244727",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3542",
+        "store_id":  "111"
+    },
+    {
+        "id":  "560",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.308468",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2076",
+        "store_id":  "111"
+    },
+    {
+        "id":  "561",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.032249",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1734",
+        "store_id":  "112"
+    },
+    {
+        "id":  "562",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.070873",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3334",
+        "store_id":  "112"
+    },
+    {
+        "id":  "563",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.186302",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1744",
+        "store_id":  "112"
+    },
+    {
+        "id":  "564",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.195218",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1455",
+        "store_id":  "112"
+    },
+    {
+        "id":  "565",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.229395",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3343",
+        "store_id":  "112"
+    },
+    {
+        "id":  "566",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.348642",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4185",
+        "store_id":  "113"
+    },
+    {
+        "id":  "567",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.374923",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4060",
+        "store_id":  "113"
+    },
+    {
+        "id":  "568",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.405431",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1638",
+        "store_id":  "113"
+    },
+    {
+        "id":  "569",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.406688",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1460",
+        "store_id":  "113"
+    },
+    {
+        "id":  "570",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.425161",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1988",
+        "store_id":  "113"
+    },
+    {
+        "id":  "571",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.04551",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3757",
+        "store_id":  "114"
+    },
+    {
+        "id":  "572",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.166045",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1414",
+        "store_id":  "114"
+    },
+    {
+        "id":  "573",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.492875",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1824",
+        "store_id":  "114"
+    },
+    {
+        "id":  "574",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.495163",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1553",
+        "store_id":  "114"
+    },
+    {
+        "id":  "575",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.7125",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1732",
+        "store_id":  "114"
+    },
+    {
+        "id":  "576",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.070105",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2385",
+        "store_id":  "115"
+    },
+    {
+        "id":  "577",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.203186",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4460",
+        "store_id":  "115"
+    },
+    {
+        "id":  "578",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.40056",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3984",
+        "store_id":  "115"
+    },
+    {
+        "id":  "579",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.427193",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3390",
+        "store_id":  "115"
+    },
+    {
+        "id":  "580",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.442978",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4344",
+        "store_id":  "115"
+    },
+    {
+        "id":  "581",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.126222",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4083",
+        "store_id":  "116"
+    },
+    {
+        "id":  "582",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.164173",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4095",
+        "store_id":  "116"
+    },
+    {
+        "id":  "583",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.201641",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1492",
+        "store_id":  "116"
+    },
+    {
+        "id":  "584",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.20967",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3577",
+        "store_id":  "116"
+    },
+    {
+        "id":  "585",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.219051",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1951",
+        "store_id":  "116"
+    },
+    {
+        "id":  "586",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.006786",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3494",
+        "store_id":  "117"
+    },
+    {
+        "id":  "587",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.013425",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1433",
+        "store_id":  "117"
+    },
+    {
+        "id":  "588",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.297946",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2391",
+        "store_id":  "117"
+    },
+    {
+        "id":  "589",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.303081",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3343",
+        "store_id":  "117"
+    },
+    {
+        "id":  "590",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.326343",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2265",
+        "store_id":  "117"
+    },
+    {
+        "id":  "591",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.102788",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3424",
+        "store_id":  "118"
+    },
+    {
+        "id":  "592",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.217654",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2952",
+        "store_id":  "118"
+    },
+    {
+        "id":  "593",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.29448",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3481",
+        "store_id":  "118"
+    },
+    {
+        "id":  "594",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.308955",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3290",
+        "store_id":  "118"
+    },
+    {
+        "id":  "595",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.35968",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1795",
+        "store_id":  "118"
+    },
+    {
+        "id":  "596",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.027919",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3595",
+        "store_id":  "119"
+    },
+    {
+        "id":  "597",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.055273",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3235",
+        "store_id":  "119"
+    },
+    {
+        "id":  "598",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.140948",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1822",
+        "store_id":  "119"
+    },
+    {
+        "id":  "599",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.163744",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3078",
+        "store_id":  "119"
+    },
+    {
+        "id":  "600",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.272099",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2663",
+        "store_id":  "119"
+    },
+    {
+        "id":  "601",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.886052",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3848",
+        "store_id":  "120"
+    },
+    {
+        "id":  "602",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.901175",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3239",
+        "store_id":  "120"
+    },
+    {
+        "id":  "603",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.966152",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1664",
+        "store_id":  "120"
+    },
+    {
+        "id":  "604",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.97039",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2633",
+        "store_id":  "120"
+    },
+    {
+        "id":  "605",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.971892",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3116",
+        "store_id":  "120"
+    },
+    {
+        "id":  "606",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.053482",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3912",
+        "store_id":  "121"
+    },
+    {
+        "id":  "607",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.080872",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1812",
+        "store_id":  "121"
+    },
+    {
+        "id":  "608",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.186567",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2317",
+        "store_id":  "121"
+    },
+    {
+        "id":  "609",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.35026",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3225",
+        "store_id":  "121"
+    },
+    {
+        "id":  "610",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.369165",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3482",
+        "store_id":  "121"
+    },
+    {
+        "id":  "611",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.06437",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4156",
+        "store_id":  "122"
+    },
+    {
+        "id":  "612",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.102679",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4011",
+        "store_id":  "122"
+    },
+    {
+        "id":  "613",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.106577",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2238",
+        "store_id":  "122"
+    },
+    {
+        "id":  "614",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.144277",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1602",
+        "store_id":  "122"
+    },
+    {
+        "id":  "615",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.185916",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4344",
+        "store_id":  "122"
+    },
+    {
+        "id":  "616",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.401358",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1826",
+        "store_id":  "123"
+    },
+    {
+        "id":  "617",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.402724",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4425",
+        "store_id":  "123"
+    },
+    {
+        "id":  "618",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.45282",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1434",
+        "store_id":  "123"
+    },
+    {
+        "id":  "619",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.45403",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2458",
+        "store_id":  "123"
+    },
+    {
+        "id":  "620",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.611826",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3648",
+        "store_id":  "123"
+    },
+    {
+        "id":  "621",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.011195",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3048",
+        "store_id":  "124"
+    },
+    {
+        "id":  "622",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.219079",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2294",
+        "store_id":  "124"
+    },
+    {
+        "id":  "623",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.219918",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2677",
+        "store_id":  "124"
+    },
+    {
+        "id":  "624",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.368664",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3168",
+        "store_id":  "124"
+    },
+    {
+        "id":  "625",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.523097",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3130",
+        "store_id":  "124"
+    },
+    {
+        "id":  "626",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.143381",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2490",
+        "store_id":  "125"
+    },
+    {
+        "id":  "627",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.174437",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4337",
+        "store_id":  "125"
+    },
+    {
+        "id":  "628",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.175215",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1867",
+        "store_id":  "125"
+    },
+    {
+        "id":  "629",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.177286",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2589",
+        "store_id":  "125"
+    },
+    {
+        "id":  "630",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.335778",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3082",
+        "store_id":  "125"
+    },
+    {
+        "id":  "631",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.104937",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4067",
+        "store_id":  "126"
+    },
+    {
+        "id":  "632",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.181162",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3828",
+        "store_id":  "126"
+    },
+    {
+        "id":  "633",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.296525",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1695",
+        "store_id":  "126"
+    },
+    {
+        "id":  "634",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.347065",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3145",
+        "store_id":  "126"
+    },
+    {
+        "id":  "635",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.383476",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2004",
+        "store_id":  "126"
+    },
+    {
+        "id":  "636",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.059411",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2297",
+        "store_id":  "127"
+    },
+    {
+        "id":  "637",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.123383",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3087",
+        "store_id":  "127"
+    },
+    {
+        "id":  "638",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.270347",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2786",
+        "store_id":  "127"
+    },
+    {
+        "id":  "639",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.271304",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1751",
+        "store_id":  "127"
+    },
+    {
+        "id":  "640",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.398557",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3496",
+        "store_id":  "127"
+    },
+    {
+        "id":  "641",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.199812",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4444",
+        "store_id":  "128"
+    },
+    {
+        "id":  "642",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.211083",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3299",
+        "store_id":  "128"
+    },
+    {
+        "id":  "643",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.414964",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4186",
+        "store_id":  "128"
+    },
+    {
+        "id":  "644",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.423974",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3662",
+        "store_id":  "128"
+    },
+    {
+        "id":  "645",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.463461",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2182",
+        "store_id":  "128"
+    },
+    {
+        "id":  "646",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.088185",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2149",
+        "store_id":  "129"
+    },
+    {
+        "id":  "647",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.092062",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2703",
+        "store_id":  "129"
+    },
+    {
+        "id":  "648",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.372981",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3295",
+        "store_id":  "129"
+    },
+    {
+        "id":  "649",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.39922",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3237",
+        "store_id":  "129"
+    },
+    {
+        "id":  "650",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.401824",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3103",
+        "store_id":  "129"
+    },
+    {
+        "id":  "651",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.066343",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1592",
+        "store_id":  "130"
+    },
+    {
+        "id":  "652",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.073255",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3192",
+        "store_id":  "130"
+    },
+    {
+        "id":  "653",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.197693",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2088",
+        "store_id":  "130"
+    },
+    {
+        "id":  "654",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.218071",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3080",
+        "store_id":  "130"
+    },
+    {
+        "id":  "655",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.382487",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3721",
+        "store_id":  "130"
+    },
+    {
+        "id":  "656",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.078053",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3744",
+        "store_id":  "131"
+    },
+    {
+        "id":  "657",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.083358",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2008",
+        "store_id":  "131"
+    },
+    {
+        "id":  "658",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.277794",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2701",
+        "store_id":  "131"
+    },
+    {
+        "id":  "659",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.296869",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4351",
+        "store_id":  "131"
+    },
+    {
+        "id":  "660",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.349651",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3948",
+        "store_id":  "131"
+    },
+    {
+        "id":  "661",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.062925",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4105",
+        "store_id":  "132"
+    },
+    {
+        "id":  "662",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.40609",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2164",
+        "store_id":  "132"
+    },
+    {
+        "id":  "663",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.413732",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3873",
+        "store_id":  "132"
+    },
+    {
+        "id":  "664",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.84796",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3209",
+        "store_id":  "132"
+    },
+    {
+        "id":  "665",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.475205",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4313",
+        "store_id":  "134"
+    },
+    {
+        "id":  "666",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.486031",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2080",
+        "store_id":  "134"
+    },
+    {
+        "id":  "667",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.054286",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3396",
+        "store_id":  "135"
+    },
+    {
+        "id":  "668",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.056466",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4191",
+        "store_id":  "135"
+    },
+    {
+        "id":  "669",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.958529",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2031",
+        "store_id":  "135"
+    },
+    {
+        "id":  "670",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.962597",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3982",
+        "store_id":  "135"
+    },
+    {
+        "id":  "671",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.463397",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3146",
+        "store_id":  "136"
+    },
+    {
+        "id":  "672",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.496583",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1379",
+        "store_id":  "136"
+    },
+    {
+        "id":  "673",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.516254",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1569",
+        "store_id":  "136"
+    },
+    {
+        "id":  "674",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.531628",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3440",
+        "store_id":  "136"
+    },
+    {
+        "id":  "675",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.556405",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4060",
+        "store_id":  "136"
+    },
+    {
+        "id":  "676",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.075431",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1561",
+        "store_id":  "138"
+    },
+    {
+        "id":  "677",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.093227",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3858",
+        "store_id":  "138"
+    },
+    {
+        "id":  "678",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.096686",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2767",
+        "store_id":  "138"
+    },
+    {
+        "id":  "679",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.115318",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1381",
+        "store_id":  "138"
+    },
+    {
+        "id":  "680",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.299286",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4188",
+        "store_id":  "138"
+    },
+    {
+        "id":  "681",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.027522",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2170",
+        "store_id":  "139"
+    },
+    {
+        "id":  "682",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.081554",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2211",
+        "store_id":  "139"
+    },
+    {
+        "id":  "683",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.283102",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4438",
+        "store_id":  "139"
+    },
+    {
+        "id":  "684",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.294553",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3136",
+        "store_id":  "139"
+    },
+    {
+        "id":  "685",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.302258",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1593",
+        "store_id":  "139"
+    },
+    {
+        "id":  "686",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.082992",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3698",
+        "store_id":  "140"
+    },
+    {
+        "id":  "687",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.089927",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1372",
+        "store_id":  "140"
+    },
+    {
+        "id":  "688",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.09044",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1726",
+        "store_id":  "140"
+    },
+    {
+        "id":  "689",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.132642",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2945",
+        "store_id":  "140"
+    },
+    {
+        "id":  "690",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.377021",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3307",
+        "store_id":  "140"
+    },
+    {
+        "id":  "691",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.137286",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1581",
+        "store_id":  "141"
+    },
+    {
+        "id":  "692",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.137523",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3088",
+        "store_id":  "141"
+    },
+    {
+        "id":  "693",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.335648",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3720",
+        "store_id":  "141"
+    },
+    {
+        "id":  "694",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.339049",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3802",
+        "store_id":  "141"
+    },
+    {
+        "id":  "695",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.354883",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1503",
+        "store_id":  "141"
+    },
+    {
+        "id":  "696",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.012995",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1623",
+        "store_id":  "142"
+    },
+    {
+        "id":  "697",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.043177",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3675",
+        "store_id":  "142"
+    },
+    {
+        "id":  "698",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.106502",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3879",
+        "store_id":  "142"
+    },
+    {
+        "id":  "699",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.110205",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1888",
+        "store_id":  "142"
+    },
+    {
+        "id":  "700",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.279838",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3406",
+        "store_id":  "142"
+    },
+    {
+        "id":  "701",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.078834",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4447",
+        "store_id":  "143"
+    },
+    {
+        "id":  "702",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.080768",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3789",
+        "store_id":  "143"
+    },
+    {
+        "id":  "703",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.380328",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2684",
+        "store_id":  "143"
+    },
+    {
+        "id":  "704",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.4384",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1913",
+        "store_id":  "143"
+    },
+    {
+        "id":  "705",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.462733",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2871",
+        "store_id":  "143"
+    },
+    {
+        "id":  "706",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.384482",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4422",
+        "store_id":  "144"
+    },
+    {
+        "id":  "707",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.409631",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3670",
+        "store_id":  "144"
+    },
+    {
+        "id":  "708",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.476231",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2888",
+        "store_id":  "144"
+    },
+    {
+        "id":  "709",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.486937",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1896",
+        "store_id":  "144"
+    },
+    {
+        "id":  "710",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.496725",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4360",
+        "store_id":  "144"
+    },
+    {
+        "id":  "711",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.058484",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4439",
+        "store_id":  "145"
+    },
+    {
+        "id":  "712",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.06967",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1847",
+        "store_id":  "145"
+    },
+    {
+        "id":  "713",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.322222",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4394",
+        "store_id":  "145"
+    },
+    {
+        "id":  "714",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.3481",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2680",
+        "store_id":  "145"
+    },
+    {
+        "id":  "715",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.552937",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2092",
+        "store_id":  "145"
+    },
+    {
+        "id":  "716",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.044159",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2262",
+        "store_id":  "146"
+    },
+    {
+        "id":  "717",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.063964",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3740",
+        "store_id":  "146"
+    },
+    {
+        "id":  "718",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.253737",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4291",
+        "store_id":  "146"
+    },
+    {
+        "id":  "719",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.265174",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1643",
+        "store_id":  "146"
+    },
+    {
+        "id":  "720",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.323743",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1504",
+        "store_id":  "146"
+    },
+    {
+        "id":  "721",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.12408",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1740",
+        "store_id":  "147"
+    },
+    {
+        "id":  "722",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.149893",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1911",
+        "store_id":  "147"
+    },
+    {
+        "id":  "723",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.328234",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3295",
+        "store_id":  "147"
+    },
+    {
+        "id":  "724",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.328363",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3237",
+        "store_id":  "147"
+    },
+    {
+        "id":  "725",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.330255",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2062",
+        "store_id":  "147"
+    },
+    {
+        "id":  "726",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.254655",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1570",
+        "store_id":  "148"
+    },
+    {
+        "id":  "727",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.27393",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3724",
+        "store_id":  "148"
+    },
+    {
+        "id":  "728",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.301454",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3488",
+        "store_id":  "148"
+    },
+    {
+        "id":  "729",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.307768",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3459",
+        "store_id":  "148"
+    },
+    {
+        "id":  "730",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.462015",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2886",
+        "store_id":  "148"
+    },
+    {
+        "id":  "731",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.115474",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2796",
+        "store_id":  "149"
+    },
+    {
+        "id":  "732",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.119749",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2186",
+        "store_id":  "149"
+    },
+    {
+        "id":  "733",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.129212",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4093",
+        "store_id":  "149"
+    },
+    {
+        "id":  "734",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.130183",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1426",
+        "store_id":  "149"
+    },
+    {
+        "id":  "735",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.253313",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3502",
+        "store_id":  "149"
+    },
+    {
+        "id":  "736",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.272803",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1888",
+        "store_id":  "150"
+    },
+    {
+        "id":  "737",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.291212",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3879",
+        "store_id":  "150"
+    },
+    {
+        "id":  "738",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.334153",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3675",
+        "store_id":  "150"
+    },
+    {
+        "id":  "739",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.34289",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1623",
+        "store_id":  "150"
+    },
+    {
+        "id":  "740",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.374532",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2292",
+        "store_id":  "150"
+    },
+    {
+        "id":  "741",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.156939",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3778",
+        "store_id":  "151"
+    },
+    {
+        "id":  "742",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.15946",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1504",
+        "store_id":  "151"
+    },
+    {
+        "id":  "743",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.218169",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2262",
+        "store_id":  "151"
+    },
+    {
+        "id":  "744",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.239212",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3740",
+        "store_id":  "151"
+    },
+    {
+        "id":  "745",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.357782",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2628",
+        "store_id":  "151"
+    },
+    {
+        "id":  "746",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.810216",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4313",
+        "store_id":  "152"
+    },
+    {
+        "id":  "747",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.819886",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2080",
+        "store_id":  "152"
+    },
+    {
+        "id":  "748",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.889203",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3257",
+        "store_id":  "152"
+    },
+    {
+        "id":  "749",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.905453",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2110",
+        "store_id":  "152"
+    },
+    {
+        "id":  "750",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.918737",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3606",
+        "store_id":  "152"
+    },
+    {
+        "id":  "751",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.024571",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "4123",
+        "store_id":  "153"
+    },
+    {
+        "id":  "752",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.146502",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "2687",
+        "store_id":  "153"
+    },
+    {
+        "id":  "753",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.159773",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "3706",
+        "store_id":  "153"
+    },
+    {
+        "id":  "754",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.231471",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1774",
+        "store_id":  "153"
+    },
+    {
+        "id":  "755",
+        "created_at":  "2026-08-15",
+        "distance_km":  "0.239495",
+        "updated_at":  "2026-08-15",
+        "bus_stop_id":  "1989",
+        "store_id":  "153"
+    }
+]
