@@ -59,7 +59,11 @@
     "typescript": "^6.0.3"
   },
   "overrides": {
-    "js-yaml": "^4.2.0"
+    "js-yaml": "^4.2.0",
+    "glob": "14.0.2",
+    "test-exclude": {
+      "minimatch": "11.0.1"
+    }
   },
   "jest": {
     "moduleFileExtensions": [
