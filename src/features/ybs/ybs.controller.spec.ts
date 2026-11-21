@@ -53,6 +53,8 @@ describe('YbsController', () => {
       const res = controller.getBusDirection(firstBusNum, 'false', '');
       expect(res).toHaveProperty('bus');
       expect(res.bus.num).toBe(firstBusNum);
+      expect(res.bus.totalStops).toBeGreaterThan(1);
+      expect(res.bus.destinations).toHaveLength(res.bus.totalStops);
 
       expect(() => controller.getBusDirection(999999, 'false', '')).toThrow(
         NotFoundException,
@@ -96,6 +98,14 @@ describe('YbsController', () => {
       const res = controller.getPathBetweenStops(1623, 2948);
       expect(res).toHaveProperty('path');
       expect(Array.isArray(res.path)).toBe(true);
+    });
+
+    it('finds a direct trip to a stop that repeats later on the route', () => {
+      const { path } = controller.getPathBetweenStops(2835, 2409);
+      const bus = path.find((trip) => trip.busSequence[0].id === 175)
+        ?.busSequence[0];
+
+      expect(bus?.destinations?.map((stop) => stop.id)).toEqual([2835, 2409]);
     });
 
     it('getPathToStore should return path array', () => {

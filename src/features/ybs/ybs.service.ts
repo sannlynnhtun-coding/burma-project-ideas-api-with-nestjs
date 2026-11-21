@@ -267,9 +267,7 @@ export class YbsService implements OnModuleInit {
     if (!rawBus) {
       return null;
     }
-    const dto = this.mapToBusDTO(rawBus, false);
-    dto.destinations = dto.startStop ? [dto.startStop] : [];
-    return { bus: dto };
+    return { bus: this.mapToBusDTO(rawBus, true) };
   }
 
   // --- Bus Stops API ---
@@ -439,7 +437,7 @@ export class YbsService implements OnModuleInit {
 
       const stopSeq = this.busStopsSequence.get(busId) || [];
       const sIdx = stopSeq.indexOf(startId);
-      const eIdx = stopSeq.indexOf(endId);
+      const eIdx = stopSeq.indexOf(endId, sIdx + 1);
 
       if (sIdx !== -1 && eIdx !== -1 && sIdx < eIdx) {
         const routeStops = stopSeq
@@ -477,7 +475,7 @@ export class YbsService implements OnModuleInit {
       const sIdx = sSeq1.indexOf(startId);
       if (sIdx === -1) continue;
 
-      const reachableStops = sSeq1.slice(sIdx + 1);
+      const reachableStops = new Set(sSeq1.slice(sIdx + 1));
 
       for (const transferStopId of reachableStops) {
         const b2List = this.stopToBusesMap.get(transferStopId) || [];
@@ -488,11 +486,11 @@ export class YbsService implements OnModuleInit {
 
           const sSeq2 = this.busStopsSequence.get(b2) || [];
           const tIdx = sSeq2.indexOf(transferStopId);
-          const eIdx = sSeq2.indexOf(endId);
+          const eIdx = sSeq2.indexOf(endId, tIdx + 1);
 
           if (tIdx !== -1 && eIdx !== -1 && tIdx < eIdx) {
             const leg1Stops = sSeq1
-              .slice(sIdx, sSeq1.indexOf(transferStopId) + 1)
+              .slice(sIdx, sSeq1.indexOf(transferStopId, sIdx + 1) + 1)
               .map((id) => this.busStopsMap.get(id))
               .filter((s): s is BusStopDTO => s !== undefined);
 
