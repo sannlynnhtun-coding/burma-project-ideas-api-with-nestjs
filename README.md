@@ -23,6 +23,16 @@ To deploy the project using Vercel, follow these simple steps:
    vercel --prod
    ```
 
+## API smoke tests
+
+Run `npm run test:smoke` with Node.js 24 to check the production API.
+To test another deployment, pass its base URL with
+`npm run test:smoke -- https://your-deployment.example`.
+
+The script checks documented GET endpoints and the read-only spelling check.
+It verifies both directions of YBS route 1, stop lookups, and both trip
+planners. It reports each request and exits with a nonzero status on failure.
+
 ## Common Issues and Fixes
 
 ### PowerShell Execution Policy Error
