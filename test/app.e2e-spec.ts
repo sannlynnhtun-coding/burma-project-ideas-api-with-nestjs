@@ -430,6 +430,7 @@ describe('AppController (e2e)', () => {
           'art-gallery | အနုပညာပြခန်း',
           'incompatible-food | အတည့်မဖြစ်သော အစားအစာများ',
           'missing-historical-records | ပျောက်ဆုံးသမိုင်းမှတ်တမ်းများ',
+          'ybs | ရန်ကုန်ဘတ်စ်ကားလိုင်းများ',
         ];
         const projectTags = res.body.tags as Array<{
           name: string;
