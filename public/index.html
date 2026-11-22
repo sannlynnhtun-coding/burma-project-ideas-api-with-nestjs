@@ -7055,6 +7055,324 @@ const RESOURCE_FLOWS = {
       }
     ],
     "mode": "choice"
+  },
+  "ybs": {
+    "titleMy": "ရန်ကုန်ဘတ်စ်ကား",
+    "intro": [
+      "Browse bus lines, select a direction or variant, and load the complete stop sequence. Stop search, nearby stops, path planning, places, and metadata are separate tasks.",
+      "ဘတ်စ်ကားလိုင်းရွေးပြီး အသွားအပြန်နှင့် လိုင်းခွဲအလိုက် မှတ်တိုင်အစဉ်ကို ရယူပါ။ မှတ်တိုင်ရှာဖွေမှု၊ အနီးမှတ်တိုင်၊ လမ်းကြောင်း၊ နေရာနှင့် metadata တို့သည် သီးခြားရွေးသုံးနိုင်သော လုပ်ဆောင်ချက်များ ဖြစ်ပါသည်။"
+    ],
+    "mode": "sequence",
+    "normalIds": [
+      "ybs-ybscontroller-getallbuses",
+      "ybs-ybscontroller-getbusesbynumber",
+      "ybs-ybscontroller-getbusdirection"
+    ],
+    "sequenceIds": [
+      "ybs-ybscontroller-getallbuses",
+      "ybs-ybscontroller-getbusesbynumber",
+      "ybs-ybscontroller-getbusdirection"
+    ],
+    "mapIds": [
+      "ybs-ybscontroller-getallbuses",
+      "ybs-ybscontroller-searchbusstops",
+      "ybs-ybscontroller-getpathbetweenstops",
+      "ybs-ybscontroller-getpaginatedstores",
+      "ybs-ybscontroller-gettotalcounts"
+    ],
+    "note": [
+      "Bus num is the displayed line number. Bus id, stop id, and store id are different identifiers. All lookups use a static dataset, not live vehicle tracking.",
+      "Bus num သည် ပြသထားသောလိုင်းနံပါတ် ဖြစ်ပါသည်။ Bus id၊ stop id နှင့် store id တို့သည် သီးခြား ID များ ဖြစ်ပါသည်။ ဤ API များသည် static dataset ကို သုံးပြီး Live ကားတည်နေရာ ခြေရာခံခြင်း မဟုတ်ပါ။"
+    ],
+    "steps": [
+      {
+        "id": "ybs-ybscontroller-getallbuses",
+        "title": [
+          "Browse bus lines",
+          "လိုင်းစာရင်းကြည့်ရန်"
+        ],
+        "detail": [
+          "Browse non-reversed lines. Use num, not internal id, for bus-number endpoints. destinations is empty here; request a direction for all stops.",
+          "အသွားဘက်လိုင်းစာရင်းကို ရယူပါ။ လိုင်းနံပါတ် endpoint များတွင် internal id အစား num ကို သုံးပါ။ destinations အလွတ်ဖြစ်၍ မှတ်တိုင်အစဉ်အပြည့်အတွက် direction ကို ခေါ်ပါ။"
+        ]
+      },
+      {
+        "id": "ybs-ybscontroller-getbusesbynumber",
+        "title": [
+          "Choose line variant",
+          "လိုင်းခွဲရွေးရန်"
+        ],
+        "detail": [
+          "Use num to get matching entries in result. Keep isReversed and variantId for direction lookup. destinations here is not the complete stop sequence.",
+          "num ဖြင့် result မှ လိုင်းခွဲနှင့် အသွားအပြန်ကို ရယူပါ။ Direction အတွက် isReversed နှင့် variantId ကို ယူပါ။ ဤ destinations သည် မှတ်တိုင်အစဉ်အပြည့် မဟုတ်ပါ။"
+        ],
+        "optional": true
+      },
+      {
+        "id": "ybs-ybscontroller-getbusdirection",
+        "title": [
+          "Read ordered stops",
+          "မှတ်တိုင်အစဉ်ကြည့်ရန်"
+        ],
+        "detail": [
+          "Send num, isReversed=true/false, and the exact variantId to get ordered bus.destinations. Defaults are false and an empty variantId.",
+          "num၊ isReversed=true/false နှင့် variantId အမှန်ဖြင့် bus.destinations မှ မှတ်တိုင်အစဉ်ကို ရယူပါ။ မူလတန်ဖိုးများမှာ false နှင့် variantId အလွတ် ဖြစ်ပါသည်။"
+        ]
+      },
+      {
+        "id": "ybs-ybscontroller-searchbusstops",
+        "title": [
+          "Search stops",
+          "မှတ်တိုင်ရှာရန်"
+        ],
+        "detail": [
+          "Search by name and optional regionName. Read content and keep stop id. page is zero-based (default 0), size defaults to 5, sort defaults to name.",
+          "name နှင့် လိုအပ်ပါက regionName ဖြင့် ရှာပါ။ content မှ မှတ်တိုင် id ကို ယူပါ။ page သည် ၀ မှစပြီး မူလ page 0၊ size 5၊ sort name ဖြစ်ပါသည်။"
+        ],
+        "alternative": true
+      },
+      {
+        "id": "ybs-ybscontroller-getpaginatedbusstops",
+        "title": [
+          "Browse stop pages",
+          "မှတ်တိုင်စာရင်းကြည့်ရန်"
+        ],
+        "detail": [
+          "Browse related_bus with stop locations and serving buses. page is one-based (default 1); page_size defaults to 6.",
+          "related_bus မှ မှတ်တိုင်နှင့် ဖြတ်သန်းလိုင်းများကို ရယူပါ။ page သည် ၁ မှစပြီး မူလ page 1၊ page_size 6 ဖြစ်ပါသည်။"
+        ],
+        "alternative": true
+      },
+      {
+        "id": "ybs-ybscontroller-getnearestbusstops",
+        "title": [
+          "Find nearby stops",
+          "အနီးမှတ်တိုင်ရှာရန်"
+        ],
+        "detail": [
+          "Enter user_lat, user_lon, and findStop. Search is within 1 km; findStop=true returns only the closest matching stop. The example uses fixed demonstration coordinates and never reads your GPS automatically.",
+          "user_lat၊ user_lon နှင့် findStop ကို ဖြည့်ပါ။ ၁ ကီလိုမီတာအတွင်း ရှာပြီး findStop=true ဖြစ်ပါက အနီးဆုံးမှတ်တိုင်တစ်ခုကိုသာ ပြန်ပေးပါသည်။ နမူနာတည်နေရာကိုသာ သုံးထားပြီး သင့် GPS ကို အလိုအလျောက် မဖတ်ပါ။"
+        ],
+        "alternative": true
+      },
+      {
+        "id": "ybs-ybscontroller-getbusesforbusstop",
+        "title": [
+          "Get serving lines",
+          "ဖြတ်သန်းလိုင်းကြည့်ရန်"
+        ],
+        "detail": [
+          "Use a stop id from search content or related_bus[].location.id. The response is a bus array; use bus num for line-number lookups.",
+          "Search content သို့မဟုတ် related_bus[].location.id မှ မှတ်တိုင် id ကို သုံးပါ။ Response သည် ကားလိုင်း array ဖြစ်ပြီး လိုင်းနံပါတ်ရှာရန် bus num ကို သုံးပါ။"
+        ],
+        "alternative": true
+      },
+      {
+        "id": "ybs-ybscontroller-getpathbetweenstops",
+        "title": [
+          "Plan stop-to-stop trip",
+          "လမ်းကြောင်းရှာရန်"
+        ],
+        "detail": [
+          "Use stop IDs as start_id and end_id. Read path with busSequence and stop counts. Direct routes are preferred; one-transfer routes are searched only if no direct route exists. This does not provide live arrival times.",
+          "မှတ်တိုင် ID များကို start_id နှင့် end_id အဖြစ် သုံးပါ။ path မှ busSequence နှင့် မှတ်တိုင်အရေအတွက်ကို ဖတ်ပါ။ တိုက်ရိုက်လမ်းကြောင်းမရှိမှ တစ်ကြိမ်ပြောင်းစီးရသော လမ်းကြောင်းကို ရှာပါသည်။ Live ရောက်ချိန် မပေးပါ။"
+        ],
+        "alternative": true
+      },
+      {
+        "id": "ybs-ybscontroller-getpathtostore",
+        "title": [
+          "Plan trip to a place",
+          "နေရာသို့ လမ်းကြောင်းရှာရန်"
+        ],
+        "detail": [
+          "Send a store id as storeId and a stop id as startBusStopId. The response is a path array to stops associated with the store, not an object with a path property.",
+          "နေရာ id ကို storeId၊ မှတ်တိုင် id ကို startBusStopId အဖြစ် ပို့ပါ။ Response သည် နေရာအနီးမှတ်တိုင်များဆီ လမ်းကြောင်း array ဖြစ်ပြီး path property ပါသော object မဟုတ်ပါ။"
+        ],
+        "alternative": true
+      },
+      {
+        "id": "ybs-ybscontroller-getpaginatedstores",
+        "title": [
+          "Browse places",
+          "နေရာစာရင်းကြည့်ရန်"
+        ],
+        "detail": [
+          "Browse places in content. page is zero-based (default 0); size defaults to 10. Use content[].id for place details, nearby stops, or store path planning.",
+          "content မှ နေရာစာရင်းကို ကြည့်ပါ။ page သည် ၀ မှစပြီး မူလ page 0၊ size 10 ဖြစ်ပါသည်။ content[].id ကို နေရာအသေးစိတ်၊ အနီးမှတ်တိုင်နှင့် လမ်းကြောင်းအတွက် သုံးပါ။"
+        ],
+        "alternative": true
+      },
+      {
+        "id": "ybs-ybscontroller-searchstores",
+        "title": [
+          "Search places",
+          "နေရာရှာရန်"
+        ],
+        "detail": [
+          "Search by name and optional regionName. Use zero-based page (default 0) and size (default 10). Keep the selected place id.",
+          "name နှင့် လိုအပ်ပါက regionName ဖြင့် ရှာပါ။ page သည် ၀ မှစပြီး မူလ page 0၊ size 10 ဖြစ်ပါသည်။ ရွေးထားသောနေရာ၏ id ကို ယူပါ။"
+        ],
+        "alternative": true
+      },
+      {
+        "id": "ybs-ybscontroller-getstorebyid",
+        "title": [
+          "Read place details",
+          "နေရာအသေးစိတ်ကြည့်ရန်"
+        ],
+        "detail": [
+          "Get details using a numeric store id from browsing or search. Unknown stores return HTTP 404.",
+          "စာရင်း သို့မဟုတ် ရှာဖွေမှုမှ နံပါတ် store id ဖြင့် နေရာအသေးစိတ်ကို ရယူပါ။ နေရာမတွေ့ပါက HTTP 404 ပြန်ပေးပါသည်။"
+        ],
+        "alternative": true
+      },
+      {
+        "id": "ybs-ybscontroller-getneareststopsforstore",
+        "title": [
+          "Find place stops",
+          "နေရာအနီးမှတ်တိုင်ကြည့်ရန်"
+        ],
+        "detail": [
+          "Use store id to read pre-associated stops in store_nearest_locations. Each location contains stop details and bus contains serving lines.",
+          "Store id ဖြင့် ကြိုတင်ဆက်စပ်ထားသော အနီးမှတ်တိုင်များကို store_nearest_locations မှ ယူပါ။ မှတ်တိုင်ကို location၊ ဖြတ်သန်းလိုင်းများကို bus မှ ဖတ်ပါ။"
+        ],
+        "alternative": true
+      },
+      {
+        "id": "ybs-ybscontroller-getallstores",
+        "title": [
+          "Load all places",
+          "နေရာအားလုံးရယူရန်"
+        ],
+        "detail": [
+          "Optional alternative: load all places as an array instead of paginated browsing.",
+          "ရွေးချယ်နိုင်သောနည်းလမ်း — စာမျက်နှာခွဲစာရင်းအစား နေရာအားလုံးကို array အဖြစ် ရယူပါ။"
+        ],
+        "optional": true
+      },
+      {
+        "id": "ybs-ybscontroller-getallregions",
+        "title": [
+          "Read region names",
+          "မြို့နယ်စာရင်းကြည့်ရန်"
+        ],
+        "detail": [
+          "Optional reference: use returned strings for regionName filters. A name-only search does not require this lookup.",
+          "ရွေးချယ်နိုင်သော ကိုးကားစာရင်း — ပြန်လာသောအမည်ကို regionName filter တွင် သုံးပါ။ နာမည်ဖြင့်သာ ရှာလျှင် ဤစာရင်းကို အရင်ခေါ်ရန် မလိုပါ။"
+        ],
+        "optional": true
+      },
+      {
+        "id": "ybs-ybscontroller-gettotalcounts",
+        "title": [
+          "Read dataset counts",
+          "ဒေတာအရေအတွက်ကြည့်ရန်"
+        ],
+        "detail": [
+          "Optional metadata: read total_bus and total_bus_stop. These counts are not live vehicle availability.",
+          "ရွေးချယ်နိုင်သော metadata — total_bus နှင့် total_bus_stop ကို ဖတ်ပါ။ ဤအရေအတွက်သည် Live ကားပြေးဆွဲမှု မဟုတ်ပါ။"
+        ],
+        "optional": true
+      }
+    ]
+  },
+  "burma-calendar": {
+    "titleMy": "မြန်မာပြက္ခဒိန်",
+    "intro": [
+      "Generate a month grid directly, or independently check a date and browse holiday data. Reference and supported-year endpoints are optional helpers.",
+      "လပြက္ခဒိန်ကို တိုက်ရိုက်ရယူနိုင်ပြီး ရက်စွဲစစ်ခြင်းနှင့် ရုံးပိတ်ရက်ရှာခြင်းကို သီးခြားစီ ရွေးသုံးနိုင်ပါသည်။ အကိုးအကားနှင့် ဒေတာရှိသောနှစ်စာရင်းတို့ကို လိုအပ်မှ ရယူပါ။"
+    ],
+    "mode": "choice",
+    "note": [
+      "Holiday coverage depends on the available yearly datasets. Month-pair mappings are references, not a complete astronomical Myanmar lunar calendar conversion.",
+      "ရုံးပိတ်ရက်အချက်အလက်သည် ဒေတာရှိသောနှစ်များအပေါ် မူတည်ပါသည်။ လတွဲများသည် အကိုးအကားဖြစ်ပြီး နက္ခတ္တဗေဒအခြေခံ မြန်မာလပြက္ခဒိန်ရက်စွဲအပြည့်အစုံ ပြောင်းလဲခြင်း မဟုတ်ပါ။"
+    ],
+    "steps": [
+      {
+        "id": "burma-calendar-burmacalendarcontroller-getmonthgrid",
+        "title": [
+          "Generate month grid",
+          "လပြက္ခဒိန်ကြည့်ရန်"
+        ],
+        "detail": [
+          "Compute a complete 6-week (42-cell) calendar month matrix starting on Sunday with Myanmar Era (မြန်မာသက္ကရာဇ်), traditional month pairs, Myanmar numerals, weekend flags, and public holidays. ",
+          "တနင်္ဂနွေနေ့မှစသော ၆ ပတ် (၄၂ ကွက်) ပြက္ခဒိန် grid ကို မြန်မာသက္ကရာဇ်၊ လတွဲ၊ မြန်မာဂဏန်း၊ စနေ/တနင်္ဂနွေနှင့် ရုံးပိတ်ရက်များဖြင့် တွက်ချက်ရယူပါ။"
+        ]
+      },
+      {
+        "id": "burma-calendar-burmacalendarcontroller-checkdate",
+        "title": [
+          "Check a date",
+          "ရက်စွဲစစ်ရန်"
+        ],
+        "detail": [
+          "Query a specific date (YYYY-MM-DD) to receive its weekday, Myanmar numeral representation, Myanmar Era year, weekend status, and public holiday details. ",
+          "ရက်စွဲတစ်ခု (YYYY-MM-DD) ၏ နေ့နံ၊ မြန်မာဂဏန်း၊ မြန်မာသက္ကရာဇ်နှင့် ရုံးပိတ်ရက်ဟုတ်မဟုတ် စစ်ဆေးရယူပါ။"
+        ],
+        "alternative": true
+      },
+      {
+        "id": "burma-calendar-burmacalendarcontroller-getholidays",
+        "title": [
+          "Filter holidays",
+          "ရုံးပိတ်ရက်ရှာရန်"
+        ],
+        "detail": [
+          "Search and list official Myanmar public holidays across available years. Filter by year (e.g. 2026) and/or month (e.g. \"April\" or 4). ",
+          "မြန်မာ့ရုံးပိတ်ရက်များကို နှစ် (ဥပမာ ၂၀၂၆) သို့မဟုတ် လ (ဥပမာ ဧပြီ သို့မဟုတ် ၄) ဖြင့် ရှာဖွေရယူပါ။"
+        ],
+        "alternative": true
+      },
+      {
+        "id": "burma-calendar-burmacalendarcontroller-getholidaysforyear",
+        "title": [
+          "Read annual holidays",
+          "နှစ်အလိုက်ကြည့်ရန်"
+        ],
+        "detail": [
+          "Retrieve the complete annual public holiday schedule for a specified year. ",
+          "သတ်မှတ်ထားသော နှစ်တစ်ခုအတွက် တရားဝင် ရုံးပိတ်ရက်စာရင်း အပြည့်အစုံကို ရယူပါ။"
+        ],
+        "alternative": true
+      },
+      {
+        "id": "burma-calendar-burmacalendarcontroller-getyears",
+        "title": [
+          "Read supported years",
+          "ဒေတာရှိသောနှစ်ကြည့်ရန်"
+        ],
+        "detail": [
+          "Retrieve the list of years for which official Myanmar public holiday schedules are available. ",
+          "တရားဝင် မြန်မာ့ရုံးပိတ်ရက်မှတ်တမ်းများ ရရှိနိုင်သော နှစ်များကို ရယူပါ။"
+        ],
+        "optional": true
+      },
+      {
+        "id": "burma-calendar-burmacalendarcontroller-getmonths",
+        "title": [
+          "Read month pairs",
+          "လအမည်ကြည့်ရန်"
+        ],
+        "detail": [
+          "Retrieve all 12 Gregorian months with their corresponding traditional Myanmar lunar month pairs and month numbers. ",
+          "ဂရီဂိုရီယံလ ၁၂ လနှင့် ၎င်းတို့နှင့် ကိုက်ညီသော မြန်မာလတွဲများကို ရယူပါ။"
+        ],
+        "optional": true
+      },
+      {
+        "id": "burma-calendar-burmacalendarcontroller-getreference",
+        "title": [
+          "Read reference data",
+          "အကိုးအကားကြည့်ရန်"
+        ],
+        "detail": [
+          "Retrieve static calendar reference definitions including English months, Myanmar lunar month pairs, bilingual weekday mappings, and numeral conversions. ",
+          "အင်္ဂလိပ်လများ၊ မြန်မာလတွဲများ၊ နေ့နံအမည်များနှင့် ဂဏန်းပြောင်းလဲမှု အကိုးအကားများကို ရယူပါ။"
+        ],
+        "optional": true
+      }
+    ]
   }
 };
 
@@ -7068,12 +7386,13 @@ function flowPathLines(path){
  return lines.filter(Boolean);
 }
 function resourceMindMap(resource,flow){
- const height=flow.steps.length*105+12, middle=height/2;
+ const mapSteps=flow.mapIds?flow.mapIds.map(id=>flow.steps.find(step=>step.id===id)):flow.steps;
+ const height=mapSteps.length*105+12, middle=height/2;
  return `<div class="mind-map-scroll" tabindex="0" role="region" aria-label="${esc(label(resource))} API decision mind map">
  <svg viewBox="0 0 680 ${height}" fill="none" role="group" aria-labelledby="${resource}-map-title ${resource}-map-desc">
  <title id="${resource}-map-title">${esc(label(resource))} — API ရွေးချယ်ပုံ</title><desc id="${resource}-map-desc">${esc(flow.intro[1]+' '+flow.intro[0])}</desc>
  <g transform="translate(14,${middle-38})"><rect width="136" height="76" rx="12" fill="var(--muted)" stroke="var(--border)"/><text x="68" y="27" text-anchor="middle" lang="my">${esc(flow.titleMy)}</text><text x="68" y="46" text-anchor="middle" class="map-secondary">${flow.steps.length} endpoints</text><text x="68" y="63" text-anchor="middle" class="map-secondary" lang="my">လုပ်ချင်တာရွေးပါ</text></g>
- ${flow.steps.map((step,i)=>{
+ ${mapSteps.map((step,i)=>{
   const d=DOC_PAGES[step.id], y=12+i*105, optional=step.optional||step.alternative;
   return `<path d="M150 ${middle}C195 ${middle} 195 ${y+38} 238 ${y+38}" stroke="var(--border)" stroke-width="1.5" ${optional?'stroke-dasharray="4 4"':''}/>
   <g transform="translate(238,${y+10})"><rect width="164" height="56" rx="8" fill="var(--muted)" stroke="var(--border)"/><text x="82" y="23" text-anchor="middle" lang="my">${esc(step.title[1])}</text><text x="82" y="42" text-anchor="middle" class="map-secondary">${step.optional?'Optional · ':step.alternative?'Alternative · ':''}${esc(step.title[0])}</text></g>
@@ -7082,10 +7401,10 @@ function resourceMindMap(resource,flow){
  }).join('')}</svg></div>`;
 }
 function resourceSequence(resource,flow){
- const steps=flow.mode==='choice'?[flow.steps[0]]:flow.steps;
+ const steps=flow.sequenceIds?flow.sequenceIds.map(id=>flow.steps.find(step=>step.id===id)):flow.mode==='choice'?[flow.steps[0]]:flow.steps;
  const end=150+steps.length*145, height=end+80;
  return `<details class="resource-sequence"><summary><span><span lang="my">အဆင့်ဆင့် ဆက်သွယ်လုပ်ဆောင်ပုံကို ကြည့်ရန်</span><span lang="en" class="flow-translation">Show sequence diagram</span></span></summary><div class="flow-detail">
- ${flow.mode==='choice'?flowText('This diagram shows the first action as an example. The other actions are independent alternatives or reference lookups, not prerequisite calls.','ဤပုံသည် ပထမလုပ်ဆောင်ချက်ကို ဥပမာအဖြစ် ပြထားပါသည်။ ကျန်လုပ်ဆောင်ချက်များသည် သီးခြားရွေးသုံးနိုင်သော နည်းလမ်း သို့မဟုတ် ကိုးကားမှုဖြစ်ပြီး အရင်ခေါ်ရမည့် အဆင့်များ မဟုတ်ပါ။'):flowText('This is a normal browsing example. Skip optional lookups or reuse earlier responses when the needed IDs and data are already available.','ဤပုံသည် ပုံမှန်ရွေးချယ်အသုံးပြုပုံ ဥပမာဖြစ်ပါသည်။ ID နှင့် ဒေတာရှိပြီးသားဆိုလျှင် optional ခေါ်ဆိုမှုများကို ကျော်၍ အစောပိုင်း response ကို ပြန်သုံးပါ။')}
+ ${flow.mode==='choice'&&!flow.sequenceIds?flowText('This diagram shows the first action as an example. The other actions are independent alternatives or reference lookups, not prerequisite calls.','ဤပုံသည် ပထမလုပ်ဆောင်ချက်ကို ဥပမာအဖြစ် ပြထားပါသည်။ ကျန်လုပ်ဆောင်ချက်များသည် သီးခြားရွေးသုံးနိုင်သော နည်းလမ်း သို့မဟုတ် ကိုးကားမှုဖြစ်ပြီး အရင်ခေါ်ရမည့် အဆင့်များ မဟုတ်ပါ။'):flowText('This is a normal browsing example. Skip optional lookups or reuse earlier responses when the needed IDs and data are already available.','ဤပုံသည် ပုံမှန်ရွေးချယ်အသုံးပြုပုံ ဥပမာဖြစ်ပါသည်။ ID နှင့် ဒေတာရှိပြီးသားဆိုလျှင် optional ခေါ်ဆိုမှုများကို ကျော်၍ အစောပိုင်း response ကို ပြန်သုံးပါ။')}
  <div class="sequence-scroll" tabindex="0" role="region" aria-label="${esc(label(resource))} request sequence"><svg viewBox="0 0 680 ${height}" role="img" aria-labelledby="${resource}-sequence-title ${resource}-sequence-desc">
  <title id="${resource}-sequence-title">${esc(label(resource))} request sequence — ဆက်သွယ်လုပ်ဆောင်ပုံ</title><desc id="${resource}-sequence-desc">${esc(steps.map(step=>step.title[1]+': '+DOC_PAGES[step.id].method+' '+DOC_PAGES[step.id].path+(step.optional?' (optional)':'')).join('. '))}</desc>
  <defs><marker id="${resource}-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="currentColor"/></marker></defs>
@@ -7100,13 +7419,14 @@ function resourceFlow(doc){
  const resource=doc.path.split('/')[1], flow=RESOURCE_FLOWS[resource];
  if(!flow||doc.kind==='guide')return '';
  const index=flow.steps.findIndex(step=>step.id===doc.id), step=flow.steps[index];
+ const normalSteps=flow.normalIds?flow.normalIds.map(id=>flow.steps.find(step=>step.id===id)):flow.steps;
  const overview=index===0, next=flow.mode==='choice'||step.optional||step.alternative?null:flow.steps.slice(index+1).find(item=>!item.optional&&!item.alternative);
  return `<section class="adhihtan-flow resource-flow" data-resource="${resource}" aria-label="${esc(label(resource))} usage flow">${overview?`
  <div class="flow-intro"><h2><span lang="my">${esc(flow.titleMy)} အသုံးပြုပုံ</span><small class="flow-translation" lang="en">${esc(label(resource))} resource overview</small></h2>${flowText(...flow.intro)}${flow.note?flowText(...flow.note):''}</div>
  <h3><span lang="my">လိုအပ်ချက်အလိုက် API ရွေးပါ</span><small lang="en" class="flow-translation">Choose an API by task</small></h3>${resourceMindMap(resource,flow)}
  ${flowText('Choose an endpoint node to open its Call Guide. No request is sent until you press Send request. On narrow screens, scroll the map horizontally.','Endpoint node ကို ရွေး၍ Call Guide ကို ဖွင့်ပါ။ Send request ကို မနှိပ်မချင်း request မပို့ပါ။ ဖုန်းမျက်နှာပြင်တွင် ပုံကို ဘေးတိုက်ရွှေ့ကြည့်နိုင်ပါသည်။')}
  <h3><span lang="my">ပုံမှန်အသုံးပြုပုံ</span><small class="flow-translation" lang="en">Normal flow</small></h3>
- <ol class="flow-steps">${flow.steps.map(item=>`<li><strong lang="my">${esc(item.title[1])}</strong><div class="flow-translation" lang="en">${esc(item.title[0])}${item.optional?' · Optional':item.alternative?' · Independent alternative':''}</div>${flowText(...item.detail)}<a href="#${item.id}">${esc(DOC_PAGES[item.id].method)} ${esc(DOC_PAGES[item.id].path)}</a></li>`).join('')}</ol>`:`<p><a href="#${flow.steps[0].id}"><span lang="my">အသုံးပြုပုံ အစအဆုံးကြည့်ရန်</span> · <span lang="en">View the resource flow</span></a></p>`}
+ <ol class="flow-steps">${normalSteps.map(item=>`<li><strong lang="my">${esc(item.title[1])}</strong><div class="flow-translation" lang="en">${esc(item.title[0])}${item.optional?' · Optional':item.alternative?' · Independent alternative':''}</div>${flowText(...item.detail)}<a href="#${item.id}">${esc(DOC_PAGES[item.id].method)} ${esc(DOC_PAGES[item.id].path)}</a></li>`).join('')}</ol>`:`<p><a href="#${flow.steps[0].id}"><span lang="my">အသုံးပြုပုံ အစအဆုံးကြည့်ရန်</span> · <span lang="en">View the resource flow</span></a></p>`}
  <div class="call-guide"><h3><span lang="my">API ခေါ်ဆိုပုံ</span><small class="flow-translation" lang="en">Call Guide</small></h3><strong lang="my">ဘယ်အချိန်နှင့် ဘယ်လိုခေါ်မလဲ</strong>${flowText(...step.detail)}
  <div class="route">${badge(doc)}<code>${esc(doc.path)}</code></div><strong lang="my">နောက်တစ်ဆင့်</strong>
  ${next?flowText(`Use the selected IDs for the next step: ${next.title[0]}.`,`ရွေးထားသော ID များဖြင့် နောက်တစ်ဆင့် ဆက်လုပ်ပါ — ${next.title[1]}။`)+`<a href="#${next.id}">${esc(DOC_PAGES[next.id].method)} ${esc(DOC_PAGES[next.id].path)}</a>`:flowText('Display the response for this task. Other lookups are optional; reuse available data. The response and error examples below describe the current endpoint behavior.','ဤလုပ်ဆောင်ချက်၏ response ကို ပြပါ။ အခြားကိုးကားမှုများကို လိုအပ်မှ ခေါ်ပြီး ရှိပြီးသားဒေတာကို ပြန်သုံးပါ။ အောက်ပါ response နှင့် error နမူနာများတွင် လက်ရှိ endpoint ၏ လုပ်ဆောင်ပုံကို ပြထားပါသည်။')}
