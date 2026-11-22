@@ -1,4 +1,9 @@
 /* Mixed mode keeps the original YBS palette. Single modes recolor surfaces together. */
+#ybs-simulator .simulator-header-badge{background:#7aa2f71a;border:1px solid #7aa2f74d;color:#a9c2ff}
+html:not([data-color-mode=light]) #ybs-simulator :is(.pipeline-card,[class~="bg-[#252525]"],[class~="bg-[#2A2A2A]"]){background:#232634!important;border-color:#3b4058!important}
+html:not([data-color-mode=light]) #ybs-simulator :is(.pipeline-card[aria-pressed=true],.pipeline-card:not([aria-pressed])[class~="border-[#E7E678]"],[class~="bg-[#323232]"]){background:#2a2e40!important;border-color:#7aa2f7!important}
+html:not([data-color-mode=light]) #ybs-simulator :is([class~="bg-[#161616]"],[class~="bg-[#141414]"],[class~="bg-[#1A1A1A]"]){background:#1e2030;border-color:#363a54}
+html[data-color-mode=light] #ybs-simulator .simulator-header-badge{background:#e5edf9;color:#2b5598;border-color:#a9bcdb}
 html[data-color-mode=light] body{background:#f4f5f7;color:#1e1e1e}
 html[data-color-mode=light] :is(.json-tree-board,.dark-json-card,.tree-node,[class~="bg-[#1E1E1E]"],[class~="bg-[#232634]"],[class~="bg-[#252525]"],[class~="bg-[#2B2B2B]"],[class~="bg-[#2A2A2A]"],[class~="bg-[#323232]"],[class~="bg-[#161616]"],[class~="bg-[#141414]"],[class~="bg-[#1A1A1A]"],[class~="bg-[#2E2E2E]"]){background:#fff!important;color:#303340!important;border-color:#c5c7ce!important;box-shadow:none}
 html[data-color-mode=light] .json-tree-board{background-color:#edf0f5!important}
@@ -23,9 +28,25 @@ html[data-color-mode=light] #ybs-ui-arrowhead path{stroke:#91471d}
 html[data-color-mode=light] .ybs-ui-arrow{stroke:#91471d!important}
 html[data-color-mode=light] .pipeline-card[aria-pressed=true]{border-color:#91471d!important;background:#fff6e5!important}
 html[data-color-mode=dark] body{background:#16171d;color:#f5f5f3}
+html[data-color-mode=dark] #ybs-simulator>div{background-color:#16171d}
 html[data-color-mode=dark] .miro-board{background-color:#16171d;color:#f5f5f3;border-color:#3b4058}
 html[data-color-mode=dark] .miro-board :is([class~="bg-white"],[class~="bg-[#F5F5F3]"]){background:#232634!important;border-color:#454b63!important}
 html[data-color-mode=dark] :is([class~="text-[#1E1E1E]"],[class~="text-[#555]"],[class~="text-[#666]"],[class~="text-[#333]"],[class~="text-[#2E2E2C]"]){color:#c0caf5!important}
 html[data-color-mode=dark] :is([class*="bg-[#E7E678]"],[class~="bg-[#C97A42]"]){color:#1e1e1e!important}
 html[data-color-mode=dark] a[class*="bg-white/"]{background:#232634!important;color:#f5f5f3!important;border-color:#454b63!important}
 html[data-color-mode=dark] .tree-node.node-selected,html[data-color-mode=light] .tree-node.node-selected{border-color:#c97a42!important}
+
+/* Restrained simulator accents: neutral badges, blue selection and primary action. */
+#ybs-simulator [class*="bg-[#E7E678]"]{background:#363a54!important;color:#d6def8!important}
+#ybs-simulator [class~="text-[#E7E678]"]{color:#a9c2ff!important}
+#ybs-simulator #detail-title-mm{color:#b9bdce!important}
+#ybs-simulator #btn-send-live{background:#7aa2f7!important;color:#182238!important}
+#ybs-simulator #btn-send-live:hover{background:#9bbaff!important}
+#ybs-simulator .code-tab[aria-pressed=true]{background:#363a54!important;color:#d6def8!important}
+html[data-color-mode=light] #ybs-simulator [class*="bg-[#E7E678]"]{background:#e5edf9!important;color:#2b5598!important}
+html[data-color-mode=light] #ybs-simulator [class~="text-[#E7E678]"]{color:#2b5598!important}
+html[data-color-mode=light] #ybs-simulator #detail-title-mm{color:#596070!important}
+html[data-color-mode=light] #ybs-simulator #btn-send-live{background:#dbe7fc!important;color:#18395f!important}
+html[data-color-mode=light] #ybs-simulator :is(.pipeline-card[aria-pressed=true],.pipeline-card:not([aria-pressed])[class~="border-[#E7E678]"]){border-color:#2b5598!important;background:#edf3fc!important}
+#ybs-simulator .code-tab:not([aria-pressed])[class~="bg-[#2E2E2E]"]{background:#363a54!important;color:#d6def8!important}
+html[data-color-mode=light] #ybs-simulator .code-tab[aria-pressed=true],html[data-color-mode=light] #ybs-simulator .code-tab:not([aria-pressed])[class~="bg-[#2E2E2E]"]{background:#e5edf9!important;color:#2b5598!important}

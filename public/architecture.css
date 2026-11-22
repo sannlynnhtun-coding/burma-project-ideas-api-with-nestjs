@@ -36,3 +36,4 @@ html[data-color-mode=light] .landing-code .request-method{color:#91471d}
 html[data-color-mode=light] .landing-code .request-scheme{color:#454956}
 html[data-color-mode=light] .landing-code .request-host{color:#2b5598}
 html[data-color-mode=light] .landing-code .request-path{color:#356324}
+html[data-color-mode=dark] .workspace,html[data-color-mode=dark] .workspace>.columns{background:#16171d}
