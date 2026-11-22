@@ -311,7 +311,7 @@ const DOC_PAGES = {
     "summary": "Overview of Burma Project Ideas REST API built with NestJS.",
     "descriptions": [
       "Welcome to the **Burma Project Ideas API** documentation. This service provides structured REST endpoints for Myanmar culture, language, astrology, food, travel, history, calendar, and reference data.",
-      "<span lang=\"my\">မြန်မာ့ယဉ်ကျေးမှု၊ ဘာသာစကား၊ ဗေဒင်၊ အစားအစာ၊ ခရီးသွား၊ သမိုင်း၊ ပြက္ခဒိန်နှင့် ကိုးကားဒေတာများအတွက် စနစ်တကျ ပြုစုထားသော REST API ဖြစ်ပါသည်။ Frontend ပရောဂျက်များ၊ မိုဘိုင်း application များနှင့် သင်ယူလေ့လာသူများအတွက် အသင့်သုံး API များကို ပံ့ပိုးပေးထားပါသည်။</span>",
+      "\u003cspan lang=\"my\">မြန်မာ့ယဉ်ကျေးမှု၊ ဘာသာစကား၊ ဗေဒင်၊ အစားအစာ၊ ခရီးသွား၊ သမိုင်း၊ ပြက္ခဒိန်နှင့် ကိုးကားဒေတာများအတွက် စနစ်တကျ ပြုစုထားသော REST API ဖြစ်ပါသည်။ Frontend ပရောဂျက်များ၊ မိုဘိုင်း application များနှင့် သင်ယူလေ့လာသူများအတွက် အသင့်သုံး API များကို ပံ့ပိုးပေးထားပါသည်။\u003c/span>",
       "Most endpoints return UTF-8 JSON. GET /myanmar-word-list/words.list returns plain text. Browse the resources below for request parameters and examples."
     ],
     "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
@@ -324,7 +324,7 @@ const DOC_PAGES = {
     "responseFields": [
       {
         "name": "endpoints",
-        "type": "Array<String>",
+        "type": "Array\u003cString>",
         "description": "List of available resource categories and modules."
       },
       {
@@ -342,7 +342,7 @@ const DOC_PAGES = {
       "name": "Burma Project Ideas API",
       "version": "1.0",
       "description": "Structured Myanmar culture, language, and knowledge REST APIs.",
-      "total_modules": 20,
+      "total_modules": 22,
       "documentation": {
         "swagger": "/swagger",
         "scalar": "/scalar"
@@ -369,7 +369,7 @@ const DOC_PAGES = {
       "Production: `https://burma-project-ideas.vercel.app`. Local development: `http://localhost:3000`.",
       "The backend serves Swagger at `/swagger`, Scalar at `/scalar`, and its OpenAPI schema at `/swagger-json`.",
       "Browser requests require the target deployment to allow your origin through CORS. The local bootstrap does not enable CORS.",
-      "<span lang=\"my\">Production နှင့် local server ကို request panel မှ ရွေးပါ။ Swagger အတွက် /swagger၊ Scalar အတွက် /scalar နှင့် OpenAPI schema အတွက် /swagger-json ကို သုံးပါ။ Browser request များအတွက် server က သင့် origin ကို CORS ဖြင့် ခွင့်ပြုထားရန် လိုသည်။</span>"
+      "\u003cspan lang=\"my\">Production နှင့် local server ကို request panel မှ ရွေးပါ။ Swagger အတွက် /swagger၊ Scalar အတွက် /scalar နှင့် OpenAPI schema အတွက် /swagger-json ကို သုံးပါ။ Browser request များအတွက် server က သင့် origin ကို CORS ဖြင့် ခွင့်ပြုထားရန် လိုသည်။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
     "callout": "Choose the server in the request panel. Examples use the selected server.",
@@ -430,7 +430,7 @@ const DOC_PAGES = {
     "descriptions": [
       "Several API endpoints (such as `birds`, `snakes`, `zodiac`, `art-gallery`, `pick-a-pile`, and `quotlets`) provide associated image assets.",
       "The API automatically formats image properties as fully qualified URLs using the incoming request's host header via the `asset-url` helper.",
-      "<span lang=\"my\">API response များတွင် ပါဝင်သော ပုံများကို `http://[host]/birds/1.jpg` ပုံစံဖြင့် တိုက်ရိုက် ရယူနိုင်ပြီး `<img>` tag များတွင် သုံးစွဲနိုင်ပါသည်။</span>"
+      "\u003cspan lang=\"my\">API response များတွင် ပါဝင်သော ပုံများကို `http://[host]/birds/1.jpg` ပုံစံဖြင့် တိုက်ရိုက် ရယူနိုင်ပြီး `\u003cimg>` tag များတွင် သုံးစွဲနိုင်ပါသည်။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs/blob/main/src/common/asset-url.ts",
     "callout": "When testing locally (`localhost:3000`), image paths will automatically resolve to `http://localhost:3000/...`. In production, they resolve to `https://burma-project-ideas.vercel.app/...`.",
@@ -482,7 +482,7 @@ const DOC_PAGES = {
     "summary": "Get all categories, schedules, and localized spell names in one request.",
     "descriptions": [
       "Get categories, schedules, and localized spell names in one unified response. Use this endpoint to cache the full dataset in client storage (IndexedDB / SQLite / AsyncStorage) for instant offline usage.",
-      "<span lang=\"my\">အမျိုးအစား၊ schedule နှင့် ဂုဏ်တော်အမည်များကို response တစ်ခုတည်းဖြင့် ရယူပါ။ Data အားလုံးကို cache လုပ်ရန် သို့မဟုတ် offline အသုံးပြုနိုင်ရန် ဒီ endpoint ကိုသုံးပါ။</span>"
+      "\u003cspan lang=\"my\">အမျိုးအစား၊ schedule နှင့် ဂုဏ်တော်အမည်များကို response တစ်ခုတည်းဖြင့် ရယူပါ။ Data အားလုံးကို cache လုပ်ရန် သို့မဟုတ် offline အသုံးပြုနိုင်ရန် ဒီ endpoint ကိုသုံးပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/sannlynnhtun-coding/Adhihtan",
     "callout": "Category 5 is a custom user-defined practice and therefore does not have fixed server schedules. Clients manage Category 5 custom entries locally.",
@@ -796,7 +796,7 @@ const DOC_PAGES = {
     "summary": "Get the five practices available in adhihtan.",
     "descriptions": [
       "Get the five practices available in adhihtan. Each category includes its duration, format, benefit summary, level options, and guidance instructions.",
-      "<span lang=\"my\">adhihtan တွင်ရှိသော အဓိဋ္ဌာန်အမျိုးအစား ငါးမျိုးကို ရယူပါ။ အမျိုးအစားတစ်ခုစီတွင် ကြာချိန်၊ ပုံစံ၊ အကျိုးအနှစ်ချုပ်၊ အဆင့်ရွေးချယ်စရာနှင့် လမ်းညွှန် ပါဝင်သည်။</span>"
+      "\u003cspan lang=\"my\">adhihtan တွင်ရှိသော အဓိဋ္ဌာန်အမျိုးအစား ငါးမျိုးကို ရယူပါ။ အမျိုးအစားတစ်ခုစီတွင် ကြာချိန်၊ ပုံစံ၊ အကျိုးအနှစ်ချုပ်၊ အဆင့်ရွေးချယ်စရာနှင့် လမ်းညွှန် ပါဝင်သည်။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/sannlynnhtun-coding/Adhihtan",
     "callout": "Use the `value` field from each category object to query specific category details (`/adhihtan/categories/:categoryId`) or schedules.",
@@ -945,7 +945,7 @@ const DOC_PAGES = {
     "summary": "Get the overview, benefits, cautions, and instructions for one category.",
     "descriptions": [
       "Get the overview, benefits, cautions, and step-by-step instructions for one category. Show this information before a user starts the practice.",
-      "<span lang=\"my\">အမျိုးအစားတစ်ခု၏ အကျဉ်းချုပ်၊ အကျိုးကျေးဇူး၊ သတိပြုရန်နှင့် လုပ်ဆောင်နည်းတို့ကို ရယူပါ။ အဓိဋ္ဌာန်မစမီ ဒီအချက်အလက်ကို အသုံးပြုသူအား ပြပါ။</span>"
+      "\u003cspan lang=\"my\">အမျိုးအစားတစ်ခု၏ အကျဉ်းချုပ်၊ အကျိုးကျေးဇူး၊ သတိပြုရန်နှင့် လုပ်ဆောင်နည်းတို့ကို ရယူပါ။ အဓိဋ္ဌာန်မစမီ ဒီအချက်အလက်ကို အသုံးပြုသူအား ပြပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/sannlynnhtun-coding/Adhihtan",
     "callout": "Pass `categoryId` from 1 through 5. Invalid IDs return HTTP 404.",
@@ -1074,7 +1074,7 @@ const DOC_PAGES = {
     "summary": "Get every schedule level and daily recitation entries for one category.",
     "descriptions": [
       "Get every schedule level and its ordered daily entries for one category. Category 5 is custom, so this endpoint returns an empty list for category 5.",
-      "<span lang=\"my\">အမျိုးအစားတစ်ခု၏ schedule level အားလုံးနှင့် အစဉ်လိုက်နေ့စဉ်စာရင်းကို ရယူပါ။ Category ၅ သည် စိတ်ကြိုက်ဖြစ်သောကြောင့် ဒီ endpoint က category ၅ အတွက် စာရင်းအလွတ် ပြန်ပေးသည်။</span>"
+      "\u003cspan lang=\"my\">အမျိုးအစားတစ်ခု၏ schedule level အားလုံးနှင့် အစဉ်လိုက်နေ့စဉ်စာရင်းကို ရယူပါ။ Category ၅ သည် စိတ်ကြိုက်ဖြစ်သောကြောင့် ဒီ endpoint က category ၅ အတွက် စာရင်းအလွတ် ပြန်ပေးသည်။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/sannlynnhtun-coding/Adhihtan",
     "callout": "Each schedule contains `datasources` with daily bead recitation counts, Burmese weekday, and spell details.",
@@ -1186,7 +1186,7 @@ const DOC_PAGES = {
     "summary": "Get localized Burmese names and identifier keys for all recitation spells.",
     "descriptions": [
       "Get localized names and keys for every spell. Use this endpoint to look up or display spell names referenced by schedule entries.",
-      "<span lang=\"my\">ဂုဏ်တော်တိုင်း၏ အမည်နှင့် သော့ချက်ကို ရယူပါ။ Schedule တွင် ကိုးကားထားသော ဂုဏ်တော်အမည်များကို ပြသရန် ဤ endpoint ကိုသုံးပါ။</span>"
+      "\u003cspan lang=\"my\">ဂုဏ်တော်တိုင်း၏ အမည်နှင့် သော့ချက်ကို ရယူပါ။ Schedule တွင် ကိုးကားထားသော ဂုဏ်တော်အမည်များကို ပြသရန် ဤ endpoint ကိုသုံးပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/sannlynnhtun-coding/Adhihtan",
     "callout": "Includes the Nine Attributes of the Buddha (ကိုးနဝင်းဂုဏ်တော်များ) and Triple Gem refuges.",
@@ -1243,7 +1243,7 @@ const DOC_PAGES = {
     "summary": "Get one schedule level with its ordered daily entries, spell names, repetition counts, and vegetarian-day flags. Choose categoryId and levelId from their lists; category 5 has no fixed schedules.",
     "descriptions": [
       "Get one schedule level with its ordered daily entries, spell names, repetition counts, and vegetarian-day flags. Choose categoryId and levelId from their lists; category 5 has no fixed schedules.",
-      "<span lang=\"my\">အမျိုးအစားနှင့် အဆင့်စာရင်းမှ categoryId နှင့် levelId ဖြင့် နေ့စဉ်အစီအစဉ်၊ ဂုဏ်တော်၊ အကြိမ်ရေနှင့် သက်သတ်လွတ်နေ့အမှတ်အသားကို ရယူပါ။ အမျိုးအစား ၅ အတွက် ပုံသေအစီအစဉ်မရှိပါ။</span>"
+      "\u003cspan lang=\"my\">အမျိုးအစားနှင့် အဆင့်စာရင်းမှ categoryId နှင့် levelId ဖြင့် နေ့စဉ်အစီအစဉ်၊ ဂုဏ်တော်၊ အကြိမ်ရေနှင့် သက်သတ်လွတ်နေ့အမှတ်အသားကို ရယူပါ။ အမျိုးအစား ၅ အတွက် ပုံသေအစီအစဉ်မရှိပါ။\u003c/span>"
     ],
     "params": [
       {
@@ -1334,7 +1334,7 @@ const DOC_PAGES = {
     "summary": "Get one localized spell by the numeric suffix of its key. For default_spell_1, use spellId 1.",
     "descriptions": [
       "Get one localized spell by the numeric suffix of its key. For default_spell_1, use spellId 1.",
-      "<span lang=\"my\">Key ၏ နောက်ဆုံးနံပါတ်ဖြင့် ဂုဏ်တော်အမည်ကို ရယူပါ။ default_spell_1 အတွက် spellId 1 ကို သုံးပါ။</span>"
+      "\u003cspan lang=\"my\">Key ၏ နောက်ဆုံးနံပါတ်ဖြင့် ဂုဏ်တော်အမည်ကို ရယူပါ။ default_spell_1 အတွက် spellId 1 ကို သုံးပါ။\u003c/span>"
     ],
     "params": [
       {
@@ -1395,7 +1395,7 @@ const DOC_PAGES = {
     "summary": "List or search NatMyatSi divination questions.",
     "descriptions": [
       "Lists all available NatMyatSi fortune questions or filters questions containing the specified Myanmar keyword using the optional `search` query parameter.",
-      "<span lang=\"my\">နတ်မျက်စိ ဗေဒင်မေးခွန်းများအားလုံးကို ရယူပါ သို့မဟုတ် `search` query parameter ဖြင့် မြန်မာစာလုံးရှာဖွေပြီး သက်ဆိုင်ရာမေးခွန်းများကို filter လုပ်ပါ။</span>"
+      "\u003cspan lang=\"my\">နတ်မျက်စိ ဗေဒင်မေးခွန်းများအားလုံးကို ရယူပါ သို့မဟုတ် `search` query parameter ဖြင့် မြန်မာစာလုံးရှာဖွေပြီး သက်ဆိုင်ရာမေးခွန်းများကို filter လုပ်ပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas/tree/main/nat-myat-si",
     "callout": "The user chooses one question, shuffles the 16 symbols, and then queries the reading endpoint.",
@@ -1453,7 +1453,7 @@ const DOC_PAGES = {
     "summary": "List the 16 grid symbols used in NatMyatSi divination.",
     "descriptions": [
       "Returns the 16 zodiac/astrological symbols arranged in a 4x4 matrix grid. Each symbol has a unique identifier, English name, Unicode glyph, and default row/column coordinate.",
-      "<span lang=\"my\">နတ်မျက်စိဗေဒင်တွင် အသုံးပြုသော ၄x၄ grid သင်္ကေတ ၁၆ ခုစာရင်းကို ရယူပါ။ သင်္ကေတတစ်ခုစီတွင် id, အမည်, glyph သင်္ကေတနှင့် row/column တည်နေရာ ပါရှိပါသည်။</span>"
+      "\u003cspan lang=\"my\">နတ်မျက်စိဗေဒင်တွင် အသုံးပြုသော ၄x၄ grid သင်္ကေတ ၁၆ ခုစာရင်းကို ရယူပါ။ သင်္ကေတတစ်ခုစီတွင် id, အမည်, glyph သင်္ကေတနှင့် row/column တည်နေရာ ပါရှိပါသည်။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas/tree/main/nat-myat-si",
     "callout": "Common symbol IDs include `pisces`, `aries`, `taurus`, `gemini`, `cancer`, `leo`, `virgo`, `libra`, `scorpio`, `sagittarius`, `capricorn`, `aquarius`.",
@@ -1523,7 +1523,7 @@ const DOC_PAGES = {
     "summary": "Get the divination answer for a selected question and revealed symbol.",
     "descriptions": [
       "Combine the selected question ID and the revealed symbol slug to retrieve the matching astrological divination reading.",
-      "<span lang=\"my\">ရွေးချယ်ထားသော မေးခွန်း ID နှင့် လှန်လိုက်သော သင်္ကေတ ID တို့ကို ပေါင်းစပ်၍ နတ်မျက်စိ ဟောစာတမ်း အဖြေကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">ရွေးချယ်ထားသော မေးခွန်း ID နှင့် လှန်လိုက်သော သင်္ကေတ ID တို့ကို ပေါင်းစပ်၍ နတ်မျက်စိ ဟောစာတမ်း အဖြေကို ရယူပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas/tree/main/nat-myat-si",
     "callout": "Requires both a valid numeric `questionId` and a valid string `symbolId` (such as `pisces`). Returns HTTP 404 if either is invalid.",
@@ -1606,7 +1606,7 @@ const DOC_PAGES = {
     "summary": "Get one Nat Myat Si question by its numeric questionId. Use an id from the questions list.",
     "descriptions": [
       "Get one Nat Myat Si question by its numeric questionId. Use an id from the questions list.",
-      "<span lang=\"my\">မေးခွန်းစာရင်းမှ id ကို questionId အဖြစ်သုံး၍ နတ်မျက်စိမေးခွန်းတစ်ခုကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">မေးခွန်းစာရင်းမှ id ကို questionId အဖြစ်သုံး၍ နတ်မျက်စိမေးခွန်းတစ်ခုကို ရယူပါ။\u003c/span>"
     ],
     "params": [
       {
@@ -1661,7 +1661,7 @@ const DOC_PAGES = {
     "summary": "Get traditional divination questions by Min Thein Kha.",
     "descriptions": [
       "Retrieves the complete list of life, career, marriage, health, and travel divination questions compiled from Sayagyi Min Thein Kha's Lat Htauk Bay Din.",
-      "<span lang=\"my\">ဆရာကြီးမင်းသိင်္ခ၏ လက်ထောက်ဗေဒင်မှ စီးပွားရေး၊ အိမ်ထောင်ရေး၊ ကျန်းမာရေး၊ ခရီးသွားလာရေး ဆိုင်ရာ မေးခွန်းစာရင်း အပြည့်အစုံကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">ဆရာကြီးမင်းသိင်္ခ၏ လက်ထောက်ဗေဒင်မှ စီးပွားရေး၊ အိမ်ထောင်ရေး၊ ကျန်းမာရေး၊ ခရီးသွားလာရေး ဆိုင်ရာ မေးခွန်းစာရင်း အပြည့်အစုံကို ရယူပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/burma-project-ideas/min-thein-kha-lat-htauk-bay-din",
     "callout": "Note the route capitalization: `/lat-htauk-bay-din/Question` with capital 'Q'.",
@@ -1710,7 +1710,7 @@ const DOC_PAGES = {
     "summary": "Retrieve divination prediction for a question and chosen number.",
     "descriptions": [
       "Combine the selected question number (1-43) and the user's tapped number choice (1-98) to get the traditional prediction text.",
-      "<span lang=\"my\">ရွေးချယ်ထားသော မေးခွန်းနံပါတ်နှင့် နှိပ်လိုက်သော အဖြေနံပါတ် (၁ မှ ၉၈ အထိ) ကို တွဲဖက်၍ ဗေဒင်ဟောကိန်း အဖြေကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">ရွေးချယ်ထားသော မေးခွန်းနံပါတ်နှင့် နှိပ်လိုက်သော အဖြေနံပါတ် (၁ မှ ၉၈ အထိ) ကို တွဲဖက်၍ ဗေဒင်ဟောကိန်း အဖြေကို ရယူပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/burma-project-ideas/min-thein-kha-lat-htauk-bay-din",
     "callout": "Unknown IDs return HTTP 200 with an empty response body.",
@@ -1778,14 +1778,14 @@ const DOC_PAGES = {
     "summary": "Get the number choices as Myanmar numeral strings. Use a selected number as answerNo in the answer endpoint. Route spelling and capitalization are significant.",
     "descriptions": [
       "Get the number choices as Myanmar numeral strings. Use a selected number as answerNo in the answer endpoint. Route spelling and capitalization are significant.",
-      "<span lang=\"my\">မြန်မာဂဏန်းဖြင့် နံပါတ်ရွေးချယ်စရာများကို ရယူပြီး ရွေးထားသောနံပါတ်ကို answerNo အဖြစ် သုံးပါ။</span>"
+      "\u003cspan lang=\"my\">မြန်မာဂဏန်းဖြင့် နံပါတ်ရွေးချယ်စရာများကို ရယူပြီး ရွေးထားသောနံပါတ်ကို answerNo အဖြစ် သုံးပါ။\u003c/span>"
     ],
     "params": [],
     "requestBody": null,
     "responseFields": [
       {
         "name": "response",
-        "type": "Array<String>",
+        "type": "Array\u003cString>",
         "description": "Myanmar numeral choices."
       }
     ],
@@ -1814,7 +1814,7 @@ const DOC_PAGES = {
     "summary": "List Buddhist prayer categories and group titles.",
     "descriptions": [
       "Lists Buddhist prayer groups and titles including Namo Tassa, Triple Gem, Parittas, Suttas, and Dhamma prayers.",
-      "<span lang=\"my\">နမောတဿ၊ ရတနာသုံးပါးကန်တော့ခန်း၊ ပရိတ်တော်များ၊ သုတ်တော်များနှင့် နေ့စဉ်ရွတ်ဖတ်ရန် ဘုရားစာခေါင်းစဉ်အုပ်စုများကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">နမောတဿ၊ ရတနာသုံးပါးကန်တော့ခန်း၊ ပရိတ်တော်များ၊ သုတ်တော်များနှင့် နေ့စဉ်ရွတ်ဖတ်ရန် ဘုရားစာခေါင်းစဉ်အုပ်စုများကို ရယူပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/burma-project-ideas/phayar-sar",
     "callout": "Use the `id` from this endpoint as `groupId` in the prayer details endpoint.",
@@ -1892,7 +1892,7 @@ const DOC_PAGES = {
     "summary": "Get prayer content, background, and paragraph-level pronunciation.",
     "descriptions": [
       "Loads one prayer entry by numeric group and detail IDs. Entries include background history, pali text, and paragraph-level pronunciation guidance.",
-      "<span lang=\"my\">အုပ်စု ID နှင့် စာ ID ဖြင့် ဘုရားစာတစ်ပုဒ်ကို ရယူနိုင်သည်။ ပါဠိစာသား၊ အနက်အဓိပ္ပာယ်နှင့် စာပိုဒ်အလိုက် အသံထွက်များ ပါဝင်သည်။</span>"
+      "\u003cspan lang=\"my\">အုပ်စု ID နှင့် စာ ID ဖြင့် ဘုရားစာတစ်ပုဒ်ကို ရယူနိုင်သည်။ ပါဠိစာသား၊ အနက်အဓိပ္ပာယ်နှင့် စာပိုဒ်အလိုက် အသံထွက်များ ပါဝင်သည်။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/burma-project-ideas/phayar-sar",
     "callout": "Appended prayer data originated from the open-source KyawTheMonkey/PhayarSar repository.",
@@ -1969,7 +1969,7 @@ const DOC_PAGES = {
     "summary": "Browse 12 astrological zodiac signs with Myanmar months and elements.",
     "descriptions": [
       "Browse the 12 Western/Myanmar zodiac signs including corresponding Myanmar months, date spans, astrological elements (Fire, Earth, Air, Water), and artwork URLs.",
-      "<span lang=\"my\">၁၂ ရာသီခွင်များ၊ မြန်မာလများ၊ ရက်စွဲများ၊ ဓာတ်သဘော (မီး၊ မြေ၊ လေ၊ ရေ) နှင့် သင်္ကေတပုံများကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">၁၂ ရာသီခွင်များ၊ မြန်မာလများ၊ ရက်စွဲများ၊ ဓာတ်သဘော (မီး၊ မြေ၊ လေ၊ ရေ) နှင့် သင်္ကေတပုံများကို ရယူပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/burma-project-ideas/zodiac",
     "callout": "All asset URLs (`ZodiacSignImageUrl`, `ElementImageUrl`) are dynamically populated with host URLs.",
@@ -2128,7 +2128,7 @@ const DOC_PAGES = {
     "summary": "Get one zodiac profile by Id, including dates, element, traits, and image URLs.",
     "descriptions": [
       "Get one zodiac profile by Id, including dates, element, traits, and image URLs.",
-      "<span lang=\"my\">Id ဖြင့် ရာသီခွင်၊ ရက်စွဲ၊ ဓာတ်သဘော၊ စရိုက်နှင့် ပုံ URL များကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">Id ဖြင့် ရာသီခွင်၊ ရက်စွဲ၊ ဓာတ်သဘော၊ စရိုက်နှင့် ပုံ URL များကို ရယူပါ။\u003c/span>"
     ],
     "params": [
       {
@@ -2267,7 +2267,7 @@ const DOC_PAGES = {
     "summary": "Calculate a traditional Myanmar name number and astrological meaning.",
     "descriptions": [
       "Calculates the traditional Myanmar name number and matching traditional prediction for a given Myanmar name. Consonant clusters and stacked consonants are normalized based on traditional numerology rules.",
-      "<span lang=\"my\">ပေးပို့လိုက်သော မြန်မာအမည်ကို ရိုးရာအက္ခရာကိန်းတန်ဖိုးများဖြင့် ပေါင်းစပ်တွက်ချက်ပြီး ရလဒ်ကိန်းအလိုက် ဟောကိန်းအဓိပ္ပာယ်ကို ထုတ်ပေးပါသည်။ ဤတွက်ချက်မှုသည် ဖျော်ဖြေရေးအတွက်သာ ဖြစ်ပါသည်။</span>"
+      "\u003cspan lang=\"my\">ပေးပို့လိုက်သော မြန်မာအမည်ကို ရိုးရာအက္ခရာကိန်းတန်ဖိုးများဖြင့် ပေါင်းစပ်တွက်ချက်ပြီး ရလဒ်ကိန်းအလိုက် ဟောကိန်းအဓိပ္ပာယ်ကို ထုတ်ပေးပါသည်။ ဤတွက်ချက်မှုသည် ဖျော်ဖြေရေးအတွက်သာ ဖြစ်ပါသည်။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/sannlynnhtun-coding/myanmar-nameology",
     "callout": "Pass `name` as a query parameter. An empty or missing name returns `{ status: 'empty', isSuccess: false }`.",
@@ -2381,7 +2381,7 @@ const DOC_PAGES = {
     "summary": "Get the seven weekday groups and the Myanmar letters assigned to values 1 through 7.",
     "descriptions": [
       "Get the seven weekday groups and the Myanmar letters assigned to values 1 through 7.",
-      "<span lang=\"my\">နေ့နံအုပ်စု ခုနစ်ခုနှင့် ၁ မှ ၇ အထိ တန်ဖိုးသတ်မှတ်ထားသော မြန်မာအက္ခရာများကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">နေ့နံအုပ်စု ခုနစ်ခုနှင့် ၁ မှ ၇ အထိ တန်ဖိုးသတ်မှတ်ထားသော မြန်မာအက္ခရာများကို ရယူပါ။\u003c/span>"
     ],
     "params": [],
     "requestBody": null,
@@ -2449,7 +2449,7 @@ const DOC_PAGES = {
     "summary": "Get the nine traditional meanings used for calculation remainders 1 through 9.",
     "descriptions": [
       "Get the nine traditional meanings used for calculation remainders 1 through 9.",
-      "<span lang=\"my\">တွက်ချက်မှုအကြွင်း ၁ မှ ၉ အထိ အသုံးပြုသော ရိုးရာကိန်းအဓိပ္ပာယ် ကိုးမျိုးကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">တွက်ချက်မှုအကြွင်း ၁ မှ ၉ အထိ အသုံးပြုသော ရိုးရာကိန်းအဓိပ္ပာယ် ကိုးမျိုးကို ရယူပါ။\u003c/span>"
     ],
     "params": [],
     "requestBody": null,
@@ -2504,7 +2504,7 @@ const DOC_PAGES = {
     "summary": "Get the traditional meaning for one remainder number from 1 through 9.",
     "descriptions": [
       "Get the traditional meaning for one remainder number from 1 through 9.",
-      "<span lang=\"my\">၁ မှ ၉ အတွင်းရှိ အကြွင်းကိန်းတစ်ခု၏ ရိုးရာကိန်းအဓိပ္ပာယ်ကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">၁ မှ ၉ အတွင်းရှိ အကြွင်းကိန်းတစ်ခု၏ ရိုးရာကိန်းအဓိပ္ပာယ်ကို ရယူပါ။\u003c/span>"
     ],
     "params": [
       {
@@ -2565,7 +2565,7 @@ const DOC_PAGES = {
     "summary": "Batch check spelling of Myanmar words and get Levenshtein suggestions.",
     "descriptions": [
       "Send up to 100 words in one request. Returns `correct`, `misspelled`, or `ignored` (for ASCII words) along with up to 5 edit-distance spelling suggestions for unknown Myanmar words.",
-      "<span lang=\"my\">မြန်မာစာလုံး ၁၀၀ အထိ တစ်ကြိမ်တည်း စာလုံးပေါင်းစစ်ဆေးပြီး မှားယွင်းနေသော စာလုံးများအတွက် အနီးစပ်ဆုံး အကြံပြုစာလုံး ငါးလုံးအထိ ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">မြန်မာစာလုံး ၁၀၀ အထိ တစ်ကြိမ်တည်း စာလုံးပေါင်းစစ်ဆေးပြီး မှားယွင်းနေသော စာလုံးများအတွက် အနီးစပ်ဆုံး အကြံပြုစာလုံး ငါးလုံးအထိ ရယူပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/sannlynnhtun-coding/blazor-word-list",
     "callout": "Words longer than 64 characters or batches exceeding 100 words will receive HTTP 400 Bad Request.",
@@ -2637,7 +2637,7 @@ const DOC_PAGES = {
     "requestBodyFields": [
       {
         "name": "words",
-        "type": "Array<String>",
+        "type": "Array\u003cString>",
         "required": true,
         "description": "1–100 non-empty strings, each at most 64 characters."
       },
@@ -2660,7 +2660,7 @@ const DOC_PAGES = {
     "summary": "Fast prefix search across 12,467 normalized Myanmar words.",
     "descriptions": [
       "Search for Myanmar words starting with a specific prefix. Useful for autocomplete search inputs and dictionary lookup components.",
-      "<span lang=\"my\">ရှေ့ပြေးစာလုံး (prefix) ဖြင့် စတင်သော မြန်မာစာလုံးများကို ရှာဖွေပါ။ Autocomplete စနစ်များတွင် အလွန် အသုံးဝင်ပါသည်။</span>"
+      "\u003cspan lang=\"my\">ရှေ့ပြေးစာလုံး (prefix) ဖြင့် စတင်သော မြန်မာစာလုံးများကို ရှာဖွေပါ။ Autocomplete စနစ်များတွင် အလွန် အသုံးဝင်ပါသည်။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/sannlynnhtun-coding/blazor-word-list",
     "callout": "Max limit is 100 results per request (default: 50).",
@@ -2740,7 +2740,7 @@ const DOC_PAGES = {
     "summary": "Get word counts, search and batch limits, supported capabilities, data sources, and license details.",
     "descriptions": [
       "Get word counts, search and batch limits, supported capabilities, data sources, and license details.",
-      "<span lang=\"my\">စာလုံးအရေအတွက်၊ ရှာဖွေမှုနှင့် အစုလိုက်စစ်ဆေးမှု ကန့်သတ်ချက်များ၊ လုပ်ဆောင်ချက်များ၊ ဒေတာမူရင်းနှင့် လိုင်စင်ကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">စာလုံးအရေအတွက်၊ ရှာဖွေမှုနှင့် အစုလိုက်စစ်ဆေးမှု ကန့်သတ်ချက်များ၊ လုပ်ဆောင်ချက်များ၊ ဒေတာမူရင်းနှင့် လိုင်စင်ကို ရယူပါ။\u003c/span>"
     ],
     "params": [],
     "requestBody": null,
@@ -2845,7 +2845,7 @@ const DOC_PAGES = {
     "summary": "Download the normalized UTF-8 word list with one word per line. This endpoint returns text/plain, not JSON; duplicate entries and byte-order marks are removed.",
     "descriptions": [
       "Download the normalized UTF-8 word list with one word per line. This endpoint returns text/plain, not JSON; duplicate entries and byte-order marks are removed.",
-      "<span lang=\"my\">Offline အသုံးပြုရန် တစ်ကြောင်းတစ်လုံး UTF-8 စာလုံးစာရင်းကို ရယူပါ။ ဤ endpoint သည် text/plain ပြန်ပေးပြီး ထပ်နေသောစာလုံးနှင့် byte-order mark များကို ဖယ်ထားသည်။</span>"
+      "\u003cspan lang=\"my\">Offline အသုံးပြုရန် တစ်ကြောင်းတစ်လုံး UTF-8 စာလုံးစာရင်းကို ရယူပါ။ ဤ endpoint သည် text/plain ပြန်ပေးပြီး ထပ်နေသောစာလုံးနှင့် byte-order mark များကို ဖယ်ထားသည်။\u003c/span>"
     ],
     "params": [],
     "requestBody": null,
@@ -2879,7 +2879,7 @@ const DOC_PAGES = {
     "summary": "Browse traditional Myanmar proverbs, idioms, and explanations.",
     "descriptions": [
       "Browse traditional Myanmar proverbs along with their deep literary meanings, origin stories, and practical life applications.",
-      "<span lang=\"my\">မြန်မာစကားပုံများ၊ အဓိပ္ပာယ် ရှင်းလင်းချက်များနှင့် ဘဝအသုံးချ အနက်သဘောများကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">မြန်မာစကားပုံများ၊ အဓိပ္ပာယ် ရှင်းလင်းချက်များနှင့် ဘဝအသုံးချ အနက်သဘောများကို ရယူပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/burma-project-ideas/myanmar-proverbs",
     "callout": "Filter by `ProverbId` in the detail endpoint `/myanmar-proverbs/:id`.",
@@ -2943,7 +2943,7 @@ const DOC_PAGES = {
     "summary": "Get one proverb and its explanation. Use ProverbId from GET /myanmar-proverbs as id.",
     "descriptions": [
       "Get one proverb and its explanation. Use ProverbId from GET /myanmar-proverbs as id.",
-      "<span lang=\"my\">GET /myanmar-proverbs မှ ProverbId ကို id အဖြစ်သုံး၍ စကားပုံနှင့် ရှင်းလင်းချက်ကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">GET /myanmar-proverbs မှ ProverbId ကို id အဖြစ်သုံး၍ စကားပုံနှင့် ရှင်းလင်းချက်ကို ရယူပါ။\u003c/span>"
     ],
     "params": [
       {
@@ -3007,7 +3007,7 @@ const DOC_PAGES = {
     "summary": "List Bagan pilgrimage routes and pagoda travel tours.",
     "descriptions": [
       "Retrieves the list of recommended travel and pagoda pilgrimage routes in ancient Bagan.",
-      "<span lang=\"my\">ရှေးဟောင်းပုဂံဒေသရှိ ဘုရားဖူးခရီးစဉ် လမ်းကြောင်းများနှင့် ခရီးစဉ် ID များကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">ရှေးဟောင်းပုဂံဒေသရှိ ဘုရားဖူးခရီးစဉ် လမ်းကြောင်းများနှင့် ခရီးစဉ် ID များကို ရယူပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/burma-project-ideas/bagan-map",
     "callout": "Use the returned `Id` to query the pagodas along that route using `/bagan-map/:id`.",
@@ -3056,7 +3056,7 @@ const DOC_PAGES = {
     "summary": "Get detailed history, architectural info, and background for a pagoda.",
     "descriptions": [
       "Retrieves detailed historical background, architecture style, donor king, and era details for a specific pagoda in Bagan.",
-      "<span lang=\"my\">ပုဂံဘုရားတစ်ဆူချင်းစီ၏ သမိုင်းကြောင်း၊ တည်ထားခဲ့သော မင်း၊ ဗိသုကာလက်ရာနှင့် နောက်ခံအချက်အလက်များကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">ပုဂံဘုရားတစ်ဆူချင်းစီ၏ သမိုင်းကြောင်း၊ တည်ထားခဲ့သော မင်း၊ ဗိသုကာလက်ရာနှင့် နောက်ခံအချက်အလက်များကို ရယူပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/burma-project-ideas/bagan-map",
     "callout": "Unknown IDs return HTTP 200 with an empty response body.",
@@ -3110,7 +3110,7 @@ const DOC_PAGES = {
     "summary": "Get one travel route, its description, and the ordered pagoda list. Use an Id from GET /bagan-map.",
     "descriptions": [
       "Get one travel route, its description, and the ordered pagoda list. Use an Id from GET /bagan-map.",
-      "<span lang=\"my\">GET /bagan-map မှ Id ဖြင့် ခရီးစဉ်၊ ဖော်ပြချက်နှင့် ဘုရားစာရင်းကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">GET /bagan-map မှ Id ဖြင့် ခရီးစဉ်၊ ဖော်ပြချက်နှင့် ဘုရားစာရင်းကို ရယူပါ။\u003c/span>"
     ],
     "params": [
       {
@@ -3189,7 +3189,7 @@ const DOC_PAGES = {
     "summary": "Browse archived Myanmar historical books and manuscripts.",
     "descriptions": [
       "Lists preserved rare Myanmar historical books, royal chronicles, and historical treaties with author names, cover images, and summaries.",
-      "<span lang=\"my\">ရှားပါးမြန်မာ့သမိုင်းမှတ်တမ်း စာအုပ်များ၊ ရာဇဝင်တော်ကြီးများနှင့် သမိုင်းစာပေများ စာရင်းကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">ရှားပါးမြန်မာ့သမိုင်းမှတ်တမ်း စာအုပ်များ၊ ရာဇဝင်တော်ကြီးများနှင့် သမိုင်းစာပေများ စာရင်းကို ရယူပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/burma-project-ideas/missing-historical-records",
     "callout": "Use the `BookId` to fetch book pages via `/missing-historical-records/:id/pages`.",
@@ -3266,7 +3266,7 @@ const DOC_PAGES = {
     "summary": "Read stored page contents for a historical record book.",
     "descriptions": [
       "Retrieves the paginated text content and transcripts for a specific historical book ID.",
-      "<span lang=\"my\">သမိုင်းမှတ်တမ်း စာအုပ် ID အလိုက် စာမျက်နှာအလိုက် စာသားများကို ရယူဖတ်ရှုပါ။</span>"
+      "\u003cspan lang=\"my\">သမိုင်းမှတ်တမ်း စာအုပ် ID အလိုက် စာမျက်နှာအလိုက် စာသားများကို ရယူဖတ်ရှုပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/burma-project-ideas/missing-historical-records",
     "callout": "Returns an array of page objects with `PageNo` and full textual `Content`.",
@@ -3299,11 +3299,11 @@ const DOC_PAGES = {
     "responseSuccess": [
       {
         "PageNo": 1,
-        "Content": "<div style=\"text-align: left;\">မြန်မာ့သမိုင်းတွင် ခရစ်နှစ် ၁၃၆၄ ခုနှစ်မှ ၁၇၅၁ ခုနှစ်အထိ နှစ် ၄ဝဝ နီးပါး သက်တမ်းရှည်ကြာခဲ့ပြီး မင်းနေပြည်တော် လေးကြိမ်ဖြစ်ခဲ့သည့် အင်းဝ သည် ပြည်တွင်းပြည်ပ၌ အထူးထင်ရှားသော သမိုင်းဝင်မြို့ဟောင်းတစ်ခုဖြစ်သည်။ အနောက် နိုင်ငံသားများက ပထမမြန်မာနိုင်ငံတော်(ပုဂံ ခေတ်)ကို Kingdom of Pagan ဟုလည်း ကောင်း၊ ဒုတိယမြန်မာနိုင်ငံတော်(တောင်ငူ ခေတ်)ကို Kingdom of Pegu ဟု လည်း ကောင်း၊ တတိယမြန်မာနိုင်ငံတော်(ကုန်းဘောင် ခေတ်)ကို Kingdom of Ava, Court of Ava ဟု လည်းကောင်း ရေးသားလေ့ရှိခဲ့ပြီး အင်းဝဖြစ်စေ၊ အမရပူရဖြစ်စေ နေပြည်တော်ကို အင်းဝ(Ava)ဟုသာ မှတ်တမ်းပြုခဲ့ကြသည်။\n    သမိုင်းထဲမှ အင်းဝမြို့တော်\n    စစ်ကိုင်းမြို့ကိုတည်ထောင်ခဲ့သူ အသင်္ခယာ စောယွန်း၏သမီး စိုးစံကိုယ်တော်ကြီးနှင့် တကောင်းမင်းရိုး သတိုးတို့၏သား သတိုးမင်း ဖျားသည် မြန်မာသက္ကရာဇ် ၇၂၆ ခုနှစ်(ခရစ်နှစ် ၁၃၆၄ ခုနှစ်)တွင် အင်းဝကိုတည်ထောင်ခဲ့သဖြင့် အင်းဝမြို့တည်မြန်မာသက္ကရာဇ်ကို 'ထုတ်ခွန် သာ အင်းဝတည်'ဟု မှတ်သားခဲ့ကြသည်။\n    အင်"
+        "Content": "\u003cdiv style=\"text-align: left;\">မြန်မာ့သမိုင်းတွင် ခရစ်နှစ် ၁၃၆၄ ခုနှစ်မှ ၁၇၅၁ ခုနှစ်အထိ နှစ် ၄ဝဝ နီးပါး သက်တမ်းရှည်ကြာခဲ့ပြီး မင်းနေပြည်တော် လေးကြိမ်ဖြစ်ခဲ့သည့် အင်းဝ သည် ပြည်တွင်းပြည်ပ၌ အထူးထင်ရှားသော သမိုင်းဝင်မြို့ဟောင်းတစ်ခုဖြစ်သည်။ အနောက် နိုင်ငံသားများက ပထမမြန်မာနိုင်ငံတော်(ပုဂံ ခေတ်)ကို Kingdom of Pagan ဟုလည်း ကောင်း၊ ဒုတိယမြန်မာနိုင်ငံတော်(တောင်ငူ ခေတ်)ကို Kingdom of Pegu ဟု လည်း ကောင်း၊ တတိယမြန်မာနိုင်ငံတော်(ကုန်းဘောင် ခေတ်)ကို Kingdom of Ava, Court of Ava ဟု လည်းကောင်း ရေးသားလေ့ရှိခဲ့ပြီး အင်းဝဖြစ်စေ၊ အမရပူရဖြစ်စေ နေပြည်တော်ကို အင်းဝ(Ava)ဟုသာ မှတ်တမ်းပြုခဲ့ကြသည်။\n    သမိုင်းထဲမှ အင်းဝမြို့တော်\n    စစ်ကိုင်းမြို့ကိုတည်ထောင်ခဲ့သူ အသင်္ခယာ စောယွန်း၏သမီး စိုးစံကိုယ်တော်ကြီးနှင့် တကောင်းမင်းရိုး သတိုးတို့၏သား သတိုးမင်း ဖျားသည် မြန်မာသက္ကရာဇ် ၇၂၆ ခုနှစ်(ခရစ်နှစ် ၁၃၆၄ ခုနှစ်)တွင် အင်းဝကိုတည်ထောင်ခဲ့သဖြင့် အင်းဝမြို့တည်မြန်မာသက္ကရာဇ်ကို 'ထုတ်ခွန် သာ အင်းဝတည်'ဟု မှတ်သားခဲ့ကြသည်။\n    အင်"
       },
       {
         "PageNo": 2,
-        "Content": "<div style=\"text-align: left;\">  အင်းဝတွင် သုံးနှစ်နန်းစံပြီး သတိုးမင်းဖျား နတ်ရွာစံခဲ့ရာ မင်းကြီးစွာစော်ကဲ၊ တရဖျား၊ ပထမမင်းခေါင်၊ သီဟသူ၊ မင်းလှငယ်၊ ကလေး ကျေးတောင်ညို၊ မိုးညှင်း၊ မင်းရဲကျော်စွာ၊ နရ ပတိကြီး၊ မဟာသီဟသူရ၊ ဒုတိယမင်းခေါင်၊ ရွှေနန်းကျော့ရှင်၊ သိုဟန်ဘွား၊ အုန်းဘောင်ခုံ မှိုင်း၊ မိုးဗြဲနရပတိ၊ စည်သူကျော်ထင်တို့သည် အင်းဝတွင် ဆက်လက် ထီးနန်းစံခဲ့ကြသည်။ တောင်ငူဘုရင် ဘုရင့်နောင်သည် ၁၅၅၄ ခုနှစ် တွင် အင်းဝကို အောင်နိုင်ခဲ့ကာ အင်းဝဘုရင် စည်သူကျော်ထင်ကို ဟံသာဝတီသို့ခေါ်ဆောင်သွားခဲ့ပြီးနောက် မြန်မာမင်းနေပြည်တော်သည် အင်းဝမှ ဟံသာဝတီသို့ပြောင်းရွှေ့သွားခဲ့ပြီး ၄၃ နှစ်အကြာ ၁၅၉၇ ခုနှစ်တွင် ဒုတိယအင်းဝ (ညောင်ရမ်း)ခေတ်တွင် အင်းဝသည် မင်းနေ ပြည်တော် ဖြစ်လာခဲ့သော်လည်း ၁၇၅၁ ခုနှစ်တွင် အင်းဝဘုရင် မဟာဓမ္မရာဇာဓိပတိ အား ဟံသာဝတီသို့ ခေါ်ဆောင်သွားခဲ့ပြီး နောက် အင်းဝမင်းဆက် ပြတ်ခဲ့ရပြန်သည်။ ကုန်းဘောင်မင်းဆက် တတိယမြောက်ဘုရင် မြေဒူးမင်းသည် ၁၇၆၅ ခုနှစ်တွင် အင်းဝသို့ ပြောင်းရွှေ့နန်းစံခဲ့ရာ ၁၇၆၅ ခုနှစ်မှ ၁၇၈၃ ခုန"
+        "Content": "\u003cdiv style=\"text-align: left;\">  အင်းဝတွင် သုံးနှစ်နန်းစံပြီး သတိုးမင်းဖျား နတ်ရွာစံခဲ့ရာ မင်းကြီးစွာစော်ကဲ၊ တရဖျား၊ ပထမမင်းခေါင်၊ သီဟသူ၊ မင်းလှငယ်၊ ကလေး ကျေးတောင်ညို၊ မိုးညှင်း၊ မင်းရဲကျော်စွာ၊ နရ ပတိကြီး၊ မဟာသီဟသူရ၊ ဒုတိယမင်းခေါင်၊ ရွှေနန်းကျော့ရှင်၊ သိုဟန်ဘွား၊ အုန်းဘောင်ခုံ မှိုင်း၊ မိုးဗြဲနရပတိ၊ စည်သူကျော်ထင်တို့သည် အင်းဝတွင် ဆက်လက် ထီးနန်းစံခဲ့ကြသည်။ တောင်ငူဘုရင် ဘုရင့်နောင်သည် ၁၅၅၄ ခုနှစ် တွင် အင်းဝကို အောင်နိုင်ခဲ့ကာ အင်းဝဘုရင် စည်သူကျော်ထင်ကို ဟံသာဝတီသို့ခေါ်ဆောင်သွားခဲ့ပြီးနောက် မြန်မာမင်းနေပြည်တော်သည် အင်းဝမှ ဟံသာဝတီသို့ပြောင်းရွှေ့သွားခဲ့ပြီး ၄၃ နှစ်အကြာ ၁၅၉၇ ခုနှစ်တွင် ဒုတိယအင်းဝ (ညောင်ရမ်း)ခေတ်တွင် အင်းဝသည် မင်းနေ ပြည်တော် ဖြစ်လာခဲ့သော်လည်း ၁၇၅၁ ခုနှစ်တွင် အင်းဝဘုရင် မဟာဓမ္မရာဇာဓိပတိ အား ဟံသာဝတီသို့ ခေါ်ဆောင်သွားခဲ့ပြီး နောက် အင်းဝမင်းဆက် ပြတ်ခဲ့ရပြန်သည်။ ကုန်းဘောင်မင်းဆက် တတိယမြောက်ဘုရင် မြေဒူးမင်းသည် ၁၇၆၅ ခုနှစ်တွင် အင်းဝသို့ ပြောင်းရွှေ့နန်းစံခဲ့ရာ ၁၇၆၅ ခုနှစ်မှ ၁၇၈၃ ခုန"
       }
     ],
     "responseError": {
@@ -3330,7 +3330,7 @@ const DOC_PAGES = {
     "summary": "Get book metadata by BookId, including its title, author, cover, category, and description. Read pages through the separate /:id/pages endpoint.",
     "descriptions": [
       "Get book metadata by BookId, including its title, author, cover, category, and description. Read pages through the separate /:id/pages endpoint.",
-      "<span lang=\"my\">BookId ဖြင့် စာအုပ်ခေါင်းစဉ်၊ စာရေးသူ၊ မျက်နှာဖုံး၊ အမျိုးအစားနှင့် ဖော်ပြချက်ကို ရယူပါ။ စာမျက်နှာများအတွက် /:id/pages ကို သုံးပါ။</span>"
+      "\u003cspan lang=\"my\">BookId ဖြင့် စာအုပ်ခေါင်းစဉ်၊ စာရေးသူ၊ မျက်နှာဖုံး၊ အမျိုးအစားနှင့် ဖော်ပြချက်ကို ရယူပါ။ စာမျက်နှာများအတွက် /:id/pages ကို သုံးပါ။\u003c/span>"
     ],
     "params": [
       {
@@ -3409,7 +3409,7 @@ const DOC_PAGES = {
     "summary": "Browse native Myanmar birds with English/Burmese names and photos.",
     "descriptions": [
       "Browse native and migratory Myanmar birds. Returns Burmese names, English ornithological names, behavioral descriptions, and asset image paths.",
-      "<span lang=\"my\">မြန်မာနိုင်ငံရှိ ဌာနေငှက်များနှင့် ဆောင်းခိုငှက်များစာရင်း၊ မြန်မာအမည်၊ အင်္ဂလိပ်အမည်၊ အလေ့အထ ဖော်ပြချက်နှင့် ဓာတ်ပုံများကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">မြန်မာနိုင်ငံရှိ ဌာနေငှက်များနှင့် ဆောင်းခိုငှက်များစာရင်း၊ မြန်မာအမည်၊ အင်္ဂလိပ်အမည်၊ အလေ့အထ ဖော်ပြချက်နှင့် ဓာတ်ပုံများကို ရယူပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/burma-project-ideas/birds",
     "callout": "The `ImagePath` property contains the fully resolved image asset URL.",
@@ -3479,7 +3479,7 @@ const DOC_PAGES = {
     "summary": "Get single bird details, photo URL, and description.",
     "descriptions": [
       "Retrieves single bird profile, description, and high-resolution photo URL by numeric ID.",
-      "<span lang=\"my\">ငှက် ID အလိုက် မြန်မာအမည်၊ အင်္ဂလိပ်အမည်နှင့် ဓာတ်ပုံလင့်ခ် အပြည့်အစုံကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">ငှက် ID အလိုက် မြန်မာအမည်၊ အင်္ဂလိပ်အမည်နှင့် ဓာတ်ပုံလင့်ခ် အပြည့်အစုံကို ရယူပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/burma-project-ideas/birds",
     "callout": "Unknown IDs return HTTP 200 with an empty response body.",
@@ -3550,7 +3550,7 @@ const DOC_PAGES = {
     "summary": "Browse Myanmar snakes with poison and danger ratings.",
     "descriptions": [
       "Lists venomous and non-venomous snake species in Myanmar with Burmese and English names, danger status, identification tips, and photographs.",
-      "<span lang=\"my\">မြန်မာနိုင်ငံရှိ အဆိပ်ရှိ/အဆိပ်မဲ့ မြွေများ၊ မြန်မာနှင့် အင်္ဂလိပ်အမည်များ၊ အဆိပ်ပြင်းအားနှင့် အန္တရာယ်ရှိမှု အချက်အလက်များကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">မြန်မာနိုင်ငံရှိ အဆိပ်ရှိ/အဆိပ်မဲ့ မြွေများ၊ မြန်မာနှင့် အင်္ဂလိပ်အမည်များ၊ အဆိပ်ပြင်းအားနှင့် အန္တရာယ်ရှိမှု အချက်အလက်များကို ရယူပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/burma-project-ideas/snakes",
     "callout": "The `IsPoison` and `IsDanger` flags identify whether the snake is medically dangerous to humans.",
@@ -3635,7 +3635,7 @@ const DOC_PAGES = {
     "summary": "Get matching snakes by Id. The response is an array, including when only one snake matches.",
     "descriptions": [
       "Get matching snakes by Id. The response is an array, including when only one snake matches.",
-      "<span lang=\"my\">Id ဖြင့် ကိုက်ညီသော မြွေအချက်အလက်များကို array အဖြစ် ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">Id ဖြင့် ကိုက်ညီသော မြွေအချက်အလက်များကို array အဖြစ် ရယူပါ။\u003c/span>"
     ],
     "params": [
       {
@@ -3719,7 +3719,7 @@ const DOC_PAGES = {
     "summary": "Browse Myanmar recipes with ingredients and cooking steps.",
     "descriptions": [
       "Browse traditional Myanmar culinary dishes with full ingredient lists, preparation steps, and authentic cooking instructions.",
-      "<span lang=\"my\">ရိုးရာမြန်မာဟင်းလျာများ၊ လိုအပ်သော ပါဝင်ပစ္စည်းများနှင့် အဆင့်ဆင့် ချက်ပြုတ်နည်းများကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">ရိုးရာမြန်မာဟင်းလျာများ၊ လိုအပ်သော ပါဝင်ပစ္စည်းများနှင့် အဆင့်ဆင့် ချက်ပြုတ်နည်းများကို ရယူပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/burma-project-ideas/burmese-recipes",
     "callout": "Use the `Guid` property to query individual recipe details at `/burmese-recipes/:id`.",
@@ -3790,7 +3790,7 @@ const DOC_PAGES = {
     "summary": "Get one recipe with ingredients and cooking instructions. Use the Guid returned by GET /burmese-recipes as id.",
     "descriptions": [
       "Get one recipe with ingredients and cooking instructions. Use the Guid returned by GET /burmese-recipes as id.",
-      "<span lang=\"my\">GET /burmese-recipes မှ Guid ကို id အဖြစ်သုံး၍ ပါဝင်ပစ္စည်းနှင့် ချက်ပြုတ်နည်းကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">GET /burmese-recipes မှ Guid ကို id အဖြစ်သုံး၍ ပါဝင်ပစ္စည်းနှင့် ချက်ပြုတ်နည်းကို ရယူပါ။\u003c/span>"
     ],
     "params": [
       {
@@ -3860,7 +3860,7 @@ const DOC_PAGES = {
     "summary": "Browse traditional Myanmar food-pairing health hazards.",
     "descriptions": [
       "Lists traditional Myanmar food-pairing incompatibilities based on traditional medicine principles where eating certain foods together causes illness or poisoning.",
-      "<span lang=\"my\">ရိုးရာမြန်မာ့ဆေးပညာအရ တွဲဖက်မစားသင့်သော ဓာတ်မတည့်သည့် အစားအစာအတွဲများနှင့် ဖြစ်ပွားတတ်သော ရောဂါလက္ခဏာများကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">ရိုးရာမြန်မာ့ဆေးပညာအရ တွဲဖက်မစားသင့်သော ဓာတ်မတည့်သည့် အစားအစာအတွဲများနှင့် ဖြစ်ပွားတတ်သော ရောဂါလက္ခဏာများကို ရယူပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/burma-project-ideas/incompatible-food",
     "callout": "Common pairs include `ဆူးပုတ်ရွက် + ဆိတ်သား` (မူးဝေ) and `ကိုကိုး + ပဲမြစ်` (မူးဝေ).",
@@ -3924,7 +3924,7 @@ const DOC_PAGES = {
     "summary": "Get one traditional food-pairing record by Id. This dataset records traditional claims and is not medical guidance.",
     "descriptions": [
       "Get one traditional food-pairing record by Id. This dataset records traditional claims and is not medical guidance.",
-      "<span lang=\"my\">Id ဖြင့် ရိုးရာအစားအစာအတွဲမှတ်တမ်းကို ရယူပါ။ ဤဒေတာသည် ရိုးရာအယူအဆများဖြစ်ပြီး ဆေးဘက်ဆိုင်ရာလမ်းညွှန်မဟုတ်ပါ။</span>"
+      "\u003cspan lang=\"my\">Id ဖြင့် ရိုးရာအစားအစာအတွဲမှတ်တမ်းကို ရယူပါ။ ဤဒေတာသည် ရိုးရာအယူအဆများဖြစ်ပြီး ဆေးဘက်ဆိုင်ရာလမ်းညွှန်မဟုတ်ပါ။\u003c/span>"
     ],
     "params": [
       {
@@ -3988,7 +3988,7 @@ const DOC_PAGES = {
     "summary": "Browse Myanmar agricultural cultivation articles and farming tips.",
     "descriptions": [
       "Browse crop cultivation guides, soil management advice, and seasonal harvesting articles authored by agricultural experts.",
-      "<span lang=\"my\">သီးနှံစိုက်ပျိုးနည်း၊ မြေဩဇာသုံးစွဲနည်းနှင့် ရာသီအလိုက် စိုက်ပျိုးရေးနည်းစနစ် ဆောင်းပါးများကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">သီးနှံစိုက်ပျိုးနည်း၊ မြေဩဇာသုံးစွဲနည်းနှင့် ရာသီအလိုက် စိုက်ပျိုးရေးနည်းစနစ် ဆောင်းပါးများကို ရယူပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/burma-project-ideas/burmese-agriculture",
     "callout": "Use `/burmese-agriculture/:id` to retrieve the complete long-form article text.",
@@ -4059,7 +4059,7 @@ const DOC_PAGES = {
     "summary": "Get an agriculture article by its string Id from GET /burmese-agriculture, including author, date, and content.",
     "descriptions": [
       "Get an agriculture article by its string Id from GET /burmese-agriculture, including author, date, and content.",
-      "<span lang=\"my\">GET /burmese-agriculture မှ string Id ဖြင့် ဆောင်းပါး၊ စာရေးသူ၊ ရက်စွဲနှင့် အကြောင်းအရာကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">GET /burmese-agriculture မှ string Id ဖြင့် ဆောင်းပါး၊ စာရေးသူ၊ ရက်စွဲနှင့် အကြောင်းအရာကို ရယူပါ။\u003c/span>"
     ],
     "params": [
       {
@@ -4129,7 +4129,7 @@ const DOC_PAGES = {
     "summary": "List the alphabetic dream categories (က မှ အ အထိ).",
     "descriptions": [
       "List the alphabetic dream groups with `GET /dream-dictionary`. Each group categorizes dreams under a specific Myanmar consonant root.",
-      "<span lang=\"my\">အက္ခရာအလိုက် အိပ်မက်အုပ်စုများကို `GET /dream-dictionary` ဖြင့် ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">အက္ခရာအလိုက် အိပ်မက်အုပ်စုများကို `GET /dream-dictionary` ဖြင့် ရယူပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/burma-project-ideas/dream-dictionary",
     "callout": "Pass the `BlogHeaderId` to `/dream-dictionary/:id` to retrieve all interpretations under that letter.",
@@ -4177,7 +4177,7 @@ const DOC_PAGES = {
     "summary": "Load the dream interpretations and omen meanings for one group ID.",
     "descriptions": [
       "Load the interpretations in one group with `GET /dream-dictionary/:id`. Shows what dreaming of particular objects or events portends.",
-      "<span lang=\"my\">အုပ်စုတစ်ခု၏ နိမိတ်အဓိပ္ပာယ်များကို `GET /dream-dictionary/:id` ဖြင့် ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">အုပ်စုတစ်ခု၏ နိမိတ်အဓိပ္ပာယ်များကို `GET /dream-dictionary/:id` ဖြင့် ရယူပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/burma-project-ideas/dream-dictionary",
     "callout": "Requires numeric group ID (e.g. 1).",
@@ -4246,7 +4246,7 @@ const DOC_PAGES = {
     "summary": "List fortune-telling questions with card options.",
     "descriptions": [
       "List the fortune-telling questions with `GET /pick-a-pile`. Each question presents a set of tarot/oracle card choices.",
-      "<span lang=\"my\">ဗေဒင်မေးခွန်းများကို `GET /pick-a-pile` ဖြင့် ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">ဗေဒင်မေးခွန်းများကို `GET /pick-a-pile` ဖြင့် ရယူပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/burma-project-ideas/pick-a-pile",
     "callout": "Use the `QuestionId` to fetch the card images and reading outcomes.",
@@ -4301,7 +4301,7 @@ const DOC_PAGES = {
     "summary": "Get card piles, photos, and divination predictions for one question.",
     "descriptions": [
       "Use a question ID to get its card answers from `GET /pick-a-pile/:id`. Includes image URLs for each card pile.",
-      "<span lang=\"my\">မေးခွန်း ID ကိုသုံး၍ သက်ဆိုင်ရာကတ်အဖြေများနှင့် ပုံများကို `GET /pick-a-pile/:id` ဖြင့် ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">မေးခွန်း ID ကိုသုံး၍ သက်ဆိုင်ရာကတ်အဖြေများနှင့် ပုံများကို `GET /pick-a-pile/:id` ဖြင့် ရယူပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/burma-project-ideas/pick-a-pile",
     "callout": "Unknown IDs return HTTP 200 with an empty array.",
@@ -4380,7 +4380,7 @@ const DOC_PAGES = {
     "summary": "Browse Myanmar artworks, paintings, and cultural exhibits.",
     "descriptions": [
       "Browse Myanmar artworks with `GET /art-gallery`. Returns art titles, descriptions, and high-resolution artwork image URLs.",
-      "<span lang=\"my\">မြန်မာအနုပညာလက်ရာများကို `GET /art-gallery` ဖြင့် ကြည့်ရှုပါ။</span>"
+      "\u003cspan lang=\"my\">မြန်မာအနုပညာလက်ရာများကို `GET /art-gallery` ဖြင့် ကြည့်ရှုပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/burma-project-ideas/art-gallery",
     "callout": "Pass `ArtId` to `/art-gallery/:id` to inspect the artist profile and all related paintings by that master.",
@@ -4442,7 +4442,7 @@ const DOC_PAGES = {
     "summary": "Get artist biography, social links, and gallery portfolio by artwork ID.",
     "descriptions": [
       "Use an artwork ID to load its artist profile, avatar image, social channels, and other works by the same artist.",
-      "<span lang=\"my\">လက်ရာ ID ကိုသုံး၍ ပန်းချီဆရာ၏ profile နှင့် ဆက်စပ်လက်ရာများကို `GET /art-gallery/:id` ဖြင့် ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">လက်ရာ ID ကိုသုံး၍ ပန်းချီဆရာ၏ profile နှင့် ဆက်စပ်လက်ရာများကို `GET /art-gallery/:id` ဖြင့် ရယူပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/burma-project-ideas/art-gallery",
     "callout": "The current controller returns HTTP 500 for an unknown artwork ID. Use an ArtId returned by the artwork list.",
@@ -4524,7 +4524,7 @@ const DOC_PAGES = {
     "summary": "Browse the 12 traditional Myanmar calendar months, seasons, and festivals.",
     "descriptions": [
       "Browse Myanmar calendar months with `GET /myanmar-months`. Each month features its seasonal festival, flower, astrological sign, and cultural rituals.",
-      "<span lang=\"my\">မြန်မာပြက္ခဒိန်လများကို `GET /myanmar-months` ဖြင့် ကြည့်ရှုပြီး လတစ်လ၏ ပွဲတော်၊ ဖော်ပြချက်နှင့် အသေးစိတ်အချက်အလက်ကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">မြန်မာပြက္ခဒိန်လများကို `GET /myanmar-months` ဖြင့် ကြည့်ရှုပြီး လတစ်လ၏ ပွဲတော်၊ ဖော်ပြချက်နှင့် အသေးစိတ်အချက်အလက်ကို ရယူပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/burma-project-ideas/myanmar-months",
     "callout": "Includes Gregorian calendar approximations (e.g. တန်ခူး = April).",
@@ -4608,7 +4608,7 @@ const DOC_PAGES = {
     "summary": "Get one Myanmar month by Id, including its festival, English month name, description, and details.",
     "descriptions": [
       "Get one Myanmar month by Id, including its festival, English month name, description, and details.",
-      "<span lang=\"my\">Id ဖြင့် မြန်မာလ၊ ပွဲတော်၊ အင်္ဂလိပ်လအမည်နှင့် အသေးစိတ်ဖော်ပြချက်များကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">Id ဖြင့် မြန်မာလ၊ ပွဲတော်၊ အင်္ဂလိပ်လအမည်နှင့် အသေးစိတ်ဖော်ပြချက်များကို ရယူပါ။\u003c/span>"
     ],
     "params": [
       {
@@ -4690,7 +4690,7 @@ const DOC_PAGES = {
     "summary": "Browse inspirational quotes with curated poster graphics.",
     "descriptions": [
       "Browse image-and-quote cards with `GET /quotlets`. Each entry combines an inspiring life quotation with high-quality graphic photography.",
-      "<span lang=\"my\">ပုံနှင့် စာစု post များကို `GET /quotlets` ဖြင့် ကြည့်ရှုပါ။</span>"
+      "\u003cspan lang=\"my\">ပုံနှင့် စာစု post များကို `GET /quotlets` ဖြင့် ကြည့်ရှုပါ။\u003c/span>"
     ],
     "sourceUrl": "https://github.com/burma-project-ideas/quotlets",
     "callout": "All `ImageUrl` properties resolve to responsive public assets.",
@@ -4753,7 +4753,7 @@ const DOC_PAGES = {
     "summary": "Get one quote post by its string Id, with its user ID and image URL.",
     "descriptions": [
       "Get one quote post by its string Id, with its user ID and image URL.",
-      "<span lang=\"my\">String Id ဖြင့် စာစုပို့စ်၊ user ID နှင့် ပုံ URL ကို ရယူပါ။</span>"
+      "\u003cspan lang=\"my\">String Id ဖြင့် စာစုပို့စ်၊ user ID နှင့် ပုံ URL ကို ရယူပါ။\u003c/span>"
     ],
     "params": [
       {
@@ -4805,6 +4805,1400 @@ const DOC_PAGES = {
     "sampleRequest": "curl -X GET \"https://burma-project-ideas.vercel.app/quotlets/adcf23fa-b579-4215-85c2-2c0f3f4beee2\"",
     "fetchRequest": "fetch(\"https://burma-project-ideas.vercel.app/quotlets/adcf23fa-b579-4215-85c2-2c0f3f4beee2\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
     "pythonRequest": "import requests\nres = requests.get(\"https://burma-project-ideas.vercel.app/quotlets/adcf23fa-b579-4215-85c2-2c0f3f4beee2\")\nprint(res.json())"
+  },
+  "ybs-ybscontroller-getallbuses": {
+    "id": "ybs-ybscontroller-getallbuses",
+    "category": "ybs",
+    "categoryMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "title": "Get all available bus lines",
+    "titleMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "method": "GET",
+    "path": "/ybs/buses",
+    "summary": "Get all available bus lines",
+    "descriptions": [
+      "Get all available bus lines",
+      "\u003cspan lang=\"my\">ရန်ကုန်ဘတ်စ်ကားလိုင်းများ API — \u003ccode>/ybs/buses\u003c/code>\u003c/span>"
+    ],
+    "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
+    "params": [],
+    "requestBody": null,
+    "responseFields": [],
+    "responseSuccess": [
+      {
+        "id": 2,
+        "num": 1,
+        "isReversed": false,
+        "variantId": "",
+        "isCardAccepted": false,
+        "totalStops": 111,
+        "startStop": {
+          "id": 1978,
+          "name": "လှည်းကူးဈေး",
+          "longitude": 96.21915,
+          "latitude": 17.09671,
+          "regionName": "လှည်းကူးမြို့နယ်"
+        },
+        "endStop": {
+          "id": 3675,
+          "name": "ဇဝန",
+          "longitude": 96.18846,
+          "latitude": 16.82831,
+          "regionName": "သင်္ဃန်းကျွန်း"
+        },
+        "destinations": []
+      },
+      {
+        "id": 4,
+        "num": 10,
+        "isReversed": false,
+        "variantId": "",
+        "isCardAccepted": true,
+        "totalStops": 67,
+        "startStop": {
+          "id": 3968,
+          "name": "၃၅",
+          "longitude": 96.21492,
+          "latitude": 16.91299,
+          "regionName": "ဒဂုံမြို့သစ်အရှေ့ပိုင်း"
+        },
+        "endStop": {
+          "id": 2768,
+          "name": "ကန်ကြီးထောင့်",
+          "longitude": 96.22166,
+          "latitude": 16.79605,
+          "regionName": "သာကေတ"
+        },
+        "destinations": []
+      }
+    ],
+    "responseStatus": 200,
+    "responseContentType": "application/json",
+    "sampleRequest": "curl -X GET \"https://burma-project-ideas.vercel.app/ybs/buses\"",
+    "fetchRequest": "fetch(\"https://burma-project-ideas.vercel.app/ybs/buses\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
+    "pythonRequest": "import requests\nres = requests.get(\"https://burma-project-ideas.vercel.app/ybs/buses\")\nprint(res.json())"
+  },
+  "ybs-ybscontroller-getbusdirection": {
+    "id": "ybs-ybscontroller-getbusdirection",
+    "category": "ybs",
+    "categoryMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "title": "Get specific bus direction and variant",
+    "titleMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "method": "GET",
+    "path": "/ybs/buses/:num/direction",
+    "summary": "Get specific bus direction and variant",
+    "descriptions": [
+      "Get specific bus direction and variant",
+      "\u003cspan lang=\"my\">ရန်ကုန်ဘတ်စ်ကားလိုင်းများ API — \u003ccode>/ybs/buses/:num/direction\u003c/code>\u003c/span>"
+    ],
+    "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
+    "params": [
+      {
+        "name": "num",
+        "in": "path",
+        "required": true,
+        "type": "number",
+        "description": "num",
+        "example": 1
+      },
+      {
+        "name": "isReversed",
+        "in": "query",
+        "required": false,
+        "type": "boolean",
+        "description": "isReversed",
+        "example": ""
+      },
+      {
+        "name": "variantId",
+        "in": "query",
+        "required": false,
+        "type": "string",
+        "description": "variantId",
+        "example": ""
+      }
+    ],
+    "requestBody": null,
+    "responseFields": [],
+    "responseSuccess": {
+      "bus": {
+        "id": 2,
+        "num": 1,
+        "isReversed": false,
+        "variantId": "",
+        "isCardAccepted": false,
+        "totalStops": 111,
+        "startStop": {
+          "id": 1978,
+          "name": "လှည်းကူးဈေး",
+          "longitude": 96.21915,
+          "latitude": 17.09671,
+          "regionName": "လှည်းကူးမြို့နယ်"
+        },
+        "endStop": {
+          "id": 3675,
+          "name": "ဇဝန",
+          "longitude": 96.18846,
+          "latitude": 16.82831,
+          "regionName": "သင်္ဃန်းကျွန်း"
+        },
+        "destinations": [
+          {
+            "id": 1978,
+            "name": "လှည်းကူးဈေး",
+            "longitude": 96.21915,
+            "latitude": 17.09671,
+            "regionName": "လှည်းကူးမြို့နယ်"
+          },
+          {
+            "id": 2550,
+            "name": "သဥ္ဇာဦး",
+            "longitude": 96.22345,
+            "latitude": 17.0985,
+            "regionName": "လှည်းကူးမြို့နယ်"
+          }
+        ]
+      }
+    },
+    "responseStatus": 200,
+    "responseContentType": "application/json",
+    "sampleRequest": "curl -X GET \"https://burma-project-ideas.vercel.app/ybs/buses/1/direction\"",
+    "fetchRequest": "fetch(\"https://burma-project-ideas.vercel.app/ybs/buses/1/direction\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
+    "pythonRequest": "import requests\nres = requests.get(\"https://burma-project-ideas.vercel.app/ybs/buses/1/direction\")\nprint(res.json())"
+  },
+  "ybs-ybscontroller-getbusesbynumber": {
+    "id": "ybs-ybscontroller-getbusesbynumber",
+    "category": "ybs",
+    "categoryMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "title": "Search bus lines by number",
+    "titleMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "method": "GET",
+    "path": "/ybs/buses/:num",
+    "summary": "Search bus lines by number",
+    "descriptions": [
+      "Search bus lines by number",
+      "\u003cspan lang=\"my\">ရန်ကုန်ဘတ်စ်ကားလိုင်းများ API — \u003ccode>/ybs/buses/:num\u003c/code>\u003c/span>"
+    ],
+    "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
+    "params": [
+      {
+        "name": "num",
+        "in": "path",
+        "required": true,
+        "type": "number",
+        "description": "num",
+        "example": 1
+      }
+    ],
+    "requestBody": null,
+    "responseFields": [],
+    "responseSuccess": {
+      "result": [
+        {
+          "id": 1,
+          "num": 1,
+          "isReversed": true,
+          "variantId": "",
+          "isCardAccepted": false,
+          "totalStops": 102,
+          "startStop": {
+            "id": 1623,
+            "name": "ဇဝန",
+            "longitude": 96.18832,
+            "latitude": 16.82796,
+            "regionName": "သင်္ဃန်းကျွန်း"
+          },
+          "endStop": {
+            "id": 3251,
+            "name": "လှည်းကူးဈေး",
+            "longitude": 96.21897,
+            "latitude": 17.09687,
+            "regionName": "လှည်းကူးမြို့နယ်"
+          },
+          "destinations": [
+            {
+              "id": 1623,
+              "name": "ဇဝန",
+              "longitude": 96.18832,
+              "latitude": 16.82796,
+              "regionName": "သင်္ဃန်းကျွန်း"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "num": 1,
+          "isReversed": false,
+          "variantId": "",
+          "isCardAccepted": false,
+          "totalStops": 111,
+          "startStop": {
+            "id": 1978,
+            "name": "လှည်းကူးဈေး",
+            "longitude": 96.21915,
+            "latitude": 17.09671,
+            "regionName": "လှည်းကူးမြို့နယ်"
+          },
+          "endStop": {
+            "id": 3675,
+            "name": "ဇဝန",
+            "longitude": 96.18846,
+            "latitude": 16.82831,
+            "regionName": "သင်္ဃန်းကျွန်း"
+          },
+          "destinations": [
+            {
+              "id": 1978,
+              "name": "လှည်းကူးဈေး",
+              "longitude": 96.21915,
+              "latitude": 17.09671,
+              "regionName": "လှည်းကူးမြို့နယ်"
+            }
+          ]
+        }
+      ]
+    },
+    "responseStatus": 200,
+    "responseContentType": "application/json",
+    "sampleRequest": "curl -X GET \"https://burma-project-ideas.vercel.app/ybs/buses/1\"",
+    "fetchRequest": "fetch(\"https://burma-project-ideas.vercel.app/ybs/buses/1\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
+    "pythonRequest": "import requests\nres = requests.get(\"https://burma-project-ideas.vercel.app/ybs/buses/1\")\nprint(res.json())"
+  },
+  "ybs-ybscontroller-getpaginatedbusstops": {
+    "id": "ybs-ybscontroller-getpaginatedbusstops",
+    "category": "ybs",
+    "categoryMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "title": "Paginated bus stops browser",
+    "titleMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "method": "GET",
+    "path": "/ybs/bus-stops",
+    "summary": "Paginated bus stops browser",
+    "descriptions": [
+      "Paginated bus stops browser",
+      "\u003cspan lang=\"my\">ရန်ကုန်ဘတ်စ်ကားလိုင်းများ API — \u003ccode>/ybs/bus-stops\u003c/code>\u003c/span>"
+    ],
+    "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
+    "params": [
+      {
+        "name": "page",
+        "in": "query",
+        "required": false,
+        "type": "number",
+        "description": "page",
+        "example": 1
+      },
+      {
+        "name": "page_size",
+        "in": "query",
+        "required": false,
+        "type": "number",
+        "description": "page_size",
+        "example": 2
+      }
+    ],
+    "requestBody": null,
+    "responseFields": [],
+    "responseSuccess": {
+      "totalPages": 1547,
+      "related_bus": [
+        {
+          "totalBuses": 8,
+          "location": {
+            "id": 1368,
+            "name": "ဧရာမြေ",
+            "longitude": 96.08327,
+            "latitude": 16.93069,
+            "regionName": "အင်းစိန်"
+          },
+          "bus": [
+            {
+              "id": 8,
+              "num": 101,
+              "isReversed": false,
+              "variantId": "",
+              "isCardAccepted": false,
+              "totalStops": 80
+            },
+            {
+              "id": 50,
+              "num": 121,
+              "isReversed": true,
+              "variantId": "",
+              "isCardAccepted": false,
+              "totalStops": 67
+            }
+          ]
+        },
+        {
+          "totalBuses": 14,
+          "location": {
+            "id": 1369,
+            "name": "ဗဟန်း၃လမ်း",
+            "longitude": 96.15744,
+            "latitude": 16.79829,
+            "regionName": "ဗဟန်း"
+          },
+          "bus": [
+            {
+              "id": 21,
+              "num": 108,
+              "isReversed": true,
+              "variantId": "",
+              "isCardAccepted": true,
+              "totalStops": 50
+            },
+            {
+              "id": 25,
+              "num": 11,
+              "isReversed": true,
+              "variantId": "",
+              "isCardAccepted": true,
+              "totalStops": 57
+            }
+          ]
+        }
+      ]
+    },
+    "responseStatus": 200,
+    "responseContentType": "application/json",
+    "sampleRequest": "curl -X GET \"https://burma-project-ideas.vercel.app/ybs/bus-stops?page=1&page_size=2\"",
+    "fetchRequest": "fetch(\"https://burma-project-ideas.vercel.app/ybs/bus-stops?page=1&page_size=2\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
+    "pythonRequest": "import requests\nres = requests.get(\"https://burma-project-ideas.vercel.app/ybs/bus-stops?page=1&page_size=2\")\nprint(res.json())"
+  },
+  "ybs-ybscontroller-searchbusstops": {
+    "id": "ybs-ybscontroller-searchbusstops",
+    "category": "ybs",
+    "categoryMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "title": "Search bus stops",
+    "titleMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "method": "GET",
+    "path": "/ybs/bus-stops/search",
+    "summary": "Search bus stops",
+    "descriptions": [
+      "Search bus stops",
+      "\u003cspan lang=\"my\">ရန်ကုန်ဘတ်စ်ကားလိုင်းများ API — \u003ccode>/ybs/bus-stops/search\u003c/code>\u003c/span>"
+    ],
+    "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
+    "params": [
+      {
+        "name": "name",
+        "in": "query",
+        "required": false,
+        "type": "string",
+        "description": "name",
+        "example": ""
+      },
+      {
+        "name": "regionName",
+        "in": "query",
+        "required": false,
+        "type": "string",
+        "description": "regionName",
+        "example": ""
+      },
+      {
+        "name": "page",
+        "in": "query",
+        "required": false,
+        "type": "number",
+        "description": "page",
+        "example": 1
+      },
+      {
+        "name": "size",
+        "in": "query",
+        "required": false,
+        "type": "number",
+        "description": "size",
+        "example": 2
+      },
+      {
+        "name": "sort",
+        "in": "query",
+        "required": false,
+        "type": "string",
+        "description": "sort",
+        "example": ""
+      }
+    ],
+    "requestBody": null,
+    "responseFields": [],
+    "responseSuccess": {
+      "content": [
+        {
+          "id": 1960,
+          "name": "၁၀၃ဂိတ်ဟောင်း",
+          "longitude": 96.19256,
+          "latitude": 16.93566,
+          "regionName": "မြောက်ဥက္ကလာပ"
+        },
+        {
+          "id": 3600,
+          "name": "၁၀၃ဂိတ်ဟောင်း",
+          "longitude": 96.06253,
+          "latitude": 16.8788,
+          "regionName": "လှိုင်သာယာ (အရှေ့ပိုင်း)"
+        }
+      ],
+      "pageable": {
+        "pageNumber": 1,
+        "pageSize": 2,
+        "sort": {
+          "empty": false,
+          "sorted": true,
+          "unsorted": false
+        },
+        "offset": 2,
+        "paged": true,
+        "unpaged": false
+      },
+      "totalPages": 1547,
+      "totalElements": 3094,
+      "last": false,
+      "size": 2,
+      "number": 1,
+      "first": false,
+      "numberOfElements": 2,
+      "empty": false
+    },
+    "responseStatus": 200,
+    "responseContentType": "application/json",
+    "sampleRequest": "curl -X GET \"https://burma-project-ideas.vercel.app/ybs/bus-stops/search?page=1&size=2\"",
+    "fetchRequest": "fetch(\"https://burma-project-ideas.vercel.app/ybs/bus-stops/search?page=1&size=2\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
+    "pythonRequest": "import requests\nres = requests.get(\"https://burma-project-ideas.vercel.app/ybs/bus-stops/search?page=1&size=2\")\nprint(res.json())"
+  },
+  "ybs-ybscontroller-getnearestbusstops": {
+    "id": "ybs-ybscontroller-getnearestbusstops",
+    "category": "ybs",
+    "categoryMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "title": "Get nearest bus stops by GPS",
+    "titleMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "method": "GET",
+    "path": "/ybs/bus-stops/nearest",
+    "summary": "Get nearest bus stops by GPS",
+    "descriptions": [
+      "Get nearest bus stops by GPS",
+      "\u003cspan lang=\"my\">ရန်ကုန်ဘတ်စ်ကားလိုင်းများ API — \u003ccode>/ybs/bus-stops/nearest\u003c/code>\u003c/span>"
+    ],
+    "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
+    "params": [
+      {
+        "name": "user_lat",
+        "in": "query",
+        "required": true,
+        "type": "number",
+        "description": "user_lat",
+        "example": ""
+      },
+      {
+        "name": "user_lon",
+        "in": "query",
+        "required": true,
+        "type": "number",
+        "description": "user_lon",
+        "example": ""
+      },
+      {
+        "name": "findStop",
+        "in": "query",
+        "required": true,
+        "type": "boolean",
+        "description": "findStop",
+        "example": ""
+      }
+    ],
+    "requestBody": null,
+    "responseFields": [],
+    "responseSuccess": {
+      "range_km": 1,
+      "near_by_locations": []
+    },
+    "responseStatus": 200,
+    "responseContentType": "application/json",
+    "sampleRequest": "curl -X GET \"https://burma-project-ideas.vercel.app/ybs/bus-stops/nearest\"",
+    "fetchRequest": "fetch(\"https://burma-project-ideas.vercel.app/ybs/bus-stops/nearest\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
+    "pythonRequest": "import requests\nres = requests.get(\"https://burma-project-ideas.vercel.app/ybs/bus-stops/nearest\")\nprint(res.json())"
+  },
+  "ybs-ybscontroller-getbusesforbusstop": {
+    "id": "ybs-ybscontroller-getbusesforbusstop",
+    "category": "ybs",
+    "categoryMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "title": "Get buses serving a specific bus stop",
+    "titleMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "method": "GET",
+    "path": "/ybs/bus-stops/:id/buses",
+    "summary": "Get buses serving a specific bus stop",
+    "descriptions": [
+      "Get buses serving a specific bus stop",
+      "\u003cspan lang=\"my\">ရန်ကုန်ဘတ်စ်ကားလိုင်းများ API — \u003ccode>/ybs/bus-stops/:id/buses\u003c/code>\u003c/span>"
+    ],
+    "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
+    "params": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "type": "number",
+        "description": "id",
+        "example": 1
+      }
+    ],
+    "requestBody": null,
+    "responseFields": [],
+    "responseSuccess": [],
+    "responseStatus": 200,
+    "responseContentType": "application/json",
+    "sampleRequest": "curl -X GET \"https://burma-project-ideas.vercel.app/ybs/bus-stops/1/buses\"",
+    "fetchRequest": "fetch(\"https://burma-project-ideas.vercel.app/ybs/bus-stops/1/buses\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
+    "pythonRequest": "import requests\nres = requests.get(\"https://burma-project-ideas.vercel.app/ybs/bus-stops/1/buses\")\nprint(res.json())"
+  },
+  "ybs-ybscontroller-getpathbetweenstops": {
+    "id": "ybs-ybscontroller-getpathbetweenstops",
+    "category": "ybs",
+    "categoryMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "title": "Stop-to-stop route path finder",
+    "titleMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "method": "GET",
+    "path": "/ybs/path-finder/stop-lvl-path",
+    "summary": "Stop-to-stop route path finder",
+    "descriptions": [
+      "Stop-to-stop route path finder",
+      "\u003cspan lang=\"my\">ရန်ကုန်ဘတ်စ်ကားလိုင်းများ API — \u003ccode>/ybs/path-finder/stop-lvl-path\u003c/code>\u003c/span>"
+    ],
+    "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
+    "params": [
+      {
+        "name": "start_id",
+        "in": "query",
+        "required": true,
+        "type": "number",
+        "description": "start_id",
+        "example": ""
+      },
+      {
+        "name": "end_id",
+        "in": "query",
+        "required": true,
+        "type": "number",
+        "description": "end_id",
+        "example": ""
+      }
+    ],
+    "requestBody": null,
+    "responseFields": [],
+    "responseSuccess": {
+      "path": []
+    },
+    "responseStatus": 200,
+    "responseContentType": "application/json",
+    "sampleRequest": "curl -X GET \"https://burma-project-ideas.vercel.app/ybs/path-finder/stop-lvl-path\"",
+    "fetchRequest": "fetch(\"https://burma-project-ideas.vercel.app/ybs/path-finder/stop-lvl-path\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
+    "pythonRequest": "import requests\nres = requests.get(\"https://burma-project-ideas.vercel.app/ybs/path-finder/stop-lvl-path\")\nprint(res.json())"
+  },
+  "ybs-ybscontroller-getpathtostore": {
+    "id": "ybs-ybscontroller-getpathtostore",
+    "category": "ybs",
+    "categoryMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "title": "Store-to-stop route path finder",
+    "titleMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "method": "GET",
+    "path": "/ybs/path-finder/store-lvl-path",
+    "summary": "Store-to-stop route path finder",
+    "descriptions": [
+      "Store-to-stop route path finder",
+      "\u003cspan lang=\"my\">ရန်ကုန်ဘတ်စ်ကားလိုင်းများ API — \u003ccode>/ybs/path-finder/store-lvl-path\u003c/code>\u003c/span>"
+    ],
+    "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
+    "params": [
+      {
+        "name": "storeId",
+        "in": "query",
+        "required": true,
+        "type": "number",
+        "description": "storeId",
+        "example": ""
+      },
+      {
+        "name": "startBusStopId",
+        "in": "query",
+        "required": true,
+        "type": "number",
+        "description": "startBusStopId",
+        "example": ""
+      }
+    ],
+    "requestBody": null,
+    "responseFields": [],
+    "responseSuccess": [],
+    "responseStatus": 200,
+    "responseContentType": "application/json",
+    "sampleRequest": "curl -X GET \"https://burma-project-ideas.vercel.app/ybs/path-finder/store-lvl-path\"",
+    "fetchRequest": "fetch(\"https://burma-project-ideas.vercel.app/ybs/path-finder/store-lvl-path\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
+    "pythonRequest": "import requests\nres = requests.get(\"https://burma-project-ideas.vercel.app/ybs/path-finder/store-lvl-path\")\nprint(res.json())"
+  },
+  "ybs-ybscontroller-getallstores": {
+    "id": "ybs-ybscontroller-getallstores",
+    "category": "ybs",
+    "categoryMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "title": "Browse all stores",
+    "titleMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "method": "GET",
+    "path": "/ybs/stores/all",
+    "summary": "Browse all stores",
+    "descriptions": [
+      "Browse all stores",
+      "\u003cspan lang=\"my\">ရန်ကုန်ဘတ်စ်ကားလိုင်းများ API — \u003ccode>/ybs/stores/all\u003c/code>\u003c/span>"
+    ],
+    "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
+    "params": [],
+    "requestBody": null,
+    "responseFields": [],
+    "responseSuccess": [
+      {
+        "id": 1,
+        "mmName": "ဆူးလေ YPS ဝန်ဆောင်မှုဆိုင်",
+        "engName": "Sule City Hall",
+        "category": "YPS Service Kios",
+        "regionName": "ကျောက်တံတား",
+        "latitude": 16.7759633,
+        "longitude": 96.1587317,
+        "totalNearestStops": 5
+      },
+      {
+        "id": 2,
+        "mmName": "သခင်မြပန်းခြံ YPS ဝန်ဆောင်မှုဆိုင်",
+        "engName": "Tha Khin Mya Pan Chan",
+        "category": "YPS Service Kios",
+        "regionName": "အလုံ",
+        "latitude": 16.7806217,
+        "longitude": 96.1353017,
+        "totalNearestStops": 5
+      }
+    ],
+    "responseStatus": 200,
+    "responseContentType": "application/json",
+    "sampleRequest": "curl -X GET \"https://burma-project-ideas.vercel.app/ybs/stores/all\"",
+    "fetchRequest": "fetch(\"https://burma-project-ideas.vercel.app/ybs/stores/all\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
+    "pythonRequest": "import requests\nres = requests.get(\"https://burma-project-ideas.vercel.app/ybs/stores/all\")\nprint(res.json())"
+  },
+  "ybs-ybscontroller-searchstores": {
+    "id": "ybs-ybscontroller-searchstores",
+    "category": "ybs",
+    "categoryMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "title": "Search stores",
+    "titleMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "method": "GET",
+    "path": "/ybs/stores/search",
+    "summary": "Search stores",
+    "descriptions": [
+      "Search stores",
+      "\u003cspan lang=\"my\">ရန်ကုန်ဘတ်စ်ကားလိုင်းများ API — \u003ccode>/ybs/stores/search\u003c/code>\u003c/span>"
+    ],
+    "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
+    "params": [
+      {
+        "name": "name",
+        "in": "query",
+        "required": false,
+        "type": "string",
+        "description": "name",
+        "example": ""
+      },
+      {
+        "name": "regionName",
+        "in": "query",
+        "required": false,
+        "type": "string",
+        "description": "regionName",
+        "example": ""
+      },
+      {
+        "name": "page",
+        "in": "query",
+        "required": false,
+        "type": "number",
+        "description": "page",
+        "example": 1
+      },
+      {
+        "name": "size",
+        "in": "query",
+        "required": false,
+        "type": "number",
+        "description": "size",
+        "example": 2
+      }
+    ],
+    "requestBody": null,
+    "responseFields": [],
+    "responseSuccess": {
+      "content": [
+        {
+          "id": 3,
+          "mmName": "မြန်မာပလာဇာ YPS ဝန်ဆောင်မှုဆိုင်",
+          "engName": "Myanmar Plaza",
+          "category": "YPS Service Kios",
+          "regionName": "ဗဟန်း",
+          "latitude": 16.8276283,
+          "longitude": 96.1546083,
+          "totalNearestStops": 5
+        },
+        {
+          "id": 4,
+          "mmName": "လှည်းတန်း YPS ဝန်ဆောင်မှုဆိုင်",
+          "engName": "Hleden Kios",
+          "category": "YPS Service Kios",
+          "regionName": "ကမာရွတ်",
+          "latitude": 16.8279405,
+          "longitude": 96.1305082,
+          "totalNearestStops": 5
+        }
+      ],
+      "pageable": {
+        "pageNumber": 1,
+        "pageSize": 2,
+        "sort": {
+          "empty": true,
+          "sorted": false,
+          "unsorted": true
+        },
+        "offset": 2,
+        "paged": true,
+        "unpaged": false
+      },
+      "totalPages": 77,
+      "totalElements": 153,
+      "last": false,
+      "size": 2,
+      "number": 1,
+      "first": false,
+      "numberOfElements": 2,
+      "empty": false
+    },
+    "responseStatus": 200,
+    "responseContentType": "application/json",
+    "sampleRequest": "curl -X GET \"https://burma-project-ideas.vercel.app/ybs/stores/search?page=1&size=2\"",
+    "fetchRequest": "fetch(\"https://burma-project-ideas.vercel.app/ybs/stores/search?page=1&size=2\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
+    "pythonRequest": "import requests\nres = requests.get(\"https://burma-project-ideas.vercel.app/ybs/stores/search?page=1&size=2\")\nprint(res.json())"
+  },
+  "ybs-ybscontroller-getneareststopsforstore": {
+    "id": "ybs-ybscontroller-getneareststopsforstore",
+    "category": "ybs",
+    "categoryMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "title": "Get nearest bus stops for store",
+    "titleMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "method": "GET",
+    "path": "/ybs/stores/:id/nearest-stops",
+    "summary": "Get nearest bus stops for store",
+    "descriptions": [
+      "Get nearest bus stops for store",
+      "\u003cspan lang=\"my\">ရန်ကုန်ဘတ်စ်ကားလိုင်းများ API — \u003ccode>/ybs/stores/:id/nearest-stops\u003c/code>\u003c/span>"
+    ],
+    "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
+    "params": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "type": "number",
+        "description": "id",
+        "example": 1
+      }
+    ],
+    "requestBody": null,
+    "responseFields": [],
+    "responseSuccess": {
+      "store_nearest_locations": [
+        {
+          "totalBuses": 11,
+          "location": {
+            "id": 1817,
+            "name": "ဆူးလေ(မြို့တောင်ခန်းမ)",
+            "longitude": 96.15871,
+            "latitude": 16.77594,
+            "regionName": "ကျောက်တံတား"
+          },
+          "bus": []
+        },
+        {
+          "totalBuses": 20,
+          "location": {
+            "id": 2003,
+            "name": "ဆူးလေ(မြို့တောင်ခန်းမ)",
+            "longitude": 96.15897,
+            "latitude": 16.77591,
+            "regionName": "ကျောက်တံတား"
+          },
+          "bus": []
+        }
+      ]
+    },
+    "responseStatus": 200,
+    "responseContentType": "application/json",
+    "sampleRequest": "curl -X GET \"https://burma-project-ideas.vercel.app/ybs/stores/1/nearest-stops\"",
+    "fetchRequest": "fetch(\"https://burma-project-ideas.vercel.app/ybs/stores/1/nearest-stops\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
+    "pythonRequest": "import requests\nres = requests.get(\"https://burma-project-ideas.vercel.app/ybs/stores/1/nearest-stops\")\nprint(res.json())"
+  },
+  "ybs-ybscontroller-getstorebyid": {
+    "id": "ybs-ybscontroller-getstorebyid",
+    "category": "ybs",
+    "categoryMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "title": "Get store details by ID",
+    "titleMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "method": "GET",
+    "path": "/ybs/stores/:id",
+    "summary": "Get store details by ID",
+    "descriptions": [
+      "Get store details by ID",
+      "\u003cspan lang=\"my\">ရန်ကုန်ဘတ်စ်ကားလိုင်းများ API — \u003ccode>/ybs/stores/:id\u003c/code>\u003c/span>"
+    ],
+    "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
+    "params": [
+      {
+        "name": "id",
+        "in": "path",
+        "required": true,
+        "type": "number",
+        "description": "id",
+        "example": 1
+      }
+    ],
+    "requestBody": null,
+    "responseFields": [],
+    "responseSuccess": {
+      "id": 1,
+      "mmName": "ဆူးလေ YPS ဝန်ဆောင်မှုဆိုင်",
+      "engName": "Sule City Hall",
+      "category": "YPS Service Kios",
+      "regionName": "ကျောက်တံတား",
+      "latitude": 16.7759633,
+      "longitude": 96.1587317,
+      "totalNearestStops": 5
+    },
+    "responseStatus": 200,
+    "responseContentType": "application/json",
+    "sampleRequest": "curl -X GET \"https://burma-project-ideas.vercel.app/ybs/stores/1\"",
+    "fetchRequest": "fetch(\"https://burma-project-ideas.vercel.app/ybs/stores/1\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
+    "pythonRequest": "import requests\nres = requests.get(\"https://burma-project-ideas.vercel.app/ybs/stores/1\")\nprint(res.json())"
+  },
+  "ybs-ybscontroller-getpaginatedstores": {
+    "id": "ybs-ybscontroller-getpaginatedstores",
+    "category": "ybs",
+    "categoryMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "title": "Paginated stores browser",
+    "titleMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "method": "GET",
+    "path": "/ybs/stores",
+    "summary": "Paginated stores browser",
+    "descriptions": [
+      "Paginated stores browser",
+      "\u003cspan lang=\"my\">ရန်ကုန်ဘတ်စ်ကားလိုင်းများ API — \u003ccode>/ybs/stores\u003c/code>\u003c/span>"
+    ],
+    "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
+    "params": [
+      {
+        "name": "page",
+        "in": "query",
+        "required": false,
+        "type": "number",
+        "description": "page",
+        "example": 1
+      },
+      {
+        "name": "size",
+        "in": "query",
+        "required": false,
+        "type": "number",
+        "description": "size",
+        "example": 2
+      }
+    ],
+    "requestBody": null,
+    "responseFields": [],
+    "responseSuccess": {
+      "content": [
+        {
+          "id": 3,
+          "mmName": "မြန်မာပလာဇာ YPS ဝန်ဆောင်မှုဆိုင်",
+          "engName": "Myanmar Plaza",
+          "category": "YPS Service Kios",
+          "regionName": "ဗဟန်း",
+          "latitude": 16.8276283,
+          "longitude": 96.1546083,
+          "totalNearestStops": 5
+        },
+        {
+          "id": 4,
+          "mmName": "လှည်းတန်း YPS ဝန်ဆောင်မှုဆိုင်",
+          "engName": "Hleden Kios",
+          "category": "YPS Service Kios",
+          "regionName": "ကမာရွတ်",
+          "latitude": 16.8279405,
+          "longitude": 96.1305082,
+          "totalNearestStops": 5
+        }
+      ],
+      "pageable": {
+        "pageNumber": 1,
+        "pageSize": 2,
+        "sort": {
+          "empty": true,
+          "sorted": false,
+          "unsorted": true
+        },
+        "offset": 2,
+        "paged": true,
+        "unpaged": false
+      },
+      "totalPages": 77,
+      "totalElements": 153,
+      "last": false,
+      "size": 2,
+      "number": 1,
+      "first": false,
+      "numberOfElements": 2,
+      "empty": false
+    },
+    "responseStatus": 200,
+    "responseContentType": "application/json",
+    "sampleRequest": "curl -X GET \"https://burma-project-ideas.vercel.app/ybs/stores?page=1&size=2\"",
+    "fetchRequest": "fetch(\"https://burma-project-ideas.vercel.app/ybs/stores?page=1&size=2\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
+    "pythonRequest": "import requests\nres = requests.get(\"https://burma-project-ideas.vercel.app/ybs/stores?page=1&size=2\")\nprint(res.json())"
+  },
+  "ybs-ybscontroller-getallregions": {
+    "id": "ybs-ybscontroller-getallregions",
+    "category": "ybs",
+    "categoryMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "title": "Get all townships / regions",
+    "titleMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "method": "GET",
+    "path": "/ybs/regions",
+    "summary": "Get all townships / regions",
+    "descriptions": [
+      "Get all townships / regions",
+      "\u003cspan lang=\"my\">ရန်ကုန်ဘတ်စ်ကားလိုင်းများ API — \u003ccode>/ybs/regions\u003c/code>\u003c/span>"
+    ],
+    "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
+    "params": [],
+    "requestBody": null,
+    "responseFields": [],
+    "responseSuccess": [
+      "ကမာရွတ်",
+      "ကိုကိုးကျွန်းမြို့နယ်"
+    ],
+    "responseStatus": 200,
+    "responseContentType": "application/json",
+    "sampleRequest": "curl -X GET \"https://burma-project-ideas.vercel.app/ybs/regions\"",
+    "fetchRequest": "fetch(\"https://burma-project-ideas.vercel.app/ybs/regions\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
+    "pythonRequest": "import requests\nres = requests.get(\"https://burma-project-ideas.vercel.app/ybs/regions\")\nprint(res.json())"
+  },
+  "ybs-ybscontroller-gettotalcounts": {
+    "id": "ybs-ybscontroller-gettotalcounts",
+    "category": "ybs",
+    "categoryMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "title": "Get system total counts",
+    "titleMm": "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ",
+    "method": "GET",
+    "path": "/ybs/total-counts",
+    "summary": "Get system total counts",
+    "descriptions": [
+      "Get system total counts",
+      "\u003cspan lang=\"my\">ရန်ကုန်ဘတ်စ်ကားလိုင်းများ API — \u003ccode>/ybs/total-counts\u003c/code>\u003c/span>"
+    ],
+    "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
+    "params": [],
+    "requestBody": null,
+    "responseFields": [],
+    "responseSuccess": {
+      "total_bus": 285,
+      "total_bus_stop": 3094
+    },
+    "responseStatus": 200,
+    "responseContentType": "application/json",
+    "sampleRequest": "curl -X GET \"https://burma-project-ideas.vercel.app/ybs/total-counts\"",
+    "fetchRequest": "fetch(\"https://burma-project-ideas.vercel.app/ybs/total-counts\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
+    "pythonRequest": "import requests\nres = requests.get(\"https://burma-project-ideas.vercel.app/ybs/total-counts\")\nprint(res.json())"
+  },
+  "burma-calendar-burmacalendarcontroller-getmonths": {
+    "id": "burma-calendar-burmacalendarcontroller-getmonths",
+    "category": "burma-calendar",
+    "categoryMm": "မြန်မာပြက္ခဒိန်",
+    "title": "List all Gregorian months with Myanmar month pairs",
+    "titleMm": "မြန်မာပြက္ခဒိန်",
+    "method": "GET",
+    "path": "/burma-calendar/months",
+    "summary": "List all Gregorian months with Myanmar month pairs",
+    "descriptions": [
+      "Retrieve all 12 Gregorian months with their corresponding traditional Myanmar lunar month pairs and month numbers. \u003cspan lang=\"my\">ဂရီဂိုရီယံလ ၁၂ လနှင့် ၎င်းတို့နှင့် ကိုက်ညီသော မြန်မာလတွဲများကို ရယူပါ။\u003c/span>"
+    ],
+    "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
+    "params": [],
+    "requestBody": null,
+    "responseFields": [],
+    "responseSuccess": [
+      {
+        "number": 1,
+        "name": "January",
+        "myanmarMonthPair": "နတ်တော် / ပြာသို"
+      },
+      {
+        "number": 2,
+        "name": "February",
+        "myanmarMonthPair": "ပြာသို / တပို့တွဲ"
+      }
+    ],
+    "responseStatus": 200,
+    "responseContentType": "application/json",
+    "sampleRequest": "curl -X GET \"https://burma-project-ideas.vercel.app/burma-calendar/months\"",
+    "fetchRequest": "fetch(\"https://burma-project-ideas.vercel.app/burma-calendar/months\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
+    "pythonRequest": "import requests\nres = requests.get(\"https://burma-project-ideas.vercel.app/burma-calendar/months\")\nprint(res.json())"
+  },
+  "burma-calendar-burmacalendarcontroller-getyears": {
+    "id": "burma-calendar-burmacalendarcontroller-getyears",
+    "category": "burma-calendar",
+    "categoryMm": "မြန်မာပြက္ခဒိန်",
+    "title": "List available holiday years",
+    "titleMm": "မြန်မာပြက္ခဒိန်",
+    "method": "GET",
+    "path": "/burma-calendar/years",
+    "summary": "List available holiday years",
+    "descriptions": [
+      "Retrieve the list of years for which official Myanmar public holiday schedules are available. \u003cspan lang=\"my\">တရားဝင် မြန်မာ့ရုံးပိတ်ရက်မှတ်တမ်းများ ရရှိနိုင်သော နှစ်များကို ရယူပါ။\u003c/span>"
+    ],
+    "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
+    "params": [],
+    "requestBody": null,
+    "responseFields": [],
+    "responseSuccess": [
+      2024,
+      2025
+    ],
+    "responseStatus": 200,
+    "responseContentType": "application/json",
+    "sampleRequest": "curl -X GET \"https://burma-project-ideas.vercel.app/burma-calendar/years\"",
+    "fetchRequest": "fetch(\"https://burma-project-ideas.vercel.app/burma-calendar/years\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
+    "pythonRequest": "import requests\nres = requests.get(\"https://burma-project-ideas.vercel.app/burma-calendar/years\")\nprint(res.json())"
+  },
+  "burma-calendar-burmacalendarcontroller-getholidays": {
+    "id": "burma-calendar-burmacalendarcontroller-getholidays",
+    "category": "burma-calendar",
+    "categoryMm": "မြန်မာပြက္ခဒိန်",
+    "title": "Filter public holidays by year and/or month",
+    "titleMm": "မြန်မာပြက္ခဒိန်",
+    "method": "GET",
+    "path": "/burma-calendar/holidays",
+    "summary": "Filter public holidays by year and/or month",
+    "descriptions": [
+      "Search and list official Myanmar public holidays across available years. Filter by year (e.g. 2026) and/or month (e.g. \"April\" or 4). \u003cspan lang=\"my\">မြန်မာ့ရုံးပိတ်ရက်များကို နှစ် (ဥပမာ ၂၀၂၆) သို့မဟုတ် လ (ဥပမာ ဧပြီ သို့မဟုတ် ၄) ဖြင့် ရှာဖွေရယူပါ။\u003c/span>"
+    ],
+    "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
+    "params": [
+      {
+        "name": "year",
+        "in": "query",
+        "required": false,
+        "type": "number",
+        "description": "Calendar year to filter holidays (e.g. 2026).",
+        "example": 2026
+      },
+      {
+        "name": "month",
+        "in": "query",
+        "required": false,
+        "type": "string",
+        "description": "Month name in English (e.g. \"April\") or month number (1-12).",
+        "example": "April"
+      }
+    ],
+    "requestBody": null,
+    "responseFields": [],
+    "responseSuccess": [
+      {
+        "month": "April",
+        "name": "သင်္ကြန်နှစ်သစ်ကူး",
+        "dates": [
+          "11",
+          "12"
+        ],
+        "total_days": 9
+      },
+      {
+        "month": "April",
+        "name": "ကဆုန်လပြည့်နေ့",
+        "dates": [
+          "30"
+        ],
+        "total_days": 1
+      }
+    ],
+    "responseStatus": 200,
+    "responseContentType": "application/json",
+    "sampleRequest": "curl -X GET \"https://burma-project-ideas.vercel.app/burma-calendar/holidays?year=2026&month=April\"",
+    "fetchRequest": "fetch(\"https://burma-project-ideas.vercel.app/burma-calendar/holidays?year=2026&month=April\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
+    "pythonRequest": "import requests\nres = requests.get(\"https://burma-project-ideas.vercel.app/burma-calendar/holidays?year=2026&month=April\")\nprint(res.json())"
+  },
+  "burma-calendar-burmacalendarcontroller-getholidaysforyear": {
+    "id": "burma-calendar-burmacalendarcontroller-getholidaysforyear",
+    "category": "burma-calendar",
+    "categoryMm": "မြန်မာပြက္ခဒိန်",
+    "title": "Get all public holidays for a specific year",
+    "titleMm": "မြန်မာပြက္ခဒိန်",
+    "method": "GET",
+    "path": "/burma-calendar/holidays/:year",
+    "summary": "Get all public holidays for a specific year",
+    "descriptions": [
+      "Retrieve the complete annual public holiday schedule for a specified year. \u003cspan lang=\"my\">သတ်မှတ်ထားသော နှစ်တစ်ခုအတွက် တရားဝင် ရုံးပိတ်ရက်စာရင်း အပြည့်အစုံကို ရယူပါ။\u003c/span>"
+    ],
+    "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
+    "params": [
+      {
+        "name": "year",
+        "in": "path",
+        "required": true,
+        "type": "number",
+        "description": "Year (e.g. 2024, 2025, 2026, 2027).",
+        "example": 2026
+      }
+    ],
+    "requestBody": null,
+    "responseFields": [],
+    "responseSuccess": {
+      "year": 2026,
+      "totalHolidays": 13,
+      "totalHolidayDays": 47,
+      "holidays": [
+        {
+          "month": "January",
+          "name": "နိုင်ငံတကာနှစ်သစ်ကူး",
+          "dates": [
+            "1",
+            "2"
+          ],
+          "total_days": 4
+        },
+        {
+          "month": "February",
+          "name": "ပြည်ထောင်စုနေ့ & တရုတ်နှစ်သစ်ကူး",
+          "dates": [
+            "12",
+            "13"
+          ],
+          "total_days": 6
+        }
+      ]
+    },
+    "responseStatus": 200,
+    "responseContentType": "application/json",
+    "sampleRequest": "curl -X GET \"https://burma-project-ideas.vercel.app/burma-calendar/holidays/2026\"",
+    "fetchRequest": "fetch(\"https://burma-project-ideas.vercel.app/burma-calendar/holidays/2026\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
+    "pythonRequest": "import requests\nres = requests.get(\"https://burma-project-ideas.vercel.app/burma-calendar/holidays/2026\")\nprint(res.json())"
+  },
+  "burma-calendar-burmacalendarcontroller-getmonthgrid": {
+    "id": "burma-calendar-burmacalendarcontroller-getmonthgrid",
+    "category": "burma-calendar",
+    "categoryMm": "မြန်မာပြက္ခဒိန်",
+    "title": "Generate a 42-day calendar month grid",
+    "titleMm": "မြန်မာပြက္ခဒိန်",
+    "method": "GET",
+    "path": "/burma-calendar/month",
+    "summary": "Generate a 42-day calendar month grid",
+    "descriptions": [
+      "Compute a complete 6-week (42-cell) calendar month matrix starting on Sunday with Myanmar Era (မြန်မာသက္ကရာဇ်), traditional month pairs, Myanmar numerals, weekend flags, and public holidays. \u003cspan lang=\"my\">တနင်္ဂနွေနေ့မှစသော ၆ ပတ် (၄၂ ကွက်) ပြက္ခဒိန် grid ကို မြန်မာသက္ကရာဇ်၊ လတွဲ၊ မြန်မာဂဏန်း၊ စနေ/တနင်္ဂနွေနှင့် ရုံးပိတ်ရက်များဖြင့် တွက်ချက်ရယူပါ။\u003c/span>"
+    ],
+    "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
+    "params": [
+      {
+        "name": "year",
+        "in": "query",
+        "required": false,
+        "type": "number",
+        "description": "Calendar year (defaults to current year).",
+        "example": 2026
+      },
+      {
+        "name": "month",
+        "in": "query",
+        "required": false,
+        "type": "number",
+        "description": "Gregorian month number 1-12 (defaults to current month).",
+        "example": 4
+      }
+    ],
+    "requestBody": null,
+    "responseFields": [],
+    "responseSuccess": {
+      "year": 2026,
+      "month": 4,
+      "monthName": "April",
+      "myanmarMonthPair": "တပေါင်း / တန်ခူး",
+      "myanmarEra": "၁၃၈၇ / ၁၃၈၈",
+      "totalDaysInMonth": 30,
+      "holidays": [
+        {
+          "month": "April",
+          "name": "သင်္ကြန်နှစ်သစ်ကူး",
+          "dates": [
+            "11",
+            "12"
+          ],
+          "total_days": 9
+        },
+        {
+          "month": "April",
+          "name": "ကဆုန်လပြည့်နေ့",
+          "dates": [
+            "30"
+          ],
+          "total_days": 1
+        }
+      ],
+      "days": [
+        {
+          "day": 29,
+          "date": "2026-03-29",
+          "dayMyanmar": "၂၉",
+          "isCurrentMonth": false,
+          "isWeekend": true,
+          "weekday": {
+            "short": "SUN",
+            "english": "Sunday",
+            "myanmar": "တနင်္ဂနွေ",
+            "index": 0
+          },
+          "isHoliday": false
+        },
+        {
+          "day": 30,
+          "date": "2026-03-30",
+          "dayMyanmar": "၃၀",
+          "isCurrentMonth": false,
+          "isWeekend": false,
+          "weekday": {
+            "short": "MON",
+            "english": "Monday",
+            "myanmar": "တနင်္လာ",
+            "index": 1
+          },
+          "isHoliday": false
+        }
+      ]
+    },
+    "responseStatus": 200,
+    "responseContentType": "application/json",
+    "sampleRequest": "curl -X GET \"https://burma-project-ideas.vercel.app/burma-calendar/month?year=2026&month=4\"",
+    "fetchRequest": "fetch(\"https://burma-project-ideas.vercel.app/burma-calendar/month?year=2026&month=4\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
+    "pythonRequest": "import requests\nres = requests.get(\"https://burma-project-ideas.vercel.app/burma-calendar/month?year=2026&month=4\")\nprint(res.json())"
+  },
+  "burma-calendar-burmacalendarcontroller-getreference": {
+    "id": "burma-calendar-burmacalendarcontroller-getreference",
+    "category": "burma-calendar",
+    "categoryMm": "မြန်မာပြက္ခဒိန်",
+    "title": "Get calendar reference metadata and constants",
+    "titleMm": "မြန်မာပြက္ခဒိန်",
+    "method": "GET",
+    "path": "/burma-calendar/reference",
+    "summary": "Get calendar reference metadata and constants",
+    "descriptions": [
+      "Retrieve static calendar reference definitions including English months, Myanmar lunar month pairs, bilingual weekday mappings, and numeral conversions. \u003cspan lang=\"my\">အင်္ဂလိပ်လများ၊ မြန်မာလတွဲများ၊ နေ့နံအမည်များနှင့် ဂဏန်းပြောင်းလဲမှု အကိုးအကားများကို ရယူပါ။\u003c/span>"
+    ],
+    "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
+    "params": [],
+    "requestBody": null,
+    "responseFields": [],
+    "responseSuccess": {
+      "englishMonths": [
+        "January",
+        "February"
+      ],
+      "myanmarMonthPairs": [
+        "နတ်တော် / ပြာသို",
+        "ပြာသို / တပို့တွဲ"
+      ],
+      "weekdays": [
+        {
+          "short": "SUN",
+          "english": "Sunday",
+          "myanmar": "တနင်္ဂနွေ",
+          "index": 0
+        },
+        {
+          "short": "MON",
+          "english": "Monday",
+          "myanmar": "တနင်္လာ",
+          "index": 1
+        }
+      ],
+      "myanmarDigits": {
+        "0": "၀",
+        "1": "၁",
+        "2": "၂",
+        "3": "၃",
+        "4": "၄",
+        "5": "၅",
+        "6": "၆",
+        "7": "၇",
+        "8": "၈",
+        "9": "၉"
+      }
+    },
+    "responseStatus": 200,
+    "responseContentType": "application/json",
+    "sampleRequest": "curl -X GET \"https://burma-project-ideas.vercel.app/burma-calendar/reference\"",
+    "fetchRequest": "fetch(\"https://burma-project-ideas.vercel.app/burma-calendar/reference\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
+    "pythonRequest": "import requests\nres = requests.get(\"https://burma-project-ideas.vercel.app/burma-calendar/reference\")\nprint(res.json())"
+  },
+  "burma-calendar-burmacalendarcontroller-checkdate": {
+    "id": "burma-calendar-burmacalendarcontroller-checkdate",
+    "category": "burma-calendar",
+    "categoryMm": "မြန်မာပြက္ခဒိန်",
+    "title": "Check holiday status and details for a single date",
+    "titleMm": "မြန်မာပြက္ခဒိန်",
+    "method": "GET",
+    "path": "/burma-calendar/check-date",
+    "summary": "Check holiday status and details for a single date",
+    "descriptions": [
+      "Query a specific date (YYYY-MM-DD) to receive its weekday, Myanmar numeral representation, Myanmar Era year, weekend status, and public holiday details. \u003cspan lang=\"my\">ရက်စွဲတစ်ခု (YYYY-MM-DD) ၏ နေ့နံ၊ မြန်မာဂဏန်း၊ မြန်မာသက္ကရာဇ်နှင့် ရုံးပိတ်ရက်ဟုတ်မဟုတ် စစ်ဆေးရယူပါ။\u003c/span>"
+    ],
+    "sourceUrl": "https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs",
+    "params": [
+      {
+        "name": "date",
+        "in": "query",
+        "required": true,
+        "type": "string",
+        "description": "ISO format date (YYYY-MM-DD).",
+        "example": "2027-01-04"
+      }
+    ],
+    "requestBody": null,
+    "responseFields": [],
+    "responseSuccess": {
+      "date": "2027-01-04",
+      "year": 2027,
+      "month": 1,
+      "monthName": "January",
+      "day": 4,
+      "dayMyanmar": "၄",
+      "myanmarEra": "၁၃၈၈",
+      "myanmarMonthPair": "နတ်တော် / ပြာသို",
+      "weekday": {
+        "short": "MON",
+        "english": "Monday",
+        "myanmar": "တနင်္လာ",
+        "index": 1
+      },
+      "isWeekend": false,
+      "isHoliday": true,
+      "holiday": {
+        "name": "လွတ်လပ်ရေးနေ့",
+        "nameEn": "Independence Day",
+        "type": "Public Holiday"
+      }
+    },
+    "responseStatus": 200,
+    "responseContentType": "application/json",
+    "sampleRequest": "curl -X GET \"https://burma-project-ideas.vercel.app/burma-calendar/check-date?date=2027-01-04\"",
+    "fetchRequest": "fetch(\"https://burma-project-ideas.vercel.app/burma-calendar/check-date?date=2027-01-04\")\n  .then(res => res.json())\n  .then(data => console.log(data));",
+    "pythonRequest": "import requests\nres = requests.get(\"https://burma-project-ideas.vercel.app/burma-calendar/check-date?date=2027-01-04\")\nprint(res.json())"
   }
 };
 

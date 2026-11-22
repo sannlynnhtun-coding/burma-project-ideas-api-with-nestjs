@@ -43,6 +43,10 @@ import { MyanmarNameologyController } from './features/myanmar-nameology/myanmar
 import { MyanmarNameologyService } from './features/myanmar-nameology/myanmar-nameology.service';
 import { MyanmarWordListController } from './features/myanmar-word-list/myanmar-word-list.controller';
 import { MyanmarWordListService } from './features/myanmar-word-list/myanmar-word-list.service';
+import { YbsController } from './features/ybs/ybs.controller';
+import { YbsService } from './features/ybs/ybs.service';
+import { BurmaCalendarController } from './features/burma-calendar/burma-calendar.controller';
+import { BurmaCalendarService } from './features/burma-calendar/burma-calendar.service';
 
 @Module({
   imports: [
@@ -76,6 +80,8 @@ import { MyanmarWordListService } from './features/myanmar-word-list/myanmar-wor
     AdhihtanController,
     MyanmarNameologyController,
     MyanmarWordListController,
+    YbsController,
+    BurmaCalendarController,
   ],
   providers: [
     AppService,
@@ -99,6 +105,8 @@ import { MyanmarWordListService } from './features/myanmar-word-list/myanmar-wor
     AdhihtanService,
     MyanmarNameologyService,
     MyanmarWordListService,
+    YbsService,
+    BurmaCalendarService,
   ],
 })
 export class AppModule {}

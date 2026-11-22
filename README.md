@@ -2,7 +2,7 @@
 
 ## API documentation
 
-The default API reference is served at `/` from `public/index.html`, with all 54 endpoints grouped into 20 resources. Start the app and open `http://localhost:3000/`. The request playground defaults to the server hosting the page, including local and preview deployments.
+The default API reference is served at `/` from `public/index.html`, with all 77 endpoints grouped into 22 resources. Start the app and open `http://localhost:3000/`. The request playground defaults to the server hosting the page, including local and preview deployments.
 
 Swagger remains available at `/swagger`, Scalar at `/scalar`, and the OpenAPI schema at `/swagger-json`. The page retains its English and Myanmar descriptions, search, themes, and mobile navigation. Design attribution is in `public/THIRD_PARTY_NOTICES.md`.
 
@@ -11,11 +11,13 @@ Swagger remains available at `/swagger`, Scalar at `/scalar`, and the OpenAPI sc
 To deploy the project using Vercel, follow these simple steps:
 
 1. Install Vercel globally:
+
    ```bash
    npm i -g vercel
    ```
 
 2. Log in to your Vercel account:
+
    ```bash
    vercel login
    ```
@@ -26,6 +28,16 @@ To deploy the project using Vercel, follow these simple steps:
    ```bash
    vercel --prod
    ```
+
+## API smoke tests
+
+Run `npm run test:smoke` with Node.js 24 to check the production API.
+To test another deployment, pass its base URL with
+`npm run test:smoke -- https://your-deployment.example`.
+
+The script checks documented GET endpoints and the read-only spelling check.
+It verifies both directions of YBS route 1, stop lookups, and both trip
+planners. It reports each request and exits with a nonzero status on failure.
 
 ## Common Issues and Fixes
 
@@ -69,7 +81,7 @@ npm run start:dev --watch
 
 This command ensures that your server restarts automatically whenever changes are detected.
 
-------
+---
 
 ## Acknowledgements
 
@@ -85,6 +97,7 @@ This document outlines the project status. Finished API features are checked aga
 - [x] Art Gallery
 - [x] Bagan Map
 - [x] Birds
+- [x] Burma Calendar
 - [x] Burmese Agriculture
 - [x] Burmese Recipes
 - [x] Dream Dictionary
@@ -106,6 +119,23 @@ This document outlines the project status. Finished API features are checked aga
 
 - [ ] Banking Management System
 - [ ] Movie Ticket Online Booking System
+
+## Burma Calendar API flow
+
+Burma Calendar provides 42-day monthly calendar matrices, Myanmar Era (မြန်မာသက္ကရာဇ်) calculations, Myanmar numerals conversion, lunar month pair mappings, and official public holiday schedules across 2024–2027. Clients can render full calendar views, look up annual holidays, or check whether a single date is a public holiday or weekend.
+
+<p lang="my">Burma Calendar တွင် ၄၂ ကွက် လစဉ်ပြက္ခဒိန် grid တွက်ချက်မှု၊ မြန်မာသက္ကရာဇ်တွက်ချက်မှု၊ မြန်မာဂဏန်းပြောင်းလဲမှု၊ လတွဲသတ်မှတ်ချက်များနှင့် ၂၀၂၄ မှ ၂၀၂၇ အထိ တရားဝင် မြန်မာ့ရုံးပိတ်ရက်မှတ်တမ်းများ ပါဝင်သည်။ Client များသည် ပြက္ခဒိန် UI အပြည့်အစုံကို ဖော်ပြနိုင်ခြင်း၊ နှစ်အလိုက် ရုံးပိတ်ရက်များ ရယူနိုင်ခြင်းနှင့် ရက်စွဲတစ်ခုချင်းစီ၏ ရုံးပိတ်ရက်အခြေအနေကို စစ်ဆေးနိုင်ခြင်းတို့ ဆောင်ရွက်နိုင်သည်။</p>
+
+```http
+GET /burma-calendar/months
+GET /burma-calendar/years
+GET /burma-calendar/month?year=2026&month=4
+GET /burma-calendar/holidays
+GET /burma-calendar/holidays?year=2026&month=April
+GET /burma-calendar/holidays/2026
+GET /burma-calendar/reference
+GET /burma-calendar/check-date?date=2027-01-04
+```
 
 ## NatMyatSi API flow
 

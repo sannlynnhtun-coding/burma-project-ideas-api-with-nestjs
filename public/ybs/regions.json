@@ -1,0 +1,317 @@
+[
+    {
+        "id":  "1",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "ဒဂုံမြို့သစ်မြောက်ပိုင်း",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "2",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "ဒဂုံမြို့သစ်အရှေ့ပိုင်း",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "3",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "ဒဂုံမြို့သစ်တောင်ပိုင်း",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "4",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "ဒဂုံဆိပ်ကမ်း",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "5",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "သင်္ဃန်းကျွန်း",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "6",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "ဗိုလ်တထောင်",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "7",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "ပုဇွန်တောင်",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "8",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "တောင်ဥက္ကလာပ",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "9",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "အလုံ",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "10",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "ဗဟန်း",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "11",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "ကိုကိုးကျွန်းမြို့နယ်",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "12",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "ဒဂုံ",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "13",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "ဒလမြို့နယ်",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "14",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "ဒေါပုံ",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "15",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "လှိုင်",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "16",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "လှိုင်သာယာ (အရှေ့ပိုင်း)",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "17",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "လှည်းကူးမြို့နယ်",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "18",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "မှော်ဘီမြို့နယ်",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "19",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "ထန်းတပင်မြို့နယ်",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "20",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "အင်းစိန်",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "21",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "ကမာရွတ်",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "22",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "ကော့မှူးမြို့နယ်",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "23",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "ခရမ်းမြို့နယ်",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "24",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "ကွမ်းခြံကုန်းမြို့နယ်",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "25",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "ကျောက်တံတား",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "26",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "ကျောက်တန်း",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "27",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "ကြည့်မြင်တိုင်",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "28",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "လမ်းမတော်",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "29",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "လသာ",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "30",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "မရမ်းကုန်း",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "31",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "မင်္ဂလာဒုံ",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "32",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "မင်္ဂလာတောင်ညွန့်",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "33",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "မြောက်ဥက္ကလာပ",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "34",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "ပန်းဘဲတန်း",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "35",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "စမ်းချောင်း",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "36",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "ဆိပ်ကြီးခနောင်တို",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "37",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "ရွှေပြည်သာ",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "38",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "တိုက်ကြီးမြို့နယ်",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "39",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "တာမွေ",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "40",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "သာကေတ",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "41",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "သန်လျင်",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "42",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "သုံးခွမြို့နယ်",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "43",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "တွံတေးမြို့နယ်",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "44",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "ရန်ကင်း",
+        "updated_at":  "2026-08-15"
+    },
+    {
+        "id":  "45",
+        "created_at":  "2026-08-15",
+        "delete_flag":  "false",
+        "region_name":  "လှိုင်သာယာ (အနောက်ပိုင်း)",
+        "updated_at":  "2026-08-15"
+    }
+]

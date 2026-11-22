@@ -21,7 +21,8 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "test:smoke": "node scripts/smoke-api.mjs"
   },
   "dependencies": {
     "@nestjs/common": "^11.2.1",
@@ -59,7 +60,11 @@
     "typescript": "^6.0.3"
   },
   "overrides": {
-    "js-yaml": "^4.2.0"
+    "js-yaml": "^4.2.0",
+    "glob": "14.0.2",
+    "test-exclude": {
+      "minimatch": "11.0.1"
+    }
   },
   "jest": {
     "moduleFileExtensions": [
