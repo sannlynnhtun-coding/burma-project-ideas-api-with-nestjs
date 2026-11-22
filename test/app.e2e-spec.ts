@@ -1,6 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import request from 'supertest';
+import { runInNewContext } from 'node:vm';
 import { AppModule } from './../src/app.module';
 import { setupApiDocumentation } from './../src/docs';
 import { usePublicStaticAssets } from './../src/static-assets';
@@ -23,63 +24,79 @@ describe('AppController (e2e)', () => {
     await app.close();
   });
 
-  it('/ (GET) should serve the bilingual accessible landing page', () => {
-    return request(app.getHttpServer())
-      .get('/')
-      .expect(200)
-      .expect('Content-Type', /html/)
-      .expect((res) => {
-        expect(res.text).toContain('<html lang="en" data-language="en">');
-        expect(res.text).toContain('href="#main"');
-        expect(res.text).toContain('<main id="main">');
-        expect(res.text).toContain('data-language-choice="en"');
-        expect(res.text).toContain('data-language-choice="my"');
-        expect(res.text).toContain('data-copy lang="my"');
-        expect(res.text).toContain('burma-project-ideas-language');
-        expect(res.text).toContain('<dl class="hero-facts">');
-        expect(res.text).toContain('<figure class="payload">');
-        expect(res.text).toContain('<pre><code lang="en">');
-        expect(res.text).toContain('/assets/brand-logo.svg');
-        expect(res.text).toContain('/assets/social-card.png');
-        expect(res.text).toContain('application/ld+json');
-        expect(res.text).toContain('rel="canonical"');
-        expect(res.text).toContain('rel="apple-touch-icon"');
-        const structuredDataMatch = res.text.match(
-          /<script type="application\/ld\+json">([\s\S]*?)<\/script>/,
-        );
-        expect(structuredDataMatch).not.toBeNull();
-        const structuredData = JSON.parse(structuredDataMatch?.[1] ?? '{}');
-        expect(structuredData).toMatchObject({
-          '@type': 'WebSite',
-          name: 'Burma Project Ideas API',
-          logo: '/assets/icon-512.png',
-          inLanguage: ['en', 'my'],
-          publisher: {
-            '@type': 'Organization',
-            logo: {
-              '@type': 'ImageObject',
-              width: 512,
-              height: 512,
-            },
-          },
-        });
-        expect(res.text).toContain('<dd lang="en">20</dd>');
-        expect(res.text).toContain('/adhihtan/categories');
-        expect(res.text).toContain('/myanmar-nameology/calculate');
-        expect(res.text).toContain('/myanmar-word-list/words');
-        expect(res.text).toContain('Open API docs');
-        expect(res.text).toContain('Browse Myanmar datasets by topic.');
-        expect(res.text).toContain(
-          'Built for apps that need clear, documented data.',
-        );
-        expect(res.text).not.toContain('Live route map');
-        expect(res.text).not.toContain('operational data product');
-        expect(res.text).toContain(
-          '<span data-copy lang="my">အဓိဋ္ဌာန်</span>',
-        );
-        expect(res.text).toContain('@media (prefers-reduced-motion: reduce)');
+  it.each(['/', '/index.html'])(
+    '%s serves the default API reference',
+    async (path) => {
+      const response = await request(app.getHttpServer())
+        .get(path)
+        .expect(200)
+        .expect('Content-Type', /html/);
+
+      expect(response.text).toContain('Burma Project Ideas · API reference');
+      expect(response.text).toContain('href="#main"');
+      expect(response.text).toContain('<main id="main"');
+      expect(response.text).toContain('aria-label="API navigation"');
+      expect(response.text).toContain('aria-controls="sidebar"');
+      expect(response.text).toContain('lang="my"');
+      expect(response.text).toContain(
+        '@media (prefers-reduced-motion: reduce)',
+      );
+      expect(response.text).toContain('/assets/brand-logo.svg');
+      expect(response.text).toContain('/assets/social-card.png');
+      expect(response.text).toContain('rel="canonical"');
+      expect(response.text).toContain('rel="apple-touch-icon"');
+      const structuredData = response.text.match(
+        /<script type="application\/ld\+json">([\s\S]*?)<\/script>/,
+      );
+      expect(JSON.parse(structuredData?.[1] ?? '{}')).toMatchObject({
+        '@type': 'WebSite',
+        name: 'Burma Project Ideas API',
+        inLanguage: ['en', 'my'],
       });
-  });
+
+      const script = response.text.match(/<script>([\s\S]*?)<\/script>/)?.[1];
+      expect(script).toBeDefined();
+      const pages = Object.values(
+        runInNewContext(script!.split('const BASE')[0] + 'DOC_PAGES'),
+      ) as Array<{ kind?: string; method: string; path: string }>;
+      const endpoints = pages.filter((page) => page.kind !== 'guide');
+      expect(endpoints).toHaveLength(54);
+      expect(
+        new Set(endpoints.map((page) => page.path.split('/')[1])).size,
+      ).toBe(20);
+
+      const schema = await request(app.getHttpServer())
+        .get('/swagger-json')
+        .expect(200);
+      const actual = Object.entries(schema.body.paths).flatMap(
+        ([route, operations]) =>
+          Object.keys(operations as object).map(
+            (method) =>
+              `${method.toUpperCase()} ${route.replace(/\{([^}]+)\}/g, ':$1')}`,
+          ),
+      );
+      expect(
+        endpoints.map((page) => `${page.method} ${page.path}`).sort(),
+      ).toEqual(actual.sort());
+
+      const serverSetup = script!.split('const pages')[0] + 'DEFAULT_SERVER';
+      for (const location of [
+        { protocol: 'http:', origin: 'http://localhost:3000' },
+        { protocol: 'https:', origin: 'https://preview.example.test' },
+        {
+          protocol: 'https:',
+          origin: 'https://burma-project-ideas.vercel.app',
+        },
+      ]) {
+        expect(runInNewContext(serverSetup, { location })).toBe(
+          location.origin,
+        );
+      }
+      expect(
+        runInNewContext(serverSetup, { location: { protocol: 'file:' } }),
+      ).toBe('https://burma-project-ideas.vercel.app');
+    },
+  );
 
   it('/missing-historical-records (GET) should return records', () => {
     return request(app.getHttpServer())
@@ -439,7 +456,7 @@ describe('AppController (e2e)', () => {
           projectTags.every(
             (tag) =>
               tag.description.includes('<span lang="my">') &&
-              tag.description.includes('Source project') &&
+              tag.description.includes('Source') &&
               tag.description.includes('https://github.com/'),
           ),
         ).toBe(true);

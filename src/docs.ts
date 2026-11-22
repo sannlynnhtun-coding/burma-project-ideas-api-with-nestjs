@@ -189,7 +189,7 @@ function buildApiTagDescription(definition: ApiTagDefinition): string {
   return (
     `${definition.english}\n\n` +
     `<span lang="my">${definition.myanmar}</span>\n\n` +
-    `Source project / <span lang="my">မူရင်း project</span>: [GitHub](${definition.sourceUrl})`
+    `Source / <span lang="my">မူရင်း</span>: [GitHub](${definition.sourceUrl})`
   );
 }
 
@@ -197,8 +197,8 @@ export function setupApiDocumentation(app: INestApplication): void {
   const configBuilder = new DocumentBuilder()
     .setTitle('Burma Project Ideas API | မြန်မာပရောဂျက်အကြံဉာဏ်များ API')
     .setDescription(
-      'Browse documented REST endpoints for Myanmar culture, education, travel, food, calendars, and reference data. ' +
-        '<span lang="my">မြန်မာ့ယဉ်ကျေးမှု၊ ပညာရေး၊ ခရီးသွား၊ အစားအစာ၊ ပြက္ခဒိန်နှင့် ကိုးကားဒေတာများအတွက် စာရွက်စာတမ်းပါသော REST endpoint များကို ကြည့်ရှုပါ။</span>',
+      'Use documented REST endpoints for Myanmar culture, language, food, travel, history, calendars, and reference data. ' +
+        '<span lang="my">မြန်မာ့ယဉ်ကျေးမှု၊ ဘာသာစကား၊ အစားအစာ၊ ခရီးသွား၊ သမိုင်း၊ ပြက္ခဒိန်နှင့် ကိုးကားဒေတာများအတွက် စာရွက်စာတမ်းပါသော REST endpoint များကို အသုံးပြုပါ။</span>',
     )
     .setVersion('1.0');
 

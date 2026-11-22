@@ -1,5 +1,11 @@
 # Burma Project Ideas API with Nest.js
 
+## API documentation
+
+The default API reference is served at `/` from `public/index.html`, with all 54 endpoints grouped into 20 resources. Start the app and open `http://localhost:3000/`. The request playground defaults to the server hosting the page, including local and preview deployments.
+
+Swagger remains available at `/swagger`, Scalar at `/scalar`, and the OpenAPI schema at `/swagger-json`. The page retains its English and Myanmar descriptions, search, themes, and mobile navigation. Design attribution is in `public/THIRD_PARTY_NOTICES.md`.
+
 ## Installation and Setup
 
 To deploy the project using Vercel, follow these simple steps:
