@@ -14,7 +14,17 @@ html[data-color-mode=light] #sidebar{background:#f4f5f7}
 .theme-select{max-width:130px;min-height:36px;padding:4px 6px;border:1px solid var(--border);border-radius:6px;background:var(--background);color:var(--foreground);font:inherit;font-size:12px}
 .theme-select:focus-visible{outline:2px solid var(--ring);outline-offset:2px}
 .header-links .version{white-space:nowrap;flex-shrink:0}
+/* One continuous documentation shell below the navigation. */
+.site-header{background:var(--site-chrome);border-bottom:1px solid var(--border)}
+.site-header .header-panel,.site-header .header-curve{display:none}
+.header-nav{padding-top:0;padding-bottom:0}
+.layout{padding:0}
+.workspace{border:0;border-left:1px solid var(--border);border-radius:0;box-shadow:none;min-height:calc(100dvh - var(--header-height))}
+.toolbar{border-radius:0;border-bottom:1px solid var(--border)}
+@media(min-width:768px){#sidebar{top:var(--header-height);height:calc(100dvh - var(--header-height))}}
+@media(max-width:767px){.workspace{border-left:0}}
 html[data-color-mode=dark] .toolbar{background:#16171d}
+html[data-color-mode=dark] .workspace,html[data-color-mode=dark] .workspace>.columns{background:#16171d}
 html[data-color-mode=light] .console .panel,html[data-color-mode=light] .landing-code{background:#fff;color:#303340;border-color:#c5c7ce}
 html[data-color-mode=light] .console :is(.panel-head,.tabs button,.copy),html[data-color-mode=light] .landing-code header{color:#2b5598}
 html[data-color-mode=light] .console .panel pre,html[data-color-mode=light] .landing-code pre{color:#356324}
@@ -36,4 +46,3 @@ html[data-color-mode=light] .landing-code .request-method{color:#91471d}
 html[data-color-mode=light] .landing-code .request-scheme{color:#454956}
 html[data-color-mode=light] .landing-code .request-host{color:#2b5598}
 html[data-color-mode=light] .landing-code .request-path{color:#356324}
-html[data-color-mode=dark] .workspace,html[data-color-mode=dark] .workspace>.columns{background:#16171d}
