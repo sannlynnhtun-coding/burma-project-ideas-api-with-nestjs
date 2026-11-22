@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI Copywriting"
+  short_description: "Write clear, concise, accessible interface copy"
+  default_prompt: "Use $ui-copywriting to improve this interface copy for clarity and usability."
