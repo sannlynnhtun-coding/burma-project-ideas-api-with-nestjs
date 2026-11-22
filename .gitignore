@@ -39,3 +39,6 @@ lerna-debug.log*
 !.vscode/extensions.json
 .vercel
 /.vs
+.claude-flow/github/store.json
+.claude-flow/policy/state.json
+.claude-flow/terminals/store.json
