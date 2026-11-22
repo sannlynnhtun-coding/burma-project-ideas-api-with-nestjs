@@ -1,0 +1,8 @@
+.json-highlight{--json-key-color:#7aa2f7;--json-string-color:#9ece6a;--json-number-color:#ff9e64;--json-boolean-color:#bb9af7;--json-null-color:#f7768e;--json-punctuation-color:#c0caf5}
+html[data-color-mode=light] .json-highlight,html:not([data-color-mode=dark]) #reference pre.json-highlight{--json-key-color:#2b5598;--json-string-color:#356324;--json-number-color:#91471d;--json-boolean-color:#7047a3;--json-null-color:#9b3150;--json-punctuation-color:#454956}
+.json-highlight .json-key{color:var(--json-key-color)}
+.json-highlight .json-string{color:var(--json-string-color)}
+.json-highlight .json-number{color:var(--json-number-color)}
+.json-highlight .json-boolean{color:var(--json-boolean-color)}
+.json-highlight .json-null{color:var(--json-null-color)}
+.json-highlight .json-punctuation{color:var(--json-punctuation-color)}
