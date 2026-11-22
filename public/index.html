@@ -281,6 +281,7 @@ p { margin: 16px 0; font-size: 14px; line-height: 1.75; color: var(--muted-foreg
 .adhihtan-flow .mind-map-scroll a:hover rect, .adhihtan-flow .mind-map-scroll a:focus-visible rect { fill: var(--accent); stroke: var(--foreground); stroke-width: 2; }
 
 .resource-flow .mind-map-scroll .map-secondary { font-size: 9px; }
+
 .landing-page .layout,.landing-page #menu{display:none}
 .landing{max-width:1120px;margin:0 auto;padding:80px 40px 64px}
 .landing[hidden]{display:none}
@@ -306,6 +307,12 @@ p { margin: 16px 0; font-size: 14px; line-height: 1.75; color: var(--muted-foreg
 @media(max-width:767px){.landing{padding:48px 24px 40px}.landing-hero{grid-template-columns:1fr;gap:36px;padding:20px 0 48px}.landing h1{font-size:clamp(36px,9.8vw,44px)}.landing .resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.landing-facts{gap:28px;margin-bottom:40px}.landing-code pre{font-size:11px;padding:18px}}
 @media(max-width:380px){.landing .resource-grid{grid-template-columns:1fr}.landing h1{font-size:36px}}
 
+.workspace[data-page-kind=resource-overview] .columns{display:block;max-width:1136px;padding:24px 48px 64px}
+.workspace[data-page-kind=resource-overview] article{max-width:800px;margin-inline:auto}
+.workspace[data-page-kind=resource-overview] .console{display:none}
+.resource-overview-link{font-weight:600}
+.workspace[data-page-kind=resource-overview] .resource-card{min-width:0;overflow-wrap:anywhere}
+@media(max-width:767px){.workspace[data-page-kind=resource-overview] .columns{padding:68px 16px 40px}.workspace[data-page-kind=resource-overview] .resource-grid{grid-template-columns:minmax(0,1fr)}}
 </style></head><body><a class="skip" href="#main">Skip to content</a>
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><defs>
 <symbol id="i-brand" viewBox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></symbol>
@@ -6265,7 +6272,7 @@ function adhihtanFlow(doc){
    ['Optional: look up one reference display name by the numeric suffix of `default_spell_*`.','ရွေးချယ်နိုင်ပါသည် — `default_spell_*` ၏ နောက်ဆုံးနံပါတ်ဖြင့် ဂုဏ်တော်အမည်တစ်ခုကို ရယူပါ။'],
    ['For `default_spell_1`, use `spellId` 1. Practice spell names and order come from schedule entries.','`default_spell_1` အတွက် `spellId` 1 ကို သုံးပါ။ အဓိဋ္ဌာန်၏ ဂုဏ်တော်အမည်နှင့် အစဉ်ကို schedule entry များမှ ရယူပါ။']]
  };
- const overview=doc.id==='adhihtan-categories', guide=guides[doc.id];
+ const overview=doc.kind==='resource-overview', guide=guides[doc.id];
  const steps=[
   ['adhihtan-categories','Choose a practice','အမျိုးအစားရွေးပါ','Use the selected category’s `value` as `categoryId`.','ရွေးထားသောအမျိုးအစား၏ `value` ကို `categoryId` အဖြစ် သုံးပါ။'],
   ['adhihtan-category-id','Read the guidance','လမ်းညွှန်ဖတ်ပါ','Show the instructions and cautions. Reuse category-list data if available.','လုပ်ဆောင်နည်းနှင့် သတိပြုရန်ကို ပြပါ။ အမျိုးအစားစာရင်းမှ ဒေတာရှိပြီးသားဆိုလျှင် ပြန်သုံးပါ။'],
@@ -6285,7 +6292,7 @@ function adhihtanFlow(doc){
  <g stroke="var(--border)" stroke-width="1.5"><path d="M150 132C195 132 195 50 238 50"/><path d="M150 150H238" stroke-dasharray="4 4"/><path d="M150 168C195 168 195 250 238 250" stroke-dasharray="4 4"/></g>
  <g transform="translate(238,22)"><rect width="164" height="56" rx="8" fill="var(--muted)" stroke="var(--border)"/><text x="82" y="23" text-anchor="middle" lang="my">ပုံမှန် စတင်အသုံးပြုရန်</text><text x="82" y="42" text-anchor="middle" class="map-secondary">Normal flow · start here</text></g>
  <path d="M402 50H442" stroke="var(--foreground)" stroke-width="1.5"/>
- <a href="#adhihtan-categories" aria-current="page" aria-label="အမျိုးအစားစာရင်းဖြင့် စတင်ရန် / Start with categories"><g transform="translate(442,18)"><rect width="224" height="64" rx="10"/><text x="12" y="24" class="map-endpoint">GET /adhihtan/categories</text><text x="12" y="44" class="map-secondary" lang="my">အမျိုးအစားရွေးပြီး အဆင့်ဆက်ရွေးပါ →</text></g></a>
+ <a href="#adhihtan-categories" aria-label="အမျိုးအစားစာရင်းဖြင့် စတင်ရန် / Start with categories"><g transform="translate(442,18)"><rect width="224" height="64" rx="10"/><text x="12" y="24" class="map-endpoint">GET /adhihtan/categories</text><text x="12" y="44" class="map-secondary" lang="my">အမျိုးအစားရွေးပြီး အဆင့်ဆက်ရွေးပါ →</text></g></a>
  <g transform="translate(238,122)"><rect width="164" height="56" rx="8" fill="var(--muted)" stroke="var(--border)"/><text x="82" y="23" text-anchor="middle" lang="my">Offline အတွက် ရယူရန်</text><text x="82" y="42" text-anchor="middle" class="map-secondary">Optional · full content</text></g>
  <path d="M402 150H442" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="4 4"/>
  <a href="#adhihtan-data" aria-label="Offline ဒေတာရယူပုံ ကြည့်ရန် / View offline download"><g transform="translate(442,118)"><rect width="224" height="64" rx="10"/><text x="12" y="24" class="map-endpoint">GET /adhihtan/data.json</text><text x="12" y="44" class="map-secondary" lang="my">ဒေတာအပြည့်အစုံကို cache လုပ်ရန် →</text></g></a>
@@ -6296,12 +6303,12 @@ function adhihtanFlow(doc){
  ${flowText('Select an endpoint node to view its Call Guide. This does not send a request. On narrow screens, scroll the map horizontally.','Endpoint node ကို ရွေး၍ သက်ဆိုင်ရာ Call Guide ကို ကြည့်ပါ။ Request အလိုအလျောက် မပို့ပါ။ ဖုန်းမျက်နှာပြင်တွင် ပုံကို ဘေးတိုက်ရွှေ့ကြည့်နိုင်ပါသည်။')}
  <h3><span lang="my">ပုံမှန်အသုံးပြုပုံ</span><small lang="en" class="flow-translation">Normal flow</small></h3>
  <ol class="flow-steps">${steps.map(([id,en,my,detail,detailMy])=>`<li><strong lang="my">${my}</strong><div lang="en" class="flow-translation">${en}</div>${flowText(detail,detailMy)}<a href="#${id}">GET ${esc(DOC_PAGES[id].path)}</a></li>`).join('')}</ol>
- <div class="note">${flowText('Category 5 is custom: its schedules endpoint returns HTTP 200 with []. Define custom entries in the client.','အမျိုးအစား ၅ သည် စိတ်ကြိုက်ဖြစ်၍ schedules endpoint က HTTP 200 နှင့် [] ပြန်ပေးပါသည်။ စိတ်ကြိုက်အစီအစဉ်ကို app ဘက်တွင် သတ်မှတ်ပါ။')}</div>`:`<p><a href="#adhihtan-categories"><span lang="my">အသုံးပြုပုံ အစအဆုံးကြည့်ရန်</span> · <span lang="en">View the normal flow</span></a></p>`}
- <div class="call-guide"><h3><span lang="my">API ခေါ်ဆိုပုံ</span><small lang="en" class="flow-translation">Call Guide</small></h3>
+ <div class="note">${flowText('Category 5 is custom: its schedules endpoint returns HTTP 200 with []. Define custom entries in the client.','အမျိုးအစား ၅ သည် စိတ်ကြိုက်ဖြစ်၍ schedules endpoint က HTTP 200 နှင့် [] ပြန်ပေးပါသည်။ စိတ်ကြိုက်အစီအစဉ်ကို app ဘက်တွင် သတ်မှတ်ပါ။')}</div>`:`<p><a href="#adhihtan-overview"><span lang="en">← Adhihtan Overview</span> · <span lang="my">အသုံးပြုပုံ အစအဆုံးကြည့်ရန်</span></a></p>`}
+ ${!overview?`<div class="call-guide"><h3><span lang="my">API ခေါ်ဆိုပုံ</span><small lang="en" class="flow-translation">Call Guide</small></h3>
  <strong lang="my">ဘယ်အချိန်ခေါ်မလဲ</strong>${flowText(...guide[0])}
  <div class="route">${badge(doc)}<code>${esc(doc.path)}</code></div>
  <strong lang="my">နောက်တစ်ဆင့်</strong>${flowText(...guide[1])}
- ${flowText('Selecting a guide or endpoint never sends a request. Use Send request in the playground to run it.','Guide သို့မဟုတ် endpoint ရွေးခြင်းဖြင့် request မပို့ပါ။ စမ်းသပ်ရန် playground ရှိ Send request ကို နှိပ်ပါ။')}</div>
+ ${flowText('Selecting a guide or endpoint never sends a request. Use Send request in the playground to run it.','Guide သို့မဟုတ် endpoint ရွေးခြင်းဖြင့် request မပို့ပါ။ စမ်းသပ်ရန် playground ရှိ Send request ကို နှိပ်ပါ။')}</div>`:''}
  ${overview?`<details class="adhihtan-sequence"><summary><span><span lang="my">အဆင့်ဆင့် ဆက်သွယ်လုပ်ဆောင်ပုံကို ကြည့်ရန်</span><span class="flow-translation" lang="en">Show sequence diagram</span></span></summary><div class="flow-detail">
  ${flowText('The normal flow is shown below. Category guidance and individual levels can be reused from earlier responses.','ပုံမှန် flow ကို အောက်တွင် ပြထားပါသည်။ အမျိုးအစားလမ်းညွှန်နှင့် အဆင့်တစ်ခု၏ ဒေတာကို အစောပိုင်း response များမှ ပြန်သုံးနိုင်ပါသည်။')}
  <div class="sequence-scroll" tabindex="0" role="region" aria-label="Scrollable Adhihtan sequence diagram"><svg viewBox="0 0 680 470" role="img" aria-labelledby="adhihtan-sequence-title adhihtan-sequence-desc">
@@ -6319,7 +6326,7 @@ function adhihtanFlow(doc){
  ${flowText('This download does not save or sync user progress.','ဤဒေတာရယူခြင်းသည် အသုံးပြုသူ၏ progress ကို သိမ်းခြင်း သို့မဟုတ် sync လုပ်ခြင်း မဟုတ်ပါ။')}
  </div></details>
  <p><a href="#adhihtan-spells"><span lang="my">လိုအပ်မှ ဂုဏ်တော်အမည်စာရင်း ကြည့်ရန်</span> · <span lang="en">Optional spell-name reference</span></a></p>
- <h2><span lang="my">အမျိုးအစားစာရင်း API အသေးစိတ်</span><small class="flow-translation" lang="en">Category endpoint reference</small></h2>`:''}</section>`;
+`:''}</section>`;
 }
 
 const RESOURCE_FLOWS = {
@@ -7418,19 +7425,32 @@ function resourceFlow(doc){
  if(doc.path.startsWith('/adhihtan/'))return adhihtanFlow(doc);
  const resource=doc.path.split('/')[1], flow=RESOURCE_FLOWS[resource];
  if(!flow||doc.kind==='guide')return '';
- const index=flow.steps.findIndex(step=>step.id===doc.id), step=flow.steps[index];
+ const index=doc.kind==='resource-overview'?0:flow.steps.findIndex(step=>step.id===doc.id), step=flow.steps[index];
  const normalSteps=flow.normalIds?flow.normalIds.map(id=>flow.steps.find(step=>step.id===id)):flow.steps;
- const overview=index===0, next=flow.mode==='choice'||step.optional||step.alternative?null:flow.steps.slice(index+1).find(item=>!item.optional&&!item.alternative);
+ const overview=doc.kind==='resource-overview', next=flow.mode==='choice'||step.optional||step.alternative?null:flow.steps.slice(index+1).find(item=>!item.optional&&!item.alternative);
  return `<section class="adhihtan-flow resource-flow" data-resource="${resource}" aria-label="${esc(label(resource))} usage flow">${overview?`
  <div class="flow-intro"><h2><span lang="my">${esc(flow.titleMy)} အသုံးပြုပုံ</span><small class="flow-translation" lang="en">${esc(label(resource))} resource overview</small></h2>${flowText(...flow.intro)}${flow.note?flowText(...flow.note):''}</div>
  <h3><span lang="my">လိုအပ်ချက်အလိုက် API ရွေးပါ</span><small lang="en" class="flow-translation">Choose an API by task</small></h3>${resourceMindMap(resource,flow)}
  ${flowText('Choose an endpoint node to open its Call Guide. No request is sent until you press Send request. On narrow screens, scroll the map horizontally.','Endpoint node ကို ရွေး၍ Call Guide ကို ဖွင့်ပါ။ Send request ကို မနှိပ်မချင်း request မပို့ပါ။ ဖုန်းမျက်နှာပြင်တွင် ပုံကို ဘေးတိုက်ရွှေ့ကြည့်နိုင်ပါသည်။')}
  <h3><span lang="my">ပုံမှန်အသုံးပြုပုံ</span><small class="flow-translation" lang="en">Normal flow</small></h3>
- <ol class="flow-steps">${normalSteps.map(item=>`<li><strong lang="my">${esc(item.title[1])}</strong><div class="flow-translation" lang="en">${esc(item.title[0])}${item.optional?' · Optional':item.alternative?' · Independent alternative':''}</div>${flowText(...item.detail)}<a href="#${item.id}">${esc(DOC_PAGES[item.id].method)} ${esc(DOC_PAGES[item.id].path)}</a></li>`).join('')}</ol>`:`<p><a href="#${flow.steps[0].id}"><span lang="my">အသုံးပြုပုံ အစအဆုံးကြည့်ရန်</span> · <span lang="en">View the resource flow</span></a></p>`}
- <div class="call-guide"><h3><span lang="my">API ခေါ်ဆိုပုံ</span><small class="flow-translation" lang="en">Call Guide</small></h3><strong lang="my">ဘယ်အချိန်နှင့် ဘယ်လိုခေါ်မလဲ</strong>${flowText(...step.detail)}
+ <ol class="flow-steps">${normalSteps.map(item=>`<li><strong lang="my">${esc(item.title[1])}</strong><div class="flow-translation" lang="en">${esc(item.title[0])}${item.optional?' · Optional':item.alternative?' · Independent alternative':''}</div>${flowText(...item.detail)}<a href="#${item.id}">${esc(DOC_PAGES[item.id].method)} ${esc(DOC_PAGES[item.id].path)}</a></li>`).join('')}</ol>`:`<p><a href="#${resource}-overview"><span lang="en">← ${esc(label(resource))} Overview</span> · <span lang="my">အသုံးပြုပုံ အစအဆုံးကြည့်ရန်</span></a></p>`}
+ ${!overview?`<div class="call-guide"><h3><span lang="my">API ခေါ်ဆိုပုံ</span><small class="flow-translation" lang="en">Call Guide</small></h3><strong lang="my">ဘယ်အချိန်နှင့် ဘယ်လိုခေါ်မလဲ</strong>${flowText(...step.detail)}
  <div class="route">${badge(doc)}<code>${esc(doc.path)}</code></div><strong lang="my">နောက်တစ်ဆင့်</strong>
  ${next?flowText(`Use the selected IDs for the next step: ${next.title[0]}.`,`ရွေးထားသော ID များဖြင့် နောက်တစ်ဆင့် ဆက်လုပ်ပါ — ${next.title[1]}။`)+`<a href="#${next.id}">${esc(DOC_PAGES[next.id].method)} ${esc(DOC_PAGES[next.id].path)}</a>`:flowText('Display the response for this task. Other lookups are optional; reuse available data. The response and error examples below describe the current endpoint behavior.','ဤလုပ်ဆောင်ချက်၏ response ကို ပြပါ။ အခြားကိုးကားမှုများကို လိုအပ်မှ ခေါ်ပြီး ရှိပြီးသားဒေတာကို ပြန်သုံးပါ။ အောက်ပါ response နှင့် error နမူနာများတွင် လက်ရှိ endpoint ၏ လုပ်ဆောင်ပုံကို ပြထားပါသည်။')}
- </div>${overview?resourceSequence(resource,flow)+`<h2><span lang="my">Endpoint အသေးစိတ်</span><small lang="en" class="flow-translation">Endpoint reference</small></h2>`:''}</section>`;
+ </div>`:''}${overview?resourceSequence(resource,flow):''}</section>`;
+}
+
+const RESOURCE_OVERVIEWS = Object.fromEntries([...groups].map(([resource,docs])=>{
+ const flow=RESOURCE_FLOWS[resource];
+ const titleMy=resource==='adhihtan'?'အဓိဋ္ဌာန်':flow.titleMy;
+ return [resource+'-overview',{id:resource+'-overview',kind:'resource-overview',resource,path:'/'+resource+'/',title:label(resource)+' Overview',titleMm:titleMy+' အသုံးပြုပုံ',summary:flow?.intro[0]||'Choose a practice, read its guidance, and select a level to see the daily plan.',descriptions:[],sourceUrl:docs[0].sourceUrl}];
+}));
+function renderResourceOverview(doc){
+ const docs=groups.get(doc.resource);
+ $('main').setAttribute('data-page-kind','resource-overview');
+ $('reference').innerHTML=`<div class="reveal"><div class="eyebrow">Resource overview · ${docs.length} endpoints</div><h1>${esc(doc.title)}</h1><p lang="my" class="muted">${esc(doc.titleMm)}</p>${resourceFlow(doc)}<h2><span lang="en">Endpoints</span> · <span lang="my">ခေါ်ဆိုနိုင်သော API များ</span></h2><div class="resource-grid">${docs.map(d=>`<a class="resource-card" href="#${d.id}"><strong>${esc(d.title)}</strong><small>${esc(d.method)} ${esc(d.path)}</small></a>`).join('')}</div><p class="footnote"><a href="${esc(doc.sourceUrl)}" target="_blank" rel="noopener">View data source ↗</a></p></div>`;
+ $('console').innerHTML='';currentExample=null;
+ closeMobileNav(false);$('copy-page-label').textContent='Copy page';
 }
 
 let current, language='curl', responseTab='success', controller;
@@ -7439,11 +7459,12 @@ function navigation(){
  $('nav').innerHTML=pages.filter(d=>d.kind==='guide').map(d=>`<a class="nav-top" href="#${d.id}" ${current.id===d.id?'aria-current="page"':''}><span class="nav-pill">${d.id==='intro'?'Overview':esc(d.title)}</span></a>`).join('')+`<div class="eyebrow" style="padding:0 8px 8px">API resources · ${groups.size}</div>`+[...groups].map(([key,docs])=>{
  const matches=docs.filter(d=>(d.title+' '+d.path+' '+d.titleMm).toLowerCase().includes(q));
  if(!matches.length)return '';
- return `<details ${q||docs.some(d=>d.id===current.id)?'open':''}><summary>${esc(label(key))}<small>${matches.length}</small></summary>${matches.map(d=>`<a class="endpoint" href="#${d.id}" ${d.id===current.id?'aria-current="page"':''}>${badge(d)}<span>${esc(d.path)}</span></a>`).join('')}</details>`;
+ return `<details ${q||current.id===key+'-overview'||docs.some(d=>d.id===current.id)?'open':''}><summary>${esc(label(key))}<small>${docs.length}</small></summary><a class="endpoint resource-overview-link" href="#${key}-overview" ${current.id===key+'-overview'?'aria-current="page"':''}><span>Overview · <span lang="my">အသုံးပြုပုံ</span></span></a>${matches.map(d=>`<a class="endpoint" href="#${d.id}" ${d.id===current.id?'aria-current="page"':''}>${badge(d)}<span>${esc(d.path)}</span></a>`).join('')}</details>`;
  }).join('');
  $('empty').hidden=!q||$('nav').querySelector('.endpoint')!==null;
 }
 function fields(rows){return rows.map(p=>`<div class="field"><code>${esc(p.name)}</code><small>${esc(p.type)}${p.in?' · '+esc(p.in):''}</small>${p.required?'<span class="required">required</span>':''}<p>${esc(p.description)}</p></div>`).join('')}
+
 function renderLanding(){
  const home=!location.hash||location.hash==='#home'||location.hash==='#landing';
  document.querySelectorAll('.header-nav a').forEach(a=>{const active=home?a.getAttribute('href')==='#home':a.getAttribute('href')===(DOC_PAGES[location.hash.slice(1)]?.kind==='guide'?'#base-urls':'#birds-all');if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
@@ -7451,19 +7472,20 @@ function renderLanding(){
  document.documentElement.classList.toggle('landing-page',home);
  if(!home){$('landing').setAttribute('hidden','');return}
  $('landing').removeAttribute('hidden');
- $('landing').innerHTML=`<section class="landing-hero" aria-labelledby="landing-title"><div><div class="eyebrow">Burma Project Ideas · REST API</div><h1 id="landing-title">Myanmar data.<br>Ready to build with.</h1><p class="lead">Explore culture, language, places, and everyday tools through one API.</p><p class="muted" lang="my">မြန်မာ့ယဉ်ကျေးမှု၊ ဘာသာစကား၊ နေရာဒေသနှင့် နေ့စဉ်သုံးဒေတာများကို API တစ်နေရာတည်းမှ ရယူပါ။</p><div class="landing-actions"><a class="primary" href="#intro">Explore API docs ↗</a><a href="#base-urls">Get started</a></div></div><div class="landing-code" role="region" aria-label="Example API request and selected response fields"><header>Your first request · GET /birds</header><pre tabindex="0" aria-label="Example curl request"><code>curl ${BASE}/birds</code></pre><header>JSON response · Selected fields</header><pre tabindex="0" aria-label="Example JSON response"><code>${esc(JSON.stringify(DOC_PAGES[Object.keys(DOC_PAGES).find(k=>DOC_PAGES[k].path==='/birds')].responseSuccess.slice(0,1).map(({Id,BirdMyanmarName,BirdEnglishName})=>({Id,BirdMyanmarName,BirdEnglishName})),null,2))}</code></pre></div></section><div class="landing-facts"><div><strong>${groups.size}</strong><span>API resources · အမျိုးအစားများ</span></div><div><strong>${endpoints.length}</strong><span>Endpoints · ခေါ်ဆိုနိုင်သော API များ</span></div></div><section aria-labelledby="catalog-title"><h2 id="catalog-title">Find your next API</h2><p class="muted">Choose a resource to see its flow, endpoints, and request examples.</p><p class="muted" lang="my">အသုံးပြုပုံ၊ endpoint နှင့် request ဥပမာများကို ကြည့်ရန် အမျိုးအစားရွေးပါ။</p><div class="resource-grid">${[...groups].map(([key,docs])=>`<a class="resource-card" href="#${docs[0].id}"><strong>${esc(label(key))} ↗</strong><small>${docs.length} endpoints</small></a>`).join('')}</div></section><footer class="landing-footer">Burma Project Ideas · <a href="#intro">API documentation ↗</a></footer>`;
+ $('landing').innerHTML=`<section class="landing-hero" aria-labelledby="landing-title"><div><div class="eyebrow">Burma Project Ideas · REST API</div><h1 id="landing-title">Myanmar data.<br>Ready to build with.</h1><p class="lead">Explore culture, language, places, and everyday tools through one API.</p><p class="muted" lang="my">မြန်မာ့ယဉ်ကျေးမှု၊ ဘာသာစကား၊ နေရာဒေသနှင့် နေ့စဉ်သုံးဒေတာများကို API တစ်နေရာတည်းမှ ရယူပါ။</p><div class="landing-actions"><a class="primary" href="#intro">Explore API docs ↗</a><a href="#base-urls">Get started</a></div></div><div class="landing-code" role="region" aria-label="Example API request and selected response fields"><header>Your first request · GET /birds</header><pre tabindex="0" aria-label="Example curl request"><code>curl ${BASE}/birds</code></pre><header>JSON response · Selected fields</header><pre tabindex="0" aria-label="Example JSON response"><code>${esc(JSON.stringify(DOC_PAGES[Object.keys(DOC_PAGES).find(k=>DOC_PAGES[k].path==='/birds')].responseSuccess.slice(0,1).map(({Id,BirdMyanmarName,BirdEnglishName})=>({Id,BirdMyanmarName,BirdEnglishName})),null,2))}</code></pre></div></section><div class="landing-facts"><div><strong>${groups.size}</strong><span>API resources · အမျိုးအစားများ</span></div><div><strong>${endpoints.length}</strong><span>Endpoints · ခေါ်ဆိုနိုင်သော API များ</span></div></div><section aria-labelledby="catalog-title"><h2 id="catalog-title">Find your next API</h2><p class="muted">Choose a resource to see its flow, endpoints, and request examples.</p><p class="muted" lang="my">အသုံးပြုပုံ၊ endpoint နှင့် request ဥပမာများကို ကြည့်ရန် အမျိုးအစားရွေးပါ။</p><div class="resource-grid">${[...groups].map(([key,docs])=>`<a class="resource-card" href="#${key}-overview"><strong>${esc(label(key))} ↗</strong><small>${docs.length} endpoints</small></a>`).join('')}</div></section><footer class="landing-footer">Burma Project Ideas · <a href="#intro">API documentation ↗</a></footer>`;
 }
 
 function render(){
  renderLanding();
  controller?.abort();
- current=DOC_PAGES[location.hash.slice(1)]||DOC_PAGES.intro;
+ current=DOC_PAGES[location.hash.slice(1)]||RESOURCE_OVERVIEWS[location.hash.slice(1)]||DOC_PAGES.intro;
  responseTab='success';
  navigation();
  $('breadcrumb').textContent='Documentation / '+(current.kind==='guide'?'Get started':label(current.path.split('/')[1]));
+ if(current.kind==='resource-overview'){renderResourceOverview(current);return}
  const intro=current.id==='intro', guide=current.kind==='guide';
  $('main').setAttribute('data-page-kind',guide?'guide':'endpoint');
- $('reference').innerHTML=`<div class="reveal"><div class="eyebrow">${intro?'Developer documentation':esc(current.category)}</div><h1>${intro?'A small window into Myanmar.':esc(current.title)}</h1><p class="lead">${intro?'Explore open data from Myanmar. One API, independent resources, and structured responses.':esc(current.summary)}</p><p lang="my" class="muted">${esc(current.titleMm)}</p>${resourceFlow(current)}${intro?`<div class="stats"><div class="stat"><strong>${groups.size}</strong><small>API resources</small></div><div class="stat"><strong>${endpoints.length}</strong><small>Documented endpoints</small></div></div>`:(guide?'':`<div class="route">${badge(current)}<code>${esc(current.path)}</code></div>`)}${current.descriptions.map(t=>`<p ${t.includes('lang="my"')?'lang="my"':''}>${prose(t)}</p>`).join('')}${current.callout?`<div class="note">${esc(current.callout)}</div>`:''}${intro?`<h2>Browse the APIs</h2><div class="resource-grid">${[...groups].map(([key,docs])=>`<a class="resource-card" href="#${docs[0].id}"><strong>${esc(label(key))} ↗</strong><small>${docs.length} endpoint${docs.length===1?'':'s'}</small></a>`).join('')}</div>`:(guide?'':`<h2>Request parameters</h2>${fields(current.params||[])||'<p class="muted">No parameters required.</p>'}${current.requestBody?`<h2>Request body</h2>${fields(current.requestBodyFields||[])}<div class="panel panel-body"><pre>${esc(JSON.stringify(current.requestBody,null,2))}</pre></div>`:''}<h2>Response fields</h2>${fields(current.responseFields||[])}`) }<p class="footnote"><a href="${esc(current.sourceUrl)}" target="_blank" rel="noopener">View data source ↗</a></p></div>`;
+ $('reference').innerHTML=`<div class="reveal"><div class="eyebrow">${intro?'Developer documentation':esc(current.category)}</div><h1>${intro?'A small window into Myanmar.':esc(current.title)}</h1><p class="lead">${intro?'Explore open data from Myanmar. One API, independent resources, and structured responses.':esc(current.summary)}</p><p lang="my" class="muted">${esc(current.titleMm)}</p>${resourceFlow(current)}${intro?`<div class="stats"><div class="stat"><strong>${groups.size}</strong><small>API resources</small></div><div class="stat"><strong>${endpoints.length}</strong><small>Documented endpoints</small></div></div>`:(guide?'':`<div class="route">${badge(current)}<code>${esc(current.path)}</code></div>`)}${current.descriptions.map(t=>`<p ${t.includes('lang="my"')?'lang="my"':''}>${prose(t)}</p>`).join('')}${current.callout?`<div class="note">${esc(current.callout)}</div>`:''}${intro?`<h2>Browse the APIs</h2><div class="resource-grid">${[...groups].map(([key,docs])=>`<a class="resource-card" href="#${key}-overview"><strong>${esc(label(key))} ↗</strong><small>${docs.length} endpoint${docs.length===1?'':'s'}</small></a>`).join('')}</div>`:(guide?'':`<h2>Request parameters</h2>${fields(current.params||[])||'<p class="muted">No parameters required.</p>'}${current.requestBody?`<h2>Request body</h2>${fields(current.requestBodyFields||[])}<div class="panel panel-body"><pre>${esc(JSON.stringify(current.requestBody,null,2))}</pre></div>`:''}<h2>Response fields</h2>${fields(current.responseFields||[])}`) }<p class="footnote"><a href="${esc(current.sourceUrl)}" target="_blank" rel="noopener">View data source ↗</a></p></div>`;
  const example=guide?DOC_PAGES[Object.keys(DOC_PAGES).find(k=>DOC_PAGES[k].path==='/birds')]:current;
  $('console').innerHTML=`<div class="eyebrow">${guide?'Make your first request':'Request playground'}</div><label class="input-field">Server<select id="server">${[...new Set([DEFAULT_SERVER, BASE, "http://localhost:3000"])].map(url=>`<option value="${esc(url)}">${url===DEFAULT_SERVER?"Current server":url===BASE?"Production":"Local"} · ${esc(url)}</option>`).join('')}</select></label><div class="panel"><div class="panel-head"><span>${badge(example)} <code>${esc(example.path)}</code></span></div><div class="tabs" role="group" aria-label="Request language">${['curl','JavaScript','Python'].map(l=>`<button  data-language="${l}" aria-pressed="${language===l}">${l}</button>`).join('')}</div><div class="panel-body"><pre id="snippet"></pre><button class="copy" id="copy" style="margin-top:14px">Copy request</button></div></div><form id="request-form">${(example.params||[]).map(p=>`<label class="input-field">${esc(p.name)} <span class="muted">${esc(p.in)}</span><input name="${esc(p.name)}" ${p.required?'required':''} value="${esc(p.example??'')}" data-location="${esc(p.in)}"></label>`).join('')}${example.requestBody?`<label class="input-field">JSON body<textarea id="body" rows="5">${esc(JSON.stringify(example.requestBody,null,2))}</textarea></label>`:''}<button class="send" id="send">Send request ↗</button></form><p class="footnote muted">Requests run from your browser against the selected server.</p><div class="panel"><div class="panel-head"><span>Response</span><span class="status" id="status">EXAMPLE</span></div><div class="tabs" role="group" aria-label="Response example"><button  data-response="success" aria-pressed="true">Success</button><button  data-response="error" aria-pressed="false">${esc(example.responseErrorLabel||'Error')}</button></div><div class="panel-body"><pre id="response" aria-live="polite"></pre><p class="footnote muted">${esc(example.responseContentType||'application/json')} · Shortened example</p></div></div>`;
  currentExample=example;
@@ -7539,7 +7561,7 @@ $('theme').onclick=()=>{
 };
 $('copy-page').onclick=async()=>{
  const d=current;
- const text=[`# ${d.title}`,d.summary,...d.descriptions.map(t=>t.replace(/<[^>]*>/g,'')),...(d.kind==='guide'?[]:[`${d.method} ${d.path}`,d.sampleRequest,JSON.stringify(d.responseSuccess,null,2)])].join('\n\n');
+ const text=d.kind==='resource-overview'?$('reference').innerText:[`# ${d.title}`,d.summary,...d.descriptions.map(t=>t.replace(/<[^>]*>/g,'')),...(d.kind==='guide'?[]:[`${d.method} ${d.path}`,d.sampleRequest,JSON.stringify(d.responseSuccess,null,2)])].join('\n\n');
  try{await navigator.clipboard.writeText(text);$('copy-page-label').textContent='Copied'}catch{$('copy-page-label').textContent='Copy unavailable'}
 };
 document.addEventListener('keydown',e=>{
