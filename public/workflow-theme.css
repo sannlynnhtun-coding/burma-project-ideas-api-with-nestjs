@@ -1,0 +1,31 @@
+/* Mixed mode keeps the original YBS palette. Single modes recolor surfaces together. */
+html[data-color-mode=light] body{background:#f4f5f7;color:#1e1e1e}
+html[data-color-mode=light] :is(.json-tree-board,.dark-json-card,.tree-node,[class~="bg-[#1E1E1E]"],[class~="bg-[#232634]"],[class~="bg-[#252525]"],[class~="bg-[#2B2B2B]"],[class~="bg-[#2A2A2A]"],[class~="bg-[#323232]"],[class~="bg-[#161616]"],[class~="bg-[#141414]"],[class~="bg-[#1A1A1A]"],[class~="bg-[#2E2E2E]"]){background:#fff!important;color:#303340!important;border-color:#c5c7ce!important;box-shadow:none}
+html[data-color-mode=light] .json-tree-board{background-color:#edf0f5!important}
+html[data-color-mode=light] [class*="text-white"]{color:#454956!important}
+html[data-color-mode=light] [class*="border-white"]{border-color:#c5c7ce!important}
+html[data-color-mode=light] [class*="bg-white/"]{background-color:#e5e7ed!important}
+html[data-color-mode=light] :is([class~="text-[#7AA2F7]"],[style*="color:#7AA2F7"]){color:#2b5598!important}
+html[data-color-mode=light] :is([class~="text-[#9ECE6A]"],[style*="color:#9ECE6A"]){color:#356324!important}
+html[data-color-mode=light] :is([class~="text-[#FF9E64]"],[class~="text-[#C97A42]"],[style*="color:#FF9E64"]){color:#91471d!important}
+html[data-color-mode=light] [class~="text-[#E7E678]"]{color:#6b590c!important}
+html[data-color-mode=light] :is(input,select,textarea){color:#303340!important;background-color:#fff!important}
+html[data-color-mode=light] input::placeholder{color:#596070!important;opacity:1}
+html[data-color-mode=light] [class~="bg-black/40"]{background-color:#e5e7ed!important}
+html[data-color-mode=light] .code-tab[aria-pressed=true],html[data-color-mode=light] .code-tab:not([aria-pressed])[class~="bg-[#2E2E2E]"]{background:#e7e678!important;color:#1e1e1e!important}
+html[data-color-mode=light] .ybs-graph-connector{stroke:#2b5598}
+html[data-color-mode=light] .ybs-graph-connector.is-active{stroke:#91471d}
+html[data-color-mode=light] .ybs-graph-terminal{stroke:#2b5598}
+html[data-color-mode=light] .ybs-graph-terminal.is-active{stroke:#91471d}
+html[data-color-mode=light] #ybs-graph-normal path{stroke:#2b5598}
+html[data-color-mode=light] #ybs-graph-active path{stroke:#91471d}
+html[data-color-mode=light] #ybs-ui-arrowhead path{stroke:#91471d}
+html[data-color-mode=light] .ybs-ui-arrow{stroke:#91471d!important}
+html[data-color-mode=light] .pipeline-card[aria-pressed=true]{border-color:#91471d!important;background:#fff6e5!important}
+html[data-color-mode=dark] body{background:#16171d;color:#f5f5f3}
+html[data-color-mode=dark] .miro-board{background-color:#16171d;color:#f5f5f3;border-color:#3b4058}
+html[data-color-mode=dark] .miro-board :is([class~="bg-white"],[class~="bg-[#F5F5F3]"]){background:#232634!important;border-color:#454b63!important}
+html[data-color-mode=dark] :is([class~="text-[#1E1E1E]"],[class~="text-[#555]"],[class~="text-[#666]"],[class~="text-[#333]"],[class~="text-[#2E2E2C]"]){color:#c0caf5!important}
+html[data-color-mode=dark] :is([class*="bg-[#E7E678]"],[class~="bg-[#C97A42]"]){color:#1e1e1e!important}
+html[data-color-mode=dark] a[class*="bg-white/"]{background:#232634!important;color:#f5f5f3!important;border-color:#454b63!important}
+html[data-color-mode=dark] .tree-node.node-selected,html[data-color-mode=light] .tree-node.node-selected{border-color:#c97a42!important}

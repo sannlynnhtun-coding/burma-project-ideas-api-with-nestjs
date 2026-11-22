@@ -328,7 +328,7 @@ p { margin: 16px 0; font-size: 14px; line-height: 1.75; color: var(--muted-foreg
 <div id="nav-backdrop" hidden aria-hidden="true"></div><header class="site-header" id="site-header"><div class="header-panel" aria-hidden="true"></div><svg class="header-curve" viewBox="0 0 400 44" preserveAspectRatio="none" fill="none" aria-hidden="true"><path d="M0 0q10 0 20 10l24 24q10 10 20 10H410V0Z" fill="var(--site-chrome)"/><path d="M0 0q10 0 20 10l24 24q10 10 20 10H410" stroke="var(--border)"/></svg>
 <a class="brand" href="#home"><span class="mark" aria-hidden="true"><svg class="icon"><use href="#i-brand"/></svg></span>Burma Project Ideas</a>
 <nav class="header-nav" aria-label="Main navigation"><a href="#home">Home</a><a href="#birds-all" aria-current="page">API reference</a><a href="#base-urls">Documentation</a></nav>
-<div class="header-links"><span class="version">REST API · v1.0</span><a href="https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs" target="_blank" rel="noopener" aria-label="View API source on GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>Source</a><span class="divider" aria-hidden="true"></span><button class="icon-button" id="theme" aria-label="Switch to dark theme" aria-pressed="false"><svg class="icon sun" aria-hidden="true"><use href="#i-sun"/></svg><svg class="icon moon" aria-hidden="true"><use href="#i-moon"/></svg></button><button class="icon-button" id="menu" aria-label="Open API navigation" aria-expanded="false" aria-controls="sidebar"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button></div></header>
+<div class="header-links"><span class="version">REST API · v1.0</span><a href="https://github.com/sannlynnhtun-coding/burma-project-ideas-api-with-nestjs" target="_blank" rel="noopener" aria-label="View API source on GitHub"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>Source</a><span class="divider" aria-hidden="true"></span><select id="theme" class="theme-select" aria-label="Color theme"><option value="light">Light</option><option value="dark">Dark</option><option value="mixed">Light + Dark</option></select><button class="icon-button" id="menu" aria-label="Open API navigation" aria-expanded="false" aria-controls="sidebar"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button></div></header>
 <main id="landing" class="landing" tabindex="-1" hidden></main><div class="layout" id="layout"><aside id="sidebar" aria-label="Documentation sidebar"><div class="sidebar-heading"><span id="nav-title">Documentation</span><button class="icon-button" id="close-nav" aria-label="Close API navigation"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button><button class="icon-button" id="collapse" aria-label="Collapse documentation sidebar" aria-expanded="true" aria-controls="sidebar-content"><svg class="icon" aria-hidden="true"><use href="#i-panel"/></svg></button></div><div id="sidebar-content"><div class="search-wrap"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><input id="search" type="search" aria-label="Find an endpoint" placeholder="Search APIs…" autocomplete="off"><kbd aria-hidden="true">/</kbd></div><nav aria-label="API navigation" id="nav"></nav><p id="empty" hidden class="muted">No endpoints found.</p><div class="sidebar-footer">Burma Project Ideas API<br><a href="https://www.obsidianui.dev/" target="_blank" rel="noopener">UI based on ObsidianUI ↗</a></div></div></aside>
 <main id="main" class="workspace" tabindex="-1"><div class="toolbar"><div class="toolbar-leading"><button id="mobile-nav" aria-expanded="false" aria-controls="sidebar">Menu</button><div class="breadcrumb" id="breadcrumb"></div></div></div><div class="toolbar-actions"><span class="version">v1.0</span><button class="copy-page" id="copy-page"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg><span id="copy-page-label">Copy page</span></button></div><div class="columns"><article id="reference"></article><section class="console" aria-label="Request and response"><div class="console-inner" id="console"></div></section></div></main></div>
 <script src="/architecture.js"></script>
@@ -7564,18 +7564,17 @@ function openMobileNav(){
 $('menu').onclick=openMobileNav;$('mobile-nav').onclick=openMobileNav;
 $('close-nav').onclick=closeMobileNav;$('nav-backdrop').onclick=closeMobileNav;
 window.addEventListener('resize',()=>{if(window.innerWidth>=768)closeMobileNav(false)});
-function setTheme(dark){
- document.documentElement.classList.toggle('dark',dark);
- $('theme').setAttribute('aria-pressed',String(dark));
- $('theme').setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');
+function setTheme(mode){
+ document.documentElement.dataset.colorMode=mode;
+ document.documentElement.classList.toggle('dark',mode==='dark');
+ $('theme').value=mode;
+ const frame=$('ybs-reference-frame');frame?.contentWindow?.postMessage({type:'bpi-color-mode',mode},location.origin);
 }
-let savedDark=false;
-try{const saved=localStorage.getItem('bpi-theme');savedDark=saved?saved==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches}catch{}
-setTheme(savedDark);
-$('theme').onclick=()=>{
- const dark=!document.documentElement.classList.contains('dark');setTheme(dark);
- try{localStorage.setItem('bpi-theme',dark?'dark':'light')}catch{}
-};
+let savedTheme='mixed';
+try{const saved=localStorage.getItem('bpi-theme');if(['light','dark','mixed'].includes(saved))savedTheme=saved;}catch{}
+setTheme(savedTheme);
+$('theme').onchange=()=>{const mode=$('theme').value;setTheme(mode);try{localStorage.setItem('bpi-theme',mode)}catch{}};
+
 $('copy-page').onclick=async()=>{
  const d=current;
  const text=d.kind==='resource-overview'?$('reference').innerText:[`# ${d.title}`,d.summary,...d.descriptions.map(t=>t.replace(/<[^>]*>/g,'')),...(d.kind==='guide'?[]:[`${d.method} ${d.path}`,d.sampleRequest,JSON.stringify(d.responseSuccess,null,2)])].join('\n\n');
