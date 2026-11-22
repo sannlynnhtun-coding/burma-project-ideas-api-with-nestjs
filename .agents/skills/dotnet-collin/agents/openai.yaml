@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dotnet Collin"
+  short_description: ".NET Collin workflow notes"
+  default_prompt: "Use $dotnet-collin to work on the Collin .NET codebase."
