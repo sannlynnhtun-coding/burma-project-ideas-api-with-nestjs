@@ -40,6 +40,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Check brand assets
+        run: npm run brand:check
+
       - name: Run tests
         run: npm test -- --runInBand
 
@@ -84,6 +87,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Check brand assets
+        run: npm run brand:check
 
       - name: Run tests
         run: npm test -- --runInBand
