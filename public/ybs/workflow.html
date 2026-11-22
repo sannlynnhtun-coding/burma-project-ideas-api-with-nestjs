@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yangon Bus Service (YBS) API Workflow · Editorial Poster, Visual Board & JSON Tree</title>
+
+  <!-- Tailwind CSS & jQuery -->
+  <link rel="stylesheet" href="/ybs/workflow-utilities.css" />
+  <script src="/ybs/jquery-3.7.1.min.js"></script>
+
+  <!-- Fonts: Courier Prime, IBM Plex Mono, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --poster-frame: #E6E6E6;
+      --paper-sheet: #F5F5F3;
+      --ink-dark: #1E1E1E;
+      --hl-yellow: #E7E678;
+      --hl-orange: #C97A42;
+      --pill-bg: #1E1E1E;
+      --pill-fg: #F5F5F3;
+      --json-bg: #1E2030;
+      --json-border: #363A54;
+      --json-key: #7AA2F7;
+      --json-str: #9ECE6A;
+      --json-num: #FF9E64;
+    }
+
+    body {
+      background-color: var(--poster-frame);
+      color: var(--ink-dark);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .font-typewriter { font-family: 'Courier Prime', 'IBM Plex Mono', monospace; }
+    .font-plex { font-family: 'IBM Plex Mono', monospace; }
+
+    /* Main Off-White Paper Sheet (Weingart Editorial) */
+    .poster-sheet {
+      background-color: var(--paper-sheet);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.14), 0 2px 10px rgba(0, 0, 0, 0.06);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .poster-sheet::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(30, 30, 30, 0.032) 1px, transparent 0);
+      background-size: 16px 16px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Miro-Style White Canvas Board */
+    .miro-board {
+      background-color: #F4F5F7;
+      background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+      background-size: 24px 24px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* JSONCrack Dark Grid Canvas */
+    .json-tree-board {
+      background-color: #16171D;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+      background-size: 22px 22px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Inline Highlighter Spans */
+    .hl-yellow {
+      background-color: var(--hl-yellow);
+      padding: 1px 4px;
+      border-radius: 2px;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+      cursor: pointer;
+      transition: filter 150ms ease, outline 150ms ease;
+    }
+
+    .hl-orange {
+      background-color: var(--hl-orange);
+      color: #141414;
+      padding: 1px 5px;
+      border-radius: 2px;
+      font-weight: 700;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+      cursor: pointer;
+      transition: filter 150ms ease, outline 150ms ease;
+    }
+
+    .hl-yellow:hover, .hl-orange:hover, .hl-active {
+      filter: brightness(0.93);
+      outline: 1.5px solid var(--ink-dark);
+      outline-offset: 1px;
+    }
+
+    /* High-Contrast Dark Callout Pills */
+    .callout-pill {
+      background-color: var(--pill-bg);
+      color: var(--pill-fg);
+      border-radius: 16px;
+      transition: transform 180ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 180ms ease;
+      cursor: pointer;
+      position: relative;
+      z-index: 10;
+    }
+
+    .callout-pill:hover, .callout-pill.pill-active {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.28);
+      outline: 2px solid var(--hl-orange);
+      outline-offset: 2px;
+    }
+
+    .vertical-capsule {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      border-radius: 9999px;
+      background-color: var(--pill-bg);
+      color: var(--pill-fg);
+      transition: transform 180ms ease, box-shadow 180ms ease;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .vertical-capsule:hover, .vertical-capsule.pill-active {
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.28);
+      outline: 2px solid var(--hl-orange);
+      outline-offset: 2px;
+    }
+
+    .pointer-line {
+      stroke: #1E1E1E;
+      stroke-width: 1.35;
+      fill: none;
+      transition: stroke 180ms ease, stroke-width 180ms ease;
+    }
+    .pointer-line.active-arrow {
+      stroke: #C97A42;
+      stroke-width: 2.35;
+    }
+
+    .underlined-address {
+      border-bottom: 1.25px solid #1E1E1E;
+      display: inline-block;
+      padding-bottom: 1px;
+      margin-bottom: 3px;
+    }
+
+    /* Dark JSON Card (Image 1 & Image 2 aesthetic) */
+    .dark-json-card {
+      background: var(--json-bg);
+      border: 1px solid var(--json-border);
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
+      font-family: 'IBM Plex Mono', monospace;
+      color: #C0CAF5;
+    }
+
+    /* Tree Node Pill (Image 2 aesthetic) */
+    .tree-node {
+      background: #232634;
+      border: 1.5px solid #3B4058;
+      border-radius: 6px;
+      transition: all 160ms ease;
+      cursor: pointer;
+    }
+    .tree-node:hover, .tree-node.node-selected {
+      border-color: #FF9E64;
+      background: #2A2E40;
+      box-shadow: 0 0 0 2px rgba(255, 158, 100, 0.25);
+    }
+
+    pre::-webkit-scrollbar, .custom-scroll::-webkit-scrollbar { height: 6px; width: 6px; }
+    pre::-webkit-scrollbar-thumb, .custom-scroll::-webkit-scrollbar-thumb { background: #444; border-radius: 3px; }
+  </style>
+<link rel="stylesheet" href="/ybs/graph-arrows.css" />
+</head>
+<body class="min-h-screen py-6 px-3 sm:px-6 lg:px-10 selection:bg-[#E7E678] selection:text-[#1E1E1E]">
+
+  <!-- Top Editorial Utility & Navigation Bar -->
+  <div class="max-w-[1120px] mx-auto mb-4 flex flex-wrap items-center justify-between gap-3 text-xs text-[#2E2E2C]">
+    <div class="flex items-center gap-2">
+      <span class="inline-block w-2.5 h-2.5 rounded-full bg-[#1E1E1E]"></span>
+      <span class="font-bold tracking-tight uppercase">Yangon Bus Service (YBS) API</span>
+      <span class="hidden sm:inline text-[#666]">|</span>
+      <span class="hidden sm:inline font-typewriter">15 REST Endpoints · /ybs/*</span>
+    </div>
+    <div class="flex flex-wrap items-center gap-2">
+      <a href="#miro-ui-board" class="px-3 py-1.5 rounded-full bg-white/85 hover:bg-white border border-black/15 font-medium transition">01 · UI ↔ JSON Board</a>
+      <a href="#json-tree-board" class="px-3 py-1.5 rounded-full bg-white/85 hover:bg-white border border-black/15 font-medium transition">02 · Relational Node Tree</a>
+      <a href="#ybs-simulator" class="px-3.5 py-1.5 rounded-full bg-[#1E1E1E] text-[#F5F5F3] hover:bg-black font-semibold transition">03 · Step-by-Step Simulator ↓</a>
+    </div>
+  </div>
+
+
+  <!-- ===================================================================== -->
+  <!-- SECTION 01: MIRO-STYLE VISUAL BOARD (UI SCREENS ↔ JSON PAYLOADS)      -->
+  <!-- Inspired by Reference Image 1 (image_7f633f.jpg)                      -->
+  <!-- ===================================================================== -->
+  <section id="miro-ui-board" class="miro-board max-w-[1120px] mx-auto mt-10 p-6 sm:p-10 rounded-2xl border border-black/15">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-black/10">
+      <div>
+        <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-md bg-[#1E1E1E] text-[#E7E678] text-[11px] font-bold uppercase tracking-wider mb-1.5">
+          Board 01 · Visual UI ↔ API Contract Map (Miro Storyboard)
+        </div>
+        <h2 class="text-xl sm:text-2xl font-bold text-[#1E1E1E] tracking-tight">How Frontend Screens Map to YBS JSON Responses</h2>
+        <p class="text-xs sm:text-sm text-[#555] mt-1">
+          Follow the numbered steps (1 → 4) to see which UI screen triggers each API call and how JSON fields pass from one screen to the next.
+        </p>
+      </div>
+      <div class="text-[11px] font-plex bg-white px-3 py-2 rounded-lg border border-black/10 text-[#333]">
+        <div>Base URL: <strong>https://burma-project-ideas.vercel.app</strong></div>
+        <div class="text-[#C97A42]">Auth: None (Public Stateless REST)</div>
+      </div>
+    </div>
+
+    <!-- 4-Column Connected UI + Dark JSON Grid -->
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 relative">
+
+      <!-- CARD 1: Screen 1 -> Nearest Stop -->
+      <div class="flex flex-col gap-3">
+        <div class="flex items-center justify-between">
+          <span class="px-2.5 py-0.5 rounded-full bg-[#1E1E1E] text-[#E7E678] font-plex text-[11px] font-bold">STEP 01 · Boarding Stop</span>
+          <span class="text-[11px] font-plex text-[#555]">GPS / Search</span>
+        </div>
+
+        <!-- Dark JSON Snippet Box (Like top-left of Image 1) -->
+        <div class="dark-json-card p-3 text-[10.5px] leading-relaxed">
+          <div class="text-[9.5px] text-white/50 border-b border-white/10 pb-1 mb-1.5 flex justify-between">
+            <span>GET /ybs/bus-stops/nearest</span>
+            <span class="text-[#9ECE6A]">200 OK</span>
+          </div>
+          <pre class="overflow-x-auto">{
+  <span class="text-[#7AA2F7]">"range_km"</span>: <span class="text-[#FF9E64]">1</span>,
+  <span class="text-[#7AA2F7]">"near_by_locations"</span>: [{
+    <span class="text-[#7AA2F7]">"id"</span>: <span class="bg-[#E7E678] text-black px-1 rounded font-bold">1817</span>,
+    <span class="text-[#7AA2F7]">"name"</span>: <span class="text-[#9ECE6A]">"ဆူးလေ(မြို့တောင်ခန်းမ)"</span>,
+    <span class="text-[#7AA2F7]">"regionName"</span>: <span class="text-[#9ECE6A]">"ကျောက်တံတား"</span>
+  }]
+}</pre>
+        </div>
+
+        <!-- Arrow Connector -->
+        <div class="flex items-center justify-center text-[#1E1E1E] font-plex text-xs font-bold">
+          ↓ extracts <code class="mx-1 px-1.5 py-0.5 rounded bg-[#E7E678]">start_id = 1817</code>
+        </div>
+
+        <!-- Mobile Screen Mockup (Like center cards of Image 1) -->
+        <div class="bg-white rounded-xl border border-black/15 p-4 shadow-sm flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between border-b border-black/10 pb-2 mb-3">
+              <span class="text-[11px] font-bold text-[#1E1E1E]">📍 မှတ်တိုင်ရွေးချယ်ရန်</span>
+              <span class="px-2 py-0.5 rounded-full bg-[#6B2D2D] text-white text-[9px]">GPS Auto</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-[#F5F5F3] border border-black/10 text-xs mb-2">
+              <div class="text-[10px] text-[#666]">စတင်မည့် မှတ်တိုင် (Origin)</div>
+              <div class="font-bold text-[#1E1E1E] mt-0.5">၁။ ဆူးလေ (ID: 1817)</div>
+            </div>
+            <div class="p-2.5 rounded-lg bg-[#F5F5F3] border border-black/10 text-xs">
+              <div class="text-[10px] text-[#666]">သွားလိုသည့် မှတ်တိုင် (Destination)</div>
+              <div class="font-bold text-[#1E1E1E] mt-0.5">၂။ လှည်းတန်း (ID: 1960)</div>
+            </div>
+          </div>
+          <button data-jump-endpoint="ybs-bus-stops-nearest" class="mt-3 w-full py-1.5 rounded-lg bg-[#1E1E1E] text-white text-[11px] font-semibold hover:bg-black transition">
+            Test Nearest API →
+          </button>
+        </div>
+      </div>
+
+      <!-- CARD 2: Screen 2 -> Stop Search / Kiosk Grid -->
+      <div class="flex flex-col gap-3">
+        <div class="flex items-center justify-between">
+          <span class="px-2.5 py-0.5 rounded-full bg-[#1E1E1E] text-[#E7E678] font-plex text-[11px] font-bold">STEP 02 · Destination / Kiosk</span>
+          <span class="text-[11px] font-plex text-[#555]">3,094 Stops</span>
+        </div>
+
+        <div class="dark-json-card p-3 text-[10.5px] leading-relaxed">
+          <div class="text-[9.5px] text-white/50 border-b border-white/10 pb-1 mb-1.5 flex justify-between">
+            <span>GET /ybs/bus-stops/search</span>
+            <span class="text-[#9ECE6A]">200 OK</span>
+          </div>
+          <pre class="overflow-x-auto">{
+  <span class="text-[#7AA2F7]">"content"</span>: [{
+    <span class="text-[#7AA2F7]">"id"</span>: <span class="bg-[#E7E678] text-black px-1 rounded font-bold">3675</span>,
+    <span class="text-[#7AA2F7]">"name"</span>: <span class="text-[#9ECE6A]">"ဇဝန"</span>,
+    <span class="text-[#7AA2F7]">"regionName"</span>: <span class="text-[#9ECE6A]">"သင်္ဃန်းကျွန်း"</span>
+  }],
+  <span class="text-[#7AA2F7]">"totalElements"</span>: <span class="text-[#FF9E64]">3094</span>
+}</pre>
+        </div>
+
+        <div class="flex items-center justify-center text-[#1E1E1E] font-plex text-xs font-bold">
+          ↓ extracts <code class="mx-1 px-1.5 py-0.5 rounded bg-[#E7E678]">end_id = 3675</code>
+        </div>
+
+        <div class="bg-white rounded-xl border border-black/15 p-4 shadow-sm flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between border-b border-black/10 pb-2 mb-3">
+              <span class="text-[11px] font-bold text-[#1E1E1E]">🔍 မြို့နယ်နှင့် မှတ်တိုင်ရှာရန်</span>
+              <span class="px-2 py-0.5 rounded-full bg-[#6B2D2D] text-white text-[9px]">Search</span>
+            </div>
+            <div class="space-y-1.5 text-[11px]">
+              <div class="flex justify-between p-2 rounded bg-[#F5F5F3] border border-black/10">
+                <span>၁။ လှည်းကူးဈေး</span>
+                <span class="font-plex text-[#666]">#1978</span>
+              </div>
+              <div class="flex justify-between p-2 rounded bg-[#E7E678]/45 border border-black/20 font-semibold">
+                <span>၂။ ဇဝန (သင်္ဃန်းကျွန်း)</span>
+                <span class="font-plex">#3675</span>
+              </div>
+              <div class="flex justify-between p-2 rounded bg-[#F5F5F3] border border-black/10">
+                <span>၃။ ဆူးလေ YPS ဆိုင်</span>
+                <span class="font-plex text-[#666]">storeId:1</span>
+              </div>
+            </div>
+          </div>
+          <button data-jump-endpoint="ybs-bus-stops-search" class="mt-3 w-full py-1.5 rounded-lg bg-[#1E1E1E] text-white text-[11px] font-semibold hover:bg-black transition">
+            Test Stop Search API →
+          </button>
+        </div>
+      </div>
+
+      <!-- CARD 3: Screen 3 -> Path Finder Result -->
+      <div class="flex flex-col gap-3">
+        <div class="flex items-center justify-between">
+          <span class="px-2.5 py-0.5 rounded-full bg-[#C97A42] text-[#141414] font-plex text-[11px] font-bold">STEP 03 · Path-Finder</span>
+          <span class="text-[11px] font-plex text-[#555]">Direct / Transfer</span>
+        </div>
+
+        <div class="dark-json-card p-3 text-[10.5px] leading-relaxed">
+          <div class="text-[9.5px] text-white/50 border-b border-white/10 pb-1 mb-1.5 flex justify-between">
+            <span>GET /ybs/path-finder/stop-lvl-path</span>
+            <span class="text-[#9ECE6A]">200 OK</span>
+          </div>
+          <pre class="overflow-x-auto">{
+  <span class="text-[#7AA2F7]">"path"</span>: [{
+    <span class="text-[#7AA2F7]">"busNum"</span>: <span class="bg-[#C97A42] text-black px-1 rounded font-bold">1</span>,
+    <span class="text-[#7AA2F7]">"isReversed"</span>: <span class="bg-[#E7E678] text-black px-1 rounded font-bold">false</span>,
+    <span class="text-[#7AA2F7]">"variantId"</span>: <span class="text-[#9ECE6A]">""</span>,
+    <span class="text-[#7AA2F7]">"stopCount"</span>: <span class="text-[#FF9E64]">111</span>
+  }]
+}</pre>
+        </div>
+
+        <div class="flex items-center justify-center text-[#1E1E1E] font-plex text-xs font-bold">
+          ↓ passes <code class="mx-1 px-1.5 py-0.5 rounded bg-[#C97A42] text-black">num=1, isReversed=false</code>
+        </div>
+
+        <div class="bg-white rounded-xl border border-black/15 p-4 shadow-sm flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between border-b border-black/10 pb-2 mb-3">
+              <span class="text-[11px] font-bold text-[#1E1E1E]">🚌 အကြံပြု ဘတ်စ်ကားလမ်းကြောင်း</span>
+              <span class="px-2 py-0.5 rounded-full bg-[#1E1E1E] text-[#E7E678] text-[9px]">Direct</span>
+            </div>
+            <div class="p-3 rounded-lg bg-[#1E1E1E] text-white text-center">
+              <div class="inline-block px-3 py-1 rounded-full bg-[#C97A42] text-black font-bold text-sm mb-1">YBS 1</div>
+              <div class="text-xs text-white/90">လှည်းကူးဈေး → ဇဝန</div>
+              <div class="text-[10px] text-[#E7E678] font-plex mt-1">111 Stops · 0 Transfers</div>
+            </div>
+          </div>
+          <button data-jump-endpoint="ybs-path-stop-lvl" class="mt-3 w-full py-1.5 rounded-lg bg-[#1E1E1E] text-white text-[11px] font-semibold hover:bg-black transition">
+            Test Path-Finder API →
+          </button>
+        </div>
+      </div>
+
+      <!-- CARD 4: Screen 4 -> Ordered Stops & YPS Card -->
+      <div class="flex flex-col gap-3">
+        <div class="flex items-center justify-between">
+          <span class="px-2.5 py-0.5 rounded-full bg-[#1E1E1E] text-[#E7E678] font-plex text-[11px] font-bold">STEP 04 · Stop Sequence</span>
+          <span class="text-[11px] font-plex text-[#555]">destinations[]</span>
+        </div>
+
+        <div class="dark-json-card p-3 text-[10.5px] leading-relaxed">
+          <div class="text-[9.5px] text-white/50 border-b border-white/10 pb-1 mb-1.5 flex justify-between">
+            <span>GET /ybs/buses/1/direction</span>
+            <span class="text-[#9ECE6A]">200 OK</span>
+          </div>
+          <pre class="overflow-x-auto">{
+  <span class="text-[#7AA2F7]">"bus"</span>: {
+    <span class="text-[#7AA2F7]">"num"</span>: <span class="text-[#FF9E64]">1</span>,
+    <span class="text-[#7AA2F7]">"isCardAccepted"</span>: <span class="text-[#FF9E64]">false</span>,
+    <span class="text-[#7AA2F7]">"destinations"</span>: [
+      { <span class="text-[#7AA2F7]">"name"</span>: <span class="text-[#9ECE6A]">"လှည်းကူးဈေး"</span> },
+      { <span class="text-[#7AA2F7]">"name"</span>: <span class="text-[#9ECE6A]">"သဥ္ဇာဦး"</span> }
+    ]
+  }
+}</pre>
+        </div>
+
+        <div class="flex items-center justify-center text-[#1E1E1E] font-plex text-xs font-bold">
+          ↓ renders polyline &amp; stop timeline
+        </div>
+
+        <div class="bg-white rounded-xl border border-black/15 p-4 shadow-sm flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between border-b border-black/10 pb-2 mb-3">
+              <span class="text-[11px] font-bold text-[#1E1E1E]">🗺️ မှတ်တိုင်အစဉ်နှင့် YPS စနစ်</span>
+              <span class="px-2 py-0.5 rounded-full bg-black/10 text-[#1E1E1E] text-[9px] font-plex">111 Stops</span>
+            </div>
+            <ul class="space-y-1.5 text-[11px] font-plex">
+              <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[#C97A42]"></span> 01. လှည်းကူးဈေး (Start)</li>
+              <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[#1E1E1E]"></span> 02. သဥ္ဇာဦး</li>
+              <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[#1E1E1E]"></span> ... (108 stops)</li>
+              <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[#E7E678] border border-black"></span> 111. ဇဝန (End)</li>
+            </ul>
+          </div>
+          <button data-jump-endpoint="ybs-bus-direction" class="mt-3 w-full py-1.5 rounded-lg bg-[#1E1E1E] text-white text-[11px] font-semibold hover:bg-black transition">
+            Test Direction API →
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- SECTION 02: JSONCRACK-STYLE RELATIONAL NODE GRAPH                     -->
+  <!-- Inspired by Reference Image 2 (image_7f635b.png)                      -->
+  <!-- ===================================================================== -->
+  <section id="json-tree-board" class="json-tree-board max-w-[1120px] mx-auto mt-10 p-6 sm:p-10 rounded-2xl border border-white/15 text-white">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-white/10">
+      <div>
+        <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-md bg-[#FF9E64]/20 border border-[#FF9E64]/50 text-[#FF9E64] text-[11px] font-bold uppercase tracking-wider mb-1.5">
+          Board 02 · Relational JSON Node Graph (Entity &amp; Key Tree)
+        </div>
+        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">YBS Data Entities &amp; Foreign-Key Tree</h2>
+        <p class="text-xs sm:text-sm text-white/70 mt-1">
+          Click any entity node on the left to inspect its expanded JSON leaf records and relational join keys on the right.
+        </p>
+      </div>
+      <div class="flex items-center gap-2 text-xs font-plex">
+        <span class="px-2.5 py-1 rounded bg-[#232634] border border-white/15 text-[#7AA2F7]">Root: YBS API (15 routes)</span>
+      </div>
+    </div>
+
+    <!-- Interactive Node Graph Canvas -->
+    <div id="ybs-node-canvas" class="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center relative">
+
+      <!-- Column 1: Root Circle Node (2 cols) -->
+      <div class="lg:col-span-2 flex flex-col items-center justify-center">
+        <div id="ybs-root-node" class="w-20 h-20 rounded-full bg-[#232634] border-2 border-[#7AA2F7] flex flex-col items-center justify-center text-center shadow-lg">
+          <span class="font-plex text-xs font-bold text-white">/ybs</span>
+          <span class="font-plex text-[10px] text-[#9ECE6A]">15 routes</span>
+        </div>
+        <div class="text-[10px] font-plex text-white/50 mt-2 text-center">Stateless REST Root</div>
+      </div>
+
+      <!-- Column 2: Entity Collection Nodes (4 cols) -->
+      <div class="lg:col-span-4 space-y-3" id="tree-entity-list">
+        <button data-tree-node="total-counts" class="tree-node node-selected w-full px-3.5 py-2.5 flex items-center justify-between text-left font-plex text-xs">
+          <div>
+            <span class="text-[#FF9E64] font-bold">total-counts</span>
+            <span class="text-white/50 ml-1">(1)</span>
+            <div class="text-[10px] text-white/60 mt-0.5">GET /ybs/total-counts</div>
+          </div>
+          <span class="text-[#7AA2F7]">🔗 →</span>
+        </button>
+
+        <button data-tree-node="bus-stops" class="tree-node w-full px-3.5 py-2.5 flex items-center justify-between text-left font-plex text-xs">
+          <div>
+            <span class="text-[#FF9E64] font-bold">bus-stops</span>
+            <span class="text-white/50 ml-1">(3094)</span>
+            <div class="text-[10px] text-white/60 mt-0.5">GET /ybs/bus-stops/nearest · /search</div>
+          </div>
+          <span class="text-[#7AA2F7]">🔗 →</span>
+        </button>
+
+        <button data-tree-node="stores" class="tree-node w-full px-3.5 py-2.5 flex items-center justify-between text-left font-plex text-xs">
+          <div>
+            <span class="text-[#FF9E64] font-bold">yps-stores</span>
+            <span class="text-white/50 ml-1">(153)</span>
+            <div class="text-[10px] text-white/60 mt-0.5">GET /ybs/stores/all · /:id/nearest-stops</div>
+          </div>
+          <span class="text-[#7AA2F7]">🔗 →</span>
+        </button>
+
+        <button data-tree-node="path-finder" class="tree-node w-full px-3.5 py-2.5 flex items-center justify-between text-left font-plex text-xs">
+          <div>
+            <span class="text-[#FF9E64] font-bold">path-finder</span>
+            <span class="text-white/50 ml-1">(legs[])</span>
+            <div class="text-[10px] text-white/60 mt-0.5">GET /ybs/path-finder/stop-lvl-path</div>
+          </div>
+          <span class="text-[#7AA2F7]">🔗 →</span>
+        </button>
+
+        <button data-tree-node="bus-direction" class="tree-node w-full px-3.5 py-2.5 flex items-center justify-between text-left font-plex text-xs">
+          <div>
+            <span class="text-[#FF9E64] font-bold">buses-direction</span>
+            <span class="text-white/50 ml-1">(285)</span>
+            <div class="text-[10px] text-white/60 mt-0.5">GET /ybs/buses/:num/direction</div>
+          </div>
+          <span class="text-[#7AA2F7]">🔗 →</span>
+        </button>
+      </div>
+
+      <!-- Column 3: Expanded Leaf JSON Records (6 cols, styled identically to Image 2) -->
+      <div class="lg:col-span-6 space-y-3" id="tree-leaf-cards">
+        <!-- Populated dynamically via jQuery -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- SECTION 03: STEP-BY-STEP PLAYBOOK & INTERACTIVE 15-ENDPOINT LAB       -->
+  <!-- ===================================================================== -->
+  <section id="ybs-simulator" class="max-w-[1120px] mx-auto mt-10 mb-16">
+    <div class="bg-[#1E1E1E] text-[#F5F5F3] rounded-2xl p-6 sm:p-8 shadow-2xl border border-black/20">
+
+      <!-- Simulator Top Header -->
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-white/15">
+        <div>
+          <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-[#E7E678] text-[#1E1E1E] text-[11px] font-bold uppercase tracking-wider mb-2">
+            Board 03 · Step-by-Step Developer Playbook &amp; 15-Endpoint Runner
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold tracking-tight">How to Call YBS API Step-by-Step + Live Lab</h2>
+          <p class="text-xs sm:text-sm text-white/70 mt-1">
+            Inspect the step-by-step integration instructions or test any of the 15 <code>/ybs/*</code> endpoints live.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-end gap-3">
+          <div class="flex flex-col gap-1 min-w-[240px]">
+            <label for="server-select" class="text-[11px] uppercase tracking-wider text-white/60 font-semibold">Target Server</label>
+            <select id="server-select" class="bg-[#2B2B2B] text-white text-xs rounded-lg px-3 py-2 border border-white/15 focus:outline-none focus:border-[#E7E678]">
+              <option value="https://burma-project-ideas.vercel.app">Production · burma-project-ideas.vercel.app</option>
+              <option value="http://localhost:3000">Local Dev · http://localhost:3000</option>
+            </select>
+          </div>
+          <button id="btn-run-chain" class="px-4 py-2 rounded-lg bg-[#C97A42] hover:bg-[#b86b35] text-[#141414] font-bold text-xs transition shadow-sm">
+            ⚡ Demo 4-Step Key Chain
+          </button>
+        </div>
+      </div>
+
+      <!-- Chain Execution Log Banner (Hidden until triggered) -->
+      <div id="chain-banner" class="hidden mt-4 p-4 rounded-xl bg-[#141414] border border-[#C97A42]/60 font-plex text-xs space-y-1.5">
+        <div class="flex items-center justify-between text-[#E7E678] font-bold">
+          <span>⚡ Automated 4-Step Foreign-Key Handshake Simulation</span>
+          <button id="btn-close-chain" class="text-white/60 hover:text-white">✕</button>
+        </div>
+        <div id="chain-log" class="text-white/85 space-y-1 text-[11px]"></div>
+      </div>
+
+      <!-- INTERACTIVE 4-STEP VISUAL WORKFLOW PIPELINE -->
+      <div class="mt-6">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-[11px] uppercase tracking-wider text-white/60 font-semibold">Click a Workflow Stage to Filter Endpoints (All 15 Routes)</span>
+          <button id="btn-show-all-stages" class="text-[11px] text-[#E7E678] hover:underline font-plex">Show All 15 Endpoints</button>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3" id="pipeline-steps">
+          <button data-pipeline-stage="1" class="pipeline-card text-left p-3.5 rounded-xl border border-[#E7E678] bg-[#2B2B2B] transition">
+            <div class="flex items-center justify-between text-[11px] font-plex mb-1">
+              <span class="px-2 py-0.5 rounded bg-[#E7E678] text-[#1E1E1E] font-bold">STEP 01</span>
+              <span class="text-white/50">3 routes</span>
+            </div>
+            <div class="font-bold text-sm text-white mt-1">Bootstrap &amp; Catalog</div>
+            <div class="text-[11px] text-white/70 mt-1 leading-snug">
+              Call <code>/total-counts</code>, <code>/regions</code>, and <code>/buses</code> on app startup.
+            </div>
+          </button>
+
+          <button data-pipeline-stage="2" class="pipeline-card text-left p-3.5 rounded-xl border border-white/15 bg-[#252525] hover:border-white/40 transition">
+            <div class="flex items-center justify-between text-[11px] font-plex mb-1">
+              <span class="px-2 py-0.5 rounded bg-white/15 text-white font-bold">STEP 02</span>
+              <span class="text-white/50">8 routes</span>
+            </div>
+            <div class="font-bold text-sm text-white mt-1">Resolve Stops &amp; Stores</div>
+            <div class="text-[11px] text-white/70 mt-1 leading-snug">
+              Get <code>stop.id</code> or <code>storeId</code> via GPS nearest, search, or paginated lists.
+            </div>
+          </button>
+
+          <button data-pipeline-stage="3" class="pipeline-card text-left p-3.5 rounded-xl border border-white/15 bg-[#252525] hover:border-white/40 transition">
+            <div class="flex items-center justify-between text-[11px] font-plex mb-1">
+              <span class="px-2 py-0.5 rounded bg-white/15 text-white font-bold">STEP 03</span>
+              <span class="text-white/50">2 routes</span>
+            </div>
+            <div class="font-bold text-sm text-white mt-1">Compute Path-Finder</div>
+            <div class="text-[11px] text-white/70 mt-1 leading-snug">
+              Pass <code>start_id</code> &amp; <code>end_id</code> to get <code>busNum</code>, <code>isReversed</code>, <code>variantId</code>.
+            </div>
+          </button>
+
+          <button data-pipeline-stage="4" class="pipeline-card text-left p-3.5 rounded-xl border border-white/15 bg-[#252525] hover:border-white/40 transition">
+            <div class="flex items-center justify-between text-[11px] font-plex mb-1">
+              <span class="px-2 py-0.5 rounded bg-white/15 text-white font-bold">STEP 04</span>
+              <span class="text-white/50">2 routes</span>
+            </div>
+            <div class="font-bold text-sm text-white mt-1">Hydrate Line &amp; Stops</div>
+            <div class="text-[11px] text-white/70 mt-1 leading-snug">
+              Call <code>/buses/:num/direction</code> for YPS flag &amp; ordered <code>destinations[]</code>.
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- TWO-COLUMN ENDPOINT INSPECTOR & LIVE RUNNER -->
+      <div class="mt-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+        <!-- Left Column: Filterable 15 YBS Endpoints -->
+        <div class="lg:col-span-5 flex flex-col gap-3">
+          <input id="ybs-search" type="text" placeholder="Filter all 15 YBS routes (e.g., nearest, stores, path-finder, direction)..."
+                 class="w-full bg-[#2A2A2A] text-white placeholder-white/40 text-xs rounded-lg px-3.5 py-2.5 border border-white/15 focus:outline-none focus:border-[#E7E678]" />
+
+          <div id="ybs-endpoint-list" class="bg-[#252525] rounded-xl border border-white/10 p-2.5 max-h-[600px] overflow-y-auto custom-scroll">
+            <!-- Populated via jQuery -->
+          </div>
+        </div>
+
+        <!-- Right Column: Step-by-Step How-To Guide, Parameters, Code & Live Response -->
+        <div class="lg:col-span-7 bg-[#252525] rounded-xl border border-white/10 p-5 flex flex-col justify-between">
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <span id="detail-stage-badge" class="text-[11px] font-bold uppercase tracking-wider text-[#C97A42]">
+                Step 01 · Bootstrap &amp; Catalog
+              </span>
+              <span class="text-[11px] font-plex px-2 py-0.5 rounded bg-black/40 text-white/70">
+                application/json
+              </span>
+            </div>
+
+            <h3 id="detail-title" class="text-lg font-bold text-white">Get system total counts</h3>
+            <p id="detail-title-mm" lang="my" class="text-xs text-[#E7E678] mt-0.5">ရန်ကုန်ဘတ်စ်ကားလိုင်းများ — စုစုပေါင်း အရေအတွက်</p>
+
+            <!-- Route Bar -->
+            <div class="mt-3 flex items-center justify-between gap-2 bg-[#161616] border border-white/15 rounded-lg px-3 py-2 font-plex text-xs">
+              <div class="flex items-center gap-2 overflow-x-auto">
+                <span class="px-2 py-0.5 rounded bg-[#E7E678] text-[#1E1E1E] font-bold text-[10px]">GET</span>
+                <span id="detail-path" class="text-white select-all">/ybs/total-counts</span>
+              </div>
+              <button id="btn-copy-url" class="text-[11px] px-2.5 py-1 rounded bg-white/10 hover:bg-white/20 text-white shrink-0 transition">
+                Copy URL
+              </button>
+            </div>
+
+            <!-- Step-by-Step "How to Do & How to Call" Callout Box -->
+            <div class="mt-3 p-3 rounded-lg bg-[#1A1A1A] border border-white/10 space-y-1.5 text-xs">
+              <div><strong class="text-[#E7E678]">When &amp; Why to Call:</strong> <span id="detail-desc" class="text-white/85"></span></div>
+              <div><strong class="text-[#C97A42]">How to Chain Next:</strong> <span id="detail-howto" class="text-white/85"></span></div>
+            </div>
+
+            <!-- Interactive Path & Query Parameters -->
+            <div id="detail-params-container" class="mt-4 hidden">
+              <div class="text-[11px] uppercase tracking-wider text-white/60 font-semibold mb-2">Interactive Path &amp; Query Parameters</div>
+              <div id="detail-params-fields" class="space-y-2.5"></div>
+            </div>
+
+            <!-- Live Execution Controls -->
+            <div class="mt-4 flex items-center gap-2">
+              <button id="btn-send-live" class="flex-1 py-2.5 px-4 rounded-lg bg-[#E7E678] hover:bg-[#dfde60] text-[#1E1E1E] font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm">
+                <span>▶ Send Live Request</span>
+              </button>
+              <button id="btn-reset-sample" class="py-2.5 px-3.5 rounded-lg bg-white/10 hover:bg-white/15 text-white text-xs font-medium transition">
+                Sample JSON
+              </button>
+            </div>
+
+            <!-- Language Code Tabs -->
+            <div class="mt-5">
+              <div class="flex items-center justify-between mb-2">
+                <div class="flex gap-1 bg-[#161616] p-1 rounded-lg text-[11px]">
+                  <button data-lang="curl" class="code-tab px-2.5 py-1 rounded bg-[#2E2E2E] text-white font-semibold">cURL</button>
+                  <button data-lang="fetch" class="code-tab px-2.5 py-1 rounded text-white/60 hover:text-white">JS Fetch</button>
+                  <button data-lang="csharp" class="code-tab px-2.5 py-1 rounded text-white/60 hover:text-white">C# HttpClient</button>
+                </div>
+                <button id="btn-copy-code" class="text-[11px] px-2.5 py-1 rounded bg-white/10 hover:bg-white/20 text-white transition">
+                  Copy Code
+                </button>
+              </div>
+              <pre id="code-preview" class="bg-[#141414] border border-white/10 rounded-lg p-3 text-[11px] font-plex text-[#E7E678] overflow-x-auto"></pre>
+            </div>
+
+            <!-- Response Output Viewer -->
+            <div class="mt-4">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-[11px] uppercase tracking-wider text-white/60 font-semibold">Response Payload</span>
+                <span id="response-status-badge" class="text-[11px] font-plex text-[#E7E678]">200 OK · Documented Sample</span>
+              </div>
+              <pre id="response-preview" class="bg-[#141414] border border-white/10 rounded-lg p-3 text-[11px] font-plex text-white/90 max-h-[240px] overflow-auto"></pre>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- JQUERY LOGIC: POSTER ARROWS, TREE GRAPH & ALL 15 YBS ENDPOINTS        -->
+  <!-- ===================================================================== -->
+  <script>
+    // Complete 15 YBS Endpoints extracted from index-bpi.html
+    const YBS_ENDPOINTS = [
+      // STEP 1: Bootstrap & Catalog (3 routes)
+      {
+        id: "ybs-total-counts",
+        stage: 1,
+        stageLabel: "Step 01 · Bootstrap & Catalog",
+        title: "Get system total counts",
+        titleMm: "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ — စုစုပေါင်း အရေအတွက်",
+        path: "/ybs/total-counts",
+        desc: "Call once on app launch to display network summary badges (285 active bus lines, 3,094 mapped stops).",
+        howTo: "Cache locally alongside /ybs/regions so your splash screen or dashboard shows instant YBS dataset metrics.",
+        params: [],
+        sample: { total_bus: 285, total_bus_stop: 3094 }
+      },
+      {
+        id: "ybs-regions",
+        stage: 1,
+        stageLabel: "Step 01 · Bootstrap & Catalog",
+        title: "Get all townships / regions",
+        titleMm: "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ — မြို့နယ်စာရင်း",
+        path: "/ybs/regions",
+        desc: "Fetch the list of Yangon townships (e.g. ကမာရွတ်, ကျောက်တံတား) to populate dropdown filter menus.",
+        howTo: "Pass any selected township string as ?regionName= into /ybs/bus-stops/search or /ybs/stores/search.",
+        params: [],
+        sample: ["ကမာရွတ်", "ကိုကိုးကျွန်းမြို့နယ်", "ကျောက်တံတား", "သင်္ဃန်းကျွန်း", "လှည်းကူးမြို့နယ်"]
+      },
+      {
+        id: "ybs-buses",
+        stage: 1,
+        stageLabel: "Step 01 · Bootstrap & Catalog",
+        title: "Get all available bus lines",
+        titleMm: "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ — လိုင်းအားလုံး",
+        path: "/ybs/buses",
+        desc: "Browse all non-reversed YBS bus lines with displayed route number (num), YPS card acceptance, and terminal stops.",
+        howTo: "Use 'num' (NOT internal 'id') when calling /ybs/buses/:num. Note that destinations[] is empty here—call /direction for full stops.",
+        params: [],
+        sample: [
+          {
+            id: 2, num: 1, isReversed: false, variantId: "", isCardAccepted: false, totalStops: 111,
+            startStop: { id: 1978, name: "လှည်းကူးဈေး", longitude: 96.21915, latitude: 17.09671, regionName: "လှည်းကူးမြို့နယ်" },
+            endStop: { id: 3675, name: "ဇဝန", longitude: 96.18846, latitude: 16.82831, regionName: "သင်္ဃန်းကျွန်း" },
+            destinations: []
+          }
+        ]
+      },
+
+      // STEP 2: Resolve Stops & Stores (8 routes)
+      {
+        id: "ybs-bus-stops-nearest",
+        stage: 2,
+        stageLabel: "Step 02 · Resolve Stops & Stores",
+        title: "Get nearest bus stops by GPS",
+        titleMm: "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ — GPS အနီးဆုံးမှတ်တိုင်",
+        path: "/ybs/bus-stops/nearest",
+        desc: "Snap the user's current GPS coordinates to bus stops within a 1 km radius (range_km: 1). Set findStop=true for the single closest stop.",
+        howTo: "Extract near_by_locations[0].id and pass it as start_id into /ybs/path-finder/stop-lvl-path.",
+        params: [
+          { name: "user_lat", in: "query", value: "16.77594", placeholder: "16.77594" },
+          { name: "user_lon", in: "query", value: "96.15871", placeholder: "96.15871" },
+          { name: "findStop", in: "query", value: "true", placeholder: "true" }
+        ],
+        sample: {
+          range_km: 1,
+          near_by_locations: [
+            { id: 1817, name: "ဆူးလေ(မြို့တောင်ခန်းမ)", longitude: 96.15871, latitude: 16.77594, regionName: "ကျောက်တံတား" }
+          ]
+        }
+      },
+      {
+        id: "ybs-bus-stops-search",
+        stage: 2,
+        stageLabel: "Step 02 · Resolve Stops & Stores",
+        title: "Search bus stops by name / region",
+        titleMm: "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ — မှတ်တိုင် ရှာဖွေခြင်း",
+        path: "/ybs/bus-stops/search",
+        desc: "Search 3,094 bus stops by Burmese stop name and/or township regionName with Spring-style pagination.",
+        howTo: "Capture content[].id as your origin (start_id) or destination (end_id) for Step 03 Path-Finder.",
+        params: [
+          { name: "name", in: "query", value: "၁၀၃ဂိတ်ဟောင်း", placeholder: "၁၀၃ဂိတ်ဟောင်း" },
+          { name: "regionName", in: "query", value: "", placeholder: "မြောက်ဥက္ကလာပ" },
+          { name: "page", in: "query", value: "1", placeholder: "1" },
+          { name: "size", in: "query", value: "2", placeholder: "2" },
+          { name: "sort", in: "query", value: "", placeholder: "name" }
+        ],
+        sample: {
+          content: [
+            { id: 1960, name: "၁၀၃ဂိတ်ဟောင်း", longitude: 96.19256, latitude: 16.93566, regionName: "မြောက်ဥက္ကလာပ" },
+            { id: 3600, name: "၁၀၃ဂိတ်ဟောင်း", longitude: 96.06253, latitude: 16.8788, regionName: "လှိုင်သာယာ (အရှေ့ပိုင်း)" }
+          ],
+          totalPages: 1547, totalElements: 3094, size: 2, number: 1
+        }
+      },
+      {
+        id: "ybs-bus-stops-paginated",
+        stage: 2,
+        stageLabel: "Step 02 · Resolve Stops & Stores",
+        title: "Paginated bus stops browser",
+        titleMm: "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ — မှတ်တိုင်စာရင်း အပိုင်းလိုက်",
+        path: "/ybs/bus-stops",
+        desc: "Browse stops pre-joined with all serving bus lines (related_bus[].bus) and stop coordinates.",
+        howTo: "Ideal for building a 'Stops Directory' screen without N+1 queries per stop.",
+        params: [
+          { name: "page", in: "query", value: "1", placeholder: "1" },
+          { name: "page_size", in: "query", value: "2", placeholder: "2" }
+        ],
+        sample: {
+          totalPages: 1547,
+          related_bus: [
+            {
+              totalBuses: 8,
+              location: { id: 1368, name: "ဧရာမြေ", longitude: 96.08327, latitude: 16.93069, regionName: "အင်းစိန်" },
+              bus: [{ id: 8, num: 101, isReversed: false, variantId: "", isCardAccepted: false, totalStops: 80 }]
+            }
+          ]
+        }
+      },
+      {
+        id: "ybs-bus-stop-buses",
+        stage: 2,
+        stageLabel: "Step 02 · Resolve Stops & Stores",
+        title: "Get buses serving a specific bus stop",
+        titleMm: "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ — မှတ်တိုင်တွင် ရပ်နားသော ကားလိုင်းများ",
+        path: "/ybs/bus-stops/:id/buses",
+        desc: "Given a single stop ID (e.g. from /nearest or /search), list every YBS line that stops there.",
+        howTo: "Pass a valid stop ID (such as 1817 for Sule) into :id.",
+        params: [
+          { name: "id", in: "path", value: "1817", placeholder: "1817" }
+        ],
+        sample: [
+          { id: 14, num: 21, isReversed: false, variantId: "", isCardAccepted: true, totalStops: 54 }
+        ]
+      },
+      {
+        id: "ybs-stores-all",
+        stage: 2,
+        stageLabel: "Step 02 · Resolve Stops & Stores",
+        title: "Browse all YPS card kiosks / stores",
+        titleMm: "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ — YPS ဝန်ဆောင်မှုဆိုင်များ အားလုံး",
+        path: "/ybs/stores/all",
+        desc: "Load all 153 Yangon Payment Services (YPS) card top-up and sales kiosks in a single payload.",
+        howTo: "Use store.id as storeId in /ybs/path-finder/store-lvl-path or /ybs/stores/:id/nearest-stops.",
+        params: [],
+        sample: [
+          { id: 1, mmName: "ဆူးလေ YPS ဝန်ဆောင်မှုဆိုင်", engName: "Sule City Hall", category: "YPS Service Kios", regionName: "ကျောက်တံတား", latitude: 16.7759633, longitude: 96.1587317, totalNearestStops: 5 }
+        ]
+      },
+      {
+        id: "ybs-stores-paginated",
+        stage: 2,
+        stageLabel: "Step 02 · Resolve Stops & Stores",
+        title: "Paginated YPS stores browser",
+        titleMm: "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ — YPS ဆိုင်များ အပိုင်းလိုက်",
+        path: "/ybs/stores",
+        desc: "Fetch paginated pages of the 153 YPS kiosks (77 pages at size=2).",
+        howTo: "Use page and size query params for infinite-scroll kiosk lists.",
+        params: [
+          { name: "page", in: "query", value: "1", placeholder: "1" },
+          { name: "size", in: "query", value: "2", placeholder: "2" }
+        ],
+        sample: {
+          content: [{ id: 3, mmName: "မြန်မာပလာဇာ YPS ဝန်ဆောင်မှုဆိုင်", engName: "Myanmar Plaza", regionName: "ဗဟန်း" }],
+          totalPages: 77, totalElements: 153
+        }
+      },
+      {
+        id: "ybs-stores-search",
+        stage: 2,
+        stageLabel: "Step 02 · Resolve Stops & Stores",
+        title: "Search YPS stores by name or region",
+        titleMm: "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ — YPS ဆိုင် ရှာဖွေခြင်း",
+        path: "/ybs/stores/search",
+        desc: "Filter YPS card kiosks by store name or Yangon township (regionName).",
+        howTo: "Pass matched store.id into /ybs/path-finder/store-lvl-path?storeId=...",
+        params: [
+          { name: "name", in: "query", value: "", placeholder: "လှည်းတန်း" },
+          { name: "regionName", in: "query", value: "", placeholder: "ကမာရွတ်" },
+          { name: "page", in: "query", value: "1", placeholder: "1" },
+          { name: "size", in: "query", value: "2", placeholder: "2" }
+        ],
+        sample: {
+          content: [{ id: 4, mmName: "လှည်းတန်း YPS ဝန်ဆောင်မှုဆိုင်", engName: "Hleden Kios", regionName: "ကမာရွတ်" }],
+          totalElements: 153
+        }
+      },
+      {
+        id: "ybs-store-by-id",
+        stage: 2,
+        stageLabel: "Step 02 · Resolve Stops & Stores",
+        title: "Get YPS store details & nearest stops",
+        titleMm: "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ — YPS ဆိုင်အသေးစိတ်နှင့် အနီးဆုံးမှတ်တိုင်",
+        path: "/ybs/stores/:id/nearest-stops",
+        desc: "Retrieve the 5 closest boarding bus stops surrounding a specific YPS service kiosk (also see GET /ybs/stores/:id).",
+        howTo: "Use when displaying a YPS kiosk map pin and showing commuters which stops drop them right at the kiosk.",
+        params: [
+          { name: "id", in: "path", value: "1", placeholder: "1" }
+        ],
+        sample: {
+          store_nearest_locations: [
+            { totalBuses: 11, location: { id: 1817, name: "ဆူးလေ(မြို့တောင်ခန်းမ)", regionName: "ကျောက်တံတား" }, bus: [] }
+          ]
+        }
+      },
+
+      // STEP 3: Compute Path-Finder (2 routes)
+      {
+        id: "ybs-path-stop-lvl",
+        stage: 3,
+        stageLabel: "Step 03 · Compute Path-Finder",
+        title: "Stop-to-stop route path finder",
+        titleMm: "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ — မှတ်တိုင်တစ်ခုမှ တစ်ခုသို့ လမ်းကြောင်း",
+        path: "/ybs/path-finder/stop-lvl-path",
+        desc: "Core routing engine: calculates direct YBS lines or 1-transfer combinations between start_id and end_id.",
+        howTo: "Read path[0].busNum, isReversed, and variantId, then call /ybs/buses/:num/direction to render the full stop list.",
+        params: [
+          { name: "start_id", in: "query", value: "1978", placeholder: "1978" },
+          { name: "end_id", in: "query", value: "3675", placeholder: "3675" }
+        ],
+        sample: {
+          path: [
+            { busNum: 1, isReversed: false, variantId: "", fromStopId: 1978, toStopId: 3675, stopCount: 111 }
+          ]
+        }
+      },
+      {
+        id: "ybs-path-store-lvl",
+        stage: 3,
+        stageLabel: "Step 03 · Compute Path-Finder",
+        title: "Store-to-stop route path finder",
+        titleMm: "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ — YPS ဆိုင်သို့ လမ်းကြောင်းရှာခြင်း",
+        path: "/ybs/path-finder/store-lvl-path",
+        desc: "Plan a bus trip from a rider's current stop (startBusStopId) directly to a YPS card top-up kiosk (storeId).",
+        howTo: "Combine Step 02 nearest stop ID with any kiosk ID from /ybs/stores/all.",
+        params: [
+          { name: "storeId", in: "query", value: "1", placeholder: "1" },
+          { name: "startBusStopId", in: "query", value: "1978", placeholder: "1978" }
+        ],
+        sample: [
+          { busNum: 21, isReversed: false, variantId: "", fromStopId: 1978, toStopId: 1817 }
+        ]
+      },
+
+      // STEP 4: Hydrate Line & Stops (2 routes)
+      {
+        id: "ybs-buses-by-number",
+        stage: 4,
+        stageLabel: "Step 04 · Hydrate Line & Stops",
+        title: "Search bus lines by number",
+        titleMm: "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ — လိုင်းနံပါတ်ဖြင့် ရှာဖွေခြင်း",
+        path: "/ybs/buses/:num",
+        desc: "Inspect all directions (isReversed: true/false) and sub-branches (variantId) for a given YBS line number.",
+        howTo: "Let the user toggle Outbound vs. Return direction, then pass isReversed & variantId to /direction.",
+        params: [
+          { name: "num", in: "path", value: "1", placeholder: "1" }
+        ],
+        sample: {
+          result: [
+            { id: 1, num: 1, isReversed: true, variantId: "", isCardAccepted: false, totalStops: 102, startStop: { id: 1623, name: "ဇဝန" }, endStop: { id: 3251, name: "လှည်းကူးဈေး" } },
+            { id: 2, num: 1, isReversed: false, variantId: "", isCardAccepted: false, totalStops: 111, startStop: { id: 1978, name: "လှည်းကူးဈေး" }, endStop: { id: 3675, name: "ဇဝန" } }
+          ]
+        }
+      },
+      {
+        id: "ybs-bus-direction",
+        stage: 4,
+        stageLabel: "Step 04 · Hydrate Line & Stops",
+        title: "Get specific bus direction & ordered stops",
+        titleMm: "ရန်ကုန်ဘတ်စ်ကားလိုင်းများ — အသွားအပြန်နှင့် မှတ်တိုင်အစဉ်",
+        path: "/ybs/buses/:num/direction",
+        desc: "Final hydration step: returns the complete ordered destinations[] array with lat/lng coordinates and YPS card support.",
+        howTo: "Plot bus.destinations[] lat/lng coordinates on Leaflet/Mapbox and display the YPS Card badge if isCardAccepted is true.",
+        params: [
+          { name: "num", in: "path", value: "1", placeholder: "1" },
+          { name: "isReversed", in: "query", value: "false", placeholder: "false" },
+          { name: "variantId", in: "query", value: "", placeholder: "" }
+        ],
+        sample: {
+          bus: {
+            id: 2, num: 1, isReversed: false, variantId: "", isCardAccepted: false, totalStops: 111,
+            startStop: { id: 1978, name: "လှည်းကူးဈေး", regionName: "လှည်းကူးမြို့နယ်" },
+            endStop: { id: 3675, name: "ဇဝန", regionName: "သင်္ဃန်းကျွန်း" },
+            destinations: [
+              { id: 1978, name: "လှည်းကူးဈေး", longitude: 96.21915, latitude: 17.09671, regionName: "လှည်းကူးမြို့နယ်" },
+              { id: 2550, name: "သဥ္ဇာဦး", longitude: 96.22345, latitude: 17.0985, regionName: "လှည်းကူးမြို့နယ်" }
+            ]
+          }
+        }
+      }
+    ];
+
+    // Relational JSON Node Tree Data (Board 02 - Image 2 style)
+    const TREE_NODES = {
+      "total-counts": [
+        { endpoint: "GET /ybs/total-counts", fields: { total_bus: 285, total_bus_stop: 3094 } }
+      ],
+      "bus-stops": [
+        { endpoint: "GET /ybs/bus-stops/nearest", fields: { id: 1817, name: '"ဆူးလေ(မြို့တောင်ခန်းမ)"', regionName: '"ကျောက်တံတား"', range_km: 1 } },
+        { endpoint: "GET /ybs/bus-stops/search", fields: { id: 1978, name: '"လှည်းကူးဈေး"', regionName: '"လှည်းကူးမြို့နယ်"', totalElements: 3094 } },
+        { endpoint: "GET /ybs/bus-stops/search", fields: { id: 3675, name: '"ဇဝန"', regionName: '"သင်္ဃန်းကျွန်း"', totalPages: 1547 } }
+      ],
+      "stores": [
+        { endpoint: "GET /ybs/stores/all", fields: { id: 1, mmName: '"ဆူးလေ YPS ဝန်ဆောင်မှုဆိုင်"', engName: '"Sule City Hall"', totalNearestStops: 5 } },
+        { endpoint: "GET /ybs/stores/all", fields: { id: 3, mmName: '"မြန်မာပလာဇာ YPS ဝန်ဆောင်မှုဆိုင်"', engName: '"Myanmar Plaza"', regionName: '"ဗဟန်း"' } }
+      ],
+      "path-finder": [
+        { endpoint: "GET /ybs/path-finder/stop-lvl-path", fields: { busNum: 1, isReversed: false, variantId: '""', fromStopId: 1978, toStopId: 3675, stopCount: 111 } },
+        { endpoint: "GET /ybs/path-finder/store-lvl-path", fields: { storeId: 1, startBusStopId: 1978, busNum: 21, toStopId: 1817 } }
+      ],
+      "bus-direction": [
+        { endpoint: "GET /ybs/buses/1/direction", fields: { id: 2, num: 1, isReversed: false, isCardAccepted: false, totalStops: 111, destinations_0: '"လှည်းကူးဈေး"' } },
+        { endpoint: "GET /ybs/buses/10/direction", fields: { id: 4, num: 10, isReversed: false, isCardAccepted: true, totalStops: 67, destinations_0: '"၃၅"' } }
+      ]
+    };
+
+    $(function () {
+      let activeStageFilter = "ALL";
+      let selectedEndpoint = YBS_ENDPOINTS[0];
+      let activeCodeLang = "curl";
+
+      // 1. Dynamic SVG Pointer Arrows on Editorial Poster
+      function drawPosterArrows() {
+        const $poster = $("#poster-canvas");
+        if (!$poster.length || $(window).width() < 768) return;
+        const posterOffset = $poster.offset();
+
+        function connect(pillSel, targetSel, arrowSel, mode) {
+          const $pill = $(pillSel), $target = $(targetSel), $arrow = $(arrowSel);
+          if (!$pill.length || !$target.length || !$arrow.length) return;
+          const pOff = $pill.offset(), tOff = $target.offset();
+          const pW = $pill.outerWidth(), pH = $pill.outerHeight();
+          const tW = $target.outerWidth(), tH = $target.outerHeight();
+          let x1, y1, x2, y2;
+
+          if (mode === "right-to-left") {
+            x1 = pOff.left - posterOffset.left + pW;
+            y1 = pOff.top - posterOffset.top + pH / 2;
+            x2 = tOff.left - posterOffset.left - 6;
+            y2 = tOff.top - posterOffset.top + tH / 2;
+          } else if (mode === "bottom-to-top") {
+            x1 = pOff.left - posterOffset.left + pW * 0.65;
+            y1 = pOff.top - posterOffset.top + pH;
+            x2 = tOff.left - posterOffset.left + tW * 0.45;
+            y2 = tOff.top - posterOffset.top - 5;
+          } else if (mode === "bottom-center-to-top") {
+            x1 = pOff.left - posterOffset.left + pW * 0.45;
+            y1 = pOff.top - posterOffset.top + pH;
+            x2 = tOff.left - posterOffset.left + tW * 0.5;
+            y2 = tOff.top - posterOffset.top - 5;
+          } else if (mode === "top-left-to-text") {
+            x1 = pOff.left - posterOffset.left + 20;
+            y1 = pOff.top - posterOffset.top;
+            x2 = tOff.left - posterOffset.left + tW * 0.65;
+            y2 = tOff.top - posterOffset.top + tH + 6;
+          } else if (mode === "top-to-bottom") {
+            x1 = pOff.left - posterOffset.left + pW * 0.5;
+            y1 = pOff.top - posterOffset.top;
+            x2 = tOff.left - posterOffset.left + tW * 0.5;
+            y2 = tOff.top - posterOffset.top + tH + 6;
+          }
+          $arrow.attr("d", `M ${x1.toFixed(1)} ${y1.toFixed(1)} L ${x2.toFixed(1)} ${y2.toFixed(1)}`);
+        }
+
+        connect("#pill-sender", "#hl-sender", "#arrow-sender", "right-to-left");
+        connect("#pill-stages", "#hl-stages", "#arrow-stages", "bottom-to-top");
+        connect("#pill-gps", "#hl-gps", "#arrow-gps", "bottom-center-to-top");
+        connect("#pill-arch", "#hl-arch", "#arrow-arch", "right-to-left");
+        connect("#pill-payload", "#hl-payload", "#arrow-payload", "top-left-to-text");
+        connect("#pill-open", "#hl-gps", "#arrow-open", "top-to-bottom");
+      }
+
+      setTimeout(drawPosterArrows, 120);
+      $(window).on("resize", drawPosterArrows);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(drawPosterArrows);
+
+      function highlightPosterStage(stageNum) {
+        $(".callout-pill, .vertical-capsule").removeClass("pill-active");
+        $(".hl-yellow, .hl-orange").removeClass("hl-active");
+        $(".pointer-line").removeClass("active-arrow").attr("marker-end", "url(#arrowhead)");
+        if (!stageNum) return;
+
+        $(`[data-stage="${stageNum}"]`).each(function () {
+          if ($(this).hasClass("callout-pill") || $(this).hasClass("vertical-capsule")) $(this).addClass("pill-active");
+          else $(this).addClass("hl-active");
+        });
+
+        const arrowMap = { 1: ["#arrow-sender", "#arrow-stages"], 2: ["#arrow-gps"], 3: ["#arrow-payload"], 4: ["#arrow-arch"] };
+        (arrowMap[stageNum] || []).forEach(sel => $(sel).addClass("active-arrow").attr("marker-end", "url(#arrowhead-active)"));
+      }
+
+      $("[data-stage]").on("click", function () {
+        const stage = Number($(this).data("stage"));
+        highlightPosterStage(stage);
+        activatePipelineStage(stage, $(this).attr("id") === "pill-open");
+      });
+
+      $("#btn-reset-pointers").on("click", () => highlightPosterStage(null));
+
+      // 2. Render JSONCrack Relational Tree Leaf Cards (Board 02)
+      function renderTreeLeaves(nodeKey) {
+        const items = TREE_NODES[nodeKey] || [];
+        const $container = $("#tree-leaf-cards").empty();
+        items.forEach(item => {
+          const lines = Object.entries(item.fields)
+            .map(([k, v]) => `<div><span class="text-[#7AA2F7]">${k}:</span> <span class="${typeof v === 'number' || typeof v === 'boolean' ? 'text-[#FF9E64]' : 'text-[#9ECE6A]'}">${v}</span></div>`)
+            .join("");
+
+          $container.append(`
+            <div class="dark-json-card p-3.5 text-[11px] leading-relaxed border-l-4 border-l-[#FF9E64]">
+              <div class="text-[10px] text-white/45 mb-1 font-plex">${item.endpoint}</div>
+              ${lines}
+            </div>
+          `);
+        });
+      }
+
+      $(".tree-node").on("click", function () {
+        $(".tree-node").removeClass("node-selected");
+        $(this).addClass("node-selected");
+        renderTreeLeaves($(this).data("tree-node"));
+      });
+      renderTreeLeaves("total-counts");
+
+      // Jump from Miro Board 01 straight to Simulator endpoint
+      $("[data-jump-endpoint]").on("click", function () {
+        const targetId = $(this).data("jump-endpoint");
+        const ep = YBS_ENDPOINTS.find(x => x.id === targetId);
+        if (ep) {
+          activatePipelineStage("ALL", false);
+          selectEndpoint(ep);
+          $("html, body").animate({ scrollTop: $("#ybs-simulator").offset().top - 20 }, 400);
+        }
+      });
+
+      // 3. Automated 4-Step Foreign-Key Chain Simulation
+      $("#btn-run-chain").on("click", function () {
+        $("#chain-banner").removeClass("hidden");
+        const steps = [
+          "1. [STEP 01] GET /ybs/total-counts → Confirmed 285 lines & 3,094 stops available.",
+          "2. [STEP 02] GET /ybs/bus-stops/nearest?user_lat=17.09671&user_lon=96.21915&findStop=true → Resolved start_id = 1978 (လှည်းကူးဈေး).",
+          "3. [STEP 03] GET /ybs/path-finder/stop-lvl-path?start_id=1978&end_id=3675 → Matched YBS busNum = 1, isReversed = false, variantId = \"\".",
+          "4. [STEP 04] GET /ybs/buses/1/direction?isReversed=false → Hydrated 111 ordered destinations[] stops & YPS card status."
+        ];
+        const $log = $("#chain-log").empty();
+        steps.forEach((txt, idx) => {
+          setTimeout(() => $log.append(`<div>${txt}</div>`), idx * 250);
+        });
+      });
+      $("#btn-close-chain").on("click", () => $("#chain-banner").addClass("hidden"));
+
+      // 4. Interactive 4-Step Pipeline & Endpoint List Rendering
+      function activatePipelineStage(stageNum, shouldScroll = false) {
+        activeStageFilter = stageNum;
+        $(".pipeline-card").removeClass("border-[#E7E678] bg-[#2B2B2B]").addClass("border-white/15 bg-[#252525]");
+        $(".pipeline-card span:first-child").removeClass("bg-[#E7E678] text-[#1E1E1E]").addClass("bg-white/15 text-white");
+
+        if (stageNum !== "ALL") {
+          const $activeCard = $(`.pipeline-card[data-pipeline-stage="${stageNum}"]`);
+          $activeCard.removeClass("border-white/15 bg-[#252525]").addClass("border-[#E7E678] bg-[#2B2B2B]");
+          $activeCard.find("span:first-child").removeClass("bg-white/15 text-white").addClass("bg-[#E7E678] text-[#1E1E1E]");
+
+          const firstInStage = YBS_ENDPOINTS.find(ep => ep.stage === stageNum);
+          if (firstInStage) selectEndpoint(firstInStage);
+        }
+
+        renderEndpointList();
+        if (shouldScroll) {
+          $("html, body").animate({ scrollTop: $("#miro-ui-board").offset().top - 20 }, 420);
+        }
+      }
+
+      $(".pipeline-card").on("click", function () {
+        const stg = Number($(this).data("pipeline-stage"));
+        highlightPosterStage(stg);
+        activatePipelineStage(stg, false);
+      });
+
+      $("#btn-show-all-stages").on("click", () => activatePipelineStage("ALL", false));
+
+      function renderEndpointList() {
+        const query = $("#ybs-search").val().toLowerCase().trim();
+        const filtered = YBS_ENDPOINTS.filter(ep => {
+          const matchesStage = activeStageFilter === "ALL" || ep.stage === activeStageFilter;
+          const matchesQuery = !query || ep.path.toLowerCase().includes(query) || ep.title.toLowerCase().includes(query) || ep.desc.toLowerCase().includes(query);
+          return matchesStage && matchesQuery;
+        });
+
+        const $list = $("#ybs-endpoint-list").empty();
+        if (!filtered.length) {
+          $list.html(`<div class="text-xs text-white/50 p-4 text-center">No matching YBS routes found.</div>`);
+          return;
+        }
+
+        filtered.forEach(ep => {
+          const isSelected = ep.id === selectedEndpoint.id;
+          const $btn = $(`
+            <button class="w-full text-left p-3 rounded-lg mb-1.5 transition border ${
+              isSelected ? "bg-[#323232] border-[#E7E678] text-white" : "bg-transparent border-transparent hover:bg-white/5 text-white/80"
+            }">
+              <div class="flex items-center justify-between gap-2">
+                <span class="text-xs font-semibold truncate">${ep.title}</span>
+                <span class="px-1.5 py-0.5 rounded bg-[#E7E678] text-[#1E1E1E] font-bold text-[10px] font-plex shrink-0">
+                  S0${ep.stage} · GET
+                </span>
+              </div>
+              <div class="font-plex text-[11px] text-white/55 truncate mt-1">${ep.path}</div>
+            </button>
+          `);
+          $btn.on("click", () => selectEndpoint(ep));
+          $list.append($btn);
+        });
+      }
+
+      function buildResolvedUrl() {
+        const base = $("#server-select").val();
+        let path = selectedEndpoint.path;
+        const queryParams = [];
+        $(".ybs-param-input").each(function () {
+          const name = $(this).data("name"), location = $(this).data("in"), val = $(this).val().trim();
+          if (location === "path") path = path.replace(`:${name}`, encodeURIComponent(val || "1"));
+          else if (location === "query" && val !== "") queryParams.push(`${encodeURIComponent(name)}=${encodeURIComponent(val)}`);
+        });
+        return base + path + (queryParams.length ? "?" + queryParams.join("&") : "");
+      }
+
+      function updateCodeSnippet() {
+        const url = buildResolvedUrl();
+        let snippet = "";
+        if (activeCodeLang === "curl") {
+          snippet = `curl -X GET "${url}"`;
+        } else if (activeCodeLang === "fetch") {
+          snippet = `const res = await fetch("${url}");\nconst data = await res.json();\nconsole.log(data);`;
+        } else if (activeCodeLang === "csharp") {
+          snippet = `using var http = new HttpClient();\nvar json = await http.GetStringAsync("${url}");\nConsole.WriteLine(json);`;
+        }
+        $("#code-preview").text(snippet);
+      }
+
+      function showSampleJson() {
+        $("#response-status-badge").text("200 OK · Documented Sample").removeClass("text-[#C97A42]").addClass("text-[#E7E678]");
+        $("#response-preview").text(JSON.stringify(selectedEndpoint.sample, null, 2));
+      }
+
+      function selectEndpoint(ep) {
+        selectedEndpoint = ep;
+        renderEndpointList();
+        $("#detail-stage-badge").text(ep.stageLabel);
+        $("#detail-title").text(ep.title);
+        $("#detail-title-mm").text(ep.titleMm);
+        $("#detail-path").text(ep.path);
+        $("#detail-desc").text(ep.desc);
+        $("#detail-howto").text(ep.howTo);
+
+        const $paramsContainer = $("#detail-params-container");
+        const $paramsFields = $("#detail-params-fields").empty();
+
+        if (ep.params && ep.params.length) {
+          $paramsContainer.removeClass("hidden");
+          ep.params.forEach(p => {
+            $paramsFields.append(`
+              <div class="grid grid-cols-1 sm:grid-cols-12 gap-2 items-center">
+                <label class="sm:col-span-4 text-xs font-plex text-white/80">${p.name} <span class="text-[10px] text-white/45">(${p.in})</span></label>
+                <input type="text" data-name="${p.name}" data-in="${p.in}" value="${p.value}" placeholder="${p.placeholder || ""}"
+                       class="ybs-param-input sm:col-span-8 bg-[#161616] border border-white/15 rounded px-2.5 py-1.5 text-xs font-plex text-white focus:outline-none focus:border-[#E7E678]" />
+              </div>
+            `);
+          });
+          $(".ybs-param-input").on("input", updateCodeSnippet);
+        } else {
+          $paramsContainer.addClass("hidden");
+        }
+
+        updateCodeSnippet();
+        showSampleJson();
+      }
+
+      $("#btn-send-live").on("click", async function () {
+        const url = buildResolvedUrl();
+        const $btn = $(this);
+        $btn.prop("disabled", true).text("⏳ Querying YBS Endpoint...");
+        $("#response-status-badge").text("GET " + url + "...");
+        try {
+          const res = await fetch(url);
+          const text = await res.text();
+          let formatted = text;
+          try { formatted = JSON.stringify(JSON.parse(text), null, 2); } catch (_) {}
+          $("#response-status-badge").text(`${res.status} ${res.statusText} · Live Response`).removeClass("text-[#C97A42]").addClass("text-[#E7E678]");
+          $("#response-preview").text(formatted || "(Empty response body)");
+        } catch (err) {
+          $("#response-status-badge").text("CORS / Offline Notice · Showing Documented Sample").removeClass("text-[#E7E678]").addClass("text-[#C97A42]");
+          $("#response-preview").text(`// Browser fetch notice: ${err.message}\n// Run the cURL or C# snippet, or inspect documented payload:\n\n` + JSON.stringify(selectedEndpoint.sample, null, 2));
+        } finally {
+          $btn.prop("disabled", false).html("<span>▶ Send Live Request</span>");
+        }
+      });
+
+      $("#btn-reset-sample").on("click", showSampleJson);
+      $("#ybs-search").on("input", renderEndpointList);
+      $("#server-select").on("change", updateCodeSnippet);
+
+      $(".code-tab").on("click", function () {
+        $(".code-tab").removeClass("bg-[#2E2E2E] text-white font-semibold").addClass("text-white/60");
+        $(this).removeClass("text-white/60").addClass("bg-[#2E2E2E] text-white font-semibold");
+        activeCodeLang = $(this).data("lang");
+        updateCodeSnippet();
+      });
+
+      function copyTextSafe(text, $btn, defaultLabel) {
+        const $temp = $("<textarea>").val(text);
+        $("body").append($temp);
+        $temp.select();
+        try { document.execCommand("copy"); $btn.text("Copied ✓"); } catch (_) { $btn.text("Press Ctrl+C"); }
+        $temp.remove();
+        setTimeout(() => $btn.text(defaultLabel), 1500);
+      }
+
+      $("#btn-copy-url").on("click", function () { copyTextSafe(buildResolvedUrl(), $(this), "Copy URL"); });
+      $("#btn-copy-code").on("click", function () { copyTextSafe($("#code-preview").text(), $(this), "Copy Code"); });
+
+      activatePipelineStage(1, false);
+    });
+  </script>
+<script>
+(function(){
+ const report=()=>{
+  const last=document.getElementById('ybs-simulator');
+  const height=Math.ceil(last.getBoundingClientRect().bottom+scrollY+parseFloat(getComputedStyle(last).marginBottom)+parseFloat(getComputedStyle(document.body).paddingBottom));
+  parent.postMessage({type:'ybs-reference-height',height},location.origin);
+ };
+ new ResizeObserver(report).observe(document.body);
+ addEventListener('load',report);
+ addEventListener('resize',report);
+ document.fonts.ready.then(report);
+ const server=document.getElementById('server-select');
+ if(server&&location.hostname==='localhost'){
+  const option=new Option('Current server · '+location.origin,location.origin,true,true);
+  server.prepend(option);
+ }
+})();
+</script><script src="/ybs/graph-arrows.js"></script>
+<script src="/ybs/board-arrows.js"></script>
+</body>
+</html>

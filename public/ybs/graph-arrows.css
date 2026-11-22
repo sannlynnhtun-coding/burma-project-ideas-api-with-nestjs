@@ -1,0 +1,13 @@
+#ybs-node-canvas{isolation:isolate}
+#ybs-node-canvas > div{position:relative;z-index:1}
+.ybs-graph-arrows{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:0}
+.ybs-graph-connector{fill:none;stroke:#7AA2F7;stroke-width:1.5;stroke-dasharray:6 5;opacity:.6;animation:ybs-arrow-flow 1.2s linear infinite}
+.ybs-graph-connector.is-active{stroke:#FF9E64;stroke-width:2;opacity:1}
+.ybs-graph-terminal{fill:none;stroke:#7AA2F7;stroke-width:1.5;opacity:.6}
+.ybs-graph-terminal.is-active{stroke:#FF9E64;stroke-width:2;opacity:1}
+@keyframes ybs-arrow-flow{to{stroke-dashoffset:-22}}
+@media(prefers-reduced-motion:reduce){.ybs-graph-connector{animation:none}}
+#ybs-ui-canvas{isolation:isolate;gap:44px}
+#ybs-ui-canvas > div{position:relative;z-index:1;min-width:0}
+#ybs-ui-canvas .ybs-ui-connector-caption{min-height:32px;padding-left:32px}
+#ybs-ui-canvas .ybs-ui-arrow{stroke:#C97A42;stroke-width:2;opacity:1}
