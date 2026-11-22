@@ -28,3 +28,10 @@ SOFTWARE.
 
 Sidebar styling credit: dashboardcn contributors, Copyright (c) 2026, MIT.
 Documentation frame attribution: EvilCharts, as credited in the ObsidianUI source.
+
+
+## Brand artwork and build tooling
+
+The open-data logo is original project artwork. Existing project licensing applies. ObsidianUI styling credits above remain unchanged.
+
+Brand exports are rendered with @resvg/resvg-js (MPL-2.0), a development-only dependency. Its source and license are at https://github.com/yisibl/resvg-js. System fonts are used for social-card text; font files are not bundled.

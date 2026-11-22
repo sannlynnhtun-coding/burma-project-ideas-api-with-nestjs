@@ -520,9 +520,10 @@ describe('AppController (e2e)', () => {
       .expect('Content-Type', /svg/)
       .expect((res) => {
         const logoSvg = Buffer.from(res.body).toString('utf8');
-        expect(logoSvg).toContain('#0d182b');
-        expect(logoSvg).toContain('#43d3ff');
-        expect(logoSvg).toContain('#f3f7ff');
+        expect(logoSvg).toContain('prefers-color-scheme:dark');
+        expect(logoSvg).toContain('#171717');
+        expect(logoSvg).toContain('#fafafa');
+        expect(logoSvg).not.toContain('#43d3ff');
       });
 
     await request(app.getHttpServer())

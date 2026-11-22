@@ -1,5 +1,12 @@
 # Burma Project Ideas API with Nest.js
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="public/assets/brand-mark-on-dark.png">
+  <img src="public/assets/brand-mark.png" alt="Burma Project Ideas open-data logo" width="96">
+</picture>
+
+The open-data mark uses code brackets around a data diamond in the app’s monochrome palette. See [brand assets and regeneration](design/README.md).
+
 ## API documentation
 
 The default API reference is served at `/` from `public/index.html`, with all 77 endpoints grouped into 22 resources. Start the app and open `http://localhost:3000/`. The request playground defaults to the server hosting the page, including local and preview deployments.

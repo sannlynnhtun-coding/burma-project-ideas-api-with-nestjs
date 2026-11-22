@@ -228,7 +228,7 @@ export function setupApiDocumentation(app: INestApplication): void {
   SwaggerModule.setup('swagger', app, document, {
     customSwaggerUiPath: join(process.cwd(), 'public'),
     customCss: swaggerThemeCss,
-    customfavIcon: '/assets/brand-logo.svg',
+    customfavIcon: '/assets/brand-logo.svg?v=open-data-1',
     customSiteTitle: 'Burma Project Ideas API Docs | မြန်မာ API များ',
     swaggerOptions: {
       tagsSorter: 'alpha',
@@ -262,8 +262,8 @@ function renderScalarReferenceHtml(): string {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="dark" />
-    <meta name="theme-color" content="#08101f" />
-    <link rel="icon" href="/assets/brand-logo.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#0f0f0f" />
+    <link rel="icon" href="/assets/brand-logo.svg?v=open-data-1" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" sizes="180x180" />
   </head>
   <body>
