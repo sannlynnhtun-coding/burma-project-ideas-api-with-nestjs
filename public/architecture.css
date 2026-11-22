@@ -21,3 +21,18 @@ html[data-color-mode=light] .console .panel pre,html[data-color-mode=light] .lan
 html[data-color-mode=light] .console .tabs button{color:#2b5598}
 html[data-color-mode=light] .console .tabs button[aria-pressed=true]{background:#e7e678;color:#1e1e1e;border-color:#b5b44b}
 @media(max-width:767px){.theme-select{max-width:94px;font-size:11px}}
+.landing .resource-grid{gap:10px;margin-top:20px}
+.landing .resource-card{min-height:0;padding:14px 16px;gap:6px;border-radius:8px}
+.landing .resource-card strong{font-size:13px;line-height:1.5}
+.landing .resource-card small{font-size:11px;line-height:1.5}
+.landing-facts{margin-bottom:40px}
+.landing-code .request-command{color:#bb9af7}
+.landing-code .request-method{color:#ff9e64;font-weight:600}
+.landing-code .request-scheme{color:#c0caf5}
+.landing-code .request-host{color:#7aa2f7}
+.landing-code .request-path{color:#9ece6a}
+html[data-color-mode=light] .landing-code .request-command{color:#7047a3}
+html[data-color-mode=light] .landing-code .request-method{color:#91471d}
+html[data-color-mode=light] .landing-code .request-scheme{color:#454956}
+html[data-color-mode=light] .landing-code .request-host{color:#2b5598}
+html[data-color-mode=light] .landing-code .request-path{color:#356324}
