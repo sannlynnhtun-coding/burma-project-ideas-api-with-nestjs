@@ -7,7 +7,10 @@
 .ybs-graph-terminal.is-active{stroke:#FF9E64;stroke-width:2;opacity:1}
 @keyframes ybs-arrow-flow{to{stroke-dashoffset:-22}}
 @media(prefers-reduced-motion:reduce){.ybs-graph-connector{animation:none}}
-#ybs-ui-canvas{isolation:isolate;gap:44px}
+#ybs-ui-canvas{isolation:isolate;gap:44px;grid-template-columns:minmax(0,1fr)}
+@media(min-width:768px){#ybs-ui-canvas{grid-template-columns:repeat(var(--board-tablet-columns,2),minmax(0,1fr))}}
+@media(min-width:1280px){#ybs-ui-canvas{grid-template-columns:repeat(var(--board-desktop-columns,4),minmax(0,1fr))}}
 #ybs-ui-canvas > div{position:relative;z-index:1;min-width:0}
+#ybs-ui-canvas > div > div:first-child > span:first-child{padding:8px 14px;line-height:1.5}
 #ybs-ui-canvas .ybs-ui-connector-caption{min-height:32px;padding-left:32px}
 #ybs-ui-canvas .ybs-ui-arrow{stroke:#C97A42;stroke-width:2;opacity:1}
